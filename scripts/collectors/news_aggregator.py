@@ -270,7 +270,7 @@ def collect_all_news() -> dict:
 
 
 def format_news_articles(news_data: dict) -> dict:
-    """将新闻数据转化为期刊各板块的文章格式
+    """将新闻数据转化为期刊各板块的文章格式, 并自动翻译英文内容
 
     Returns:
         {
@@ -299,7 +299,12 @@ def format_news_articles(news_data: dict) -> dict:
         "trade": "贸易"
     }
 
-    for article in news_data.get("articles", []):
+    # 翻译英文文章
+    from .translator import translate_articles
+    articles = news_data.get("articles", [])
+    translate_articles(articles)
+
+    for article in articles:
         cats = article.get("categories", [])
         if not cats:
             continue
@@ -314,6 +319,10 @@ def format_news_articles(news_data: dict) -> dict:
             "source": article.get("source", ""),
             "link": article.get("link", "")
         }
+
+        # 保留英文原标题 (如有翻译)
+        if article.get("title_en"):
+            formatted["title_en"] = article["title_en"]
 
         if primary_cat in sections:
             sections[primary_cat].append(formatted)

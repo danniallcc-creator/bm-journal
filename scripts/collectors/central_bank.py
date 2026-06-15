@@ -230,6 +230,7 @@ def format_macro_article(fed_data: dict, all_banks: dict) -> dict:
             "title": "央行利率数据暂不可用",
             "summary": "FRED API Key未配置或数据获取失败。请检查配置。",
             "source": "FRED",
+            "link": "https://fred.stlouisfed.org/series/FEDFUNDS",
             "date": datetime.now().strftime("%Y-%m-%d"),
             "impact": 0
         }
@@ -264,6 +265,7 @@ def format_macro_article(fed_data: dict, all_banks: dict) -> dict:
                    f"全球央行: {global_summary}。"
                    f"对建材行业影响: 利率变动通过房贷利率和建筑融资成本传导至房地产投资和新开工。",
         "source": "FRED / 各国央行",
+        "link": "https://fred.stlouisfed.org/series/FEDFUNDS",
         "date": fed.get("last_date", datetime.now().strftime("%Y-%m-%d")),
         "impact": impact
     }

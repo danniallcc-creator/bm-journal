@@ -4,7 +4,7 @@
   "title": "建材行业全球资讯期刊",
   "tagline": "Global Building Materials Weekly Intelligence Report",
   "coverage": "25 国家 | 35 品类 | 207+ HS编码",
-  "sources": "FRED(9/9央行) + World Bank(25国) + SCFI + BDI + EUR-Lex(0条) + RSS(28篇/6源) + Events(13场) + Academia(10主题) + Research(23篇) + Emerging(0强信号)",
+  "sources": "FRED(9/9央行) + World Bank(25国) + SCFI + BDI + EUR-Lex(0条) + RSS(46篇/8源) + Events(13场) + Academia(10主题) + Research(23篇) + Emerging(0强信号)",
   "keyTakeaways": [
     {
       "headline": "'自修复混凝土'搜索热度增长96%",
@@ -28,29 +28,33 @@
       "title": "美联储维持利率3.62%不变",
       "summary": "联邦基金有效利率3.62%。10年期国债收益率4.45%。全球央行: 欧央行(ECB) 2.00%; 英央行(BOE) 3.73%; 日央行(BOJ) 0.73%; 澳联储(RBA) 4.10%; 加央行(BOC) 2.25%。对建材行业影响: 利率变动通过房贷利率和建筑融资成本传导至房地产投资和新开工。",
       "source": "FRED / 各国央行",
+      "link": "https://fred.stlouisfed.org/series/FEDFUNDS",
       "date": "2026-06-11",
       "impact": 3
     },
     {
       "tag": "宏观 / 供应链",
-      "title": "How the Hormuz crisis is pushing the Gulf states toward greater resilience",
-      "summary": "<p>The blockade has sent ripples across the world’s supply chains but, while all eyes are on the price of oil, Gulf states are developing a more resilient infrastructure strategy. Coming&#8230;</p>\n<p",
+      "title": "霍尔木兹危机如何推动海湾国家走向更大的复原力",
+      "summary": "封锁给全球供应链带来了涟漪，但尽管所有人都在关注石油价格，但海湾国家正在制定更具弹性的基础设施战略。来了…\n&lt; p",
       "source": "Global Construction Review",
-      "link": "https://www.globalconstructionreview.com/how-the-hormuz-crisis-is-pushing-the-gulf-states-toward-greater-resilience/"
+      "link": "https://www.globalconstructionreview.com/how-the-hormuz-crisis-is-pushing-the-gulf-states-toward-greater-resilience/",
+      "title_en": "How the Hormuz crisis is pushing the Gulf states toward greater resilience"
     },
     {
       "tag": "宏观 / 房地产",
-      "title": "The timing tax: How America’s rent calendar punishes the workers it should protect",
-      "summary": "Millions of American renters face a structural \"timing tax\" when fixed rent due dates clash with their misaligned or unpredictable income schedules. By implementing flexible payment infrastructure, pr",
+      "title": "计时税：美国的租金日历如何惩罚它应该保护的工人",
+      "summary": "当固定租金到期日与其不协调或不可预测的收入计划发生冲突时，数百万美国租房者面临结构性“计时税”。通过实施灵活的支付基础设施，",
       "source": "HousingWire",
-      "link": "https://www.housingwire.com/articles/rent-timing-tax-workers/"
+      "link": "https://www.housingwire.com/articles/rent-timing-tax-workers/",
+      "title_en": "The timing tax: How America’s rent calendar punishes the workers it should protect"
     },
     {
       "tag": "宏观 / 房地产",
-      "title": "Why housing demand is up and inventory is down in 2026",
-      "summary": "Pending sales rose to 75,856 vs 72,039 in 2025 as inventory turned negative year over year with mortgage rates near 6.58%.",
+      "title": "2026年房屋需求上升而库存下降的原因",
+      "summary": "由于库存同比转为负值，抵押贷款利率接近6.58% ，未决销售额从2025年的72,039上升至75,856。",
       "source": "HousingWire",
-      "link": "https://www.housingwire.com/articles/housing-demand-inventory-2026pending-sales-rose-to-75856-vs-72039-in-2025-as-inventory-turned-negative-year-over-year-with-mortgage-rates-near-6-58/"
+      "link": "https://www.housingwire.com/articles/housing-demand-inventory-2026pending-sales-rose-to-75856-vs-72039-in-2025-as-inventory-turned-negative-year-over-year-with-mortgage-rates-near-6-58/",
+      "title_en": "Why housing demand is up and inventory is down in 2026"
     }
   ],
   "regional": {
