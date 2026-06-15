@@ -1,4 +1,4 @@
-"""周报生成管道 (P0 + P1 + P2) - 汇总全部自动化采集数据
+"""周报生成管道 (P0 + P1 + P2 + P3) - 汇总全部自动化采集数据
 运行: python -m scripts.weekly_pipeline
 """
 import json, sys, os
@@ -26,6 +26,11 @@ from scripts.collectors.trade_flow import collect_all_trade_flows, format_trade_
 from scripts.collectors.regulation import collect_all_regulations, format_regulation_items
 from scripts.collectors.news_aggregator import collect_all_news, format_news_articles
 from scripts.collectors.events_calendar import collect_events_calendar, format_events_list
+
+# P3 imports
+from scripts.collectors.innovation import collect_all_innovation, format_innovation_items
+from scripts.collectors.research_reports import collect_all_research, format_research_highlights
+from scripts.collectors.emerging_demand import detect_emerging_demands, format_emerging_demands
 
 from scripts.utils import save_raw, log, fmt_number
 from scripts.config import COUNTRIES_BY_REGION
@@ -103,6 +108,23 @@ def run_pipeline():
     # 事件日历
     events_data = collect_events_calendar()
     events_list = format_events_list(events_data)
+
+    # ============================================================
+    # P3: 创新技术 + 投研报告 + 新兴需求探测
+    # ============================================================
+    log.info("--- P3: Innovation, research & emerging demand ---")
+
+    # 学术论文/创新技术 (Crossref + arXiv + DOAJ)
+    innovation_data = collect_all_innovation()
+    innovation_items = format_innovation_items(innovation_data)
+
+    # 投研报告 (Crossref多主题)
+    research_data = collect_all_research()
+    research_highlights = format_research_highlights(research_data)
+
+    # 新兴需求探测 (交叉分析P1社交信号 + P2新闻)
+    emerging_data = detect_emerging_demands(news_data=news_data, social_data=social_data)
+    emerging_items = format_emerging_demands(emerging_data)
 
     # 将新闻文章合并到macro板块
     news_macro_articles = news_sections.get("macro", [])
@@ -221,6 +243,12 @@ def run_pipeline():
         sources_parts.append(f"RSS({news_data.get('relevant_count',0)}篇/{news_data.get('sources_ok',0)}源)")
     if events_data.get("status") == "ok":
         sources_parts.append(f"Events({events_data.get('total',0)}场)")
+    if innovation_data.get("status") == "ok":
+        sources_parts.append(f"Academia({innovation_data.get('topics_with_papers',0)}主题)")
+    if research_data.get("status") == "ok":
+        sources_parts.append(f"Research({research_data.get('total_reports',0)}篇)")
+    if emerging_data.get("status") == "ok":
+        sources_parts.append(f"Emerging({emerging_data.get('strong_signals',0)}强信号)")
 
     # macro板块: P0央行 + P2新闻中的宏观文章
     macro_articles = [macro_article] + news_macro_articles[:3]
@@ -239,8 +267,10 @@ def run_pipeline():
         "trends": product_trends,
         "supplyChain": supply_chain,
         "regulation": regulation_items,
-        "innovation": news_sections.get("innovation", []),
+        "innovation": innovation_items,
         "events": events_list,
+        "emergingDemand": emerging_items,
+        "researchHighlights": research_highlights,
         "dataSources": []
     }
 
@@ -261,6 +291,9 @@ def run_pipeline():
     log.info(f"  Regulation items: {len(regulation_items)}")
     log.info(f"  News articles: {news_data.get('relevant_count',0)} ({news_data.get('sources_ok',0)} sources)")
     log.info(f"  Events: {len(events_list)} upcoming")
+    log.info(f"  Innovation items: {len(innovation_items)} ({innovation_data.get('topics_with_papers',0)} topics)")
+    log.info(f"  Research highlights: {len(research_highlights)}")
+    log.info(f"  Emerging demands: {len(emerging_items)} ({emerging_data.get('strong_signals',0)} strong)")
     log.info(f"  Sources: {', '.join(sources_parts) if sources_parts else 'none'}")
     log.info(f"{'='*60}")
 

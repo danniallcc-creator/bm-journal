@@ -4,7 +4,7 @@
   "title": "建材行业全球资讯期刊",
   "tagline": "Global Building Materials Weekly Intelligence Report",
   "coverage": "25 国家 | 35 品类 | 207+ HS编码",
-  "sources": "World Bank(25国) + SCFI + BDI + EUR-Lex(0条) + RSS(37篇/7源) + Events(13场)",
+  "sources": "World Bank(25国) + SCFI + BDI + EUR-Lex(0条) + RSS(28篇/6源) + Events(13场) + Academia(10主题) + Research(23篇) + Emerging(0强信号)",
   "keyTakeaways": [],
   "macro": [
     {
@@ -818,11 +818,76 @@
   ],
   "innovation": [
     {
-      "tag": "创新",
-      "title": "Bechtel to build $100bn semiconductor plant, biggest in US",
-      "summary": "<p>Micron Technology has picked Bechtel to build the first phase of what’s billed as the US’ biggest semiconductor plant in Clay, New York. Bechtel will use digital-enabled construction technologies, ",
-      "source": "Global Construction Review",
-      "link": "https://www.globalconstructionreview.com/bechtel-to-build-100bn-semiconductor-plant-biggest-in-us/"
+      "title": "Enhancing thermal insulation in cement mortar with silica aerogel and recycled P",
+      "summary": "气凝胶保温: 共10篇相关论文(近期10篇)。代表: Marof; Šiller(2025)，被引19次。",
+      "tag": "innovation",
+      "topic": "气凝胶保温",
+      "paper_count": 10,
+      "source": "Crossref/DOAJ",
+      "doi": "10.1016/j.conbuildmat.2025.140320"
+    },
+    {
+      "title": "Optimized community-level distributed photovoltaic generation (DPVG): Aesthetic,",
+      "summary": "光伏一体化(BIPV): 共10篇相关论文(近期10篇)。代表: Zhang; Cao; Chen et al.(2025)，被引14次。",
+      "tag": "innovation",
+      "topic": "光伏一体化(BIPV)",
+      "paper_count": 10,
+      "source": "Crossref/DOAJ",
+      "doi": "10.1016/j.jobe.2025.112085"
+    },
+    {
+      "title": "Bacterial concrete: the future of self-healing and sustainable infrastructure",
+      "summary": "自修复混凝土: 共7篇相关论文(近期7篇)。代表: Sukumaran; Johnpaul; Balasundaram et al.(2025)，被引9次。",
+      "tag": "innovation",
+      "topic": "自修复混凝土",
+      "paper_count": 7,
+      "source": "Crossref/DOAJ",
+      "doi": "10.1016/j.mex.2025.103569"
+    },
+    {
+      "title": "Façade systems for industrialised prefabricated prefinished modular construction",
+      "summary": "模块化建筑: 共6篇相关论文(近期6篇)。代表: Hajirezaei; Sharafi; Farsangi et al.(2025)，被引7次。",
+      "tag": "innovation",
+      "topic": "模块化建筑",
+      "paper_count": 6,
+      "source": "Crossref/DOAJ",
+      "doi": "10.1016/j.autcon.2025.106269"
+    },
+    {
+      "title": "Spectral analysis of the discoloration process in architectural electrochromic g",
+      "summary": "智能玻璃: 共6篇相关论文(近期6篇)。代表: Wen; Meng(2025)，被引9次。",
+      "tag": "innovation",
+      "topic": "智能玻璃",
+      "paper_count": 6,
+      "source": "Crossref/DOAJ",
+      "doi": "10.1038/s41598-025-91183-w"
+    },
+    {
+      "title": "Building Sustainable Futures: Evaluating Embodied Carbon Emissions and Biogenic ",
+      "summary": "大木结构(CLT): 共5篇相关论文(近期5篇)。代表: Chapagain; Crovella(2025)，被引6次。",
+      "tag": "innovation",
+      "topic": "大木结构(CLT)",
+      "paper_count": 5,
+      "source": "Crossref/DOAJ",
+      "doi": "10.3390/su17125602"
+    },
+    {
+      "title": "Technological aspects of fabricating a reinforced concrete shell using 3D concre",
+      "summary": "3D打印建筑: 共4篇相关论文(近期4篇)。代表: Tenesesku(2025)，被引1次。",
+      "tag": "innovation",
+      "topic": "3D打印建筑",
+      "paper_count": 4,
+      "source": "Crossref/DOAJ",
+      "doi": "10.32347/2522-4182.17.2025.141-152"
+    },
+    {
+      "title": "Performance Evaluation of Recycled Self-Compacting Concrete Incorporating Recycl",
+      "summary": "再生钢材: 共2篇相关论文(近期2篇)。代表: Abdulrahman; Taha; Younis(2025)，被引1次。",
+      "tag": "innovation",
+      "topic": "再生钢材",
+      "paper_count": 2,
+      "source": "Crossref/DOAJ",
+      "doi": "10.20944/preprints202504.1804.v1"
     }
   ],
   "events": [
@@ -994,6 +1059,138 @@
         "利率"
       ],
       "website": ""
+    }
+  ],
+  "emergingDemand": [
+    {
+      "name": "灾后重建",
+      "signal_count": 1,
+      "strength": "weak",
+      "signal_types": [],
+      "description": "检测到1条需求信号信号。来源: Construction Dive。",
+      "example_articles": [
+        {
+          "title": "The tariff storm has a silver lining. And it belongs to preconstruction.",
+          "source": "Construction Dive"
+        }
+      ]
+    },
+    {
+      "name": "未满足需求",
+      "signal_count": 1,
+      "strength": "medium",
+      "signal_types": [
+        "gap"
+      ],
+      "description": "Report lays out wealth, housing gaps facing LGBTQ+ Gen Z (HousingWire) - 关键词: gap",
+      "example_articles": [
+        {
+          "title": "Report lays out wealth, housing gaps facing LGBTQ+ Gen Z",
+          "source": "HousingWire"
+        }
+      ]
+    }
+  ],
+  "researchHighlights": [
+    {
+      "title": "OECD Steel Outlook 2025",
+      "summary": "OECD Publishing book (2025)",
+      "publisher": "OECD Publishing",
+      "year": 2025,
+      "theme": "commodities",
+      "doi": "10.1787/28b61a5e-en",
+      "source": "Crossref",
+      "citations": 5
+    },
+    {
+      "title": "Initial Property Offering: Underpricing and Learning Behavior in the Presale Hou",
+      "summary": "Springer Science and Business Media LLC journal-article (2025)",
+      "publisher": "Springer Science and Business Media LLC",
+      "year": 2025,
+      "theme": "housing_market",
+      "doi": "10.1007/s11146-025-10013-y",
+      "source": "Crossref",
+      "citations": 2
+    },
+    {
+      "title": "The impact of free trade port construction on regional import and export: Eviden",
+      "summary": "<jats:p>The construction of the Hainan Free Trade Port (HFTP) represents one of the most advanced regional development models explored by China. This study clarifies the concept of the free trade port",
+      "publisher": "Public Library of Science (PLoS)",
+      "year": 2025,
+      "theme": "trade",
+      "doi": "10.1371/journal.pone.0328875",
+      "source": "Crossref",
+      "citations": 2
+    },
+    {
+      "title": "The Impacts of Housing Price Regulation on the Real Estate Market: Micro Evidenc",
+      "summary": "Elsevier BV posted-content (2025)",
+      "publisher": "Elsevier BV",
+      "year": 2025,
+      "theme": "housing_market",
+      "doi": "10.2139/ssrn.5530640",
+      "source": "Crossref",
+      "citations": 1
+    },
+    {
+      "title": "Assessing the role of Fintech, technological infrastructure, and macroeconomic s",
+      "summary": "<jats:p>Type of the article: Research ArticleAbstractThis study examined per capita spending as a key indicator of domestic-level economic activity and households’ financial involvement, both of which",
+      "publisher": "LLC CPC Business Perspectives",
+      "year": 2025,
+      "theme": "infrastructure",
+      "doi": "10.21511/imfi.22(4).2025.04",
+      "source": "Crossref",
+      "citations": 0
+    },
+    {
+      "title": "Regulation of Infrastructure Investment and Development",
+      "summary": "Routledge book-chapter (2025)",
+      "publisher": "Routledge",
+      "year": 2025,
+      "theme": "infrastructure",
+      "doi": "10.4324/9781032712031-36",
+      "source": "Crossref",
+      "citations": 0
+    },
+    {
+      "title": "OECD Steel Outlook 2026",
+      "summary": "OECD Publishing book (2026)",
+      "publisher": "OECD Publishing",
+      "year": 2026,
+      "theme": "commodities",
+      "doi": "10.1787/99ab9b0c-en",
+      "source": "Crossref",
+      "citations": 0
+    },
+    {
+      "title": "Green Concrete for Sustainable Infrastructure Development",
+      "summary": "CRC Press book-chapter (2025)",
+      "publisher": "CRC Press",
+      "year": 2025,
+      "theme": "green_finance",
+      "doi": "10.1201/9781003617594-4",
+      "source": "Crossref",
+      "citations": 0
+    },
+    {
+      "title": "THE GREEN BOND AND SUSTAINABLE FINANCE MARKET. THE GREEN BOND PREMIUM: EVIDENCE ",
+      "summary": "<jats:p>This study examines the determinants of greenium – the yield differential between\ngreen and conventional bonds-focusing on the European and Chinese green bond markets. It\ninvestigates the impa",
+      "publisher": "European Academy of Sciences Ltd",
+      "year": 2025,
+      "theme": "green_finance",
+      "doi": "10.51586/2754-6209.2025.13.2(105)",
+      "source": "Crossref",
+      "citations": 0
+    },
+    {
+      "title": "Role of Bill of Lading in Export Import Trade with AI Integration",
+      "summary": "<jats:p>How AI is changing the world of Export and import.Bill of Lading a document acts as a receipt in shipment through cargos.</jats:p>",
+      "publisher": "Elsevier BV",
+      "year": 2026,
+      "theme": "trade",
+      "doi": "10.2139/ssrn.6636218",
+      "source": "Crossref",
+      "citations": 0
     }
   ],
   "dataSources": []
