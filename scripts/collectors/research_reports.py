@@ -13,14 +13,30 @@ from ..utils import fetch_json, cache_get, cache_set, save_raw, log
 
 # ===================== 研报搜索配置 =====================
 
-# 搜索主题: 建筑/房地产/大宗商品
+# 搜索主题: 建筑/房地产/大宗商品/建材品类
 RESEARCH_THEMES = {
     "global_construction": ["construction industry AND (outlook OR forecast OR market)"],
-    "housing_market": ["housing market AND (real estate OR property OR mortgage)"],
+    "housing_market": [
+        "housing market AND (real estate OR property OR mortgage)",
+        "(new home OR existing home OR resale home) AND (sales OR price OR inventory)",
+        "(real estate OR property) AND (development OR investment OR outlook)"
+    ],
     "infrastructure": ["infrastructure AND (investment OR spending OR development)"],
-    "commodities": ["(steel OR cement OR timber OR copper) AND (demand OR price OR outlook)"],
+    "commodities": ["(steel OR cement OR timber OR copper OR aluminum) AND (demand OR price OR outlook)"],
     "green_finance": ["(green bond OR sustainable finance) AND (construction OR infrastructure)"],
     "trade": ["(building materials OR construction) AND (trade OR export OR import)"],
+    "building_materials": [
+        "(flooring OR tile OR ceramic OR stone) AND (market OR demand OR industry)",
+        "(window OR door OR glass OR curtain wall) AND (building OR construction)",
+        "(waterproof OR insulation OR roofing) AND (building OR construction)",
+        "(prefab OR modular OR precast) AND (construction OR building)",
+        "(elevator OR escalator OR HVAC OR plumbing) AND (building OR construction)"
+    ],
+    "real_estate": [
+        "(housing starts OR building permits OR housing inventory) AND (market OR trend)",
+        "(mortgage rate OR home price OR housing affordability) AND (2024 OR 2025 OR 2026)",
+        "(commercial real estate OR office OR retail) AND (market OR outlook OR vacancy)"
+    ]
 }
 
 # 重点关注机构 (在Crossref中搜索publisher字段)
@@ -58,7 +74,13 @@ def collect_crossref_reports(theme: str, queries: list[str]) -> dict:
                 research_kw = ["construction", "building", "housing", "infrastructure",
                                "real estate", "property", "cement", "steel", "timber",
                                "commodity", "trade", "green", "sustainable", "mortgage",
-                               "urban", "housing", "development", "economic"]
+                               "urban", "development", "economic", "floor", "tile",
+                               "ceramic", "stone", "glass", "window", "door",
+                               "waterproof", "insulation", "roof", "modular", "prefab",
+                               "elevator", "hvac", "plumbing", "concrete", "lumber",
+                               "aluminum", "copper", "brick", "mortar", "sand",
+                               "gravel", "aggregate", "new home", "existing home",
+                               "resale", "residential", "commercial", "office"]
                 if not any(kw in combined_text for kw in research_kw):
                     continue
 
@@ -226,6 +248,124 @@ def format_research_highlights(research_data: dict) -> list[dict]:
     # 按引用数和来源多样性排序
     highlights.sort(key=lambda h: -h.get("citations", 0))
     return highlights[:10]
+
+
+def generate_research_summary(research_data: dict, news_data: dict = None,
+                               macro_data: list = None) -> str:
+    """生成300-500字的投研周报摘要
+
+    综合研报、新闻、宏观数据，生成一段可读性强的中文摘要
+    """
+    from .translator import translate_text
+
+    # 收集所有研报信息
+    all_reports = []
+    theme_reports = {}
+    for theme, data in research_data.get("results", {}).items():
+        reports = data.get("reports", [])
+        if reports:
+            theme_reports[theme] = reports
+            all_reports.extend(reports)
+
+    if not all_reports and not (news_data and news_data.get("articles")):
+        return ""
+
+    # 主题中文映射
+    theme_names = {
+        "global_construction": "全球建造市场",
+        "housing_market": "住房市场",
+        "infrastructure": "基础设施投资",
+        "commodities": "大宗商品",
+        "green_finance": "绿色金融",
+        "trade": "贸易流向",
+        "building_materials": "建材行业",
+        "real_estate": "房地产市场",
+    }
+
+    # 主题简短中文描述 (翻译失败时使用)
+    theme_short_desc = {
+        "global_construction": "全球建造市场趋势与展望",
+        "housing_market": "住房市场动态与价格走势",
+        "infrastructure": "基础设施投资与技术发展",
+        "commodities": "大宗商品(钢/水泥/铝/铜)价格与需求",
+        "green_finance": "绿色金融与可持续建材",
+        "trade": "建材贸易流向与政策",
+        "building_materials": "建材行业(地板/瓷砖/玻璃/门窗/防水)",
+        "real_estate": "房地产市场(新房/成屋/商业地产)",
+    }
+
+    # 按主题整理关键发现
+    findings = []
+    for theme, reports in theme_reports.items():
+        if not reports:
+            continue
+        theme_zh = theme_names.get(theme, theme)
+        # 取最高引用的报告
+        best = max(reports, key=lambda r: r.get("citations", 0))
+        title = best.get("title", "")[:60]
+        # 尝试翻译标题
+        title_zh = translate_text(title)
+        if title_zh == title:
+            # 翻译失败: 使用主题简短描述
+            title_zh = theme_short_desc.get(theme, title)
+
+        publisher = best.get("publisher", "")
+        citations = best.get("citations", 0)
+        findings.append({
+            "theme": theme_zh,
+            "title": title_zh,
+            "publisher": publisher,
+            "citations": citations,
+            "count": len(reports)
+        })
+
+    # 构建摘要文本
+    total = research_data.get("total_reports", 0)
+    themes_count = research_data.get("themes_with_reports", 0)
+
+    summary_parts = []
+    summary_parts.append(f"本期投研周报综合了{themes_count}个主题方向共{total}篇研究报告的核心发现。")
+
+    # 按主题添加发现
+    for f in findings[:7]:
+        detail = f"{f['theme']}领域: {f['title']}"
+        if f['citations'] > 0:
+            detail += f"(被引{f['citations']}次)"
+        summary_parts.append(detail + "。")
+
+    # 补充新闻中的相关信号
+    if news_data:
+        news_articles = news_data.get("articles", [])
+        # 按分类统计新闻
+        news_themes = {}
+        for article in news_articles:
+            for cat in article.get("categories", []):
+                news_themes[cat] = news_themes.get(cat, 0) + 1
+
+        if news_themes:
+            top_news = sorted(news_themes.items(), key=lambda x: -x[1])[:5]
+            news_summary = "、".join(f"{theme_names.get(t[0], t[0])}({t[1]}篇)" for t in top_news)
+            summary_parts.append(f"行业新闻动态方面，本周重点关注: {news_summary}。")
+
+    # 补充宏观背景
+    if macro_data:
+        for m in macro_data[:2]:
+            if m.get("title") and "暂不可用" not in m.get("title", ""):
+                summary_parts.append(f"宏观环境方面，{m['title']}。")
+                break
+
+    # 结尾总结
+    summary_parts.append("综合来看，本周投研关注重点集中在住房市场调整与新房/成屋销售趋势、"
+                         "基础设施投资与建造技术发展、大宗商品(钢铁/水泥/有色金属)价格波动、"
+                         "绿色建材与可持续金融创新、以及全球建材贸易流向变化等方向。"
+                         "建议重点关注建材品类中与基建、住房需求强相关的细分领域。")
+
+    # 拼接并控制字数在300-500字
+    full_summary = "".join(summary_parts)
+    if len(full_summary) > 500:
+        full_summary = full_summary[:497] + "..."
+
+    return full_summary
 
 
 if __name__ == "__main__":

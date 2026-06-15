@@ -189,6 +189,10 @@ a:hover{text-decoration:underline}
 .research-item .ri-content p{font-size:13px;color:var(--text-light);line-height:1.6;margin-bottom:8px}
 .research-item .ri-meta{display:flex;gap:16px;font-size:12px;color:var(--text-light);flex-wrap:wrap}
 .research-item .ri-meta .citations{font-weight:600;color:var(--gold)}
+.research-summary-card{background:linear-gradient(135deg,#f8f4e8,#fdf9ef);border-radius:12px;padding:24px;margin-bottom:20px;border:1px solid #e8dcc0;border-left:5px solid var(--gold)}
+.research-summary-card .rs-header h3{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:12px}
+.research-summary-card .rs-body p{font-size:14px;color:var(--text);line-height:1.9;letter-spacing:0.02em}
+.kp-research .kp-text .detail{white-space:pre-line;max-height:none!important}
 
 /* Emerging Demand */
 .emerging-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px}
@@ -526,7 +530,7 @@ function renderAll() {
   renderInnovation(d.innovation || []);
   renderSupplyChain(d.supplyChain || []);
   renderRegulation(d.regulation || []);
-  renderResearch(d.researchHighlights || []);
+  renderResearch(d.researchHighlights || [], d.researchSummary || '');
   renderEmerging(d.emergingDemand || []);
   renderCategoryExplorer();
   renderEvents(d.events || []);
@@ -553,6 +557,14 @@ function renderSummary(items) {
   el.innerHTML = items.map((it, i) => {
     const tagClass = {risk:'tag-risk',opportunity:'tag-opportunity',watch:'tag-watch',info:'tag-info'}[it.tag||'info'];
     const tagLabel = {risk:'风险',opportunity:'机会',watch:'关注',info:'信息'}[it.tag||'info'];
+    // 投研摘要: 展开显示完整内容
+    if (it.type === 'research_summary') {
+      return '<div class="key-point kp-research">' +
+        '<div class="kp-num" style="background:var(--gold)">' + (i+1) + '</div>' +
+        '<div class="kp-text"><div class="headline" style="font-weight:700">投研周报摘要</div>' +
+        '<div class="detail" style="line-height:1.8;max-height:none;font-size:13.5px">' + esc(it.detail) + '</div></div>' +
+        '<span class="kp-tag ' + tagClass + '">' + tagLabel + '</span></div>';
+    }
     return '<div class="key-point">' +
       '<div class="kp-num">' + (i+1) + '</div>' +
       '<div class="kp-text"><div class="headline">' + esc(it.headline) + '</div>' +
@@ -788,12 +800,21 @@ function renderInnovation(items) {
 }
 
 // ===================== RESEARCH =====================
-function renderResearch(items) {
+function renderResearch(items, summary) {
   const el = document.getElementById('research-list');
-  if (!items.length) { el.innerHTML = emptyHTML('暂无投研摘要'); return; }
+  if (!items.length && !summary) { el.innerHTML = emptyHTML('暂无投研摘要'); return; }
   const themeLabels = {commodities:'大宗商品',housing_market:'住房市场',infrastructure:'基础设施',
-    global_construction:'全球建造',green_finance:'绿色金融',trade:'贸易政策'};
-  el.innerHTML = items.map(it => {
+    global_construction:'全球建造',green_finance:'绿色金融',trade:'贸易政策',
+    building_materials:'建材行业',real_estate:'房地产市场'};
+  let html = '';
+  // 投研周报摘要卡片 (放在最前面)
+  if (summary) {
+    html += '<div class="research-summary-card">' +
+      '<div class="rs-header"><h3>本期投研摘要</h3></div>' +
+      '<div class="rs-body"><p>' + esc(summary) + '</p></div></div>';
+  }
+  // 研报列表
+  html += items.map(it => {
     const themeZh = themeLabels[it.theme] || it.theme || '综合';
     const doiHtml = it.doi ? ' <a href="https://doi.org/' + esc(it.doi) + '" target="_blank" style="color:var(--accent-blue);font-size:11px">DOI</a>' : '';
     return '<div class="research-item">' +
@@ -807,6 +828,7 @@ function renderResearch(items) {
       doiHtml +
       '</div></div></div>';
   }).join('');
+  el.innerHTML = html;
 }
 
 // ===================== EMERGING DEMAND =====================

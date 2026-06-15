@@ -31,7 +31,7 @@ from scripts.collectors.events_calendar import collect_events_calendar, format_e
 
 # P3 imports
 from scripts.collectors.innovation import collect_all_innovation, format_innovation_items
-from scripts.collectors.research_reports import collect_all_research, format_research_highlights
+from scripts.collectors.research_reports import collect_all_research, format_research_highlights, generate_research_summary
 from scripts.collectors.emerging_demand import detect_emerging_demands, format_emerging_demands
 
 from scripts.utils import save_raw, log, fmt_number
@@ -123,6 +123,10 @@ def run_pipeline():
     # 投研报告 (Crossref多主题)
     research_data = collect_all_research()
     research_highlights = format_research_highlights(research_data)
+    # 生成投研周报摘要 (300-500字)
+    research_summary = generate_research_summary(
+        research_data, news_data=news_data, macro_data=[macro_article]
+    )
 
     # 新兴需求探测 (交叉分析P1社交信号 + P2新闻)
     emerging_data = detect_emerging_demands(news_data=news_data, social_data=social_data)
@@ -163,6 +167,16 @@ def run_pipeline():
     key_takeaways = []
 
     # === 行业影响类 (放上面) ===
+
+    # 投研周报摘要 → 综合300-500字分析
+    if research_summary:
+        # 用固定headline, detail保留完整摘要
+        key_takeaways.append({
+            "headline": f"投研周报: 综合{research_data.get('themes_with_reports',0)}大方向{research_data.get('total_reports',0)}篇报告核心发现",
+            "detail": research_summary,
+            "tag": "watch",
+            "type": "research_summary"
+        })
 
     # 社交趋势热点 → 产品需求信号
     if product_trends:
@@ -228,7 +242,7 @@ def run_pipeline():
             "tag": "risk"
         })
 
-    key_takeaways = key_takeaways[:5]
+    key_takeaways = key_takeaways[:6]
 
     # 供应面板块合并
     supply_chain = []
@@ -293,6 +307,7 @@ def run_pipeline():
         "events": events_list,
         "emergingDemand": emerging_items,
         "researchHighlights": research_highlights,
+        "researchSummary": research_summary,
         "dataSources": []
     }
 
@@ -317,6 +332,8 @@ def run_pipeline():
     log.info(f"  Events: {len(events_list)} upcoming")
     log.info(f"  Innovation items: {len(innovation_items)} ({innovation_data.get('topics_with_papers',0)} topics)")
     log.info(f"  Research highlights: {len(research_highlights)}")
+    if research_summary:
+        log.info(f"  Research summary: {len(research_summary)} chars")
     log.info(f"  Emerging demands: {len(emerging_items)} ({emerging_data.get('strong_signals',0)} strong)")
     log.info(f"  Sources: {', '.join(sources_parts) if sources_parts else 'none'}")
     log.info(f"{'='*60}")

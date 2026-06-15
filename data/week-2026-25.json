@@ -4,8 +4,14 @@
   "title": "建材行业全球资讯期刊",
   "tagline": "Global Building Materials Weekly Intelligence Report",
   "coverage": "25 国家 | 35 品类 | 207+ HS编码",
-  "sources": "FRED(9/9央行) + World Bank(25国) + SCFI + BDI + EUR-Lex(0条) + RSS(46篇/8源) + Events(13场) + Academia(10主题) + Research(23篇) + Emerging(0强信号)",
+  "sources": "FRED(9/9央行) + World Bank(25国) + SCFI + BDI + EUR-Lex(0条) + RSS(46篇/8源) + Events(13场) + Academia(10主题) + Research(71篇) + Emerging(0强信号)",
   "keyTakeaways": [
+    {
+      "headline": "投研周报: 综合7大方向71篇报告核心发现",
+      "detail": "本期投研周报综合了7个主题方向共71篇研究报告的核心发现。住房市场领域: 住房市场动态与价格走势(被引2次)。基础设施投资领域: 基础设施投资与技术发展。大宗商品领域: 大宗商品(钢/水泥/铝/铜)价格与需求(被引11次)。绿色金融领域: 绿色金融与可持续建材。贸易流向领域: 建材贸易流向与政策(被引2次)。建材行业领域: 建材行业(地板/瓷砖/玻璃/门窗/防水)(被引10次)。房地产市场领域: 房地产市场(新房/成屋/商业地产)(被引1次)。行业新闻动态方面，本周重点关注: commodity(10篇)、macro(10篇)、regulation(8篇)、房地产市场(8篇)、supply_chain(7篇)。宏观环境方面，美联储维持利率3.62%不变。综合来看，本周投研关注重点集中在住房市场调整与新房/成屋销售趋势、基础设施投资与建造技术发展、大宗商品(钢铁/水泥/有色金属)价格波动、绿色建材与可持续金融创新、以及全球建材贸易流向变化等方向。建议重点关注建材品类中与基建、住房需求强相关的细分领域。",
+      "tag": "watch",
+      "type": "research_summary"
+    },
     {
       "headline": "'自修复混凝土'搜索热度增长96%",
       "detail": "利用细菌或微胶囊技术实现混凝土裂缝自修复。荷兰代尔夫特理工大学和比利时Ghent大学技术领先。可延长基础设施寿命50%+，降低全生命周期成本。",
@@ -13,7 +19,7 @@
     },
     {
       "headline": "美联储维持利率3.62%不变",
-      "detail": "联邦基金有效利率3.62%。10年期国债收益率N/A%。全球央行: 欧央行(ECB) 2.00%; 英央行(BOE) 3.73%; 日央行(BOJ) 0.73%; 澳联储(RBA) 4.10%; 加央行(BOC) 2.25%。对建材行业影响...",
+      "detail": "联邦基金有效利率3.62%。10年期国债收益率4.45%。全球央行: 欧央行(ECB) 2.00%; 英央行(BOE) 3.73%; 日央行(BOJ) 0.73%; 澳联储(RBA) 4.10%; 加央行(BOC) 2.25%。对建材行业影...",
       "tag": "watch"
     },
     {
@@ -26,7 +32,7 @@
     {
       "tag": "央行政策",
       "title": "美联储维持利率3.62%不变",
-      "summary": "联邦基金有效利率3.62%。10年期国债收益率N/A%。全球央行: 欧央行(ECB) 2.00%; 英央行(BOE) 3.73%; 日央行(BOJ) 0.73%; 澳联储(RBA) 4.10%; 加央行(BOC) 2.25%。对建材行业影响: 利率变动通过房贷利率和建筑融资成本传导至房地产投资和新开工。",
+      "summary": "联邦基金有效利率3.62%。10年期国债收益率4.45%。全球央行: 欧央行(ECB) 2.00%; 英央行(BOE) 3.73%; 日央行(BOJ) 0.73%; 澳联储(RBA) 4.10%; 加央行(BOC) 2.25%。对建材行业影响: 利率变动通过房贷利率和建筑融资成本传导至房地产投资和新开工。",
       "source": "FRED / 各国央行",
       "link": "https://fred.stlouisfed.org/series/FEDFUNDS",
       "date": "2026-06-11",
@@ -1999,6 +2005,36 @@
   ],
   "researchHighlights": [
     {
+      "title": "Positive effects of sulfates on performance of cement paste incorporating low-gr",
+      "summary": "Elsevier BV journal-article (2025)",
+      "publisher": "Elsevier BV",
+      "year": 2025,
+      "theme": "commodities",
+      "doi": "10.1016/j.cemconcomp.2025.106134",
+      "source": "Crossref",
+      "citations": 11
+    },
+    {
+      "title": "Enabling scalable Model Predictive Control design for building HVAC systems usin",
+      "summary": "Elsevier BV journal-article (2025)",
+      "publisher": "Elsevier BV",
+      "year": 2025,
+      "theme": "building_materials",
+      "doi": "10.1016/j.autcon.2024.105929",
+      "source": "Crossref",
+      "citations": 10
+    },
+    {
+      "title": "Thermal performance of precast concrete sandwich walls with a double-layer insul",
+      "summary": "Elsevier BV journal-article (2025)",
+      "publisher": "Elsevier BV",
+      "year": 2025,
+      "theme": "building_materials",
+      "doi": "10.1016/j.conbuildmat.2025.140785",
+      "source": "Crossref",
+      "citations": 9
+    },
+    {
       "title": "OECD Steel Outlook 2025",
       "summary": "OECD Publishing book (2025)",
       "publisher": "OECD Publishing",
@@ -2039,6 +2075,16 @@
       "citations": 1
     },
     {
+      "title": "The Impacts of Housing Price Regulation on the Real Estate Market: Micro Evidenc",
+      "summary": "Elsevier BV posted-content (2025)",
+      "publisher": "Elsevier BV",
+      "year": 2025,
+      "theme": "real_estate",
+      "doi": "10.2139/ssrn.5530640",
+      "source": "Crossref",
+      "citations": 1
+    },
+    {
       "title": "Assessing the role of Fintech, technological infrastructure, and macroeconomic s",
       "summary": "<jats:p>Type of the article: Research ArticleAbstractThis study examined per capita spending as a key indicator of domestic-level economic activity and households’ financial involvement, both of which",
       "publisher": "LLC CPC Business Perspectives",
@@ -2057,47 +2103,8 @@
       "doi": "10.4324/9781032712031-36",
       "source": "Crossref",
       "citations": 0
-    },
-    {
-      "title": "OECD Steel Outlook 2026",
-      "summary": "OECD Publishing book (2026)",
-      "publisher": "OECD Publishing",
-      "year": 2026,
-      "theme": "commodities",
-      "doi": "10.1787/99ab9b0c-en",
-      "source": "Crossref",
-      "citations": 0
-    },
-    {
-      "title": "Green Concrete for Sustainable Infrastructure Development",
-      "summary": "CRC Press book-chapter (2025)",
-      "publisher": "CRC Press",
-      "year": 2025,
-      "theme": "green_finance",
-      "doi": "10.1201/9781003617594-4",
-      "source": "Crossref",
-      "citations": 0
-    },
-    {
-      "title": "THE GREEN BOND AND SUSTAINABLE FINANCE MARKET. THE GREEN BOND PREMIUM: EVIDENCE ",
-      "summary": "<jats:p>This study examines the determinants of greenium – the yield differential between\ngreen and conventional bonds-focusing on the European and Chinese green bond markets. It\ninvestigates the impa",
-      "publisher": "European Academy of Sciences Ltd",
-      "year": 2025,
-      "theme": "green_finance",
-      "doi": "10.51586/2754-6209.2025.13.2(105)",
-      "source": "Crossref",
-      "citations": 0
-    },
-    {
-      "title": "Role of Bill of Lading in Export Import Trade with AI Integration",
-      "summary": "<jats:p>How AI is changing the world of Export and import.Bill of Lading a document acts as a receipt in shipment through cargos.</jats:p>",
-      "publisher": "Elsevier BV",
-      "year": 2026,
-      "theme": "trade",
-      "doi": "10.2139/ssrn.6636218",
-      "source": "Crossref",
-      "citations": 0
     }
   ],
+  "researchSummary": "本期投研周报综合了7个主题方向共71篇研究报告的核心发现。住房市场领域: 住房市场动态与价格走势(被引2次)。基础设施投资领域: 基础设施投资与技术发展。大宗商品领域: 大宗商品(钢/水泥/铝/铜)价格与需求(被引11次)。绿色金融领域: 绿色金融与可持续建材。贸易流向领域: 建材贸易流向与政策(被引2次)。建材行业领域: 建材行业(地板/瓷砖/玻璃/门窗/防水)(被引10次)。房地产市场领域: 房地产市场(新房/成屋/商业地产)(被引1次)。行业新闻动态方面，本周重点关注: commodity(10篇)、macro(10篇)、regulation(8篇)、房地产市场(8篇)、supply_chain(7篇)。宏观环境方面，美联储维持利率3.62%不变。综合来看，本周投研关注重点集中在住房市场调整与新房/成屋销售趋势、基础设施投资与建造技术发展、大宗商品(钢铁/水泥/有色金属)价格波动、绿色建材与可持续金融创新、以及全球建材贸易流向变化等方向。建议重点关注建材品类中与基建、住房需求强相关的细分领域。",
   "dataSources": []
 }
