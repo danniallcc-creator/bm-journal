@@ -1,4 +1,4 @@
-"""周报生成管道 (P0 + P1) - 汇总全部自动化采集数据
+"""周报生成管道 (P0 + P1 + P2) - 汇总全部自动化采集数据
 运行: python -m scripts.weekly_pipeline
 """
 import json, sys, os
@@ -21,6 +21,11 @@ from scripts.collectors.real_estate import (
 from scripts.collectors.shipping import collect_all_shipping, format_supply_chain_table
 from scripts.collectors.social_signals import collect_all_social_signals, format_product_trends
 from scripts.collectors.trade_flow import collect_all_trade_flows, format_trade_summary
+
+# P2 imports
+from scripts.collectors.regulation import collect_all_regulations, format_regulation_items
+from scripts.collectors.news_aggregator import collect_all_news, format_news_articles
+from scripts.collectors.events_calendar import collect_events_calendar, format_events_list
 
 from scripts.utils import save_raw, log, fmt_number
 from scripts.config import COUNTRIES_BY_REGION
@@ -81,6 +86,26 @@ def run_pipeline():
     # UN Comtrade 贸易流
     trade_data = collect_all_trade_flows()
     trade_tables = format_trade_summary(trade_data)
+
+    # ============================================================
+    # P2: 监管法规 + 新闻聚合 + 事件日历
+    # ============================================================
+    log.info("--- P2: Regulation, news & events ---")
+
+    # 监管与合规
+    reg_data = collect_all_regulations()
+    regulation_items = format_regulation_items(reg_data)
+
+    # 新闻聚合 (RSS多源)
+    news_data = collect_all_news()
+    news_sections = format_news_articles(news_data)
+
+    # 事件日历
+    events_data = collect_events_calendar()
+    events_list = format_events_list(events_data)
+
+    # 将新闻文章合并到macro板块
+    news_macro_articles = news_sections.get("macro", [])
 
     # ============================================================
     # 组装周报JSON
@@ -190,6 +215,15 @@ def run_pipeline():
         sources_parts.append("Google Trends")
     if trade_data.get("status") == "ok":
         sources_parts.append(f"UN Comtrade({trade_data.get('categories_collected',0)}品类)")
+    if reg_data.get("eu_regulations", {}).get("status") == "ok":
+        sources_parts.append(f"EUR-Lex({reg_data.get('eu_regulations',{}).get('relevant_count',0)}条)")
+    if news_data.get("status") == "ok":
+        sources_parts.append(f"RSS({news_data.get('relevant_count',0)}篇/{news_data.get('sources_ok',0)}源)")
+    if events_data.get("status") == "ok":
+        sources_parts.append(f"Events({events_data.get('total',0)}场)")
+
+    # macro板块: P0央行 + P2新闻中的宏观文章
+    macro_articles = [macro_article] + news_macro_articles[:3]
 
     # 最终JSON
     week_data = {
@@ -200,13 +234,13 @@ def run_pipeline():
         "coverage": f"{len(country_metrics)} 国家 | 35 品类 | 207+ HS编码",
         "sources": " + ".join(sources_parts) if sources_parts else "数据采集完成",
         "keyTakeaways": key_takeaways,
-        "macro": [macro_article],
+        "macro": macro_articles,
         "regional": regional,
         "trends": product_trends,
         "supplyChain": supply_chain,
-        "regulation": [],
-        "innovation": [],
-        "events": [],
+        "regulation": regulation_items,
+        "innovation": news_sections.get("innovation", []),
+        "events": events_list,
         "dataSources": []
     }
 
@@ -220,10 +254,13 @@ def run_pipeline():
     log.info(f"{'='*60}")
     log.info(f"Weekly report saved: {output_file.relative_to(ROOT)}")
     log.info(f"  Key takeaways: {len(key_takeaways)}")
-    log.info(f"  Macro articles: 1")
+    log.info(f"  Macro articles: {len(macro_articles)}")
     log.info(f"  Countries: {len(country_metrics)}")
     log.info(f"  Product trends: {len(product_trends)}")
     log.info(f"  Supply chain tables: {len(supply_chain)}")
+    log.info(f"  Regulation items: {len(regulation_items)}")
+    log.info(f"  News articles: {news_data.get('relevant_count',0)} ({news_data.get('sources_ok',0)} sources)")
+    log.info(f"  Events: {len(events_list)} upcoming")
     log.info(f"  Sources: {', '.join(sources_parts) if sources_parts else 'none'}")
     log.info(f"{'='*60}")
 

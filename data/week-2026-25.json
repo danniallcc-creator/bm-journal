@@ -4,7 +4,7 @@
   "title": "建材行业全球资讯期刊",
   "tagline": "Global Building Materials Weekly Intelligence Report",
   "coverage": "25 国家 | 35 品类 | 207+ HS编码",
-  "sources": "World Bank(25国) + SCFI + BDI",
+  "sources": "World Bank(25国) + SCFI + BDI + EUR-Lex(0条) + RSS(37篇/7源) + Events(13场)",
   "keyTakeaways": [],
   "macro": [
     {
@@ -14,6 +14,27 @@
       "source": "FRED",
       "date": "2026-06-15",
       "impact": 0
+    },
+    {
+      "tag": "宏观 / 供应链",
+      "title": "How the Hormuz crisis is pushing the Gulf states toward greater resilience",
+      "summary": "<p>The blockade has sent ripples across the world’s supply chains but, while all eyes are on the price of oil, Gulf states are developing a more resilient infrastructure strategy. Coming&#8230;</p>\n<p",
+      "source": "Global Construction Review",
+      "link": "https://www.globalconstructionreview.com/how-the-hormuz-crisis-is-pushing-the-gulf-states-toward-greater-resilience/"
+    },
+    {
+      "tag": "宏观 / 房地产",
+      "title": "The timing tax: How America’s rent calendar punishes the workers it should protect",
+      "summary": "Millions of American renters face a structural \"timing tax\" when fixed rent due dates clash with their misaligned or unpredictable income schedules. By implementing flexible payment infrastructure, pr",
+      "source": "HousingWire",
+      "link": "https://www.housingwire.com/articles/rent-timing-tax-workers/"
+    },
+    {
+      "tag": "宏观 / 房地产",
+      "title": "Why housing demand is up and inventory is down in 2026",
+      "summary": "Pending sales rose to 75,856 vs 72,039 in 2025 as inventory turned negative year over year with mortgage rates near 6.58%.",
+      "source": "HousingWire",
+      "link": "https://www.housingwire.com/articles/housing-demand-inventory-2026pending-sales-rose-to-75856-vs-72039-in-2025-as-inventory-turned-negative-year-over-year-with-mortgage-rates-near-6-58/"
     }
   ],
   "regional": {
@@ -769,8 +790,211 @@
       ]
     }
   ],
-  "regulation": [],
-  "innovation": [],
-  "events": [],
+  "regulation": [
+    {
+      "title": "7-Drawer Dressers Recalled Due to Risk of Serious Injury or Death from Tip-Over ",
+      "summary": "This recall involves Hasuit 7-Drawer Dressers. The recalled dressers have seven drawers, are made of wood and come in black. They are 27.6 inches wide, 44.5 inches tall, 15.8 inches long and weigh 102",
+      "tag": "warn",
+      "source": "US CPSC",
+      "link": "https://www.cpsc.gov/Recalls/2026/7-Drawer-Dressers-Recalled-Du-to-Risk-of-Serious-Injury-or-Death-from-Tip-Over-and-Entrapment-Hazards-Violate-Mandatory-Standard-for-Clothing-Storage-Units-Sold-on-Amazon-com-by-Hasuit-Direct",
+      "date": "2026-06-11T00:00:00"
+    },
+    {
+      "title": "Hopelight Adult Portable Bed Rails Recalled Due to Risk of Serious Injury or Dea",
+      "summary": "This recall involves Hopelight adult portable bed rails. The bed rail comes in silver and black, measure 11.5 inches wide by 23.5 inches tall, is made of metal and weighs 4 pounds. It has the model nu",
+      "tag": "warn",
+      "source": "US CPSC",
+      "link": "https://www.cpsc.gov/Recalls/2026/Hopelight-Adult-Portable-Bed-Rails-Recalled-Due-to-Risk-of-Serious-Injury-or-Death-from-Entrapment-and-Asphyxiation-Violates-Mandatory-Standard-for-Adult-Portable-Bed-Rails-Sold-on-Amazon-by-MOCCI-SHOP",
+      "date": "2026-06-11T00:00:00"
+    },
+    {
+      "title": "Kawasaki Motors USA Recalls Model Year 2026 Teryx4 H2 and Teryx5 H2 Recreational",
+      "summary": "This recall involves Model Year 2026 Kawasaki Teryx4 H2 and Teryx5 H2 recreational off-road vehicles with the following model numbers: KRT1000D, KRT1000F and KRT1000G. Each unit has a unique VIN numbe",
+      "tag": "warn",
+      "source": "US CPSC",
+      "link": "https://www.cpsc.gov/Recalls/2026/Kawasaki-Motors-USA-Recalls-Model-Year-2026-Teryx4-H2-and-Teryx5-H2-Recreational-Off-Road-Vehicles-Due-to-Impact-and-Injury-Hazards",
+      "date": "2026-06-11T00:00:00"
+    }
+  ],
+  "innovation": [
+    {
+      "tag": "创新",
+      "title": "Bechtel to build $100bn semiconductor plant, biggest in US",
+      "summary": "<p>Micron Technology has picked Bechtel to build the first phase of what’s billed as the US’ biggest semiconductor plant in Clay, New York. Bechtel will use digital-enabled construction technologies, ",
+      "source": "Global Construction Review",
+      "link": "https://www.globalconstructionreview.com/bechtel-to-build-100bn-semiconductor-plant-biggest-in-us/"
+    }
+  ],
+  "events": [
+    {
+      "name": "FOMC利率决议",
+      "date": "2026-06-17",
+      "location": "美联储",
+      "type": "central_bank",
+      "importance": "high",
+      "days_away": 2,
+      "categories": [
+        "货币政策",
+        "利率"
+      ],
+      "website": ""
+    },
+    {
+      "name": "BOJ利率决议",
+      "date": "2026-06-18",
+      "location": "日本央行",
+      "type": "central_bank",
+      "importance": "high",
+      "days_away": 3,
+      "categories": [
+        "货币政策",
+        "利率"
+      ],
+      "website": ""
+    },
+    {
+      "name": "BOE利率决议",
+      "date": "2026-06-18",
+      "location": "英国央行",
+      "type": "central_bank",
+      "importance": "high",
+      "days_away": 3,
+      "categories": [
+        "货币政策",
+        "利率"
+      ],
+      "website": ""
+    },
+    {
+      "name": "LPR报价",
+      "date": "2026-06-20",
+      "location": "中国人民银行",
+      "type": "central_bank",
+      "importance": "high",
+      "days_away": 5,
+      "categories": [
+        "货币政策",
+        "利率"
+      ],
+      "website": ""
+    },
+    {
+      "name": "LPR报价",
+      "date": "2026-07-20",
+      "location": "中国人民银行",
+      "type": "central_bank",
+      "importance": "high",
+      "days_away": 35,
+      "categories": [
+        "货币政策",
+        "利率"
+      ],
+      "website": ""
+    },
+    {
+      "name": "ECB利率决议",
+      "date": "2026-07-23",
+      "location": "欧洲央行",
+      "type": "central_bank",
+      "importance": "high",
+      "days_away": 38,
+      "categories": [
+        "货币政策",
+        "利率"
+      ],
+      "website": ""
+    },
+    {
+      "name": "FOMC利率决议",
+      "date": "2026-07-29",
+      "location": "美联储",
+      "type": "central_bank",
+      "importance": "high",
+      "days_away": 44,
+      "categories": [
+        "货币政策",
+        "利率"
+      ],
+      "website": ""
+    },
+    {
+      "name": "BOJ利率决议",
+      "date": "2026-07-30",
+      "location": "日本央行",
+      "type": "central_bank",
+      "importance": "high",
+      "days_away": 45,
+      "categories": [
+        "货币政策",
+        "利率"
+      ],
+      "website": ""
+    },
+    {
+      "name": "BOE利率决议",
+      "date": "2026-08-06",
+      "location": "英国央行",
+      "type": "central_bank",
+      "importance": "high",
+      "days_away": 52,
+      "categories": [
+        "货币政策",
+        "利率"
+      ],
+      "website": ""
+    },
+    {
+      "name": "Architct@Expo",
+      "date": "2026-08-15",
+      "location": "上海, 中国",
+      "type": "trade_show",
+      "importance": "medium",
+      "days_away": 61,
+      "categories": [
+        "建筑设计",
+        "建材"
+      ],
+      "website": ""
+    },
+    {
+      "name": "Architct@Expo",
+      "date": "2026-08-17",
+      "location": "上海, 中国",
+      "type": "trade_show",
+      "importance": "medium",
+      "days_away": 63,
+      "categories": [
+        "建筑设计",
+        "建材"
+      ],
+      "website": ""
+    },
+    {
+      "name": "LPR报价",
+      "date": "2026-08-20",
+      "location": "中国人民银行",
+      "type": "central_bank",
+      "importance": "high",
+      "days_away": 66,
+      "categories": [
+        "货币政策",
+        "利率"
+      ],
+      "website": ""
+    },
+    {
+      "name": "ECB利率决议",
+      "date": "2026-09-10",
+      "location": "欧洲央行",
+      "type": "central_bank",
+      "importance": "high",
+      "days_away": 87,
+      "categories": [
+        "货币政策",
+        "利率"
+      ],
+      "website": ""
+    }
+  ],
   "dataSources": []
 }
