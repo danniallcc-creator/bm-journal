@@ -85,24 +85,44 @@ a:hover{text-decoration:underline}
 .impact-low{background:var(--accent-green)}
 .impact-none{background:var(--border)}
 
-/* Country Grid */
-.region-tabs{display:flex;gap:4px;margin-bottom:20px;flex-wrap:wrap}
-.region-tab{padding:8px 16px;border-radius:8px;font-size:13px;cursor:pointer;border:1.5px solid var(--border);background:var(--surface);color:var(--text-light);font-weight:500;transition:all .2s}
-.region-tab:hover{border-color:var(--gold)}
-.region-tab.active{background:var(--navy);color:#fff;border-color:var(--navy)}
-.country-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
-.country-card{background:var(--surface);border-radius:10px;padding:20px;border:1px solid var(--border)}
-.country-card .cc-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
-.country-card .cc-name{font-weight:700;font-size:15px;color:var(--navy)}
-.country-card .cc-flag{font-size:20px}
-.cc-metrics{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.cc-metric{font-size:12px}
-.cc-metric .label{color:var(--text-light)}
-.cc-metric .value{font-weight:600;color:var(--text);font-size:14px}
-.cc-metric .change{font-size:11px;margin-left:4px}
-.cc-metric .change.up{color:var(--accent-green)}
-.cc-metric .change.down{color:var(--accent-red)}
-.cc-comment{margin-top:12px;padding-top:12px;border-top:1px solid var(--border);font-size:13px;color:var(--text-light);line-height:1.6}
+/* Demand Grid */
+.demand-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px}
+.demand-card{background:var(--surface);border-radius:12px;border:1px solid var(--border);overflow:hidden;cursor:pointer;transition:all .25s}
+.demand-card:hover{border-color:var(--gold);box-shadow:0 4px 16px rgba(0,0,0,.06)}
+.demand-card.expanded{border-color:var(--accent-blue);box-shadow:0 4px 20px rgba(41,128,185,.12)}
+.demand-head{padding:20px;display:flex;align-items:center;gap:14px}
+.demand-icon{font-size:28px;width:48px;height:48px;display:flex;align-items:center;justify-content:center;background:#f8f9fa;border-radius:12px;flex-shrink:0}
+.demand-info{flex:1;min-width:0}
+.demand-info h3{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:4px}
+.demand-info p{font-size:12px;color:var(--text-light);line-height:1.5;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.demand-meta{display:flex;align-items:center;gap:12px;margin-top:8px}
+.demand-strength{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:600}
+.strength-bar{width:60px;height:6px;background:var(--border);border-radius:3px;overflow:hidden}
+.strength-fill{height:100%;border-radius:3px;transition:width .4s}
+.strength-fill.high{background:linear-gradient(90deg,#27ae60,#2ecc71)}
+.strength-fill.med{background:linear-gradient(90deg,#f39c12,#f1c40f)}
+.strength-fill.low{background:linear-gradient(90deg,#e74c3c,#c0392b)}
+.demand-cnt{font-size:12px;color:var(--text-light)}
+.demand-expand{font-size:11px;color:var(--accent-blue);font-weight:500;margin-left:auto;white-space:nowrap}
+.demand-detail{padding:0 20px 20px;display:none;border-top:1px solid var(--border)}
+.demand-card.expanded .demand-detail{display:block}
+.demand-card.expanded .demand-expand{color:var(--text-light)}
+.dc-countries{margin-top:14px}
+.dc-country{padding:12px 0;border-bottom:1px solid var(--border)}
+.dc-country:last-child{border-bottom:none}
+.dc-country-head{display:flex;align-items:center;justify-content:space-between}
+.dc-country-name{font-weight:600;font-size:14px;color:var(--navy)}
+.dc-country-name .region-tag{font-size:11px;color:var(--text-light);font-weight:400;margin-left:6px}
+.dc-strength{display:flex;align-items:center;gap:6px}
+.dc-strength-val{font-size:13px;font-weight:700}
+.dc-strength-val.high{color:var(--accent-green)}
+.dc-strength-val.med{color:var(--accent-orange)}
+.dc-strength-val.low{color:var(--accent-red)}
+.dc-reason{font-size:12px;color:var(--text-light);margin-top:4px;line-height:1.5}
+.dc-metrics{display:flex;gap:12px;margin-top:8px;flex-wrap:wrap}
+.dc-metric{font-size:12px;padding:4px 10px;background:#f8f9fa;border-radius:6px}
+.dc-metric .lbl{color:var(--text-light)}
+.dc-metric .val{font-weight:600;color:var(--text);margin-left:4px}
 
 /* Trend Cards */
 .trend-list{display:flex;flex-direction:column;gap:16px}
@@ -256,8 +276,9 @@ a:hover{text-decoration:underline}
   .content{padding:20px!important;max-width:100%!important}
   .report-hero{margin:0!important;padding:24px!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
   .section{page-break-inside:avoid}
-  .article-card,.country-card,.trend-card,.sc-card,.reg-item,.inno-card,.event-item{page-break-inside:avoid}
-  .article-grid,.country-grid,.sc-grid,.inno-grid{grid-template-columns:1fr 1fr!important}
+  .article-card,.country-card,.trend-card,.sc-card,.reg-item,.inno-card,.event-item,.demand-card{page-break-inside:avoid}
+  .article-grid,.country-grid,.demand-grid,.sc-grid,.inno-grid{grid-template-columns:1fr 1fr!important}
+  .demand-detail{display:block!important}
   body{font-size:12px}
   .cat-explorer{page-break-before:always}
   @page{margin:1.5cm;size:A4}
@@ -268,7 +289,7 @@ a:hover{text-decoration:underline}
   .content{padding:20px}
   .cat-body{grid-template-columns:1fr}
   .trend-card{grid-template-columns:1fr}
-  .article-grid,.country-grid,.sc-grid,.inno-grid{grid-template-columns:1fr}
+  .article-grid,.country-grid,.demand-grid,.sc-grid,.inno-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -343,14 +364,13 @@ a:hover{text-decoration:underline}
       <div class="article-grid" id="macro-grid"></div>
     </div>
 
-    <!-- Section 2: Regional -->
+    <!-- Section 2: Regional & Country Analysis (Demand-Driven) -->
     <div class="section" id="regional">
       <div class="section-header">
         <div class="num">2</div>
-        <h2>区域与国别分析<span class="en">Regional & Country Analysis</span></h2>
+        <h2>区域与国别分析<span class="en">Demand-Driven Regional Analysis</span></h2>
       </div>
-      <div class="region-tabs" id="region-tabs"></div>
-      <div class="country-grid" id="country-grid"></div>
+      <div class="demand-grid" id="demand-grid"></div>
     </div>
 
     <!-- Section 3: Product Trends -->
@@ -495,7 +515,11 @@ function renderAll() {
   renderHero(d);
   renderSummary(d.keyTakeaways || []);
   renderMacro(d.macro || []);
-  renderRegional(d.regional || {});
+  if (d.demandView && d.demandView.length) {
+    renderDemandView(d.demandView);
+  } else {
+    renderRegional(d.regional || {});
+  }
   renderTrends(d.trends || []);
   renderSupplyChain(d.supplyChain || []);
   renderRegulation(d.regulation || []);
@@ -577,13 +601,68 @@ function articleCard(it) {
     '<span>' + esc(it.date||'') + '</span></div></div>';
 }
 
-// ===================== REGIONAL =====================
+// ===================== REGIONAL (Demand-Driven) =====================
+function renderDemandView(demands) {
+  const el = document.getElementById('demand-grid');
+  if (!demands || !demands.length) { el.innerHTML = emptyHTML('暂无需求分析数据'); return; }
+
+  // Filter out demands with no countries
+  const active = demands.filter(d => d.country_count > 0);
+  if (!active.length) { el.innerHTML = emptyHTML('暂无需求分析数据'); return; }
+
+  el.innerHTML = active.map((d, i) => {
+    const sClass = d.total_strength >= 70 ? 'high' : d.total_strength >= 40 ? 'med' : 'low';
+    const countries = (d.countries || []).map(c => {
+      const csClass = c.strength >= 70 ? 'high' : c.strength >= 40 ? 'med' : 'low';
+      const metrics = Object.entries(c.metrics || {}).map(([lbl, val]) =>
+        '<span class="dc-metric"><span class="lbl">' + esc(lbl) + '</span><span class="val">' + esc(val) + '</span></span>'
+      ).join('');
+      return '<div class="dc-country">' +
+        '<div class="dc-country-head">' +
+          '<span class="dc-country-name">' + esc(c.name) + '<span class="region-tag">' + esc(c.region) + '</span></span>' +
+          '<div class="dc-strength"><div class="strength-bar" style="width:40px"><div class="strength-fill ' + csClass + '" style="width:' + c.strength + '%"></div></div>' +
+          '<span class="dc-strength-val ' + csClass + '">' + c.strength + '%</span></div>' +
+        '</div>' +
+        '<div class="dc-reason">' + esc(c.reason) + '</div>' +
+        (metrics ? '<div class="dc-metrics">' + metrics + '</div>' : '') +
+        '</div>';
+    }).join('');
+
+    return '<div class="demand-card" onclick="toggleDemand(this)">' +
+      '<div class="demand-head">' +
+        '<div class="demand-icon">' + esc(d.icon) + '</div>' +
+        '<div class="demand-info">' +
+          '<h3>' + esc(d.name) + '</h3>' +
+          '<p>' + esc(d.desc) + '</p>' +
+          '<div class="demand-meta">' +
+            '<div class="demand-strength">' +
+              '<div class="strength-bar"><div class="strength-fill ' + sClass + '" style="width:' + d.total_strength + '%"></div></div>' +
+              '<span>' + d.total_strength + '%</span>' +
+            '</div>' +
+            '<span class="demand-cnt">' + d.country_count + '个国家</span>' +
+            '<span class="demand-expand">点击展开 ↓</span>' +
+          '</div>' +
+        '</div>' +
+      '</div>' +
+      '<div class="demand-detail"><div class="dc-countries">' + countries + '</div></div>' +
+    '</div>';
+  }).join('');
+}
+
+function toggleDemand(card) {
+  card.classList.toggle('expanded');
+  const arrow = card.querySelector('.demand-expand');
+  if (arrow) arrow.textContent = card.classList.contains('expanded') ? '收起 ↑' : '点击展开 ↓';
+}
+
+// Keep old functions for backward compatibility
 function renderRegional(data) {
+  // Fallback: if no demandView, render old regional view
   const tabs = document.getElementById('region-tabs');
   const grid = document.getElementById('country-grid');
+  if (!tabs || !grid) return;
   const regions = Object.keys(data);
   if (!regions.length) { grid.innerHTML = emptyHTML('暂无国别数据'); tabs.innerHTML = ''; return; }
-
   tabs.innerHTML = regions.map((r, i) =>
     '<div class="region-tab' + (i===0?' active':'') + '" onclick="switchRegion(this,\'' + r + '\')">' + esc(r) + '</div>'
   ).join('');
@@ -599,6 +678,7 @@ function switchRegion(tab, region) {
 
 function renderCountries(countries) {
   const grid = document.getElementById('country-grid');
+  if (!grid) return;
   grid.innerHTML = countries.map(c => {
     const metrics = (c.metrics||[]).map(m => {
       const chgClass = m.change > 0 ? 'up' : m.change < 0 ? 'down' : '';

@@ -22,6 +22,7 @@ from scripts.collectors.shipping import collect_all_shipping, format_supply_chai
 from scripts.collectors.social_signals import collect_all_social_signals, format_product_trends
 from scripts.collectors.product_trends import synthesize_product_trends
 from scripts.collectors.trade_flow import collect_all_trade_flows, format_trade_summary
+from scripts.collectors.demand_analysis import build_demand_view
 
 # P2 imports
 from scripts.collectors.regulation import collect_all_regulations, format_regulation_items
@@ -155,6 +156,9 @@ def run_pipeline():
             if code in country_metrics:
                 regional[region].append(country_metrics[code])
 
+    # 需求分析: 将国别数据转化为需求驱动视图
+    demand_view = build_demand_view(regional, news_data)
+
     # 核心观点自动生成
     key_takeaways = []
 
@@ -281,6 +285,7 @@ def run_pipeline():
         "keyTakeaways": key_takeaways,
         "macro": macro_articles,
         "regional": regional,
+        "demandView": demand_view.get("demands", []),
         "trends": product_trends,
         "supplyChain": supply_chain,
         "regulation": regulation_items,
@@ -303,6 +308,8 @@ def run_pipeline():
     log.info(f"  Key takeaways: {len(key_takeaways)}")
     log.info(f"  Macro articles: {len(macro_articles)}")
     log.info(f"  Countries: {len(country_metrics)}")
+    demand_active = sum(1 for d in demand_view.get('demands',[]) if d.get('country_count',0) > 0)
+    log.info(f"  Demand types: {demand_active}/6 with country data")
     log.info(f"  Product trends: {len(product_trends)}")
     log.info(f"  Supply chain tables: {len(supply_chain)}")
     log.info(f"  Regulation items: {len(regulation_items)}")
