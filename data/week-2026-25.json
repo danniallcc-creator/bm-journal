@@ -7,6 +7,11 @@
   "sources": "FRED(9/9央行) + World Bank(25国) + SCFI + BDI + EUR-Lex(0条) + RSS(28篇/6源) + Events(13场) + Academia(10主题) + Research(23篇) + Emerging(0强信号)",
   "keyTakeaways": [
     {
+      "headline": "'自修复混凝土'搜索热度增长96%",
+      "detail": "利用细菌或微胶囊技术实现混凝土裂缝自修复。荷兰代尔夫特理工大学和比利时Ghent大学技术领先。可延长基础设施寿命50%+，降低全生命周期成本。",
+      "tag": "opportunity"
+    },
+    {
       "headline": "美联储维持利率3.62%不变",
       "detail": "联邦基金有效利率3.62%。10年期国债收益率4.45%。全球央行: 欧央行(ECB) 2.00%; 英央行(BOE) 3.73%; 日央行(BOJ) 0.73%; 澳联储(RBA) 4.10%; 加央行(BOC) 2.25%。对建材行业影...",
       "tag": "watch"
@@ -15,11 +20,6 @@
       "headline": "美国Case-Shiller房价同比上涨0.7%",
       "detail": "全美指数329.938。房价趋势影响翻新和新建投资。",
       "tag": "info"
-    },
-    {
-      "headline": "'自修复混凝土'搜索热度增长96%",
-      "detail": "利用细菌或微胶囊技术实现混凝土裂缝自修复。荷兰代尔夫特理工大学和比利时Ghent大学技术领先。可延长基础设施寿命50%+，降低全生命周期成本。",
-      "tag": "opportunity"
     }
   ],
   "macro": [

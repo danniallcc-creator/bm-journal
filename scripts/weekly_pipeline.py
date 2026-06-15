@@ -158,7 +158,21 @@ def run_pipeline():
     # 核心观点自动生成
     key_takeaways = []
 
-    # 央行
+    # === 行业影响类 (放上面) ===
+
+    # 社交趋势热点 → 产品需求信号
+    if product_trends:
+        top_trend = product_trends[0]
+        signals = top_trend.get("socialSignals", [])
+        if signals:
+            best_growth = max(s.get("growth", 0) for s in signals)
+            key_takeaways.append({
+                "headline": f"'{top_trend['name']}'搜索热度增长{best_growth:.0f}%",
+                "detail": top_trend.get("description", ""),
+                "tag": "opportunity"
+            })
+
+    # 央行 → 影响融资成本和地产投资
     if macro_article.get("title") and "暂不可用" not in macro_article.get("title", ""):
         tag = "opportunity" if "降息" in macro_article["title"] else (
             "risk" if "加息" in macro_article["title"] else "watch"
@@ -169,7 +183,9 @@ def run_pipeline():
             "tag": tag
         })
 
-    # 美国房价
+    # === 数据与事件类 (放下面) ===
+
+    # 美国房价 (Case-Shiller指数)
     cs_yoy = us_data.get("case_shiller", {}).get("national", {}).get("yoy")
     if cs_yoy is not None:
         d = "上涨" if cs_yoy > 0 else "下跌"
@@ -207,18 +223,6 @@ def run_pipeline():
             "detail": f"当前{scfi_comp['value']:.0f}，集装箱运费波动直接影响建材出口成本。",
             "tag": "risk"
         })
-
-    # 社交趋势热点
-    if product_trends:
-        top_trend = product_trends[0]
-        signals = top_trend.get("socialSignals", [])
-        if signals:
-            best_growth = max(s.get("growth", 0) for s in signals)
-            key_takeaways.append({
-                "headline": f"'{top_trend['name']}'搜索热度增长{best_growth:.0f}%",
-                "detail": top_trend.get("description", ""),
-                "tag": "opportunity"
-            })
 
     key_takeaways = key_takeaways[:5]
 
