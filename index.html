@@ -152,6 +152,44 @@ a:hover{text-decoration:underline}
 .stage-pilot{background:#fff3e0;color:#f39c12}
 .stage-commercial{background:#e8f5e9;color:#27ae60}
 .inno-card p{font-size:13px;color:var(--text-light);line-height:1.6}
+.inno-card .inno-meta{display:flex;gap:12px;margin-top:10px;font-size:12px;color:var(--text-light)}
+.inno-card .inno-meta .cite{font-weight:600;color:var(--gold)}
+.inno-card .inno-meta .doi a{color:var(--accent-blue);font-size:11px}
+
+/* Research Highlights */
+.research-list{display:flex;flex-direction:column;gap:12px}
+.research-item{background:var(--surface);border-radius:10px;padding:20px;border:1px solid var(--border);display:flex;gap:16px;align-items:flex-start}
+.research-item .ri-badge{background:var(--navy);color:var(--gold);padding:4px 10px;border-radius:8px;font-size:11px;font-weight:600;flex-shrink:0;min-width:50px;text-align:center}
+.research-item .ri-content{flex:1}
+.research-item .ri-content h4{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:4px;line-height:1.5}
+.research-item .ri-content p{font-size:13px;color:var(--text-light);line-height:1.6;margin-bottom:8px}
+.research-item .ri-meta{display:flex;gap:16px;font-size:12px;color:var(--text-light);flex-wrap:wrap}
+.research-item .ri-meta .citations{font-weight:600;color:var(--gold)}
+
+/* Emerging Demand */
+.emerging-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px}
+.emerging-card{background:var(--surface);border-radius:10px;padding:24px;border:1px solid var(--border);border-top:4px solid var(--accent-orange)}
+.emerging-card.strong{border-top-color:var(--accent-red)}
+.emerging-card.medium{border-top-color:var(--accent-orange)}
+.emerging-card.weak{border-top-color:var(--accent-blue)}
+.emerging-card h4{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:4px}
+.emerging-card .em-strength{font-size:11px;padding:2px 8px;border-radius:10px;font-weight:600;display:inline-block;margin-bottom:10px}
+.emerging-card .em-strength.s-strong{background:#fde8e8;color:var(--accent-red)}
+.emerging-card .em-strength.s-medium{background:#fff3e0;color:var(--accent-orange)}
+.emerging-card .em-strength.s-weak{background:#e3f2fd;color:var(--accent-blue)}
+.emerging-card p{font-size:13px;color:var(--text-light);line-height:1.6;margin-bottom:10px}
+.emerging-card .em-signals{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+.emerging-card .em-signals span{font-size:11px;padding:2px 8px;background:var(--bg);border-radius:8px;color:var(--text-light)}
+.emerging-card .em-articles{border-top:1px solid var(--border);padding-top:10px;margin-top:4px}
+.emerging-card .em-articles .em-article{font-size:12px;color:var(--text-light);padding:3px 0;display:flex;justify-content:space-between}
+.emerging-card .em-articles .em-article .em-src{color:var(--accent-blue);font-weight:500}
+
+/* News */
+.news-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px}
+.news-card{background:var(--surface);border-radius:10px;padding:20px;border:1px solid var(--border)}
+.news-card .nc-cat{font-size:11px;font-weight:600;padding:2px 8px;border-radius:10px;display:inline-block;margin-bottom:8px}
+.news-card h4{font-size:14px;font-weight:600;color:var(--navy);margin-bottom:6px;line-height:1.5}
+.news-card .nc-meta{font-size:12px;color:var(--text-light);display:flex;justify-content:space-between}
 
 /* Category Explorer */
 .cat-explorer{background:var(--surface);border-radius:12px;border:1px solid var(--border);overflow:hidden}
@@ -249,13 +287,15 @@ a:hover{text-decoration:underline}
     <a href="#supplychain"><span class="icon">4</span>供应链与贸易</a>
     <a href="#regulation"><span class="icon">5</span>监管与ESG</a>
     <a href="#innovation"><span class="icon">6</span>技术创新</a>
+    <a href="#research"><span class="icon">7</span>投研摘要</a>
+    <a href="#emerging"><span class="icon">8</span>新兴需求</a>
     <div class="group-label">工具</div>
-    <a href="#categories"><span class="icon">7</span>品类浏览器</a>
-    <a href="#events"><span class="icon">8</span>事件日历</a>
-    <a href="#sources"><span class="icon">9</span>数据源管理</a>
+    <a href="#categories"><span class="icon">9</span>品类浏览器</a>
+    <a href="#events"><span class="icon">10</span>事件日历</a>
+    <a href="#sources"><span class="icon">11</span>数据源管理</a>
   </div>
   <div class="sidebar-footer">
-    &copy; 2025 BM Global Journal<br>数据更新至 <span id="footer-date"></span>
+    &copy; 2026 BM Global Journal<br>数据更新至 <span id="footer-date"></span>
   </div>
 </nav>
 
@@ -347,10 +387,28 @@ a:hover{text-decoration:underline}
       <div class="inno-grid" id="inno-grid"></div>
     </div>
 
+    <!-- Section 7: Research Highlights -->
+    <div class="section" id="research">
+      <div class="section-header">
+        <div class="num">7</div>
+        <h2>投研摘要<span class="en">Research Highlights</span></h2>
+      </div>
+      <div class="research-list" id="research-list"></div>
+    </div>
+
+    <!-- Section 8: Emerging Demand -->
+    <div class="section" id="emerging">
+      <div class="section-header">
+        <div class="num">8</div>
+        <h2>新兴需求<span class="en">Emerging Demand Signals</span></h2>
+      </div>
+      <div class="emerging-list" id="emerging-list"></div>
+    </div>
+
     <!-- Category Explorer -->
     <div class="section" id="categories">
       <div class="section-header">
-        <div class="num">7</div>
+        <div class="num">9</div>
         <h2>品类浏览器<span class="en">Category Explorer</span></h2>
       </div>
       <div class="cat-explorer">
@@ -376,7 +434,7 @@ a:hover{text-decoration:underline}
     <!-- Events Calendar -->
     <div class="section" id="events">
       <div class="section-header">
-        <div class="num">8</div>
+        <div class="num">10</div>
         <h2>事件日历<span class="en">Events Calendar</span></h2>
       </div>
       <div class="events-list" id="events-list"></div>
@@ -385,7 +443,7 @@ a:hover{text-decoration:underline}
     <!-- Data Sources -->
     <div class="section" id="sources">
       <div class="section-header">
-        <div class="num">9</div>
+        <div class="num">11</div>
         <h2>数据源管理<span class="en">Data Sources</span></h2>
       </div>
       <div class="ds-grid" id="ds-grid"></div>
@@ -403,7 +461,7 @@ async function init() {
   try {
     const [taxRes, dataRes] = await Promise.all([
       fetch('data/taxonomy.json').then(r => r.ok ? r.json() : null).catch(() => null),
-      fetch('data/week-2025-24.json').then(r => r.ok ? r.json() : null).catch(() => null)
+      fetch('data/week-2026-25.json').then(r => r.ok ? r.json() : null).catch(() => null)
     ]);
     if (taxRes) TAXONOMY = taxRes;
     if (dataRes) WEEK_DATA = dataRes;
@@ -422,10 +480,15 @@ function renderAll() {
   document.getElementById('footer-date').textContent = d.date || '';
   document.getElementById('topbar-date').textContent = d.date || '';
   document.getElementById('issue-num').textContent = 'ISSUE #' + String(d.issue || 1).padStart(3, '0');
+
+  const countryCount = d.regional ? Object.values(d.regional).reduce((s,r) => s + (r||[]).length, 0) : 0;
+  const cbCount = d.macro ? d.macro.filter(m => m.tag === '央行政策').length : 0;
   document.getElementById('topbar-stats').textContent =
     (d.macro ? d.macro.length : 0) + ' 条宏观 | ' +
-    (d.regional ? Object.keys(d.regional).reduce((s,r) => s + (d.regional[r]||[]).length, 0) : 0) + ' 国别 | ' +
-    (d.trends ? d.trends.length : 0) + ' 趋势';
+    countryCount + ' 国别 | ' +
+    (d.supplyChain ? d.supplyChain.reduce((s,t) => s + (t.data||[]).length, 0) : 0) + ' 商品指标 | ' +
+    (d.innovation ? d.innovation.length : 0) + ' 论文 | ' +
+    (d.events ? d.events.length : 0) + ' 事件';
 
   renderHero(d);
   renderSummary(d.keyTakeaways || []);
@@ -435,6 +498,8 @@ function renderAll() {
   renderSupplyChain(d.supplyChain || []);
   renderRegulation(d.regulation || []);
   renderInnovation(d.innovation || []);
+  renderResearch(d.researchHighlights || []);
+  renderEmerging(d.emergingDemand || []);
   renderCategoryExplorer();
   renderEvents(d.events || []);
   renderDataSources(d.dataSources || []);
@@ -591,14 +656,17 @@ function renderRegulation(items) {
   const el = document.getElementById('reg-list');
   if (!items.length) { el.innerHTML = emptyHTML('暂无监管动态'); return; }
   el.innerHTML = items.map(it => {
-    const iconClass = it.type === 'esg' ? 'reg-esg' : it.type === 'standard' ? 'reg-std' : 'reg-warn';
-    const icon = it.type === 'esg' ? 'E' : it.type === 'standard' ? 'S' : '!';
+    const t = it.type || it.tag || 'standard';
+    const iconClass = t === 'esg' ? 'reg-esg' : t === 'standard' ? 'reg-std' : 'reg-warn';
+    const icon = t === 'esg' ? 'E' : t === 'standard' ? 'S' : '!';
     const tags = (it.tags||[]).map(t => '<span>' + esc(t) + '</span>').join('');
+    const sourceLabel = it.source ? '<span style="color:var(--accent-blue);font-weight:500">' + esc(it.source) + '</span>' : '';
+    const linkHtml = it.link ? '<a href="' + esc(it.link) + '" target="_blank" style="font-size:11px;margin-left:8px">详情</a>' : '';
     return '<div class="reg-item">' +
       '<div class="reg-icon ' + iconClass + '">' + icon + '</div>' +
       '<div class="reg-content"><h4>' + esc(it.title) + '</h4>' +
-      '<p>' + esc(it.summary) + '</p>' +
-      '<div class="reg-tags">' + tags + '</div></div></div>';
+      '<p>' + esc((it.summary||'').substring(0,200)) + (it.summary && it.summary.length > 200 ? '...' : '') + '</p>' +
+      '<div class="reg-tags">' + sourceLabel + linkHtml + tags + '</div></div></div>';
   }).join('');
 }
 
@@ -607,10 +675,59 @@ function renderInnovation(items) {
   const el = document.getElementById('inno-grid');
   if (!items.length) { el.innerHTML = emptyHTML('暂无创新动态'); return; }
   el.innerHTML = items.map(it => {
-    const stageClass = it.stage === '商业化' ? 'stage-commercial' : it.stage === '试点' ? 'stage-pilot' : 'stage-lab';
+    const stageGuess = (it.paper_count||0) >= 8 ? '商业化' : (it.paper_count||0) >= 4 ? '试点' : '研发';
+    const stageClass = stageGuess === '商业化' ? 'stage-commercial' : stageGuess === '试点' ? 'stage-pilot' : 'stage-lab';
+    const doiHtml = it.doi ? '<span class="doi"><a href="https://doi.org/' + esc(it.doi) + '" target="_blank">DOI</a></span>' : '';
     return '<div class="inno-card"><h4>' + esc(it.title) + '</h4>' +
-      '<span class="inno-stage ' + stageClass + '">' + esc(it.stage||'研发') + '</span>' +
-      '<p>' + esc(it.summary) + '</p></div>';
+      '<span class="inno-stage ' + stageClass + '">' + esc(it.topic || it.title.split(':')[0]) + '</span>' +
+      '<p>' + esc(it.summary) + '</p>' +
+      '<div class="inno-meta">' +
+      (it.paper_count ? '<span>' + it.paper_count + ' 篇论文</span>' : '') +
+      doiHtml +
+      '<span>' + esc(it.source||'') + '</span></div></div>';
+  }).join('');
+}
+
+// ===================== RESEARCH =====================
+function renderResearch(items) {
+  const el = document.getElementById('research-list');
+  if (!items.length) { el.innerHTML = emptyHTML('暂无投研摘要'); return; }
+  const themeLabels = {commodities:'大宗商品',housing_market:'住房市场',infrastructure:'基础设施',
+    global_construction:'全球建造',green_finance:'绿色金融',trade:'贸易政策'};
+  el.innerHTML = items.map(it => {
+    const themeZh = themeLabels[it.theme] || it.theme || '综合';
+    const doiHtml = it.doi ? ' <a href="https://doi.org/' + esc(it.doi) + '" target="_blank" style="color:var(--accent-blue);font-size:11px">DOI</a>' : '';
+    return '<div class="research-item">' +
+      '<div class="ri-badge">' + esc(themeZh) + '</div>' +
+      '<div class="ri-content"><h4>' + esc(it.title) + '</h4>' +
+      '<p>' + esc(it.summary||'') + '</p>' +
+      '<div class="ri-meta">' +
+      '<span>' + esc(it.publisher||'') + '</span>' +
+      '<span>' + (it.year||'') + '</span>' +
+      (it.citations ? '<span class="citations">被引 ' + it.citations + '</span>' : '') +
+      doiHtml +
+      '</div></div></div>';
+  }).join('');
+}
+
+// ===================== EMERGING DEMAND =====================
+function renderEmerging(items) {
+  const el = document.getElementById('emerging-list');
+  if (!items.length) { el.innerHTML = emptyHTML('暂无新兴需求信号'); return; }
+  el.innerHTML = items.map(it => {
+    const strength = it.strength || 'weak';
+    const strengthLabel = {strong:'强信号',medium:'中信号',weak:'弱信号'}[strength] || '弱信号';
+    const signals = (it.signal_types||[]).map(s => '<span>' + esc(s) + '</span>').join('');
+    const articles = (it.example_articles||[]).map(a =>
+      '<div class="em-article"><span>' + esc(a.title||'').substring(0,60) + (a.title&&a.title.length>60?'...':'') + '</span><span class="em-src">' + esc(a.source||'') + '</span></div>'
+    ).join('');
+    return '<div class="emerging-card ' + strength + '">' +
+      '<h4>' + esc(it.name) + '</h4>' +
+      '<span class="em-strength s-' + strength + '">' + strengthLabel + ' (x' + (it.signal_count||0) + ')</span>' +
+      '<p>' + esc(it.description||'') + '</p>' +
+      (signals ? '<div class="em-signals">' + signals + '</div>' : '') +
+      (articles ? '<div class="em-articles">' + articles + '</div>' : '') +
+      '</div>';
   }).join('');
 }
 
@@ -673,15 +790,21 @@ function filterCategories() {
 function renderEvents(items) {
   const el = document.getElementById('events-list');
   if (!items.length) { el.innerHTML = emptyHTML('暂无近期事件'); return; }
+  const impColors = {high:'border-left:4px solid var(--accent-red)',medium:'border-left:4px solid var(--accent-orange)',low:''};
   el.innerHTML = items.map(it => {
+    const title = it.title || it.name || '';
     const d = new Date(it.date);
     const months = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
-    const tags = (it.tags||[]).map(t => '<span>' + esc(t) + '</span>').join('');
-    return '<div class="event-item">' +
-      '<div class="event-date"><div class="month">' + months[d.getMonth()] + '</div>' +
-      '<div class="day">' + d.getDate() + '</div></div>' +
-      '<div class="event-info"><h4>' + esc(it.title) + '</h4>' +
-      '<p>' + esc(it.description) + '</p>' +
+    const tags = (it.tags||it.categories||[]).map(t => '<span>' + esc(t) + '</span>').join('');
+    const impStyle = impColors[it.importance] || '';
+    const daysLabel = it.days_away != null ? (it.days_away === 0 ? '今天' : it.days_away + ' 天后') : '';
+    const locationLabel = it.location ? ' · ' + esc(it.location) : '';
+    const desc = it.description || (it.type === 'central_bank' ? '央行利率决议' : '') + locationLabel;
+    return '<div class="event-item" style="' + impStyle + '">' +
+      '<div class="event-date"><div class="month">' + (isNaN(d.getTime()) ? '' : months[d.getMonth()]) + '</div>' +
+      '<div class="day">' + (isNaN(d.getTime()) ? '' : d.getDate()) + '</div></div>' +
+      '<div class="event-info"><h4>' + esc(title) + '</h4>' +
+      '<p>' + esc(desc) + (daysLabel ? ' <span style="color:var(--gold);font-weight:600">(' + daysLabel + ')</span>' : '') + '</p>' +
       '<div class="event-tags">' + tags + '</div></div></div>';
   }).join('');
 }
