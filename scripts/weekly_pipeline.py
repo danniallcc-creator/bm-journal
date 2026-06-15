@@ -20,6 +20,7 @@ from scripts.collectors.real_estate import (
 # P1 imports
 from scripts.collectors.shipping import collect_all_shipping, format_supply_chain_table
 from scripts.collectors.social_signals import collect_all_social_signals, format_product_trends
+from scripts.collectors.product_trends import synthesize_product_trends
 from scripts.collectors.trade_flow import collect_all_trade_flows, format_trade_summary
 
 # P2 imports
@@ -125,6 +126,18 @@ def run_pipeline():
     # 新兴需求探测 (交叉分析P1社交信号 + P2新闻)
     emerging_data = detect_emerging_demands(news_data=news_data, social_data=social_data)
     emerging_items = format_emerging_demands(emerging_data)
+
+    # ============================================================
+    # 产品趋势合成 (从P0-P3已有数据交叉生成, 替代不可用的社交信号)
+    # ============================================================
+    if not product_trends:
+        log.info("--- Synthesizing product trends from pipeline data ---")
+        product_trends = synthesize_product_trends(
+            news_data=news_data,
+            innovation_data=innovation_data,
+            commodity_data=us_data.get("commodities", {}),
+            regional_data=country_metrics
+        )
 
     # 将新闻文章合并到macro板块
     news_macro_articles = news_sections.get("macro", [])

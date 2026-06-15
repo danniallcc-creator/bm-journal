@@ -260,7 +260,7 @@ def format_macro_article(fed_data: dict, all_banks: dict) -> dict:
         "tag": "央行政策",
         "title": title,
         "summary": f"联邦基金有效利率{rate:.2f}%。"
-                   f"10年期国债收益率{fed_data.get('treasury_10y', [{}])[0].get('value', 'N/A')}%。"
+                   f"10年期国债收益率{next((t.get('value','N/A') for t in fed_data.get('treasury_10y',[])), 'N/A')}%。"
                    f"全球央行: {global_summary}。"
                    f"对建材行业影响: 利率变动通过房贷利率和建筑融资成本传导至房地产投资和新开工。",
         "source": "FRED / 各国央行",

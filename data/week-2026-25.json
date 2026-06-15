@@ -15,6 +15,11 @@
       "headline": "美国Case-Shiller房价同比上涨0.7%",
       "detail": "全美指数329.938。房价趋势影响翻新和新建投资。",
       "tag": "info"
+    },
+    {
+      "headline": "'自修复混凝土'搜索热度增长96%",
+      "detail": "利用细菌或微胶囊技术实现混凝土裂缝自修复。荷兰代尔夫特理工大学和比利时Ghent大学技术领先。可延长基础设施寿命50%+，降低全生命周期成本。",
+      "tag": "opportunity"
     }
   ],
   "macro": [
@@ -793,7 +798,256 @@
       }
     ]
   },
-  "trends": [],
+  "trends": [
+    {
+      "name": "自修复混凝土",
+      "category": "砖石材料",
+      "description": "利用细菌或微胶囊技术实现混凝土裂缝自修复。荷兰代尔夫特理工大学和比利时Ghent大学技术领先。可延长基础设施寿命50%+，降低全生命周期成本。",
+      "drivers": [
+        "基础设施老化",
+        "维护成本",
+        "寿命延长",
+        "可持续性",
+        "7篇最新论文"
+      ],
+      "socialSignals": [
+        {
+          "platform": "学术论文",
+          "growth": 96
+        },
+        {
+          "platform": "Google",
+          "growth": 30
+        }
+      ],
+      "satisfaction": 10
+    },
+    {
+      "name": "3D打印建筑",
+      "category": "砖石材料",
+      "description": "ICON在美国完成100栋3D打印住宅社区。COBOD在中东获大型政府订单。打印材料以特种水泥基为主，对传统砖石和模板行业形成替代压力。",
+      "drivers": [
+        "人力成本",
+        "设计自由度",
+        "快速建造",
+        "太空探索",
+        "4篇最新论文"
+      ],
+      "socialSignals": [
+        {
+          "platform": "Google",
+          "growth": 55
+        },
+        {
+          "platform": "YouTube",
+          "growth": 85
+        },
+        {
+          "platform": "X",
+          "growth": 45
+        }
+      ],
+      "satisfaction": 15
+    },
+    {
+      "name": "气凝胶保温材料",
+      "category": "隔热材料",
+      "description": "导热系数低至0.015 W/mK，远优于传统EPS/XPS。当前成本为传统材料5-8倍，适用于高端和空间受限场景。全球能效建筑法规趋严推动渗透率提升。",
+      "drivers": [
+        "能效法规",
+        "极端气候",
+        "空间受限场景",
+        "10篇最新论文"
+      ],
+      "socialSignals": [
+        {
+          "platform": "Google",
+          "growth": 40
+        },
+        {
+          "platform": "学术论文",
+          "growth": 100
+        }
+      ],
+      "satisfaction": 20
+    },
+    {
+      "name": "低碳水泥/绿色水泥",
+      "category": "砖石材料",
+      "description": "Heidelberg碳捕集项目投产，Solidia低温烧制水泥获$3亿融资。碳减排幅度30-70%。EU CBAM碳关税和各国碳交易推动传统水泥企业转型。",
+      "drivers": [
+        "碳交易",
+        "CBAM关税",
+        "EPD要求",
+        "绿建认证",
+        "1篇最新论文"
+      ],
+      "socialSignals": [
+        {
+          "platform": "行业新闻",
+          "growth": 70
+        },
+        {
+          "platform": "学术论文",
+          "growth": 58
+        }
+      ],
+      "satisfaction": 20
+    },
+    {
+      "name": "光伏屋面瓦(BIPV)",
+      "category": "建筑工业玻璃",
+      "description": "光伏建筑一体化市场年增速超30%。各国补贴政策(美国IRA、欧洲RePowerEU、中国整县推进)共同推动。隆基、汉瓦等中国厂商加速出海。",
+      "drivers": [
+        "IRA补贴",
+        "RePowerEU",
+        "ESG合规",
+        "电费上涨",
+        "10篇最新论文"
+      ],
+      "socialSignals": [
+        {
+          "platform": "Google",
+          "growth": 55
+        },
+        {
+          "platform": "YouTube",
+          "growth": 70
+        },
+        {
+          "platform": "X",
+          "growth": 35
+        }
+      ],
+      "satisfaction": 25
+    },
+    {
+      "name": "大木结构(CLT)",
+      "category": "木材",
+      "description": "交叉层压木材(CLT)在中低层建筑中替代混凝土和钢材的趋势加速。隐含碳优势获各国绿建认证加分。北美和北欧为主要市场，亚太快速跟进。",
+      "drivers": [
+        "碳减排",
+        "装配式建筑",
+        "美学需求",
+        "防火改良",
+        "5篇最新论文"
+      ],
+      "socialSignals": [
+        {
+          "platform": "Google",
+          "growth": 38
+        },
+        {
+          "platform": "学术论文",
+          "growth": 80
+        },
+        {
+          "platform": "YouTube",
+          "growth": 42
+        }
+      ],
+      "satisfaction": 30
+    },
+    {
+      "name": "整体浴室(Prefab Bathroom)",
+      "category": "浴室和厨房产品",
+      "description": "日本和北欧渗透率高，正向欧美和中国市场扩展。解决施工人力短缺和品质一致性痛点。酒店和长租公寓为主要应用场景。",
+      "drivers": [
+        "人力短缺",
+        "工业化建造",
+        "酒店翻新",
+        "品质一致性"
+      ],
+      "socialSignals": [
+        {
+          "platform": "Google",
+          "growth": 42
+        },
+        {
+          "platform": "YouTube",
+          "growth": 35
+        }
+      ],
+      "satisfaction": 35
+    },
+    {
+      "name": "集装箱/模块化房屋",
+      "category": "活动房屋与钢结构",
+      "description": "可负担住房危机+灵活办公需求驱动。非洲和拉美市场增长最快。模块化建造工厂化率从20%提升至60-80%，对传统施工材料组合产生结构性影响。",
+      "drivers": [
+        "可负担住房",
+        "灵活办公",
+        "灾后安置",
+        "新兴市场",
+        "6篇最新论文"
+      ],
+      "socialSignals": [
+        {
+          "platform": "Google",
+          "growth": 48
+        },
+        {
+          "platform": "YouTube",
+          "growth": 90
+        },
+        {
+          "platform": "Instagram",
+          "growth": 60
+        }
+      ],
+      "satisfaction": 40
+    },
+    {
+      "name": "SPC/LVT石塑地板",
+      "category": "地板及配件",
+      "description": "欧美市场对SPC/LVT地板需求持续增长，替代传统木地板和瓷砖。防水、耐磨、易安装特性契合DIY文化和租房市场。中国出口量同比增15%+。",
+      "drivers": [
+        "DIY文化",
+        "租房市场",
+        "防水需求",
+        "环保替代"
+      ],
+      "socialSignals": [
+        {
+          "platform": "Google",
+          "growth": 65
+        },
+        {
+          "platform": "YouTube",
+          "growth": 80
+        },
+        {
+          "platform": "Amazon",
+          "growth": 50
+        }
+      ],
+      "satisfaction": 45
+    },
+    {
+      "name": "铝幕墙与节能玻璃",
+      "category": "幕墙配件",
+      "description": "全球高层建筑持续增长推动幕墙需求。中东(沙特NEOM)、东南亚为主要增量市场。Low-E玻璃、智能调光玻璃渗透率提升。铝价上涨推动替代材料研发。 铝价格近期上涨1.7%。",
+      "drivers": [
+        "LEED认证",
+        "高层建筑",
+        "节能法规",
+        "中东建设潮",
+        "6篇最新论文",
+        "铝价格上涨1.7%"
+      ],
+      "socialSignals": [
+        {
+          "platform": "Google",
+          "growth": 32
+        },
+        {
+          "platform": "行业新闻",
+          "growth": 55
+        }
+      ],
+      "satisfaction": 60
+    }
+  ],
   "supplyChain": [
     {
       "title": "大宗商品价格追踪 (FRED)",
