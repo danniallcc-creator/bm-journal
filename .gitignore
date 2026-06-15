@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.pyo
+.env
+data/raw/
+.DS_Store
+*.log
+scripts/__pycache__/
+scripts/collectors/__pycache__/
+scripts/aggregators/__pycache__/

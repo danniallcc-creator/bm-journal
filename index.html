@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>建材行业全球资讯期刊 | BM Global Journal</title>
+<style>
+:root{--bg:#f7f8fa;--surface:#fff;--navy:#1a2332;--navy-light:#243447;--gold:#c9a84c;--gold-light:#e8d49b;--text:#2c3e50;--text-light:#6b7c93;--border:#e2e6ed;--accent-red:#e74c3c;--accent-green:#27ae60;--accent-blue:#2980b9;--accent-orange:#f39c12;--sidebar-w:260px;--header-h:64px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'PingFang SC','Microsoft YaHei','Noto Sans SC',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:15px}
+a{color:var(--accent-blue);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* Sidebar */
+.sidebar{position:fixed;top:0;left:0;width:var(--sidebar-w);height:100vh;background:var(--navy);color:#fff;overflow-y:auto;z-index:100;display:flex;flex-direction:column}
+.sidebar-brand{padding:24px 20px 16px;border-bottom:1px solid rgba(255,255,255,.08)}
+.sidebar-brand h1{font-size:18px;font-weight:700;letter-spacing:.5px;color:var(--gold)}
+.sidebar-brand .sub{font-size:12px;color:rgba(255,255,255,.5);margin-top:4px}
+.sidebar-nav{flex:1;padding:12px 0}
+.sidebar-nav a{display:flex;align-items:center;padding:10px 20px;color:rgba(255,255,255,.7);font-size:13.5px;transition:all .2s;border-left:3px solid transparent}
+.sidebar-nav a:hover,.sidebar-nav a.active{color:#fff;background:rgba(255,255,255,.05);border-left-color:var(--gold);text-decoration:none}
+.sidebar-nav a .icon{width:20px;margin-right:10px;text-align:center;font-size:14px;opacity:.6}
+.sidebar-nav .group-label{padding:16px 20px 6px;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.3)}
+.sidebar-footer{padding:16px 20px;border-top:1px solid rgba(255,255,255,.08);font-size:12px;color:rgba(255,255,255,.35)}
+
+/* Main */
+.main{margin-left:var(--sidebar-w);min-height:100vh}
+
+/* Top Bar */
+.topbar{position:sticky;top:0;background:rgba(247,248,250,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 40px;height:var(--header-h);display:flex;align-items:center;justify-content:space-between;z-index:50}
+.topbar-meta{display:flex;align-items:center;gap:16px;font-size:13px;color:var(--text-light)}
+.topbar-meta .badge{background:var(--gold);color:var(--navy);padding:2px 10px;border-radius:12px;font-weight:600;font-size:12px}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:8px 18px;border-radius:6px;font-size:13px;font-weight:600;cursor:pointer;border:none;transition:all .2s}
+.btn-primary{background:var(--navy);color:#fff}
+.btn-primary:hover{background:var(--navy-light)}
+.btn-outline{background:transparent;border:1.5px solid var(--border);color:var(--text)}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+.btn-group{display:flex;gap:8px}
+
+/* Content */
+.content{padding:32px 40px 80px;max-width:1200px}
+.section{margin-bottom:56px;scroll-margin-top:80px}
+.section-header{display:flex;align-items:center;gap:12px;margin-bottom:24px;padding-bottom:12px;border-bottom:2px solid var(--navy)}
+.section-header .num{background:var(--navy);color:var(--gold);width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;flex-shrink:0}
+.section-header h2{font-size:20px;font-weight:700;color:var(--navy)}
+.section-header .en{font-size:13px;color:var(--text-light);margin-left:8px;font-weight:400}
+
+/* Report Header */
+.report-hero{background:linear-gradient(135deg,var(--navy) 0%,#2c3e50 100%);color:#fff;padding:48px 40px;margin:-32px -40px 40px;position:relative;overflow:hidden}
+.report-hero::after{content:'';position:absolute;top:0;right:0;width:300px;height:100%;background:linear-gradient(135deg,transparent 50%,rgba(201,168,76,.1) 100%)}
+.report-hero h1{font-size:28px;font-weight:800;margin-bottom:8px}
+.report-hero .tagline{font-size:15px;color:rgba(255,255,255,.7);margin-bottom:20px}
+.report-hero .meta-row{display:flex;gap:24px;flex-wrap:wrap;font-size:13px;color:rgba(255,255,255,.5)}
+.report-hero .meta-row span{display:flex;align-items:center;gap:4px}
+
+/* Executive Summary */
+.exec-summary{background:var(--surface);border-radius:12px;padding:28px;border:1px solid var(--border);margin-bottom:12px}
+.exec-summary .key-point{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--border)}
+.exec-summary .key-point:last-child{border-bottom:none}
+.exec-summary .kp-num{background:var(--gold);color:var(--navy);width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0;margin-top:2px}
+.exec-summary .kp-text{flex:1}
+.exec-summary .kp-text .headline{font-weight:600;color:var(--navy);margin-bottom:2px}
+.exec-summary .kp-text .detail{font-size:13.5px;color:var(--text-light)}
+.exec-summary .kp-tag{font-size:11px;padding:2px 8px;border-radius:10px;font-weight:600;flex-shrink:0;align-self:flex-start;margin-top:2px}
+.tag-risk{background:#fde8e8;color:var(--accent-red)}
+.tag-opportunity{background:#e8f5e9;color:var(--accent-green)}
+.tag-watch{background:#fff3e0;color:var(--accent-orange)}
+.tag-info{background:#e3f2fd;color:var(--accent-blue)}
+
+/* Article Cards */
+.article-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:20px}
+.article-card{background:var(--surface);border-radius:10px;padding:24px;border:1px solid var(--border);transition:box-shadow .2s}
+.article-card:hover{box-shadow:0 4px 20px rgba(0,0,0,.06)}
+.article-card .card-tag{font-size:11px;font-weight:600;padding:2px 8px;border-radius:10px;display:inline-block;margin-bottom:10px}
+.article-card h3{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:8px;line-height:1.5}
+.article-card .card-body{font-size:13.5px;color:var(--text-light);line-height:1.7;margin-bottom:12px}
+.article-card .card-footer{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--text-light)}
+.article-card .source{color:var(--accent-blue)}
+.impact-bar{display:flex;gap:2px;margin-top:8px}
+.impact-bar span{height:4px;border-radius:2px;flex:1}
+.impact-high{background:var(--accent-red)}
+.impact-med{background:var(--accent-orange)}
+.impact-low{background:var(--accent-green)}
+.impact-none{background:var(--border)}
+
+/* Country Grid */
+.region-tabs{display:flex;gap:4px;margin-bottom:20px;flex-wrap:wrap}
+.region-tab{padding:8px 16px;border-radius:8px;font-size:13px;cursor:pointer;border:1.5px solid var(--border);background:var(--surface);color:var(--text-light);font-weight:500;transition:all .2s}
+.region-tab:hover{border-color:var(--gold)}
+.region-tab.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.country-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.country-card{background:var(--surface);border-radius:10px;padding:20px;border:1px solid var(--border)}
+.country-card .cc-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.country-card .cc-name{font-weight:700;font-size:15px;color:var(--navy)}
+.country-card .cc-flag{font-size:20px}
+.cc-metrics{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.cc-metric{font-size:12px}
+.cc-metric .label{color:var(--text-light)}
+.cc-metric .value{font-weight:600;color:var(--text);font-size:14px}
+.cc-metric .change{font-size:11px;margin-left:4px}
+.cc-metric .change.up{color:var(--accent-green)}
+.cc-metric .change.down{color:var(--accent-red)}
+.cc-comment{margin-top:12px;padding-top:12px;border-top:1px solid var(--border);font-size:13px;color:var(--text-light);line-height:1.6}
+
+/* Trend Cards */
+.trend-list{display:flex;flex-direction:column;gap:16px}
+.trend-card{background:var(--surface);border-radius:10px;padding:24px;border:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.trend-card .tc-left h3{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:6px}
+.trend-card .tc-left .tc-desc{font-size:13.5px;color:var(--text-light);line-height:1.7}
+.trend-card .tc-left .tc-drivers{margin-top:10px;display:flex;flex-wrap:wrap;gap:6px}
+.trend-card .tc-left .tc-drivers span{font-size:11px;padding:2px 8px;background:var(--bg);border-radius:8px;color:var(--text-light)}
+.trend-card .tc-right{display:flex;flex-direction:column;gap:8px}
+.social-signal{display:flex;align-items:center;gap:8px;font-size:12px}
+.social-signal .platform{width:60px;font-weight:600;color:var(--text)}
+.social-signal .bar-bg{flex:1;height:8px;background:var(--bg);border-radius:4px;overflow:hidden}
+.social-signal .bar-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--gold),var(--gold-light))}
+.social-signal .pct{width:48px;text-align:right;font-weight:600;color:var(--gold)}
+.tc-meta{display:flex;gap:12px;margin-top:8px;font-size:11px;color:var(--text-light)}
+.tc-meta .sat{padding:1px 6px;border-radius:6px;font-weight:600}
+.sat-high{background:#e8f5e9;color:#27ae60}
+.sat-med{background:#fff3e0;color:#f39c12}
+.sat-low{background:#fde8e8;color:#e74c3c}
+
+/* Supply Chain */
+.sc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.sc-card{background:var(--surface);border-radius:10px;padding:20px;border:1px solid var(--border)}
+.sc-card h4{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:10px}
+.sc-table{width:100%;border-collapse:collapse;font-size:13px}
+.sc-table th{text-align:left;padding:6px 0;color:var(--text-light);font-weight:500;border-bottom:1px solid var(--border)}
+.sc-table td{padding:6px 0;border-bottom:1px solid rgba(0,0,0,.03)}
+.sc-table .val{font-weight:600}
+.sc-table .chg{font-size:12px}
+
+/* Regulation */
+.reg-list{display:flex;flex-direction:column;gap:12px}
+.reg-item{background:var(--surface);border-radius:10px;padding:20px;border:1px solid var(--border);display:flex;gap:16px}
+.reg-item .reg-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.reg-esg{background:#e8f5e9}
+.reg-std{background:#e3f2fd}
+.reg-warn{background:#fff3e0}
+.reg-item .reg-content h4{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:4px}
+.reg-item .reg-content p{font-size:13px;color:var(--text-light);line-height:1.6}
+.reg-item .reg-tags{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.reg-item .reg-tags span{font-size:11px;padding:2px 8px;background:var(--bg);border-radius:8px;color:var(--text-light)}
+
+/* Innovation */
+.inno-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px}
+.inno-card{background:var(--surface);border-radius:10px;padding:24px;border:1px solid var(--border);border-left:4px solid var(--gold)}
+.inno-card h4{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:6px}
+.inno-card .inno-stage{font-size:11px;padding:2px 8px;border-radius:8px;display:inline-block;margin-bottom:8px;font-weight:600}
+.stage-lab{background:#e3f2fd;color:#2980b9}
+.stage-pilot{background:#fff3e0;color:#f39c12}
+.stage-commercial{background:#e8f5e9;color:#27ae60}
+.inno-card p{font-size:13px;color:var(--text-light);line-height:1.6}
+
+/* Category Explorer */
+.cat-explorer{background:var(--surface);border-radius:12px;border:1px solid var(--border);overflow:hidden}
+.cat-toolbar{padding:16px 20px;border-bottom:1px solid var(--border);display:flex;gap:12px;align-items:center}
+.cat-search{flex:1;padding:8px 14px;border:1.5px solid var(--border);border-radius:8px;font-size:13px;outline:none;transition:border-color .2s}
+.cat-search:focus{border-color:var(--gold)}
+.cat-filter{padding:8px 14px;border:1.5px solid var(--border);border-radius:8px;font-size:13px;outline:none;background:var(--surface);cursor:pointer}
+.cat-body{display:grid;grid-template-columns:280px 1fr;min-height:400px}
+.cat-l2-list{border-right:1px solid var(--border);overflow-y:auto;max-height:600px}
+.cat-l2-item{padding:10px 20px;cursor:pointer;font-size:13px;border-bottom:1px solid rgba(0,0,0,.03);transition:all .15s;display:flex;justify-content:space-between;align-items:center}
+.cat-l2-item:hover{background:var(--bg)}
+.cat-l2-item.active{background:rgba(201,168,76,.08);border-left:3px solid var(--gold);font-weight:600;color:var(--navy)}
+.cat-l2-item .count{font-size:11px;color:var(--text-light);background:var(--bg);padding:1px 6px;border-radius:8px}
+.cat-detail{padding:24px;overflow-y:auto;max-height:600px}
+.cat-detail h3{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:4px}
+.cat-detail .cat-en{font-size:13px;color:var(--text-light);margin-bottom:16px}
+.cat-l3-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px}
+.cat-l3-item{padding:10px 14px;background:var(--bg);border-radius:8px;font-size:13px}
+.cat-l3-item .l3zh{font-weight:500;color:var(--text)}
+.cat-l3-item .l3en{font-size:11px;color:var(--text-light);margin-top:2px}
+.cat-hs{margin-top:20px}
+.cat-hs h4{font-size:14px;font-weight:600;color:var(--navy);margin-bottom:10px}
+.hs-tags{display:flex;flex-wrap:wrap;gap:6px}
+.hs-tag{font-size:12px;padding:4px 10px;background:var(--navy);color:var(--gold-light);border-radius:6px;font-family:'SF Mono',Consolas,monospace;letter-spacing:.5px}
+
+/* Events Calendar */
+.events-list{display:flex;flex-direction:column;gap:10px}
+.event-item{display:flex;gap:16px;align-items:flex-start;background:var(--surface);border-radius:10px;padding:16px 20px;border:1px solid var(--border)}
+.event-date{background:var(--navy);color:var(--gold);padding:8px 12px;border-radius:8px;text-align:center;flex-shrink:0;min-width:60px}
+.event-date .month{font-size:11px;text-transform:uppercase}
+.event-date .day{font-size:20px;font-weight:700;line-height:1.2}
+.event-info h4{font-size:14px;font-weight:600;color:var(--navy);margin-bottom:4px}
+.event-info p{font-size:13px;color:var(--text-light)}
+.event-info .event-tags{display:flex;gap:6px;margin-top:6px}
+.event-info .event-tags span{font-size:11px;padding:2px 8px;background:var(--bg);border-radius:8px;color:var(--text-light)}
+
+/* Data Source Table */
+.ds-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.ds-card{background:var(--surface);border-radius:10px;padding:16px;border:1px solid var(--border)}
+.ds-card h5{font-size:13px;font-weight:700;color:var(--navy);margin-bottom:8px}
+.ds-card .ds-type{font-size:11px;padding:2px 6px;border-radius:6px;display:inline-block;margin-bottom:6px;font-weight:600}
+.ds-auto{background:#e8f5e9;color:#27ae60}
+.ds-semi{background:#fff3e0;color:#f39c12}
+.ds-manual{background:#fde8e8;color:#e74c3c}
+.ds-card p{font-size:12px;color:var(--text-light);line-height:1.5}
+
+/* Empty state */
+.empty-state{text-align:center;padding:40px;color:var(--text-light)}
+.empty-state .es-icon{font-size:36px;margin-bottom:12px;opacity:.3}
+.empty-state p{font-size:14px}
+
+/* Scrollbar */
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:rgba(0,0,0,.12);border-radius:3px}
+::-webkit-scrollbar-thumb:hover{background:rgba(0,0,0,.2)}
+
+/* Print Styles */
+@media print{
+  .sidebar,.topbar,.btn,.cat-toolbar .cat-search,.cat-toolbar .cat-filter{display:none!important}
+  .main{margin-left:0!important}
+  .content{padding:20px!important;max-width:100%!important}
+  .report-hero{margin:0!important;padding:24px!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .section{page-break-inside:avoid}
+  .article-card,.country-card,.trend-card,.sc-card,.reg-item,.inno-card,.event-item{page-break-inside:avoid}
+  .article-grid,.country-grid,.sc-grid,.inno-grid{grid-template-columns:1fr 1fr!important}
+  body{font-size:12px}
+  .cat-explorer{page-break-before:always}
+  @page{margin:1.5cm;size:A4}
+}
+@media(max-width:900px){
+  .sidebar{display:none}
+  .main{margin-left:0}
+  .content{padding:20px}
+  .cat-body{grid-template-columns:1fr}
+  .trend-card{grid-template-columns:1fr}
+  .article-grid,.country-grid,.sc-grid,.inno-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- Sidebar -->
+<nav class="sidebar">
+  <div class="sidebar-brand">
+    <h1>BM Global Journal</h1>
+    <div class="sub">建材行业全球资讯期刊</div>
+  </div>
+  <div class="sidebar-nav">
+    <div class="group-label">本期内容</div>
+    <a href="#summary" class="active"><span class="icon">0</span>核心观点</a>
+    <a href="#macro"><span class="icon">1</span>宏观环境</a>
+    <a href="#regional"><span class="icon">2</span>区域与国别分析</a>
+    <a href="#products"><span class="icon">3</span>产品趋势与需求</a>
+    <a href="#supplychain"><span class="icon">4</span>供应链与贸易</a>
+    <a href="#regulation"><span class="icon">5</span>监管与ESG</a>
+    <a href="#innovation"><span class="icon">6</span>技术创新</a>
+    <div class="group-label">工具</div>
+    <a href="#categories"><span class="icon">7</span>品类浏览器</a>
+    <a href="#events"><span class="icon">8</span>事件日历</a>
+    <a href="#sources"><span class="icon">9</span>数据源管理</a>
+  </div>
+  <div class="sidebar-footer">
+    &copy; 2025 BM Global Journal<br>数据更新至 <span id="footer-date"></span>
+  </div>
+</nav>
+
+<!-- Main Content -->
+<div class="main">
+  <!-- Top Bar -->
+  <div class="topbar">
+    <div class="topbar-meta">
+      <span class="badge" id="issue-num">ISSUE #001</span>
+      <span id="topbar-date"></span>
+      <span>|</span>
+      <span id="topbar-stats"></span>
+    </div>
+    <div class="btn-group">
+      <button class="btn btn-outline" onclick="window.print()">导出 PDF</button>
+      <button class="btn btn-primary" onclick="refreshData()">刷新数据</button>
+    </div>
+  </div>
+
+  <div class="content">
+    <!-- Report Hero -->
+    <div class="report-hero" id="report-hero">
+      <h1 id="hero-title"></h1>
+      <div class="tagline" id="hero-tagline"></div>
+      <div class="meta-row" id="hero-meta"></div>
+    </div>
+
+    <!-- Executive Summary -->
+    <div class="section" id="summary">
+      <div class="section-header">
+        <div class="num">0</div>
+        <h2>本期核心观点<span class="en">Executive Summary</span></h2>
+      </div>
+      <div class="exec-summary" id="exec-summary"></div>
+    </div>
+
+    <!-- Section 1: Macro -->
+    <div class="section" id="macro">
+      <div class="section-header">
+        <div class="num">1</div>
+        <h2>宏观环境<span class="en">Macro Environment</span></h2>
+      </div>
+      <div class="article-grid" id="macro-grid"></div>
+    </div>
+
+    <!-- Section 2: Regional -->
+    <div class="section" id="regional">
+      <div class="section-header">
+        <div class="num">2</div>
+        <h2>区域与国别分析<span class="en">Regional & Country Analysis</span></h2>
+      </div>
+      <div class="region-tabs" id="region-tabs"></div>
+      <div class="country-grid" id="country-grid"></div>
+    </div>
+
+    <!-- Section 3: Product Trends -->
+    <div class="section" id="products">
+      <div class="section-header">
+        <div class="num">3</div>
+        <h2>产品趋势与需求<span class="en">Product Trends & Demand</span></h2>
+      </div>
+      <div class="trend-list" id="trend-list"></div>
+    </div>
+
+    <!-- Section 4: Supply Chain -->
+    <div class="section" id="supplychain">
+      <div class="section-header">
+        <div class="num">4</div>
+        <h2>供应链与贸易<span class="en">Supply Chain & Trade</span></h2>
+      </div>
+      <div class="sc-grid" id="sc-grid"></div>
+    </div>
+
+    <!-- Section 5: Regulation & ESG -->
+    <div class="section" id="regulation">
+      <div class="section-header">
+        <div class="num">5</div>
+        <h2>监管与ESG<span class="en">Regulation & ESG</span></h2>
+      </div>
+      <div class="reg-list" id="reg-list"></div>
+    </div>
+
+    <!-- Section 6: Innovation -->
+    <div class="section" id="innovation">
+      <div class="section-header">
+        <div class="num">6</div>
+        <h2>技术创新<span class="en">Innovation & Technology</span></h2>
+      </div>
+      <div class="inno-grid" id="inno-grid"></div>
+    </div>
+
+    <!-- Category Explorer -->
+    <div class="section" id="categories">
+      <div class="section-header">
+        <div class="num">7</div>
+        <h2>品类浏览器<span class="en">Category Explorer</span></h2>
+      </div>
+      <div class="cat-explorer">
+        <div class="cat-toolbar">
+          <input class="cat-search" type="text" placeholder="搜索品类名称或HS编码..." id="cat-search-input" oninput="filterCategories()">
+          <select class="cat-filter" id="cat-filter" onchange="filterCategories()">
+            <option value="all">全部品类</option>
+            <option value="hs">有HS编码</option>
+          </select>
+        </div>
+        <div class="cat-body">
+          <div class="cat-l2-list" id="cat-l2-list"></div>
+          <div class="cat-detail" id="cat-detail">
+            <div class="empty-state">
+              <div class="es-icon">&#9664;</div>
+              <p>请从左侧选择一个品类分类</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Events Calendar -->
+    <div class="section" id="events">
+      <div class="section-header">
+        <div class="num">8</div>
+        <h2>事件日历<span class="en">Events Calendar</span></h2>
+      </div>
+      <div class="events-list" id="events-list"></div>
+    </div>
+
+    <!-- Data Sources -->
+    <div class="section" id="sources">
+      <div class="section-header">
+        <div class="num">9</div>
+        <h2>数据源管理<span class="en">Data Sources</span></h2>
+      </div>
+      <div class="ds-grid" id="ds-grid"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ===================== DATA =====================
+let TAXONOMY = {};
+let WEEK_DATA = {};
+
+// ===================== INIT =====================
+async function init() {
+  try {
+    const [taxRes, dataRes] = await Promise.all([
+      fetch('data/taxonomy.json').then(r => r.ok ? r.json() : null).catch(() => null),
+      fetch('data/week-2025-24.json').then(r => r.ok ? r.json() : null).catch(() => null)
+    ]);
+    if (taxRes) TAXONOMY = taxRes;
+    if (dataRes) WEEK_DATA = dataRes;
+  } catch(e) { console.warn('Data load failed, using embedded data:', e); }
+
+  // Fallback embedded data
+  if (!WEEK_DATA.issue) WEEK_DATA = getEmbeddedData();
+  if (!TAXONOMY.categories) TAXONOMY = getEmbeddedTaxonomy();
+
+  renderAll();
+  setupNavigation();
+}
+
+function renderAll() {
+  const d = WEEK_DATA;
+  document.getElementById('footer-date').textContent = d.date || '';
+  document.getElementById('topbar-date').textContent = d.date || '';
+  document.getElementById('issue-num').textContent = 'ISSUE #' + String(d.issue || 1).padStart(3, '0');
+  document.getElementById('topbar-stats').textContent =
+    (d.macro ? d.macro.length : 0) + ' 条宏观 | ' +
+    (d.regional ? Object.keys(d.regional).reduce((s,r) => s + (d.regional[r]||[]).length, 0) : 0) + ' 国别 | ' +
+    (d.trends ? d.trends.length : 0) + ' 趋势';
+
+  renderHero(d);
+  renderSummary(d.keyTakeaways || []);
+  renderMacro(d.macro || []);
+  renderRegional(d.regional || {});
+  renderTrends(d.trends || []);
+  renderSupplyChain(d.supplyChain || []);
+  renderRegulation(d.regulation || []);
+  renderInnovation(d.innovation || []);
+  renderCategoryExplorer();
+  renderEvents(d.events || []);
+  renderDataSources(d.dataSources || []);
+}
+
+// ===================== HERO =====================
+function renderHero(d) {
+  document.getElementById('hero-title').textContent = d.title || '建材行业全球资讯期刊';
+  document.getElementById('hero-tagline').textContent = d.tagline || '';
+  const meta = document.getElementById('hero-meta');
+  meta.innerHTML = [
+    d.date ? '<span>发布日期: ' + d.date + '</span>' : '',
+    d.issue ? '<span>期号: #' + String(d.issue).padStart(3,'0') + '</span>' : '',
+    d.coverage ? '<span>覆盖: ' + d.coverage + '</span>' : '',
+    d.sources ? '<span>数据源: ' + d.sources + '</span>' : ''
+  ].filter(Boolean).join('');
+}
+
+// ===================== EXECUTIVE SUMMARY =====================
+function renderSummary(items) {
+  const el = document.getElementById('exec-summary');
+  if (!items.length) { el.innerHTML = '<div class="empty-state"><p>暂无核心观点</p></div>'; return; }
+  el.innerHTML = items.map((it, i) => {
+    const tagClass = {risk:'tag-risk',opportunity:'tag-opportunity',watch:'tag-watch',info:'tag-info'}[it.tag||'info'];
+    const tagLabel = {risk:'风险',opportunity:'机会',watch:'关注',info:'信息'}[it.tag||'info'];
+    return '<div class="key-point">' +
+      '<div class="kp-num">' + (i+1) + '</div>' +
+      '<div class="kp-text"><div class="headline">' + esc(it.headline) + '</div>' +
+      '<div class="detail">' + esc(it.detail) + '</div></div>' +
+      '<span class="kp-tag ' + tagClass + '">' + tagLabel + '</span></div>';
+  }).join('');
+}
+
+// ===================== MACRO =====================
+function renderMacro(items) {
+  const el = document.getElementById('macro-grid');
+  if (!items.length) { el.innerHTML = emptyHTML('暂无宏观资讯'); return; }
+  el.innerHTML = items.map(it => articleCard(it)).join('');
+}
+
+function articleCard(it) {
+  const tagColors = {
+    '央行政策':'background:#e3f2fd;color:#1565c0',
+    'AI基建':'background:#f3e5f5;color:#7b1fa2',
+    '战后重建':'background:#fff3e0;color:#e65100',
+    '房屋翻新':'background:#e8f5e9;color:#2e7d32',
+    '企业扩产':'background:#e0f7fa;color:#00695c',
+    '财政刺激':'background:#fce4ec;color:#c62828',
+    '人口迁移':'background:#f1f8e9;color:#558b2f',
+    '能源转型':'background:#fff8e1;color:#f57f17',
+    '贸易壁垒':'background:#fbe9e7;color:#bf360c',
+    '地缘政治':'background:#ede7f6;color:#4527a0',
+  };
+  const style = tagColors[it.tag] || 'background:#eceff1;color:#455a64';
+  const impact = it.impact || 0;
+  const bars = [1,2,3,4,5].map(i => {
+    if (i <= impact) return '<span class="impact-high"></span>';
+    if (i <= impact + 1) return '<span class="impact-med"></span>';
+    return '<span class="impact-none"></span>';
+  }).join('');
+  return '<div class="article-card">' +
+    '<span class="card-tag" style="' + style + '">' + esc(it.tag||'资讯') + '</span>' +
+    '<h3>' + esc(it.title) + '</h3>' +
+    '<div class="card-body">' + esc(it.summary) + '</div>' +
+    '<div class="impact-bar">' + bars + '</div>' +
+    '<div class="card-footer"><span class="source">' + esc(it.source||'') + '</span>' +
+    '<span>' + esc(it.date||'') + '</span></div></div>';
+}
+
+// ===================== REGIONAL =====================
+function renderRegional(data) {
+  const tabs = document.getElementById('region-tabs');
+  const grid = document.getElementById('country-grid');
+  const regions = Object.keys(data);
+  if (!regions.length) { grid.innerHTML = emptyHTML('暂无国别数据'); tabs.innerHTML = ''; return; }
+
+  tabs.innerHTML = regions.map((r, i) =>
+    '<div class="region-tab' + (i===0?' active':'') + '" onclick="switchRegion(this,\'' + r + '\')">' + esc(r) + '</div>'
+  ).join('');
+  renderCountries(data[regions[0]] || []);
+  window._regionalData = data;
+}
+
+function switchRegion(tab, region) {
+  document.querySelectorAll('.region-tab').forEach(t => t.classList.remove('active'));
+  tab.classList.add('active');
+  renderCountries(window._regionalData[region] || []);
+}
+
+function renderCountries(countries) {
+  const grid = document.getElementById('country-grid');
+  grid.innerHTML = countries.map(c => {
+    const metrics = (c.metrics||[]).map(m => {
+      const chgClass = m.change > 0 ? 'up' : m.change < 0 ? 'down' : '';
+      const chgText = m.change > 0 ? '+' + m.change : m.change < 0 ? String(m.change) : '';
+      return '<div class="cc-metric"><div class="label">' + esc(m.label) + '</div>' +
+        '<div class="value">' + esc(m.value) +
+        (chgText ? '<span class="change ' + chgClass + '">' + chgText + '</span>' : '') +
+        '</div></div>';
+    }).join('');
+    return '<div class="country-card">' +
+      '<div class="cc-header"><span class="cc-name">' + esc(c.name) + '</span>' +
+      '<span class="cc-flag">' + (c.flag||'') + '</span></div>' +
+      '<div class="cc-metrics">' + metrics + '</div>' +
+      (c.comment ? '<div class="cc-comment">' + esc(c.comment) + '</div>' : '') +
+      '</div>';
+  }).join('');
+}
+
+// ===================== TRENDS =====================
+function renderTrends(items) {
+  const el = document.getElementById('trend-list');
+  if (!items.length) { el.innerHTML = emptyHTML('暂无趋势数据'); return; }
+  el.innerHTML = items.map(it => {
+    const signals = (it.socialSignals||[]).map(s => {
+      const pct = Math.min(100, Math.max(0, s.growth||0));
+      return '<div class="social-signal">' +
+        '<span class="platform">' + esc(s.platform) + '</span>' +
+        '<div class="bar-bg"><div class="bar-fill" style="width:' + pct + '%"></div></div>' +
+        '<span class="pct">' + (s.growth>0?'+':'') + s.growth + '%</span></div>';
+    }).join('');
+    const drivers = (it.drivers||[]).map(d => '<span>' + esc(d) + '</span>').join('');
+    const satClass = (it.satisfaction||0) > 70 ? 'sat-high' : (it.satisfaction||0) > 40 ? 'sat-med' : 'sat-low';
+    const satLabel = (it.satisfaction||0) > 70 ? '供给充足' : (it.satisfaction||0) > 40 ? '部分满足' : '需求缺口';
+    return '<div class="trend-card">' +
+      '<div class="tc-left"><h3>' + esc(it.name) + '</h3>' +
+      '<div class="tc-desc">' + esc(it.description) + '</div>' +
+      '<div class="tc-drivers">' + drivers + '</div></div>' +
+      '<div class="tc-right">' + signals +
+      '<div class="tc-meta"><span class="sat ' + satClass + '">' + satLabel + ' ' + (it.satisfaction||0) + '%</span>' +
+      (it.category ? '<span>品类: ' + esc(it.category) + '</span>' : '') +
+      '</div></div></div>';
+  }).join('');
+}
+
+// ===================== SUPPLY CHAIN =====================
+function renderSupplyChain(items) {
+  const el = document.getElementById('sc-grid');
+  if (!items.length) { el.innerHTML = emptyHTML('暂无供应链数据'); return; }
+  el.innerHTML = items.map(it => {
+    const rows = (it.data||[]).map(r => {
+      const chgClass = r.change > 0 ? 'up' : r.change < 0 ? 'down' : '';
+      const chgText = r.change > 0 ? '+' + r.change + '%' : r.change < 0 ? r.change + '%' : '-';
+      return '<tr><td>' + esc(r.item) + '</td><td class="val">' + esc(r.value) + '</td>' +
+        '<td class="chg"><span class="change ' + chgClass + '">' + chgText + '</span></td></tr>';
+    }).join('');
+    return '<div class="sc-card"><h4>' + esc(it.title) + '</h4>' +
+      '<table class="sc-table"><tr><th>指标</th><th>数值</th><th>变动</th></tr>' + rows + '</table></div>';
+  }).join('');
+}
+
+// ===================== REGULATION =====================
+function renderRegulation(items) {
+  const el = document.getElementById('reg-list');
+  if (!items.length) { el.innerHTML = emptyHTML('暂无监管动态'); return; }
+  el.innerHTML = items.map(it => {
+    const iconClass = it.type === 'esg' ? 'reg-esg' : it.type === 'standard' ? 'reg-std' : 'reg-warn';
+    const icon = it.type === 'esg' ? 'E' : it.type === 'standard' ? 'S' : '!';
+    const tags = (it.tags||[]).map(t => '<span>' + esc(t) + '</span>').join('');
+    return '<div class="reg-item">' +
+      '<div class="reg-icon ' + iconClass + '">' + icon + '</div>' +
+      '<div class="reg-content"><h4>' + esc(it.title) + '</h4>' +
+      '<p>' + esc(it.summary) + '</p>' +
+      '<div class="reg-tags">' + tags + '</div></div></div>';
+  }).join('');
+}
+
+// ===================== INNOVATION =====================
+function renderInnovation(items) {
+  const el = document.getElementById('inno-grid');
+  if (!items.length) { el.innerHTML = emptyHTML('暂无创新动态'); return; }
+  el.innerHTML = items.map(it => {
+    const stageClass = it.stage === '商业化' ? 'stage-commercial' : it.stage === '试点' ? 'stage-pilot' : 'stage-lab';
+    return '<div class="inno-card"><h4>' + esc(it.title) + '</h4>' +
+      '<span class="inno-stage ' + stageClass + '">' + esc(it.stage||'研发') + '</span>' +
+      '<p>' + esc(it.summary) + '</p></div>';
+  }).join('');
+}
+
+// ===================== CATEGORY EXPLORER =====================
+function renderCategoryExplorer() {
+  const cats = TAXONOMY.categories || {};
+  const list = document.getElementById('cat-l2-list');
+  const entries = Object.entries(cats).sort((a,b) => a[1].zh.localeCompare(b[1].zh,'zh'));
+  window._catEntries = entries;
+
+  list.innerHTML = entries.map(([key, val]) => {
+    const total = (val.l3||[]).length + (val.hs_codes||[]).length;
+    return '<div class="cat-l2-item" data-key="' + esc(key) + '" onclick="selectCategory(this,\'' + esc(key) + '\')">' +
+      '<span>' + esc(val.zh) + (val.en ? ' <small style="color:#999">' + esc(val.en) + '</small>' : '') + '</span>' +
+      '<span class="count">' + (val.l3||[]).length + '+' + (val.hs_codes||[]).length + '</span></div>';
+  }).join('');
+}
+
+function selectCategory(el, key) {
+  document.querySelectorAll('.cat-l2-item').forEach(i => i.classList.remove('active'));
+  el.classList.add('active');
+  const cat = (TAXONOMY.categories||{})[key];
+  if (!cat) return;
+  const detail = document.getElementById('cat-detail');
+  const l3html = (cat.l3||[]).map(l =>
+    '<div class="cat-l3-item"><div class="l3zh">' + esc(l.zh) + '</div>' +
+    '<div class="l3en">' + esc(l.en) + '</div></div>'
+  ).join('');
+  const hshtml = (cat.hs_codes||[]).length ?
+    '<div class="cat-hs"><h4>海关HS编码</h4><div class="hs-tags">' +
+    cat.hs_codes.map(c => '<span class="hs-tag">' + esc(c) + '</span>').join('') +
+    '</div></div>' : '';
+  detail.innerHTML = '<h3>' + esc(cat.zh) + '</h3>' +
+    '<div class="cat-en">' + esc(cat.en||'') + ' | 三级品类: ' + (cat.l3||[]).length + ' | HS编码: ' + (cat.hs_codes||[]).length + '</div>' +
+    (l3html ? '<div class="cat-l3-grid">' + l3html + '</div>' : '<p style="color:#999;font-size:13px">暂无三级品类数据</p>') +
+    hshtml;
+}
+
+function filterCategories() {
+  const query = document.getElementById('cat-search-input').value.toLowerCase();
+  const filter = document.getElementById('cat-filter').value;
+  const entries = window._catEntries || [];
+  const items = document.querySelectorAll('.cat-l2-item');
+  items.forEach(item => {
+    const key = item.dataset.key;
+    const cat = (TAXONOMY.categories||{})[key];
+    if (!cat) return;
+    let match = true;
+    if (query) {
+      const searchStr = (cat.zh + ' ' + cat.en + ' ' + (cat.hs_codes||[]).join(' ') +
+        ' ' + (cat.l3||[]).map(l=>l.zh+' '+l.en).join(' ')).toLowerCase();
+      match = searchStr.includes(query);
+    }
+    if (filter === 'hs' && !(cat.hs_codes||[]).length) match = false;
+    item.style.display = match ? '' : 'none';
+  });
+}
+
+// ===================== EVENTS =====================
+function renderEvents(items) {
+  const el = document.getElementById('events-list');
+  if (!items.length) { el.innerHTML = emptyHTML('暂无近期事件'); return; }
+  el.innerHTML = items.map(it => {
+    const d = new Date(it.date);
+    const months = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+    const tags = (it.tags||[]).map(t => '<span>' + esc(t) + '</span>').join('');
+    return '<div class="event-item">' +
+      '<div class="event-date"><div class="month">' + months[d.getMonth()] + '</div>' +
+      '<div class="day">' + d.getDate() + '</div></div>' +
+      '<div class="event-info"><h4>' + esc(it.title) + '</h4>' +
+      '<p>' + esc(it.description) + '</p>' +
+      '<div class="event-tags">' + tags + '</div></div></div>';
+  }).join('');
+}
+
+// ===================== DATA SOURCES =====================
+function renderDataSources(items) {
+  const el = document.getElementById('ds-grid');
+  if (!items.length) {
+    el.innerHTML = renderDefaultSources();
+    return;
+  }
+  el.innerHTML = items.map(it => {
+    const typeClass = it.type === 'auto' ? 'ds-auto' : it.type === 'semi' ? 'ds-semi' : 'ds-manual';
+    const typeLabel = it.type === 'auto' ? '自动化' : it.type === 'semi' ? '半自动' : '人工';
+    return '<div class="ds-card"><h5>' + esc(it.name) + '</h5>' +
+      '<span class="ds-type ' + typeClass + '">' + typeLabel + '</span>' +
+      '<p>' + esc(it.description) + '</p></div>';
+  }).join('');
+}
+
+function renderDefaultSources() {
+  const sources = [
+    {name:'各国央行官网',type:'semi',desc:'Fed/ECB/BOJ/PBOC等利率决议、政策声明、经济展望'},
+    {name:'国际投研机构',type:'semi',desc:'高盛、摩根大通、美银、瑞银、德银、中金、中信等研报'},
+    {name:'Bloomberg / Reuters',type:'semi',desc:'全球财经新闻、大宗商品价格、汇率数据'},
+    {name:'各国统计局',type:'semi',desc:'人口、GDP、CPI、建筑许可证、PMI等官方数据'},
+    {name:'UN Comtrade',type:'auto',desc:'全球贸易流数据、HS编码维度进出口统计'},
+    {name:'Google Trends',type:'auto',desc:'建材相关搜索关键词趋势、地区热度'},
+    {name:'社交平台',type:'semi',desc:'Instagram/YouTube/X/Pinterest建材话题热度与趋势'},
+    {name:'世界银行/IMF',type:'semi',desc:'全球经济展望、各国基建投资数据'},
+    {name:'行业会展',type:'manual',desc:'bauma/Canton Fair/Big 5等行业展会动态'},
+    {name:'各国智库',type:'semi',desc:'BRICS智库、兰德、查塔姆研究所等政策研究'},
+    {name:'权威媒体',type:'semi',desc:'人民日报、财联社、第一财经、日经新闻、联合早报'},
+    {name:'买方卖方报告',type:'manual',desc:'私募/公募/对冲基金/投行研究报告'},
+    {name:'各国海关数据',type:'auto',desc:'HS编码维度进出口量价数据'},
+    {name:'BDI/SCFI指数',type:'auto',desc:'波罗的海干散货指数、上海出口集装箱运价指数'},
+    {name:'碳交易市场',type:'auto',desc:'EU ETS/CCER等碳配额价格动态'},
+    {name:'各国住建部/建设部门',type:'semi',desc:'建筑法规、绿色建筑标准更新'}
+  ];
+  return sources.map(s => {
+    const typeClass = s.type === 'auto' ? 'ds-auto' : s.type === 'semi' ? 'ds-semi' : 'ds-manual';
+    const typeLabel = s.type === 'auto' ? '自动化' : s.type === 'semi' ? '半自动' : '人工';
+    return '<div class="ds-card"><h5>' + s.name + '</h5>' +
+      '<span class="ds-type ' + typeClass + '">' + typeLabel + '</span>' +
+      '<p>' + s.desc + '</p></div>';
+  }).join('');
+}
+
+// ===================== NAVIGATION =====================
+function setupNavigation() {
+  const links = document.querySelectorAll('.sidebar-nav a');
+  const sections = [...links].map(l => document.querySelector(l.getAttribute('href'))).filter(Boolean);
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        links.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector('.sidebar-nav a[href="#' + entry.target.id + '"]');
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-80px 0px -60% 0px' });
+  sections.forEach(s => observer.observe(s));
+}
+
+function refreshData() { init(); }
+
+// ===================== HELPERS =====================
+function esc(s) { if (s==null) return ''; const d=document.createElement('div'); d.textContent=String(s); return d.innerHTML; }
+function emptyHTML(msg) { return '<div class="empty-state"><p>' + esc(msg) + '</p></div>'; }
+
+// ===================== EMBEDDED FALLBACK DATA =====================
+function getEmbeddedData() {
+  return {
+    issue: 1,
+    date: '2025-06-15',
+    title: '建材行业全球资讯期刊',
+    tagline: 'Global Building Materials Weekly Intelligence Report',
+    coverage: '30+ 国家 | 35 品类 | 207+ HS编码',
+    sources: '16+ 数据源',
+    keyTakeaways: [
+      {headline:'美联储维持利率不变，鲍威尔暗示年内或降息一次',detail:'对全球房贷利率和房地产投资形成边际利好，北美建材需求有望企稳',tag:'opportunity'},
+      {headline:'欧盟碳边境调节机制(CBAM)正式覆盖钢铁和铝',detail:'出口欧盟的钢铁/铝制品将面临碳关税，中国建材出口企业成本压力上升',tag:'risk'},
+      {headline:'中东基建投资持续升温，沙特NEOM进入大规模施工阶段',detail:'水泥、钢材、玻璃等基础建材需求激增，中东成为短期最大增量市场',tag:'opportunity'},
+      {headline:'中国房地产新开工面积同比下降18%，建材内需承压',detail:'国内水泥、钢铁产能过剩加剧，出口导向型企业需关注东南亚和非洲替代市场',tag:'risk'},
+      {headline:'SPC石塑地板和光伏屋面瓦搜索量同比增长65%+',detail:'欧美市场对新型建材的需求信号强烈，建议关注相关品类的出口机会',tag:'watch'}
+    ],
+    macro: [
+      {tag:'央行政策',title:'美联储6月议息：维持5.25-5.50%不变，点阵图暗示年内降息一次',summary:'鲍威尔在新闻发布会上表示通胀回落进程"不均衡但方向正确"，劳动力市场降温为降息提供空间。30年期美债收益率下行至4.35%，对房贷利率形成传导。',source:'Federal Reserve',date:'2025-06-12',impact:4},
+      {tag:'央行政策',title:'欧央行6月如期降息25bp至3.50%，暗示7月暂停',summary:'拉加德表示欧元区经济增长仍疲软，通胀接近2%目标但服务业价格粘性犹存。欧洲建筑融资成本边际改善，利好Q3-Q4施工旺季。',source:'ECB',date:'2025-06-06',impact:3},
+      {tag:'AI基建',title:'全球AI数据中心建设潮：2025年资本开支预计突破$3200亿',summary:'微软、谷歌、亚马逊、字节跳动等科技巨头持续加码数据中心建设。对钢结构、精密空调(HVAC)、防火板材、架空地板等品类需求拉动显著。北美和东南亚为主要建设区域。',source:'Goldman Sachs Research',date:'2025-06-10',impact:5},
+      {tag:'战后重建',title:'乌克兰重建基金规模达$850亿，世界银行启动新一批基建招标',summary:'涵盖道路、桥梁、住宅和公共设施重建。水泥、钢材、门窗、屋面材料需求集中释放。波兰和土耳其建材企业成为主要供应商。',source:'World Bank',date:'2025-06-08',impact:4},
+      {tag:'房屋翻新',title:'美国成屋库存降至历史低位，翻新市场替代新建需求',summary:'NAR数据显示成屋可售月数仅3.2个月，大量房主选择翻新而非换房。Kitchen & Bath remodeling市场预计2025年增长8.2%。橱柜、卫浴、地板品类受益。',source:'NAR / Houzz',date:'2025-06-11',impact:3},
+      {tag:'财政刺激',title:'印度宣布$1500亿国家基建管道(NIP)年度拨款',summary:'莫迪政府第三任期加速基建投资，覆盖公路、铁路、机场和城市住房。水泥和钢材内需预计增长12-15%。印度成为全球建材需求增速最快的主要经济体。',source:'印度财政部',date:'2025-06-05',impact:5},
+      {tag:'能源转型',title:'BIPV光伏建筑一体化市场年增速超30%，各国补贴加码',summary:'中国"整县推进"、欧洲RePowerEU计划、美国IRA税收抵免共同推动BIPV市场。光伏屋面瓦、光伏幕墙等品类需求快速增长。',source:'IEA / Bloomberg NEF',date:'2025-06-09',impact:4},
+      {tag:'贸易壁垒',title:'美国对华铝材反补贴终裁税率升至68.7%',summary:'涵盖铝板、铝箔等HS7606/7607系列产品。中国铝材出口美国渠道基本关闭，部分企业转向东南亚和墨西哥中转。',source:'US DOC',date:'2025-06-07',impact:3}
+    ],
+    regional: {
+      '亚太': [
+        {name:'中国',flag:'',metrics:[
+          {label:'GDP增速',value:'4.8%',change:-0.2},{label:'城市化率',value:'67.5%',change:0.5},
+          {label:'新房价格指数',value:'98.2',change:-1.8},{label:'成屋价格指数',value:'95.6',change:-2.4},
+          {label:'基建投资增速',value:'6.8%',change:1.2},{label:'建筑PMI',value:'51.2',change:0.8}
+        ],comment:'房地产下行周期延续，政策端"保交楼"和城中村改造支撑部分需求。水泥错峰生产力度加大，价格企稳回升。出口导向型建材企业受益于"一带一路"沿线订单。'},
+        {name:'印度',flag:'',metrics:[
+          {label:'GDP增速',value:'7.2%',change:0.3},{label:'城市化率',value:'36.4%',change:0.8},
+          {label:'新房价格指数',value:'112.5',change:3.2},{label:'成屋价格指数',value:'108.3',change:2.8},
+          {label:'基建预算',value:'$1500亿',change:15},{label:'水泥产量增速',value:'12%',change:2}
+        ],comment:'全球建材需求增速最快的主要市场。NIP基建+城市住房双轮驱动。水泥、钢材、瓷砖、卫浴品类需求旺盛。本土产能扩张加速，但高端品类仍依赖进口。'},
+        {name:'东南亚(越/印/菲)',flag:'',metrics:[
+          {label:'GDP增速',value:'5.5%',change:0.2},{label:'城市化率',value:'39%',change:1.0},
+          {label:'FDI流入',value:'$2100亿',change:8},{label:'工业园建设',value:'加速',change:0}
+        ],comment:'产业链转移持续驱动工业厂房和配套基建需求。越南胡志明市地铁、印尼新首都Nusantara、菲律宾"Build Better More"计划带动建材进口。中国建材企业在当地设厂趋势明显。'},
+        {name:'日本',flag:'',metrics:[
+          {label:'GDP增速',value:'1.2%',change:-0.1},{label:'城市化率',value:'92%',change:0.1},
+          {label:'建筑开工数',value:'82万户',change:-3},{label:'翻新市场',value:'$680亿',change:4}
+        ],comment:'老龄化推动翻新需求增长，新建住宅持续萎缩。耐震建材、无障碍卫浴、节能门窗为增长品类。木材进口需求稳定。'}
+      ],
+      '中东非洲': [
+        {name:'沙特',flag:'',metrics:[
+          {label:'GDP增速',value:'4.5%',change:0.8},{label:'城市化率',value:'84.3%',change:0.3},
+          {label:'NEOM投资',value:'$5000亿',change:0},{label:'住房项目',value:'60万+',change:20}
+        ],comment:'Vision 2030项目群进入施工高峰期。水泥、钢材、玻璃、HVAC系统需求激增。沙特本地水泥产能过剩但特种水泥仍需进口。铝幕墙和节能玻璃需求强劲。'},
+        {name:'阿联酋',flag:'',metrics:[
+          {label:'GDP增速',value:'5.0%',change:0.5},{label:'迪拜房价指数',value:'145',change:12},
+          {label:' Expo City后续',value:'推进中',change:0},{label:'酒店建设',value:'85个',change:15}
+        ],comment:'迪拜房地产价格持续上涨，新一轮住宅和商业项目密集启动。高端卫浴、石材、幕墙品类需求旺盛。'},
+        {name:'尼日利亚',flag:'',metrics:[
+          {label:'GDP增速',value:'3.8%',change:0.2},{label:'城市化率',value:'54%',change:1.2},
+          {label:'住房缺口',value:'2800万套',change:0},{label:'水泥产量',value:'4500万吨',change:8}
+        ],comment:'非洲最大经济体，住房缺口巨大。廉价建材(波纹钢板、水泥、塑料管)需求持续。丹格特水泥主导本地市场，进口建材主要来自中国和土耳其。'}
+      ],
+      '欧洲': [
+        {name:'德国',flag:'',metrics:[
+          {label:'GDP增速',value:'0.3%',change:-0.2},{label:'建筑许可证',value:'24.5万',change:-12},
+          {label:'建筑PMI',value:'44.5',change:-1.5},{label:'翻新补贴',value:'130亿欧',change:25}
+        ],comment:'新建住宅市场严重低迷，高利率和高建造成本抑制投资。但政府加大能效翻新补贴(EEG)，保温材料、热泵系统、节能门窗需求逆势增长。'},
+        {name:'英国',flag:'',metrics:[
+          {label:'GDP增速',value:'1.0%',change:0.2},{label:'房价指数',value:'105.3',change:2.5},
+          {label:'建筑PMI',value:'48.2',change:1.0},{label:'规划审批',value:'恢复中',change:5}
+        ],comment:'工党政府承诺150万套住房建设，规划改革推进中。砖块、木材、屋面材料需求有望在下半年回升。'},
+        {name:'波兰/土耳其',flag:'',metrics:[
+          {label:'波兰GDP',value:'3.5%',change:0.3},{label:'土耳其通胀',value:'55%',change:-10},
+          {label:'重建基金',value:'$300亿',change:0},{label:'乌克兰供应',value:'活跃',change:0}
+        ],comment:'土耳其地震灾后重建+乌克兰重建中转需求。波兰作为东欧建材制造中心受益。水泥、钢材、预制构件需求旺盛。'}
+      ],
+      '美洲': [
+        {name:'美国',flag:'',metrics:[
+          {label:'GDP增速',value:'2.5%',change:-0.1},{label:'成屋中位价',value:'$41.2万',change:3.8},
+          {label:'新房开工',value:'142万套',change:-5},{label:'30Y房贷',value:'6.65%',change:-0.15},
+          {label:'翻新支出',value:'$4800亿',change:6},{label:'建筑PMI',value:'52.8',change:0.5}
+        ],comment:'高利率抑制新房开工但房价持续走高，翻新市场活跃。IRA法案推动清洁能源建筑(热泵、保温、BIPV)。数据中心建设为HVAC和架空地板带来增量需求。'},
+        {name:'巴西',flag:'',metrics:[
+          {label:'GDP增速',value:'2.8%',change:0.3},{label:'Selic利率',value:'10.5%',change:-0.5},
+          {label:'住房信贷',value:'增长中',change:8},{label:'基建计划',value:'PAC4',change:0}
+        ],comment:'Lula政府PAC4基建计划和Minha Casa Minha Vida住房计划支撑建材需求。陶瓷、水泥、钢材内需增长。利率下行趋势利好建筑融资。'},
+        {name:'墨西哥',flag:'',metrics:[
+          {label:'GDP增速',value:'2.2%',change:-0.3},{label:'近岸外包FDI',value:'$380亿',change:15},
+          {label:'工业地产',value:'高增长',change:12},{label:'比索汇率',value:'17.5',change:-2}
+        ],comment:'近岸外包(nearshoring)持续驱动工业厂房和物流仓储建设。钢结构、工业门、HVAC系统需求旺盛。北部边境城市为主要增长极。'}
+      ]
+    },
+    trends: [
+      {name:'SPC石塑地板',category:'地板及配件',description:'欧美市场对SPC/LVT地板需求持续增长，替代传统木地板和瓷砖的趋势明显。防水、耐磨、易安装特性契合DIY文化和租房市场。',drivers:['DIY文化','租房市场','防水需求','环保替代'],socialSignals:[
+        {platform:'Google',growth:68},{platform:'YouTube',growth:85},{platform:'Pinterest',growth:45},{platform:'Amazon',growth:52}
+      ],satisfaction:45},
+      {name:'光伏屋面瓦(BIPV)',category:'多功能材料',description:'特斯拉Solar Roof带动品类认知度提升，中国厂商(隆基、汉瓦)加速出海。各国补贴政策和ESG要求共同驱动。',drivers:['IRA补贴','RePowerEU','ESG合规','电费上涨'],socialSignals:[
+        {platform:'Google',growth:55},{platform:'YouTube',growth:72},{platform:'X',growth:38}
+      ],satisfaction:25},
+      {name:'整体浴室(Prefab Bathroom)',category:'浴室和厨房产品',description:'日本和北欧渗透率高，正在向欧美和中国市场扩展。解决施工人力短缺和品质一致性痛点。酒店和长租公寓为主要应用场景。',drivers:['人力短缺','工业化建造','酒店翻新','品质一致性'],socialSignals:[
+        {platform:'Google',growth:42},{platform:'YouTube',growth:35}
+      ],satisfaction:35},
+      {name:'低辐射Low-E玻璃',category:'建筑工业玻璃',description:'全球能效建筑法规趋严推动Low-E玻璃渗透率提升。中东(极端高温)和北欧(极端寒冷)为高需求区域。',drivers:['能效法规','极端气候','节能认证'],socialSignals:[
+        {platform:'Google',growth:32},{platform:'X',growth:18}
+      ],satisfaction:60},
+      {name:'集装箱房屋',category:'活动房屋与钢结构',description:'可负担住房危机+灵活办公需求驱动。非洲和拉美市场增长最快，用于低成本住宅和小型商业。',drivers:['可负担住房','灵活办公','灾后安置','新兴市场'],socialSignals:[
+        {platform:'Google',growth:48},{platform:'YouTube',growth:95},{platform:'Instagram',growth:62}
+      ],satisfaction:40}
+    ],
+    supplyChain: [
+      {title:'大宗商品价格追踪',data:[
+        {item:'铁矿石(62% Fe)',value:'$108/吨',change:-5.2},
+        {item:'热轧钢卷(HRC)',value:'$612/吨',change:-3.8},
+        {item:'铝(LME)',value:'$2,485/吨',change:2.1},
+        {item:'铜(LME)',value:'$9,520/吨',change:4.5},
+        {item:'动力煤',value:'$135/吨',change:-8.2},
+        {item:'天然气(Henry Hub)',value:'$2.85/MMBtu',change:-12},
+        {item:'PVC树脂',value:'$820/吨',change:1.5},
+        {item:'浮法玻璃(4mm)',value:'$280/吨',change:-2}
+      ]},
+      {title:'海运运价指数',data:[
+        {item:'BDI(波罗的海干散货)',value:'1,850',change:8.5},
+        {item:'SCFI(上海集装箱)',value:'2,180',change:15.2},
+        {item:'中国-中东(20GP)',value:'$1,250',change:12},
+        {item:'中国-欧洲(20GP)',value:'$2,850',change:18.5},
+        {item:'中国-美西(20GP)',value:'$3,200',change:-5}
+      ]},
+      {title:'关税与贸易政策',data:[
+        {item:'美对华铝材反补贴税',value:'68.7%',change:0},
+        {item:'EU CBAM碳关税(钢铁)',value:'~6%',change:6},
+        {item:'RCEP框架关税减免',value:'生效中',change:0},
+        {item:'印度对华瓷砖反倾销',value:'调查中',change:0}
+      ]}
+    ],
+    regulation: [
+      {type:'esg',title:'EU CBAM碳边境调节机制正式征收期启动',summary:'2026年起钢铁、铝、水泥、化肥进口商需购买CBAM证书。碳价挂钩EU ETS(当前约85欧/吨)。出口欧盟的建材企业需尽快建立碳足迹核算体系。',tags:['碳关税','欧盟','钢铁','铝','水泥']},
+      {type:'standard',title:'欧盟建筑产品法规(CPR)更新：环境性能声明将成强制要求',summary:'新版CPR将EPD(环境产品声明)从自愿升级为强制要求，预计2027年起分品类实施。影响所有出口欧盟的建材产品。',tags:['CPR','EPD','欧盟','绿色建筑']},
+      {type:'esg',title:'中国建材行业碳达峰实施方案进入执行年',summary:'水泥、平板玻璃、建筑陶瓷三大品类被纳入全国碳交易市场扩容范围。2025年底前需完成碳排放数据报送。',tags:['碳交易','水泥','玻璃','陶瓷']},
+      {type:'standard',title:'LEED v5草案发布：隐含碳(Embodied Carbon)纳入评分体系',summary:'新版LEED首次将建筑材料的隐含碳纳入评分，鼓励使用低碳建材。预计2026年正式版发布。对高端商业建筑项目的材料选择影响显著。',tags:['LEED','绿色建筑','隐含碳']},
+      {type:'warn',title:'东南亚多国提高建材防火标准',summary:'越南、印尼、菲律宾近期更新建筑防火规范，对保温材料、装饰面板的阻燃等级要求提高。部分中国出口产品需调整配方或工艺。',tags:['防火标准','东南亚','保温材料']}
+    ],
+    innovation: [
+      {title:'绿色水泥(Green Cement)：碳捕集+替代原料路线加速商业化',stage:'商业化',summary:'Heidelberg Materials在挪威的Brevik碳捕集项目投产(年捕集40万吨CO2)。Solidia Technologies的低温烧制水泥获得$3亿融资。碳减排幅度可达30-70%。'},
+      {title:'3D打印建筑：从示范走向规模化应用',stage:'试点',summary:'ICON在美国德州完成100栋3D打印住宅社区。COBOD在中东获大型政府订单。打印材料以特种水泥基为主，对传统砖石和模板行业形成替代压力。'},
+      {title:'自修复混凝土(Self-healing Concrete)',stage:'研发',summary:'利用细菌或微胶囊技术实现混凝土裂缝自修复。荷兰代尔夫特理工大学和比利时Ghent大学技术领先。可延长基础设施寿命50%+。'},
+      {title:'气凝胶保温材料规模化生产',stage:'试点',summary:'气凝胶毡/板导热系数低至0.015 W/mK，远优于传统EPS/XPS。Aspen Aerogels产能扩张中。当前成本仍为传统材料5-8倍，适用于高端和空间受限场景。'},
+      {title:'模块化建筑(Modular Construction)工厂化率提升',stage:'商业化',summary:'Katerra重组后行业进入理性发展期。MiTek和Blokable等企业在北美推进公寓和酒店的模块化建造。工厂化率从20%提升至60-80%，对传统施工材料组合产生结构性影响。'}
+    ],
+    events: [
+      {date:'2025-06-23',title:'Big 5 Construct Saudi (利雅得)',description:'中东最大建筑建材展，覆盖水泥、钢材、玻璃、HVAC等全品类。NEOM项目采购对接。',tags:['中东','展会','沙特']},
+      {date:'2025-07-01',title:'EU CBAM Q2碳申报截止',description:'2025年Q2进口数据申报截止日。钢铁、铝、水泥进口商需在EU CBAM Transitional Registry提交数据。',tags:['合规','欧盟','碳关税']},
+      {date:'2025-07-15',title:'Canton Fair Phase 1 (广交会一期)',description:'建材品类集中展区。瓷砖、卫浴、门窗、石材为核心展示品类。',tags:['中国','展会','出口']},
+      {date:'2025-08-01',title:'Fed议息会议',description:'FOMC利率决议。市场当前预期降息25bp概率为65%。',tags:['宏观','美国','利率']},
+      {date:'2025-08-20',title:'bauma CHINA 2025 (上海宝马展)',description:'亚洲最大工程机械和建材设备展。覆盖矿山、建材生产、施工设备全产业链。',tags:['中国','展会','设备']}
+    ],
+    dataSources: []
+  };
+}
+
+function getEmbeddedTaxonomy() {
+  return {
+    l1:{en:'Building Materials & Real Estate',zh:'建材与房地产'},
+    categories:{
+      '瓷砖及配件':{en:'Tiles & Accessories',zh:'瓷砖及配件',l3:[{en:'Tiles',zh:'瓷砖'},{en:'Sintered Stone',zh:'岩板'}],hs_codes:['690590','690740','690410','690490','690510','690722','690721','690723','690730']},
+      '地板及配件':{en:'Flooring & Accessories',zh:'地板及配件',l3:[{en:'Laminated Flooring',zh:'强化地板'},{en:'Cork Flooring',zh:'软木地板'},{en:'Plastic Flooring',zh:'塑料地板革'},{en:'Wood Flooring',zh:'木地板'},{en:'Rubber Flooring',zh:'橡胶地板'},{en:'Engineered Flooring',zh:'实木复合地板'},{en:'Anti-Static Flooring',zh:'防静电地板'},{en:'Flooring Accessories',zh:'地板配件'},{en:'Bamboo Flooring',zh:'竹地板'}],hs_codes:['391810','441875','441874','391890','441879','690490','441873']},
+      '建筑板材':{en:'Building Boards',zh:'建筑板材',l3:[{en:'Cement Boards',zh:'水泥板'},{en:'Honeycomb Panel',zh:'蜂窝板'},{en:'Plasterboards',zh:'石膏板'},{en:'Aluminum Composite Panels',zh:'铝塑复合板'},{en:'Sandwich Panels',zh:'夹心板材'}],hs_codes:['441241','441892','441239','441233','441231','441251','441012','441883','441881','441249','441242','441889','441234','441299','441292','441291','441294','441259','441252','441019','441090','441899','441882','441891']},
+      '石材':{en:'Stone',zh:'石材',l3:[{en:'Stone Carvings and Sculptures',zh:'石雕和雕塑'},{en:'Natural Stone',zh:'天然石材'},{en:'Landscaping Stone',zh:'环境石材'},{en:'Artificial Stone',zh:'人造石'},{en:'Tombstones and Monuments',zh:'墓碑和纪念碑'}],hs_codes:['680293','681019','680221','251310','250860','251320','251200','250850','680223','251710','680229','251690','251520','680291','680292','680299','250610','250620','251110','680100','251512','251511','680210']},
+      '浴室和厨房产品':{en:'Bathroom & Kitchen',zh:'浴室和厨房产品',l3:[{en:'Prefab Bathroom Unit',zh:'整体浴室'},{en:'Kitchen Sinks',zh:'厨房洗涤槽'},{en:'Bathtubs & Whirlpools',zh:'涡旋浴缸'},{en:'Bathroom Accessories',zh:'卫浴配件'},{en:'Shower Rooms & Accessories',zh:'淋浴房及配件'},{en:'Faucets, Mixers & Taps',zh:'龙头，阀门'},{en:'Toilet & Accessories',zh:'厕所及其配件'},{en:'Sanitary Ware Suite',zh:'卫浴套件'},{en:'Spa Tubs & Sauna Rooms',zh:'水疗浴缸及桑拿房'},{en:'Kitchen Storage',zh:'厨房收纳'},{en:'Bathroom Sinks',zh:'浴室水槽'},{en:'Kitchen Cabinets & Accessories',zh:'橱柜及配件'}],hs_codes:['732410','940340','691010','848190','761520','848180','732429','691090','741820','732490','732421']},
+      '门、窗及其配件':{en:'Door, Window & Accessories',zh:'门、窗及其配件',l3:[{en:'Door & Window Accessories',zh:'门窗配件'},{en:'Exterior Doors',zh:'室外门'},{en:'Industrial Doors',zh:'工业门'},{en:'Windows',zh:'窗户'},{en:'Interior Doors',zh:'室内门'}],hs_codes:['441819','441829','730830','830241','830260','761010','441850','441830','441811','441821','441810','441820','392530','392520']},
+      '活动房屋与钢结构':{en:'Prefabricated Buildings',zh:'活动房屋与钢结构',l3:[{en:'Prefab House',zh:'移动房屋类'},{en:'Apartments',zh:'公寓'},{en:'Steel Structure Buildings',zh:'钢结构建筑'},{en:'Villas',zh:'别墅'},{en:'Container Houses',zh:'集装箱房屋'},{en:'Office Buildings',zh:'写字楼'},{en:'Shops',zh:'商店'},{en:'Farms',zh:'农场'},{en:'Hotels',zh:'酒店'},{en:'Workshops & Plants',zh:'车间厂房'}],hs_codes:['940610','940620','940690']},
+      '木材':{en:'Timber',zh:'木材',l3:[{en:'Laminated Wood Boards / Blockboards',zh:'层压木板/夹芯板'},{en:'Decorative High-Pressure Laminates / HPL',zh:'高压装饰层压板/HPL'},{en:'Fibreboards',zh:'纤维板'},{en:'Veneers',zh:'贴面板'},{en:'Flakeboards',zh:'刨花板'},{en:'Solid Wood Boards',zh:'实心木材板'},{en:'Finger Jointed Boards',zh:'指接板'},{en:'Plywoods',zh:'胶合板'}],hs_codes:['440398','440795','440796','440395','440396','440810','440831','440323','440324','440712','440791','440391','440721','440500','441193','441012','441011','440793','440399','441299','440420','441192','441194','441090','440729','440349','440719','440325','440326','440890','440839','440799','440922','440910','440929','440921','440725','440341','440792','440393','440394','440711','440321','440322','440722','440714','440612','440611','440797','440397','440692','440691','440794','440723','440342','440713','440410','441113','441114','441112','441210','440726','440727','440728']},
+      '砖石材料':{en:'Masonry Materials',zh:'砖石材料',l3:[{en:'Bricks',zh:'砖块'},{en:'Building Blocks',zh:'积木'},{en:'Roof Tiles',zh:'屋顶瓦片'},{en:'Mortar',zh:'砂浆'},{en:'Cement',zh:'水泥'},{en:'Aggregate',zh:'集料'},{en:'Gypsum Powder',zh:'石膏粉'}],hs_codes:['252321','681181','252330','681140','690310','681091','680911','690210','252329','690590','690390','690290','680990','681099','252390','680919','690740','681011','681019','252310','690600','690722','690721','690723','681182','681189','690730','690220','690320']},
+      '建筑工业玻璃':{en:'Building & Industrial Glass',zh:'建筑工业玻璃',l3:[{en:'Clear Glass',zh:'透明玻璃'},{en:'Medical Glass',zh:'医用玻璃'},{en:'Insulated Glass',zh:'中空玻璃'},{en:'Laminated Glass',zh:'夹层玻璃'},{en:'Tinted Glass',zh:'颜色玻璃'},{en:'Decorative Glass',zh:'装饰玻璃'},{en:'Low-E glass',zh:'低辐射玻璃'}],hs_codes:['700800','700729','701690']}
+    }
+  };
+}
+
+// Start
+init();
+</script>
+</body>
+</html>

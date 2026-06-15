@@ -1,0 +1,915 @@
+{
+  "l1": {
+    "en": "Building Materials & Real Estate",
+    "zh": "建材与房地产"
+  },
+  "categories": {
+    "梯子及脚手架": {
+      "en": "Ladders & Scaffoldings",
+      "zh": "梯子及脚手架",
+      "l3": [
+        {
+          "en": "Work Platforms",
+          "zh": "工作平台"
+        },
+        {
+          "en": "Scaffoldings",
+          "zh": "脚手架"
+        },
+        {
+          "en": "Ladder & Scaffolding Parts",
+          "zh": "梯子及脚手架部件"
+        },
+        {
+          "en": "Ladders",
+          "zh": "梯子"
+        }
+      ],
+      "hs_codes": [
+        "730840"
+      ]
+    },
+    "塑料管": {
+      "en": "Plastic Tubes",
+      "zh": "塑料管",
+      "l3": [
+        {
+          "en": "Plastic Tubes(从上级行业虚拟)",
+          "zh": "塑料管(从上级行业虚拟)"
+        }
+      ],
+      "hs_codes": [
+        "391722",
+        "391723",
+        "391721"
+      ]
+    },
+    "土工材料": {
+      "en": "Earthwork Products",
+      "zh": "土工材料",
+      "l3": [
+        {
+          "en": "Geotextiles",
+          "zh": "土工布"
+        },
+        {
+          "en": "Geogrids",
+          "zh": "土工格栅"
+        },
+        {
+          "en": "Geocells",
+          "zh": "土工格室"
+        },
+        {
+          "en": "Geomembranes",
+          "zh": "土工膜"
+        }
+      ],
+      "hs_codes": [
+        "560313"
+      ]
+    },
+    "石材": {
+      "en": "Stone",
+      "zh": "石材",
+      "l3": [
+        {
+          "en": "Stone Carvings and Sculptures",
+          "zh": "石雕和雕塑"
+        },
+        {
+          "en": "Natural Stone",
+          "zh": "天然石材"
+        },
+        {
+          "en": "Landscaping Stone",
+          "zh": "环境石材"
+        },
+        {
+          "en": "Artificial Stone",
+          "zh": "人造石"
+        },
+        {
+          "en": "Tombstones and Monuments",
+          "zh": "墓碑和纪念碑"
+        }
+      ],
+      "hs_codes": [
+        "680293",
+        "681019",
+        "680221",
+        "251310",
+        "250860",
+        "251320",
+        "251200",
+        "250850",
+        "680223",
+        "251710",
+        "680229",
+        "251690",
+        "251520",
+        "680291",
+        "680292",
+        "680299",
+        "250610",
+        "250620",
+        "251110",
+        "680100",
+        "251512",
+        "251511",
+        "680210"
+      ]
+    },
+    "空调系统及配件": {
+      "en": "HVAC System & Parts",
+      "zh": "空调系统及配件",
+      "l3": [
+        {
+          "en": "HVAC Systems Parts",
+          "zh": "空调系统配件"
+        },
+        {
+          "en": "Registers & Grilles",
+          "zh": "出风口"
+        }
+      ],
+      "hs_codes": []
+    },
+    "砖石材料": {
+      "en": "Masonry Materials",
+      "zh": "砖石材料",
+      "l3": [
+        {
+          "en": "Bricks",
+          "zh": "砖块"
+        },
+        {
+          "en": "Building Blocks",
+          "zh": "积木"
+        },
+        {
+          "en": "Roof Tiles",
+          "zh": "屋顶瓦片"
+        },
+        {
+          "en": "Mortar",
+          "zh": "砂浆"
+        },
+        {
+          "en": "Cement",
+          "zh": "水泥"
+        },
+        {
+          "en": "Aggregate",
+          "zh": "集料"
+        },
+        {
+          "en": "Gypsum Powder",
+          "zh": "石膏粉"
+        }
+      ],
+      "hs_codes": [
+        "252321",
+        "681181",
+        "252330",
+        "681140",
+        "690310",
+        "681091",
+        "680911",
+        "690210",
+        "252329",
+        "690590",
+        "690390",
+        "690290",
+        "680990",
+        "681099",
+        "252390",
+        "680919",
+        "690740",
+        "681011",
+        "681019",
+        "252310",
+        "690600",
+        "690722",
+        "690721",
+        "690723",
+        "681182",
+        "681189",
+        "690730",
+        "690220",
+        "690320"
+      ]
+    },
+    "木材": {
+      "en": "Timber",
+      "zh": "木材",
+      "l3": [
+        {
+          "en": "Laminated Wood Boards / Blockboards",
+          "zh": "层压木板/夹芯板"
+        },
+        {
+          "en": "Decorative High-Pressure Laminates / HPL",
+          "zh": "高压装饰层压板/HPL"
+        },
+        {
+          "en": "Fibreboards",
+          "zh": "纤维板"
+        },
+        {
+          "en": "Veneers",
+          "zh": "贴面板"
+        },
+        {
+          "en": "Flakeboards",
+          "zh": "刨花板"
+        },
+        {
+          "en": "Solid Wood Boards",
+          "zh": "实心木材板"
+        },
+        {
+          "en": "Finger Jointed Boards",
+          "zh": "指接板"
+        },
+        {
+          "en": "Plywoods",
+          "zh": "胶合板"
+        }
+      ],
+      "hs_codes": [
+        "440398",
+        "440795",
+        "440796",
+        "440395",
+        "440396",
+        "440810",
+        "440831",
+        "440323",
+        "440324",
+        "440712",
+        "440791",
+        "440391",
+        "440721",
+        "440500",
+        "441193",
+        "441012",
+        "441011",
+        "440793",
+        "440399",
+        "441299",
+        "440420",
+        "441192",
+        "441194",
+        "441090",
+        "440729",
+        "440349",
+        "440719",
+        "440325",
+        "440326",
+        "440890",
+        "440839",
+        "440799",
+        "440922",
+        "440910",
+        "440929",
+        "440921",
+        "440725",
+        "440341",
+        "440792",
+        "440393",
+        "440394",
+        "440711",
+        "440321",
+        "440322",
+        "440722",
+        "440714",
+        "440612",
+        "440611",
+        "440797",
+        "440397",
+        "440692",
+        "440691",
+        "440794",
+        "440723",
+        "440342",
+        "440713",
+        "440410",
+        "441113",
+        "441114",
+        "441112",
+        "441210",
+        "440726",
+        "440727",
+        "440728"
+      ]
+    },
+    "浴室和厨房产品": {
+      "en": "Bathroom & Kitchen",
+      "zh": "浴室和厨房产品",
+      "l3": [
+        {
+          "en": "Prefab Bathroom Unit",
+          "zh": "整体浴室"
+        },
+        {
+          "en": "Kitchen Sinks",
+          "zh": "厨房洗涤槽"
+        },
+        {
+          "en": "Bathtubs & Whirlpools",
+          "zh": "涡旋浴缸"
+        },
+        {
+          "en": "Bathroom Accessories",
+          "zh": "卫浴配件"
+        },
+        {
+          "en": "Shower Rooms & Accessories",
+          "zh": "淋浴房及配件"
+        },
+        {
+          "en": "Faucets, Mixers & Taps",
+          "zh": "龙头，阀门"
+        },
+        {
+          "en": "Toilet & Accessories",
+          "zh": "厕所及其配件"
+        },
+        {
+          "en": "Sanitary Ware Suite",
+          "zh": "卫浴套件"
+        },
+        {
+          "en": "Spa Tubs & Sauna Rooms",
+          "zh": "水疗浴缸及桑拿房"
+        },
+        {
+          "en": "Kitchen Storage",
+          "zh": "厨房收纳"
+        },
+        {
+          "en": "Bathroom Sinks",
+          "zh": "浴室水槽"
+        },
+        {
+          "en": "Kitchen Cabinets & Accessories",
+          "zh": "橱柜及配件"
+        }
+      ],
+      "hs_codes": [
+        "732410",
+        "940340",
+        "691010",
+        "848190",
+        "761520",
+        "848180",
+        "732429",
+        "691090",
+        "741820",
+        "732490",
+        "732421"
+      ]
+    },
+    "门、窗及其配件": {
+      "en": "Door, Window & Accessories",
+      "zh": "门、窗及其配件",
+      "l3": [
+        {
+          "en": "Door & Window Accessories",
+          "zh": "门窗配件"
+        },
+        {
+          "en": "Exterior Doors",
+          "zh": "室外门"
+        },
+        {
+          "en": "Industrial Doors",
+          "zh": "工业门"
+        },
+        {
+          "en": "Windows",
+          "zh": "窗户"
+        },
+        {
+          "en": "Interior Doors",
+          "zh": "室内门"
+        }
+      ],
+      "hs_codes": [
+        "441819",
+        "441829",
+        "730830",
+        "830241",
+        "830260",
+        "761010",
+        "441850",
+        "441830",
+        "441811",
+        "441821",
+        "441810",
+        "441820",
+        "392530",
+        "392520"
+      ]
+    },
+    "活动房屋与钢结构": {
+      "en": "Prefabricated Buildings",
+      "zh": "活动房屋与钢结构",
+      "l3": [
+        {
+          "en": "Prefab House",
+          "zh": "移动房屋类"
+        },
+        {
+          "en": "Apartments",
+          "zh": "公寓"
+        },
+        {
+          "en": "Steel Structure Buildings",
+          "zh": "钢结构建筑"
+        },
+        {
+          "en": "Villas",
+          "zh": "别墅"
+        },
+        {
+          "en": "Container Houses",
+          "zh": "集装箱房屋"
+        },
+        {
+          "en": "Office Buildings",
+          "zh": "写字楼"
+        },
+        {
+          "en": "Shops",
+          "zh": "商店"
+        },
+        {
+          "en": "Farms",
+          "zh": "农场"
+        },
+        {
+          "en": "Hotels",
+          "zh": "酒店"
+        },
+        {
+          "en": "Workshops & Plants",
+          "zh": "车间厂房"
+        }
+      ],
+      "hs_codes": [
+        "940610",
+        "940620",
+        "940690"
+      ]
+    },
+    "工作台面、洗面台与桌面": {
+      "en": "Countertops, Vanity Tops & Table Tops",
+      "zh": "工作台面、洗面台与桌面",
+      "l3": [
+        {
+          "en": "Countertops, Vanity Tops & Table Tops(从上级行业虚拟)",
+          "zh": "工作台面、洗面台与桌面(从上级行业虚拟)"
+        }
+      ],
+      "hs_codes": []
+    },
+    "天花板": {
+      "en": "Ceilings",
+      "zh": "天花板",
+      "l3": [
+        {
+          "en": "Ceiling Tiles",
+          "zh": "天花板"
+        },
+        {
+          "en": "Ceiling Grid Components",
+          "zh": "天花龙骨组件"
+        }
+      ],
+      "hs_codes": []
+    },
+    "电梯和自动扶梯": {
+      "en": "Elevators & Escalators",
+      "zh": "电梯和自动扶梯",
+      "l3": [
+        {
+          "en": "Escalators",
+          "zh": "自动扶梯"
+        },
+        {
+          "en": "Moving Walks",
+          "zh": "客用电动走道"
+        },
+        {
+          "en": "Escalator Parts",
+          "zh": "自动扶梯配件"
+        },
+        {
+          "en": "Elevators",
+          "zh": "电梯"
+        }
+      ],
+      "hs_codes": [
+        "842810",
+        "842840"
+      ]
+    },
+    "建筑工业玻璃": {
+      "en": "Building & Industrial Glass",
+      "zh": "建筑工业玻璃",
+      "l3": [
+        {
+          "en": "Clear Glass",
+          "zh": "透明玻璃"
+        },
+        {
+          "en": "Medical Glass",
+          "zh": "医用玻璃"
+        },
+        {
+          "en": "Insulated Glass",
+          "zh": "中空玻璃"
+        },
+        {
+          "en": "Laminated Glass",
+          "zh": "夹层玻璃"
+        },
+        {
+          "en": "Tinted Glass",
+          "zh": "颜色玻璃"
+        },
+        {
+          "en": "Decorative Glass",
+          "zh": "装饰玻璃"
+        },
+        {
+          "en": "Low-E glass",
+          "zh": "低辐射玻璃"
+        }
+      ],
+      "hs_codes": [
+        "700800",
+        "700729",
+        "701690"
+      ]
+    },
+    "墙纸/墙板": {
+      "en": "Wallpapers/Wall panels",
+      "zh": "墙纸/墙板",
+      "l3": [
+        {
+          "en": "Peel & Stick Wallpapers",
+          "zh": "自粘式墙纸"
+        },
+        {
+          "en": "Wallpaper rolls",
+          "zh": "壁纸卷"
+        },
+        {
+          "en": "Wall Panels & Boards",
+          "zh": "墙板"
+        }
+      ],
+      "hs_codes": [
+        "481420"
+      ]
+    },
+    "塑料建材": {
+      "en": "Plastic Building Materials",
+      "zh": "塑料建材",
+      "l3": [
+        {
+          "en": "Sun Sheets & PC Embossed Sheets",
+          "zh": "阳光板和 PC 压花板"
+        },
+        {
+          "en": "Plastic Profiles",
+          "zh": "塑料型材"
+        }
+      ],
+      "hs_codes": []
+    },
+    "户外设施类": {
+      "en": "Outdoor Facilities",
+      "zh": "户外设施类",
+      "l3": [
+        {
+          "en": "Fountain",
+          "zh": "喷泉"
+        },
+        {
+          "en": "Pavilion",
+          "zh": "凉亭"
+        }
+      ],
+      "hs_codes": []
+    },
+    "幕墙配件": {
+      "en": "Curtain Walls & Accessories",
+      "zh": "幕墙配件",
+      "l3": [
+        {
+          "en": "Curtain Wall Profiles",
+          "zh": "幕墙型材"
+        },
+        {
+          "en": "Spiders",
+          "zh": "蜘蛛布"
+        }
+      ],
+      "hs_codes": []
+    },
+    "地板及配件": {
+      "en": "Flooring & Accessories",
+      "zh": "地板及配件",
+      "l3": [
+        {
+          "en": "Laminated Flooring",
+          "zh": "强化地板"
+        },
+        {
+          "en": "Cork Flooring",
+          "zh": "软木地板"
+        },
+        {
+          "en": "Plastic Flooring",
+          "zh": "塑料地板革"
+        },
+        {
+          "en": "Wood Flooring",
+          "zh": "木地板"
+        },
+        {
+          "en": "Rubber Flooring",
+          "zh": "橡胶地板"
+        },
+        {
+          "en": "Engineered Flooring",
+          "zh": "实木复合地板"
+        },
+        {
+          "en": "Anti-Static Flooring",
+          "zh": "防静电地板"
+        },
+        {
+          "en": "Flooring Accessories",
+          "zh": "地板配件"
+        },
+        {
+          "en": "Bamboo Flooring",
+          "zh": "竹地板"
+        }
+      ],
+      "hs_codes": [
+        "391810",
+        "441875",
+        "441874",
+        "391890",
+        "441879",
+        "690490",
+        "441873"
+      ]
+    },
+    "瓷砖及配件": {
+      "en": "Tiles & Accessories",
+      "zh": "瓷砖及配件",
+      "l3": [
+        {
+          "en": "Tiles",
+          "zh": "瓷砖"
+        },
+        {
+          "en": "Sintered Stone",
+          "zh": "岩板"
+        }
+      ],
+      "hs_codes": [
+        "690590",
+        "690740",
+        "690410",
+        "690490",
+        "690510",
+        "690722",
+        "690721",
+        "690723",
+        "690730"
+      ]
+    },
+    "建筑板材": {
+      "en": "Building Boards",
+      "zh": "建筑板材",
+      "l3": [
+        {
+          "en": "Cement Boards",
+          "zh": "水泥板"
+        },
+        {
+          "en": "Honeycomb Panel",
+          "zh": "蜂窝板"
+        },
+        {
+          "en": "Plasterboards",
+          "zh": "石膏板"
+        },
+        {
+          "en": "Aluminum Composite Panels",
+          "zh": "铝塑复合板"
+        },
+        {
+          "en": "Sandwich Panels",
+          "zh": "夹心板材"
+        }
+      ],
+      "hs_codes": [
+        "441241",
+        "441892",
+        "441239",
+        "441233",
+        "441231",
+        "441251",
+        "441012",
+        "441883",
+        "441881",
+        "441249",
+        "441242",
+        "441889",
+        "441234",
+        "441299",
+        "441292",
+        "441291",
+        "441294",
+        "441259",
+        "441252",
+        "441019",
+        "441090",
+        "441899",
+        "441882",
+        "441891"
+      ]
+    },
+    "楼梯及楼梯配件": {
+      "en": "Stairs & Stair Parts",
+      "zh": "楼梯及楼梯配件",
+      "l3": [
+        {
+          "en": "Stair Parts",
+          "zh": "楼梯配件"
+        },
+        {
+          "en": "Stairs",
+          "zh": "楼梯"
+        }
+      ],
+      "hs_codes": []
+    },
+    "防火材料": {
+      "en": "Fireproofing Materials",
+      "zh": "防火材料",
+      "l3": [
+        {
+          "en": "Magnesium Oxide Boards",
+          "zh": "氧化镁板"
+        }
+      ],
+      "hs_codes": [
+        "381600",
+        "680690"
+      ]
+    },
+    "隔热材料": {
+      "en": "Heat Insulation Materials",
+      "zh": "隔热材料",
+      "l3": [
+        {
+          "en": "EPS Foam Boards",
+          "zh": "EPS 泡沫板"
+        }
+      ],
+      "hs_codes": [
+        "392111"
+      ]
+    },
+    "隔音材料": {
+      "en": "Soundproofing Materials",
+      "zh": "隔音材料",
+      "l3": [
+        {
+          "en": "Acoustic Panels",
+          "zh": "吸音板"
+        }
+      ],
+      "hs_codes": []
+    },
+    "防水材料": {
+      "en": "Waterproofing Materials",
+      "zh": "防水材料",
+      "l3": [
+        {
+          "en": "Waterproof Membrane",
+          "zh": "防水卷材"
+        },
+        {
+          "en": "Roofing Felts",
+          "zh": "屋面用毡"
+        },
+        {
+          "en": "Geosynthetic Clay Liner",
+          "zh": "膨润土防水毯"
+        }
+      ],
+      "hs_codes": [
+        "680710"
+      ]
+    },
+    "装饰线条": {
+      "en": "Mouldings",
+      "zh": "装饰线条",
+      "l3": [
+        {
+          "en": "Mouldings(从上级行业虚拟)",
+          "zh": "装饰线条(从上级行业虚拟)"
+        }
+      ],
+      "hs_codes": []
+    },
+    "壁炉、炉灶": {
+      "en": "Fireplaces & Stoves",
+      "zh": "壁炉、炉灶",
+      "l3": [
+        {
+          "en": "Stoves",
+          "zh": "炉具"
+        }
+      ],
+      "hs_codes": [
+        "732190",
+        "732189"
+      ]
+    },
+    "多功能材料": {
+      "en": "Multifunctional Materials",
+      "zh": "多功能材料",
+      "l3": [
+        {
+          "en": "Multifunctional Materials(从上级行业虚拟)",
+          "zh": "多功能材料(从上级行业虚拟)"
+        }
+      ],
+      "hs_codes": []
+    },
+    "防撞护角": {
+      "en": "Corner Guards",
+      "zh": "防撞护角",
+      "l3": [
+        {
+          "en": "Corner Guards(从上级行业虚拟)",
+          "zh": "防撞护角(从上级行业虚拟)"
+        }
+      ],
+      "hs_codes": []
+    },
+    "马赛克": {
+      "en": "",
+      "zh": "马赛克",
+      "l3": [],
+      "hs_codes": [
+        "701610",
+        "680210"
+      ]
+    },
+    "金属建材": {
+      "en": "",
+      "zh": "金属建材",
+      "l3": [],
+      "hs_codes": [
+        "830241"
+      ]
+    },
+    "模架": {
+      "en": "",
+      "zh": "模架",
+      "l3": [],
+      "hs_codes": [
+        "441840"
+      ]
+    },
+    "栏杆与扶手": {
+      "en": "",
+      "zh": "栏杆与扶手",
+      "l3": [],
+      "hs_codes": [
+        "730120"
+      ]
+    },
+    "地板供暖系统及配件": {
+      "en": "",
+      "zh": "地板供暖系统及配件",
+      "l3": [],
+      "hs_codes": [
+        "732219"
+      ]
+    }
+  }
+}

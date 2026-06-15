@@ -1,0 +1,745 @@
+{
+  "issue": 25,
+  "date": "2026-06-15",
+  "title": "建材行业全球资讯期刊",
+  "tagline": "Global Building Materials Weekly Intelligence Report",
+  "coverage": "24 国家 | 35 品类 | 207+ HS编码",
+  "sources": "P0: FRED + World Bank (0/10央行成功)",
+  "keyTakeaways": [
+    {
+      "headline": "央行利率数据暂不可用",
+      "detail": "FRED API Key未配置或数据获取失败。请检查配置。...",
+      "tag": "watch"
+    }
+  ],
+  "macro": [
+    {
+      "tag": "央行政策",
+      "title": "央行利率数据暂不可用",
+      "summary": "FRED API Key未配置或数据获取失败。请检查配置。",
+      "source": "FRED",
+      "date": "2026-06-15",
+      "impact": 0
+    }
+  ],
+  "regional": {
+    "亚太": [
+      {
+        "name": "中国",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "GDP增速",
+            "value": "5.0%",
+            "change": -8.1
+          },
+          {
+            "label": "人口",
+            "value": "14.1亿",
+            "change": -0.1
+          },
+          {
+            "label": "城市化率",
+            "value": "65.9%",
+            "change": 0.6
+          },
+          {
+            "label": "CPI通胀",
+            "value": "0.2%",
+            "change": -7.1
+          }
+        ],
+        "comment": "World Bank(截至2024年)。GDP: 18.7万亿。",
+        "data_year": "2024",
+        "source": "World Bank"
+      },
+      {
+        "name": "印度",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "GDP增速",
+            "value": "6.5%",
+            "change": -29.3
+          },
+          {
+            "label": "人口",
+            "value": "14.5亿",
+            "change": 0.9
+          },
+          {
+            "label": "城市化率",
+            "value": "35.4%",
+            "change": 0.9
+          },
+          {
+            "label": "CPI通胀",
+            "value": "5.0%",
+            "change": -12.3
+          }
+        ],
+        "comment": "World Bank(截至2024年)。GDP: 3.9万亿。",
+        "data_year": "2024",
+        "source": "World Bank"
+      },
+      {
+        "name": "日本",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "GDP增速",
+            "value": "0.1%",
+            "change": -92.9
+          },
+          {
+            "label": "人口",
+            "value": "1.2亿",
+            "change": -0.4
+          },
+          {
+            "label": "城市化率",
+            "value": "92.2%",
+            "change": 0.1
+          },
+          {
+            "label": "CPI通胀",
+            "value": "2.7%",
+            "change": -16.2
+          }
+        ],
+        "comment": "World Bank(截至2024年)。GDP: 4.0万亿。",
+        "data_year": "2024",
+        "source": "World Bank"
+      },
+      {
+        "name": "韩国",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "GDP增速",
+            "value": "2.0%",
+            "change": 26.6
+          },
+          {
+            "label": "人口",
+            "value": "5175.1万",
+            "change": 0.1
+          },
+          {
+            "label": "城市化率",
+            "value": "81.2%",
+            "change": 0.0
+          },
+          {
+            "label": "CPI通胀",
+            "value": "2.3%",
+            "change": -35.5
+          }
+        ],
+        "comment": "World Bank(截至2024年)。GDP: 1.9万亿。",
+        "data_year": "2024",
+        "source": "World Bank"
+      },
+      {
+        "name": "印尼",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "GDP增速",
+            "value": "5.0%",
+            "change": -0.4
+          },
+          {
+            "label": "人口",
+            "value": "2.8亿",
+            "change": 0.8
+          },
+          {
+            "label": "城市化率",
+            "value": "58.8%",
+            "change": 1.1
+          },
+          {
+            "label": "CPI通胀",
+            "value": "2.2%",
+            "change": -40.5
+          }
+        ],
+        "comment": "World Bank(截至2024年)。GDP: 1.4万亿。",
+        "data_year": "2024",
+        "source": "World Bank"
+      },
+      {
+        "name": "越南",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "GDP增速",
+            "value": "7.1%",
+            "change": 40.0
+          },
+          {
+            "label": "人口",
+            "value": "1.0亿",
+            "change": 0.6
+          },
+          {
+            "label": "城市化率",
+            "value": "38.5%",
+            "change": 0.9
+          },
+          {
+            "label": "CPI通胀",
+            "value": "3.6%",
+            "change": 11.3
+          }
+        ],
+        "comment": "World Bank(截至2024年)。GDP: 4763.9亿。",
+        "data_year": "2024",
+        "source": "World Bank"
+      },
+      {
+        "name": "菲律宾",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "GDP增速",
+            "value": "5.7%",
+            "change": 3.1
+          },
+          {
+            "label": "人口",
+            "value": "1.2亿",
+            "change": 0.8
+          },
+          {
+            "label": "城市化率",
+            "value": "55.5%",
+            "change": 0.6
+          },
+          {
+            "label": "CPI通胀",
+            "value": "3.2%",
+            "change": -46.3
+          }
+        ],
+        "comment": "World Bank(截至2024年)。GDP: 4616.2亿。",
+        "data_year": "2024",
+        "source": "World Bank"
+      },
+      {
+        "name": "泰国",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "GDP增速",
+            "value": "2.5%",
+            "change": 26.0
+          },
+          {
+            "label": "人口",
+            "value": "7166.8万",
+            "change": -0.0
+          },
+          {
+            "label": "城市化率",
+            "value": "61.9%",
+            "change": 1.5
+          },
+          {
+            "label": "CPI通胀",
+            "value": "1.4%",
+            "change": -83.9
+          }
+        ],
+        "comment": "World Bank(截至2024年)。GDP: 5265.2亿。",
+        "data_year": "2024",
+        "source": "World Bank"
+      },
+      {
+        "name": "澳大利亚",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "GDP增速",
+            "value": "1.4%",
+            "change": -61.7
+          },
+          {
+            "label": "人口",
+            "value": "2719.7万",
+            "change": 2.0
+          },
+          {
+            "label": "城市化率",
+            "value": "87.6%",
+            "change": 0.1
+          },
+          {
+            "label": "CPI通胀",
+            "value": "3.2%",
+            "change": -43.4
+          }
+        ],
+        "comment": "World Bank(截至2024年)。GDP: 1.8万亿。",
+        "data_year": "2024",
+        "source": "World Bank"
+      }
+    ],
+    "中东非洲": [
+      {
+        "name": "沙特",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "GDP增速",
+            "value": "2.0%",
+            "change": 268.0
+          },
+          {
+            "label": "人口",
+            "value": "3530.0万",
+            "change": 4.7
+          },
+          {
+            "label": "城市化率",
+            "value": "84.5%",
+            "change": 0.2
+          },
+          {
+            "label": "CPI通胀",
+            "value": "1.7%",
+            "change": -27.5
+          }
+        ],
+        "comment": "World Bank(截至2024年)。GDP: 1.2万亿。",
+        "data_year": "2024",
+        "source": "World Bank"
+      },
+      {
+        "name": "阿联酋",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "GDP增速",
+            "value": "4.0%",
+            "change": -7.2
+          },
+          {
+            "label": "人口",
+            "value": "1098.6万",
+            "change": 4.8
+          },
+          {
+            "label": "城市化率",
+            "value": "85.8%",
+            "change": 0.2
+          },
+          {
+            "label": "CPI通胀",
+            "value": "1.7%",
+            "change": 2.3
+          }
+        ],
+        "comment": "World Bank(截至2024年)。GDP: 5523.2亿。",
+        "data_year": "2024",
+        "source": "World Bank"
+      },
+      {
+        "name": "尼日利亚",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "GDP增速",
+            "value": "4.1%",
+            "change": 22.1
+          },
+          {
+            "label": "人口",
+            "value": "2.3亿",
+            "change": 2.1
+          },
+          {
+            "label": "城市化率",
+            "value": "63.0%",
+            "change": 1.3
+          },
+          {
+            "label": "CPI通胀",
+            "value": "33.2%",
+            "change": 34.8
+          }
+        ],
+        "comment": "World Bank(截至2024年)。GDP: 2522.6亿。",
+        "data_year": "2024",
+        "source": "World Bank"
+      },
+      {
+        "name": "南非",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "GDP增速",
+            "value": "0.5%",
+            "change": -33.7
+          },
+          {
+            "label": "人口",
+            "value": "6400.7万",
+            "change": 1.3
+          },
+          {
+            "label": "城市化率",
+            "value": "63.7%",
+            "change": 0.2
+          },
+          {
+            "label": "CPI通胀",
+            "value": "4.4%",
+            "change": -28.2
+          }
+        ],
+        "comment": "World Bank(截至2024年)。GDP: 4011.4亿。",
+        "data_year": "2024",
+        "source": "World Bank"
+      },
+      {
+        "name": "埃及",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "GDP增速",
+            "value": "2.4%",
+            "change": -36.2
+          },
+          {
+            "label": "人口",
+            "value": "1.2亿",
+            "change": 1.7
+          },
+          {
+            "label": "城市化率",
+            "value": "42.8%",
+            "change": 0.2
+          },
+          {
+            "label": "CPI通胀",
+            "value": "28.3%",
+            "change": -16.6
+          }
+        ],
+        "comment": "World Bank(截至2024年)。GDP: 3890.6亿。",
+        "data_year": "2024",
+        "source": "World Bank"
+      }
+    ],
+    "欧洲": [
+      {
+        "name": "德国",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "GDP增速",
+            "value": "-0.5%",
+            "change": 43.0
+          },
+          {
+            "label": "人口",
+            "value": "8351.7万",
+            "change": 0.3
+          },
+          {
+            "label": "城市化率",
+            "value": "82.0%",
+            "change": 0.1
+          },
+          {
+            "label": "CPI通胀",
+            "value": "2.3%",
+            "change": -62.1
+          }
+        ],
+        "comment": "World Bank(截至2024年)。GDP: 4.7万亿。",
+        "data_year": "2024",
+        "source": "World Bank"
+      },
+      {
+        "name": "英国",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "GDP增速",
+            "value": "1.1%",
+            "change": 314.7
+          },
+          {
+            "label": "人口",
+            "value": "6922.6万",
+            "change": 1.1
+          },
+          {
+            "label": "城市化率",
+            "value": "83.2%",
+            "change": 0.1
+          },
+          {
+            "label": "CPI通胀",
+            "value": "3.3%",
+            "change": -51.8
+          }
+        ],
+        "comment": "World Bank(截至2024年)。GDP: 3.7万亿。",
+        "data_year": "2024",
+        "source": "World Bank"
+      },
+      {
+        "name": "法国",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "GDP增速",
+            "value": "1.2%",
+            "change": -17.3
+          },
+          {
+            "label": "人口",
+            "value": "6855.2万",
+            "change": 0.3
+          },
+          {
+            "label": "城市化率",
+            "value": "78.8%",
+            "change": 0.0
+          },
+          {
+            "label": "CPI通胀",
+            "value": "2.0%",
+            "change": -59.0
+          }
+        ],
+        "comment": "World Bank(截至2024年)。GDP: 3.2万亿。",
+        "data_year": "2024",
+        "source": "World Bank"
+      },
+      {
+        "name": "波兰",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "GDP增速",
+            "value": "3.0%",
+            "change": 1113.3
+          },
+          {
+            "label": "人口",
+            "value": "3655.9万",
+            "change": -0.3
+          },
+          {
+            "label": "城市化率",
+            "value": "60.0%",
+            "change": 0.1
+          },
+          {
+            "label": "CPI通胀",
+            "value": "3.8%",
+            "change": -67.1
+          }
+        ],
+        "comment": "World Bank(截至2024年)。GDP: 9177.7亿。",
+        "data_year": "2024",
+        "source": "World Bank"
+      },
+      {
+        "name": "土耳其",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "GDP增速",
+            "value": "3.3%",
+            "change": -34.0
+          },
+          {
+            "label": "人口",
+            "value": "8551.9万",
+            "change": 0.2
+          },
+          {
+            "label": "城市化率",
+            "value": "89.3%",
+            "change": 0.4
+          },
+          {
+            "label": "CPI通胀",
+            "value": "58.5%",
+            "change": 8.6
+          }
+        ],
+        "comment": "World Bank(截至2024年)。GDP: 1.4万亿。",
+        "data_year": "2024",
+        "source": "World Bank"
+      },
+      {
+        "name": "意大利",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "GDP增速",
+            "value": "0.7%",
+            "change": -29.0
+          },
+          {
+            "label": "人口",
+            "value": "5895.3万",
+            "change": -0.1
+          },
+          {
+            "label": "城市化率",
+            "value": "69.6%",
+            "change": 0.1
+          },
+          {
+            "label": "CPI通胀",
+            "value": "1.0%",
+            "change": -82.5
+          }
+        ],
+        "comment": "World Bank(截至2024年)。GDP: 2.4万亿。",
+        "data_year": "2024",
+        "source": "World Bank"
+      },
+      {
+        "name": "西班牙",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "GDP增速",
+            "value": "3.5%",
+            "change": 40.4
+          },
+          {
+            "label": "人口",
+            "value": "4884.9万",
+            "change": 1.0
+          },
+          {
+            "label": "城市化率",
+            "value": "80.3%",
+            "change": 0.2
+          },
+          {
+            "label": "CPI通胀",
+            "value": "2.8%",
+            "change": -21.5
+          }
+        ],
+        "comment": "World Bank(截至2024年)。GDP: 1.7万亿。",
+        "data_year": "2024",
+        "source": "World Bank"
+      }
+    ],
+    "美洲": [
+      {
+        "name": "美国",
+        "flag": "",
+        "metrics": [],
+        "comment": "。",
+        "source": "FRED / Case-Shiller / Census Bureau",
+        "data_date": null
+      },
+      {
+        "name": "巴西",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "GDP增速",
+            "value": "3.4%",
+            "change": 5.5
+          },
+          {
+            "label": "人口",
+            "value": "2.1亿",
+            "change": 0.4
+          },
+          {
+            "label": "城市化率",
+            "value": "87.9%",
+            "change": 0.3
+          },
+          {
+            "label": "CPI通胀",
+            "value": "4.4%",
+            "change": -4.9
+          }
+        ],
+        "comment": "World Bank(截至2024年)。GDP: 2.2万亿。",
+        "data_year": "2024",
+        "source": "World Bank"
+      },
+      {
+        "name": "墨西哥",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "GDP增速",
+            "value": "1.4%",
+            "change": -57.4
+          },
+          {
+            "label": "人口",
+            "value": "1.3亿",
+            "change": 0.9
+          },
+          {
+            "label": "城市化率",
+            "value": "79.8%",
+            "change": 0.4
+          },
+          {
+            "label": "CPI通胀",
+            "value": "4.7%",
+            "change": -14.6
+          }
+        ],
+        "comment": "World Bank(截至2024年)。GDP: 1.9万亿。",
+        "data_year": "2024",
+        "source": "World Bank"
+      },
+      {
+        "name": "加拿大",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "GDP增速",
+            "value": "1.6%",
+            "change": 1.7
+          },
+          {
+            "label": "人口",
+            "value": "4128.9万",
+            "change": 3.0
+          },
+          {
+            "label": "城市化率",
+            "value": "82.7%",
+            "change": 0.2
+          },
+          {
+            "label": "CPI通胀",
+            "value": "2.4%",
+            "change": -38.6
+          }
+        ],
+        "comment": "World Bank(截至2024年)。GDP: 2.2万亿。",
+        "data_year": "2024",
+        "source": "World Bank"
+      }
+    ]
+  },
+  "trends": [],
+  "supplyChain": [],
+  "regulation": [],
+  "innovation": [],
+  "events": [],
+  "dataSources": []
+}
