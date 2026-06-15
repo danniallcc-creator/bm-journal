@@ -63,17 +63,14 @@ FRED_SERIES = {
     "fed_funds_target_lower": "DFII10",      # (用同一series,手动区分)
     # 美国房地产 - Case-Shiller
     "cs_national_sa": "CSUSHPINSA",          # 全美房价指数(季调)
-    "cs_national_yoy": "CSUSHPINSAYOY",      # 全美房价同比(%)
     "cs_20city": "SPCS20RSA",                # 20城综合(季调)
-    "cs_20city_yoy": "SPCS20RNSAYOY",        # 20城同比
     # 美国建筑先行指标
     "building_permits": "PERMIT",            # 建筑许可证(千套,SAAR)
     "housing_starts": "HOUST",               # 新屋开工(千套,SAAR)
-    "construction_spending": "TLACONS",      # 建筑支出(十亿美元,SA)
+    "construction_spending": "TTLCONS",      # 建筑支出(十亿美元,SA)
     "existing_home_sales": "EXHOSLUSM495S",  # 成屋销售(万套,SAAR)
     "existing_home_inventory": "MSACSR",     # 成屋库存(月数)
     "new_home_sales": "HSN1FNSA",            # 新房销售(千套,SA)
-    "home_price_index_ofheo": "OFHEOPRICE",  # OFHEO房价指数
     # 美国宏观
     "us_cpi_all": "CPIAUCSL",               # CPI全品类
     "us_cpi_shelter": "CUSR0000SAH1",        # CPI住房分项
@@ -81,28 +78,26 @@ FRED_SERIES = {
     "us_10y_treasury": "DGS10",              # 10年期国债
     "us_30y_mortgage": "MORTGAGE30US",       # 30年期房贷利率
     "us_15y_mortgage": "MORTGAGE15US",       # 15年期房贷利率
-    # 金属价格(FRED有部分)
-    "aluminum_price": "PALUM",               # 铝全球均价($/mt)
-    "copper_price": "PCOPP",                 # 铜($/mt)
-    "zinc_price": "PZINC",                   # 锌
-    "lead_price": "PLEAD",                   # 铅
-    "tin_price": "PTIN",                     # 锡
-    "nickel_price": "PNICK",                 # 镍
-    "iron_ore": "PIORECR",                   # 铁矿石
+    # 金属价格(FRED Global Price系列, USDM后缀)
+    "aluminum_price": "PALUMUSDM",           # 铝全球均价($/mt)
+    "copper_price": "PCOPPUSDM",             # 铜($/mt)
+    "zinc_price": "PZINCUSDM",               # 锌($/mt)
+    "lead_price": "PLEADUSDM",               # 铅($/mt)
+    "nickel_price": "PNICKUSDM",             # 镍($/mt)
+    "iron_ore": "PIORECRUSDM",               # 铁矿石($/mt)
     # 能源
-    "natural_gas_hh": "NGRNGC1",             # 天然气Henry Hub
+    "natural_gas_hh": "DHHNGSP",             # 天然气Henry Hub现货价
     "wti_crude": "DCOILWTICO",               # WTI原油
     "brent_crude": "DCOILBRENTEU",           # Brent原油
-    "coal": "PCOALAU",                       # 澳大利亚动力煤
+    "coal": "PCOALAUUSDM",                   # 澳大利亚动力煤($/mt)
 }
 
 # === 央行利率映射 (FRED series_id) ===
 CENTRAL_BANK_RATES = {
     "US": {"name": "美联储(Fed)", "fred_id": "DFF", "type": "daily"},
-    "ECB": {"name": "欧央行(ECB)", "fred_id": "ECBESTRVOL", "type": "daily"},
+    "ECB": {"name": "欧央行(ECB)", "fred_id": "ECBDFR", "type": "daily"},
     "GB": {"name": "英央行(BOE)", "fred_id": "IUDSOIA", "type": "daily"},
     "JP": {"name": "日央行(BOJ)", "fred_id": "IRSTCI01JPM156N", "type": "monthly"},
-    "CN_1Y": {"name": "中国LPR(1Y)", "fred_id": "CHN_LPR_1Y", "type": "monthly"},  # 可能不存在
     "AU": {"name": "澳联储(RBA)", "fred_id": "IRSTCI01AUM156N", "type": "monthly"},
     "CA": {"name": "加央行(BOC)", "fred_id": "IRSTCI01CAM156N", "type": "monthly"},
     "BR": {"name": "巴西央行(BCB)", "fred_id": "IRSTCI01BRM156N", "type": "monthly"},

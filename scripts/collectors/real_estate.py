@@ -82,7 +82,7 @@ def collect_case_shiller() -> dict:
 
     # 主要城市 (部分FRED有数据)
     metro_series = {
-        "洛杉矶": "LRXRSA",
+        "洛杉矶": "LXXRSA",
         "纽约": "NYXRSA",
         "旧金山": "SFXRSA",
         "迈阿密": "MIXRSA",

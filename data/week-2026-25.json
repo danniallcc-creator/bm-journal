@@ -4,16 +4,27 @@
   "title": "建材行业全球资讯期刊",
   "tagline": "Global Building Materials Weekly Intelligence Report",
   "coverage": "25 国家 | 35 品类 | 207+ HS编码",
-  "sources": "World Bank(25国) + SCFI + BDI + EUR-Lex(0条) + RSS(28篇/6源) + Events(13场) + Academia(10主题) + Research(23篇) + Emerging(0强信号)",
-  "keyTakeaways": [],
+  "sources": "FRED(9/9央行) + World Bank(25国) + SCFI + BDI + EUR-Lex(0条) + RSS(28篇/6源) + Events(13场) + Academia(10主题) + Research(23篇) + Emerging(0强信号)",
+  "keyTakeaways": [
+    {
+      "headline": "美联储维持利率3.62%不变",
+      "detail": "联邦基金有效利率3.62%。10年期国债收益率4.45%。全球央行: 欧央行(ECB) 2.00%; 英央行(BOE) 3.73%; 日央行(BOJ) 0.73%; 澳联储(RBA) 4.10%; 加央行(BOC) 2.25%。对建材行业影...",
+      "tag": "watch"
+    },
+    {
+      "headline": "美国Case-Shiller房价同比上涨0.7%",
+      "detail": "全美指数329.938。房价趋势影响翻新和新建投资。",
+      "tag": "info"
+    }
+  ],
   "macro": [
     {
       "tag": "央行政策",
-      "title": "央行利率数据暂不可用",
-      "summary": "FRED API Key未配置或数据获取失败。请检查配置。",
-      "source": "FRED",
-      "date": "2026-06-15",
-      "impact": 0
+      "title": "美联储维持利率3.62%不变",
+      "summary": "联邦基金有效利率3.62%。10年期国债收益率4.45%。全球央行: 欧央行(ECB) 2.00%; 英央行(BOE) 3.73%; 日央行(BOJ) 0.73%; 澳联储(RBA) 4.10%; 加央行(BOC) 2.25%。对建材行业影响: 利率变动通过房贷利率和建筑融资成本传导至房地产投资和新开工。",
+      "source": "FRED / 各国央行",
+      "date": "2026-06-11",
+      "impact": 3
     },
     {
       "tag": "宏观 / 供应链",
@@ -659,29 +670,39 @@
         "flag": "",
         "metrics": [
           {
-            "label": "GDP增速",
-            "value": "2.8%",
-            "change": -3.3
+            "label": "Case-Shiller房价(YoY)",
+            "value": "0.7%",
+            "change": 0.7
           },
           {
-            "label": "人口",
-            "value": "3.4亿",
-            "change": 1.0
+            "label": "新屋开工",
+            "value": "1465千套",
+            "change": 4.6
           },
           {
-            "label": "城市化率",
-            "value": "80.1%",
-            "change": 0.1
+            "label": "建筑许可证",
+            "value": "1423千套",
+            "change": -1.5
           },
           {
-            "label": "CPI通胀",
-            "value": "2.9%",
-            "change": -28.3
+            "label": "30Y房贷利率",
+            "value": "6.52%",
+            "change": 0.6
+          },
+          {
+            "label": "成屋库存",
+            "value": "9.4月",
+            "change": 8.0
+          },
+          {
+            "label": "建筑支出",
+            "value": "$2172397B",
+            "change": 0.9
           }
         ],
-        "comment": "World Bank(截至2024年)。GDP: 28.8万亿。",
-        "data_year": "2024",
-        "source": "World Bank"
+        "comment": "房价同比上涨0.7%，新屋开工同比增长4.6%，30Y房贷6.52%。",
+        "source": "FRED / Case-Shiller / Census Bureau",
+        "data_date": "2026-03-01"
       },
       {
         "name": "巴西",
@@ -774,6 +795,61 @@
   },
   "trends": [],
   "supplyChain": [
+    {
+      "title": "大宗商品价格追踪 (FRED)",
+      "data": [
+        {
+          "item": "铁矿石",
+          "value": "111.65 $/mt",
+          "change": 2.1
+        },
+        {
+          "item": "铝",
+          "value": "3654.02 $/mt",
+          "change": 1.7
+        },
+        {
+          "item": "铜",
+          "value": "13483.75 $/mt",
+          "change": 4.6
+        },
+        {
+          "item": "锌",
+          "value": "3458.04 $/mt",
+          "change": 3.1
+        },
+        {
+          "item": "铅",
+          "value": "1984.26 $/mt",
+          "change": 2.9
+        },
+        {
+          "item": "镍",
+          "value": "18879.23 $/mt",
+          "change": 5.7
+        },
+        {
+          "item": "天然气(HH)",
+          "value": "3.10 $/MMBtu",
+          "change": 1.6
+        },
+        {
+          "item": "WTI原油",
+          "value": "95.00 $/barrel",
+          "change": 0.7
+        },
+        {
+          "item": "Brent原油",
+          "value": "97.46 $/barrel",
+          "change": 0.2
+        },
+        {
+          "item": "动力煤",
+          "value": "141.45 $/mt",
+          "change": -0.5
+        }
+      ]
+    },
     {
       "title": "海运运价指数",
       "data": [
