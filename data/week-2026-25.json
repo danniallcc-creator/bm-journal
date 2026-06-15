@@ -13,7 +13,7 @@
     },
     {
       "headline": "美联储维持利率3.62%不变",
-      "detail": "联邦基金有效利率3.62%。10年期国债收益率4.45%。全球央行: 欧央行(ECB) 2.00%; 英央行(BOE) 3.73%; 日央行(BOJ) 0.73%; 澳联储(RBA) 4.10%; 加央行(BOC) 2.25%。对建材行业影...",
+      "detail": "联邦基金有效利率3.62%。10年期国债收益率N/A%。全球央行: 欧央行(ECB) 2.00%; 英央行(BOE) 3.73%; 日央行(BOJ) 0.73%; 澳联储(RBA) 4.10%; 加央行(BOC) 2.25%。对建材行业影响...",
       "tag": "watch"
     },
     {
@@ -26,7 +26,7 @@
     {
       "tag": "央行政策",
       "title": "美联储维持利率3.62%不变",
-      "summary": "联邦基金有效利率3.62%。10年期国债收益率4.45%。全球央行: 欧央行(ECB) 2.00%; 英央行(BOE) 3.73%; 日央行(BOJ) 0.73%; 澳联储(RBA) 4.10%; 加央行(BOC) 2.25%。对建材行业影响: 利率变动通过房贷利率和建筑融资成本传导至房地产投资和新开工。",
+      "summary": "联邦基金有效利率3.62%。10年期国债收益率N/A%。全球央行: 欧央行(ECB) 2.00%; 英央行(BOE) 3.73%; 日央行(BOJ) 0.73%; 澳联储(RBA) 4.10%; 加央行(BOC) 2.25%。对建材行业影响: 利率变动通过房贷利率和建筑融资成本传导至房地产投资和新开工。",
       "source": "FRED / 各国央行",
       "link": "https://fred.stlouisfed.org/series/FEDFUNDS",
       "date": "2026-06-11",
@@ -1592,7 +1592,7 @@
         "高层建筑",
         "节能法规",
         "中东建设潮",
-        "6篇最新论文",
+        "7篇最新论文",
         "铝价格上涨1.7%"
       ],
       "socialSignals": [
@@ -1709,75 +1709,91 @@
   "innovation": [
     {
       "title": "Enhancing thermal insulation in cement mortar with silica aerogel and recycled P",
-      "summary": "气凝胶保温: 共10篇相关论文(近期10篇)。代表: Marof; Šiller(2025)，被引19次。",
+      "title_zh": "气凝胶保温材料",
+      "summary": "气凝胶保温: 共10篇相关论文(近期10篇)。代表研究: Marof; Šiller(2025)，被引19次。",
       "tag": "innovation",
       "topic": "气凝胶保温",
       "paper_count": 10,
       "source": "Crossref/DOAJ",
-      "doi": "10.1016/j.conbuildmat.2025.140320"
+      "doi": "10.1016/j.conbuildmat.2025.140320",
+      "tech_direction": "开发低成本气凝胶复合保温板材；解决脆性问题提升施工性；目标导热系数<0.015 W/mK"
     },
     {
       "title": "Optimized community-level distributed photovoltaic generation (DPVG): Aesthetic,",
-      "summary": "光伏一体化(BIPV): 共10篇相关论文(近期10篇)。代表: Zhang; Cao; Chen et al.(2025)，被引14次。",
+      "title_zh": "建筑光伏一体化(BIPV)",
+      "summary": "光伏一体化(BIPV): 共10篇相关论文(近期10篇)。代表研究: Zhang; Cao; Chen et al.(2025)，被引14次。",
       "tag": "innovation",
       "topic": "光伏一体化(BIPV)",
       "paper_count": 10,
       "source": "Crossref/DOAJ",
-      "doi": "10.1016/j.jobe.2025.112085"
+      "doi": "10.1016/j.jobe.2025.112085",
+      "tech_direction": "研发建筑外立面集成光伏组件；兼顾美观与发电效率；开发透明/彩色光伏玻璃"
     },
     {
       "title": "Bacterial concrete: the future of self-healing and sustainable infrastructure",
-      "summary": "自修复混凝土: 共7篇相关论文(近期7篇)。代表: Sukumaran; Johnpaul; Balasundaram et al.(2025)，被引9次。",
+      "title_zh": "自修复混凝土技术",
+      "summary": "自修复混凝土: 共7篇相关论文(近期7篇)。代表研究: Sukumaran; Johnpaul; Balasundaram et al.(2025)，被引9次。",
       "tag": "innovation",
       "topic": "自修复混凝土",
       "paper_count": 7,
       "source": "Crossref/DOAJ",
-      "doi": "10.1016/j.mex.2025.103569"
+      "doi": "10.1016/j.mex.2025.103569",
+      "tech_direction": "研发微生物/微胶囊自修复添加剂，延长混凝土结构寿命50%+；适用于基础设施和海洋工程"
+    },
+    {
+      "title": "Effect of window orientation on the thermal performance of electrochromic glass",
+      "title_zh": "智能调光玻璃",
+      "summary": "智能玻璃: 共7篇相关论文(近期7篇)。代表研究: Wen; Sun; Meng(2025)，被引12次。",
+      "tag": "innovation",
+      "topic": "智能玻璃",
+      "paper_count": 7,
+      "source": "Crossref/DOAJ",
+      "doi": "10.1016/j.csite.2025.105990",
+      "tech_direction": "研发电致变色/热致变色智能调光玻璃；降低制造成本；集成建筑自动化控制系统"
     },
     {
       "title": "Façade systems for industrialised prefabricated prefinished modular construction",
-      "summary": "模块化建筑: 共6篇相关论文(近期6篇)。代表: Hajirezaei; Sharafi; Farsangi et al.(2025)，被引7次。",
+      "title_zh": "模块化与装配式建筑",
+      "summary": "模块化建筑: 共6篇相关论文(近期6篇)。代表研究: Hajirezaei; Sharafi; Farsangi et al.(2025)，被引7次。",
       "tag": "innovation",
       "topic": "模块化建筑",
       "paper_count": 6,
       "source": "Crossref/DOAJ",
-      "doi": "10.1016/j.autcon.2025.106269"
-    },
-    {
-      "title": "Spectral analysis of the discoloration process in architectural electrochromic g",
-      "summary": "智能玻璃: 共6篇相关论文(近期6篇)。代表: Wen; Meng(2025)，被引9次。",
-      "tag": "innovation",
-      "topic": "智能玻璃",
-      "paper_count": 6,
-      "source": "Crossref/DOAJ",
-      "doi": "10.1038/s41598-025-91183-w"
+      "doi": "10.1016/j.autcon.2025.106269",
+      "tech_direction": "设计标准化模块接口系统；开发轻量化结构板材；实现工厂预制率80%+的快速装配"
     },
     {
       "title": "Building Sustainable Futures: Evaluating Embodied Carbon Emissions and Biogenic ",
-      "summary": "大木结构(CLT): 共5篇相关论文(近期5篇)。代表: Chapagain; Crovella(2025)，被引6次。",
+      "title_zh": "大木结构(CLT)技术",
+      "summary": "大木结构(CLT): 共5篇相关论文(近期5篇)。代表研究: Chapagain; Crovella(2025)，被引6次。",
       "tag": "innovation",
       "topic": "大木结构(CLT)",
       "paper_count": 5,
       "source": "Crossref/DOAJ",
-      "doi": "10.3390/su17125602"
+      "doi": "10.3390/su17125602",
+      "tech_direction": "开发高强度CLT板材和连接节点系统；解决防火防潮技术难点；拓展中高层建筑应用"
     },
     {
       "title": "Technological aspects of fabricating a reinforced concrete shell using 3D concre",
-      "summary": "3D打印建筑: 共4篇相关论文(近期4篇)。代表: Tenesesku(2025)，被引1次。",
+      "title_zh": "3D打印建筑技术",
+      "summary": "3D打印建筑: 共4篇相关论文(近期4篇)。代表研究: Tenesesku(2025)，被引1次。",
       "tag": "innovation",
       "topic": "3D打印建筑",
       "paper_count": 4,
       "source": "Crossref/DOAJ",
-      "doi": "10.32347/2522-4182.17.2025.141-152"
+      "doi": "10.32347/2522-4182.17.2025.141-152",
+      "tech_direction": "开发适用于大型3D打印的速凝特种水泥配方；优化打印路径和结构强度；降低建造成本30%+"
     },
     {
       "title": "Performance Evaluation of Recycled Self-Compacting Concrete Incorporating Recycl",
-      "summary": "再生钢材: 共2篇相关论文(近期2篇)。代表: Abdulrahman; Taha; Younis(2025)，被引1次。",
+      "title_zh": "再生钢材与绿色钢铁",
+      "summary": "再生钢材: 共2篇相关论文(近期2篇)。代表研究: Abdulrahman; Taha; Younis(2025)，被引1次。",
       "tag": "innovation",
       "topic": "再生钢材",
       "paper_count": 2,
       "source": "Crossref/DOAJ",
-      "doi": "10.20944/preprints202504.1804.v1"
+      "doi": "10.20944/preprints202504.1804.v1",
+      "tech_direction": "开发氢基直接还原铁(DRI-H2)炼钢工艺；提升废钢回收利用率；实现近零碳排放钢铁生产"
     }
   ],
   "events": [

@@ -242,8 +242,58 @@ def collect_all_innovation() -> dict:
 
 
 def format_innovation_items(innovation_data: dict) -> list[dict]:
-    """转化为期刊innovation板块格式"""
+    """转化为期刊innovation板块格式, 含翻译和技术方向提炼"""
+    from .translator import translate_text
+
     items = []
+
+    # 技术方向映射: 从主题推断核心产品开发方向
+    TECH_DIRECTIONS = {
+        "低碳水泥": "开发低碳/零碳水泥配方，替代传统硅酸盐水泥；研究地质聚合物和LC3复合配方降低碳排放50%+",
+        "自修复混凝土": "研发微生物/微胶囊自修复添加剂，延长混凝土结构寿命50%+；适用于基础设施和海洋工程",
+        "3D打印建筑": "开发适用于大型3D打印的速凝特种水泥配方；优化打印路径和结构强度；降低建造成本30%+",
+        "气凝胶保温": "开发低成本气凝胶复合保温板材；解决脆性问题提升施工性；目标导热系数<0.015 W/mK",
+        "光伏一体化(BIPV)": "研发建筑外立面集成光伏组件；兼顾美观与发电效率；开发透明/彩色光伏玻璃",
+        "大木结构(CLT)": "开发高强度CLT板材和连接节点系统；解决防火防潮技术难点；拓展中高层建筑应用",
+        "模块化建筑": "设计标准化模块接口系统；开发轻量化结构板材；实现工厂预制率80%+的快速装配",
+        "智能玻璃": "研发电致变色/热致变色智能调光玻璃；降低制造成本；集成建筑自动化控制系统",
+        "再生钢材": "开发氢基直接还原铁(DRI-H2)炼钢工艺；提升废钢回收利用率；实现近零碳排放钢铁生产",
+        "数字孪生": "构建建筑结构全生命周期数字孪生平台；集成IoT传感器实时监测；AI预测维护需求",
+        "碳捕集建材": "开发CO2矿化养护混凝土技术；将工业废气转化为建材原料；实现碳负排放建材产品",
+    }
+
+    # 技术方向映射: 从主题推断核心产品开发方向
+    TECH_DIRECTIONS = {
+        "低碳水泥": "开发低碳/零碳水泥配方，替代传统硅酸盐水泥；研究地质聚合物和LC3复合配方降低碳排放50%+",
+        "自修复混凝土": "研发微生物/微胶囊自修复添加剂，延长混凝土结构寿命50%+；适用于基础设施和海洋工程",
+        "3D打印建筑": "开发适用于大型3D打印的速凝特种水泥配方；优化打印路径和结构强度；降低建造成本30%+",
+        "气凝胶保温": "开发低成本气凝胶复合保温板材；解决脆性问题提升施工性；目标导热系数<0.015 W/mK",
+        "光伏一体化(BIPV)": "研发建筑外立面集成光伏组件；兼顾美观与发电效率；开发透明/彩色光伏玻璃",
+        "大木结构(CLT)": "开发高强度CLT板材和连接节点系统；解决防火防潮技术难点；拓展中高层建筑应用",
+        "模块化建筑": "设计标准化模块接口系统；开发轻量化结构板材；实现工厂预制率80%+的快速装配",
+        "智能玻璃": "研发电致变色/热致变色智能调光玻璃；降低制造成本；集成建筑自动化控制系统",
+        "再生钢材": "开发氢基直接还原铁(DRI-H2)炼钢工艺；提升废钢回收利用率；实现近零碳排放钢铁生产",
+        "数字孪生": "构建建筑结构全生命周期数字孪生平台；集成IoT传感器实时监测；AI预测维护需求",
+        "碳捕集建材": "开发CO2矿化养护混凝土技术；将工业废气转化为建材原料；实现碳负排放建材产品",
+    }
+
+    # 主题中文标题映射（当翻译API不可用时的降级方案）
+    TOPIC_ZH_TITLES = {
+        "低碳水泥": "低碳水泥与地质聚合物",
+        "自修复混凝土": "自修复混凝土技术",
+        "3D打印建筑": "3D打印建筑技术",
+        "气凝胶保温": "气凝胶保温材料",
+        "光伏一体化(BIPV)": "建筑光伏一体化(BIPV)",
+        "大木结构(CLT)": "大木结构(CLT)技术",
+        "模块化建筑": "模块化与装配式建筑",
+        "智能玻璃": "智能调光玻璃",
+        "再生钢材": "再生钢材与绿色钢铁",
+        "数字孪生": "建筑数字孪生",
+        "碳捕集建材": "碳捕集建材技术",
+        "智能建造": "智能建造与机器人",
+        "建筑能源": "建筑能效优化",
+        "AI建筑设计": "AI辅助建筑设计",
+    }
 
     # 按主题聚合, 取论文最多的top 8
     topic_papers = []
@@ -264,29 +314,50 @@ def format_innovation_items(innovation_data: dict) -> list[dict]:
 
     for tp in topic_papers[:8]:
         paper = tp["best_paper"]
+        original_title = paper["title"][:80]
+
+        # 翻译标题 (优先API翻译, 失败时用主题中文名)
+        translated_title = translate_text(original_title)
+        if translated_title == original_title:
+            translated_title = TOPIC_ZH_TITLES.get(tp["topic"], original_title)
+
+        # 提炼技术方向
+        tech_direction = TECH_DIRECTIONS.get(tp["topic"], "")
+
+        # 构建摘要(中文)
+        summary = f"{tp['topic']}: 共{tp['total_papers']}篇相关论文(近期{tp['recent_count']}篇)。" \
+                  f"代表研究: {paper['authors']}({paper['year']})，被引{paper['citations']}次。"
+
         items.append({
-            "title": paper["title"][:80],
-            "summary": f"{tp['topic']}: 共{tp['total_papers']}篇相关论文(近期{tp['recent_count']}篇)。"
-                       f"代表: {paper['authors']}({paper['year']})，被引{paper['citations']}次。",
+            "title": original_title,
+            "title_zh": translated_title,
+            "summary": summary,
             "tag": "innovation",
             "topic": tp["topic"],
             "paper_count": tp["total_papers"],
             "source": "Crossref/DOAJ",
             "doi": paper.get("doi", ""),
+            "tech_direction": tech_direction,
         })
 
     # 补充arXiv预印本
     for topic, data in innovation_data.get("arxiv", {}).items():
         papers = data.get("papers", [])
         if papers:
+            original_title = papers[0]["title"][:80]
+            translated_title = translate_text(original_title)
+            if translated_title == original_title:
+                translated_title = TOPIC_ZH_TITLES.get(topic, original_title)
             items.append({
-                "title": papers[0]["title"][:80],
-                "summary": f"{topic}: {len(papers)}篇预印本。最新: {papers[0]['authors']} - {papers[0]['title'][:50]}",
+                "title": original_title,
+                "title_zh": translated_title,
+                "summary": f"{topic}: {len(papers)}篇预印本。最新: {papers[0]['authors']} - {translated_title[:50]}",
                 "tag": "innovation",
                 "topic": topic,
                 "paper_count": len(papers),
                 "source": "arXiv",
                 "link": papers[0].get("link", ""),
+                "tech_direction": TECH_DIRECTIONS.get(topic, ""),
             })
 
     return items[:10]

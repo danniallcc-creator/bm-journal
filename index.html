@@ -174,6 +174,8 @@ a:hover{text-decoration:underline}
 .stage-pilot{background:#fff3e0;color:#f39c12}
 .stage-commercial{background:#e8f5e9;color:#27ae60}
 .inno-card p{font-size:13px;color:var(--text-light);line-height:1.6}
+.inno-card .tech-direction{margin:8px 0;padding:8px 12px;background:linear-gradient(135deg,#fff8e1,#fff3cd);border-radius:8px;font-size:13px;color:#7c6a0a;line-height:1.5}
+.inno-card .tech-direction .td-label{display:inline-block;font-size:11px;font-weight:700;background:var(--gold);color:#fff;padding:1px 6px;border-radius:4px;margin-right:6px}
 .inno-card .inno-meta{display:flex;gap:12px;margin-top:10px;font-size:12px;color:var(--text-light)}
 .inno-card .inno-meta .cite{font-weight:600;color:var(--gold)}
 .inno-card .inno-meta .doi a{color:var(--accent-blue);font-size:11px}
@@ -307,9 +309,9 @@ a:hover{text-decoration:underline}
     <a href="#macro"><span class="icon">1</span>宏观环境</a>
     <a href="#regional"><span class="icon">2</span>区域与国别分析</a>
     <a href="#products"><span class="icon">3</span>产品趋势与需求</a>
-    <a href="#supplychain"><span class="icon">4</span>供应链与贸易</a>
-    <a href="#regulation"><span class="icon">5</span>监管与ESG</a>
-    <a href="#innovation"><span class="icon">6</span>技术创新</a>
+    <a href="#innovation"><span class="icon">4</span>技术创新</a>
+    <a href="#supplychain"><span class="icon">5</span>供应链与贸易</a>
+    <a href="#regulation"><span class="icon">6</span>监管与ESG</a>
     <a href="#research"><span class="icon">7</span>投研摘要</a>
     <a href="#emerging"><span class="icon">8</span>新兴需求</a>
     <div class="group-label">工具</div>
@@ -382,31 +384,31 @@ a:hover{text-decoration:underline}
       <div class="trend-list" id="trend-list"></div>
     </div>
 
-    <!-- Section 4: Supply Chain -->
-    <div class="section" id="supplychain">
+    <!-- Section 4: Innovation -->
+    <div class="section" id="innovation">
       <div class="section-header">
         <div class="num">4</div>
+        <h2>技术创新<span class="en">Innovation & Technology</span></h2>
+      </div>
+      <div class="inno-grid" id="inno-grid"></div>
+    </div>
+
+    <!-- Section 5: Supply Chain -->
+    <div class="section" id="supplychain">
+      <div class="section-header">
+        <div class="num">5</div>
         <h2>供应链与贸易<span class="en">Supply Chain & Trade</span></h2>
       </div>
       <div class="sc-grid" id="sc-grid"></div>
     </div>
 
-    <!-- Section 5: Regulation & ESG -->
+    <!-- Section 6: Regulation & ESG -->
     <div class="section" id="regulation">
       <div class="section-header">
-        <div class="num">5</div>
+        <div class="num">6</div>
         <h2>监管与ESG<span class="en">Regulation & ESG</span></h2>
       </div>
       <div class="reg-list" id="reg-list"></div>
-    </div>
-
-    <!-- Section 6: Innovation -->
-    <div class="section" id="innovation">
-      <div class="section-header">
-        <div class="num">6</div>
-        <h2>技术创新<span class="en">Innovation & Technology</span></h2>
-      </div>
-      <div class="inno-grid" id="inno-grid"></div>
     </div>
 
     <!-- Section 7: Research Highlights -->
@@ -521,9 +523,9 @@ function renderAll() {
     renderRegional(d.regional || {});
   }
   renderTrends(d.trends || []);
+  renderInnovation(d.innovation || []);
   renderSupplyChain(d.supplyChain || []);
   renderRegulation(d.regulation || []);
-  renderInnovation(d.innovation || []);
   renderResearch(d.researchHighlights || []);
   renderEmerging(d.emergingDemand || []);
   renderCategoryExplorer();
@@ -766,8 +768,17 @@ function renderInnovation(items) {
     const stageGuess = (it.paper_count||0) >= 8 ? '商业化' : (it.paper_count||0) >= 4 ? '试点' : '研发';
     const stageClass = stageGuess === '商业化' ? 'stage-commercial' : stageGuess === '试点' ? 'stage-pilot' : 'stage-lab';
     const doiHtml = it.doi ? '<span class="doi"><a href="https://doi.org/' + esc(it.doi) + '" target="_blank">DOI</a></span>' : '';
-    return '<div class="inno-card"><h4>' + esc(it.title) + '</h4>' +
-      '<span class="inno-stage ' + stageClass + '">' + esc(it.topic || it.title.split(':')[0]) + '</span>' +
+    // Use translated title, fallback to original
+    const title = it.title_zh || it.title || '';
+    // Technology direction
+    const direction = it.tech_direction || '';
+    const dirHtml = direction ? '<div class="tech-direction"><span class="td-label">技术方向</span>' + esc(direction) + '</div>' : '';
+    // Topic as primary badge
+    const topicLabel = it.topic || '';
+    return '<div class="inno-card">' +
+      '<span class="inno-stage ' + stageClass + '">' + esc(topicLabel) + ' · ' + stageGuess + '</span>' +
+      '<h4>' + esc(title) + '</h4>' +
+      dirHtml +
       '<p>' + esc(it.summary) + '</p>' +
       '<div class="inno-meta">' +
       (it.paper_count ? '<span>' + it.paper_count + ' 篇论文</span>' : '') +
