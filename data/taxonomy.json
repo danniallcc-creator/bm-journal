@@ -27,7 +27,8 @@
       ],
       "hs_codes": [
         "730840"
-      ]
+      ],
+      "l2_slug": "ladders-scaffoldings"
     },
     "塑料管": {
       "en": "Plastic Tubes",
@@ -67,7 +68,8 @@
       ],
       "hs_codes": [
         "560313"
-      ]
+      ],
+      "l2_slug": "earthwork-products"
     },
     "石材": {
       "en": "Stone",
@@ -118,7 +120,8 @@
         "251512",
         "251511",
         "680210"
-      ]
+      ],
+      "l2_slug": "stone"
     },
     "空调系统及配件": {
       "en": "HVAC System & Parts",
@@ -133,7 +136,8 @@
           "zh": "出风口"
         }
       ],
-      "hs_codes": []
+      "hs_codes": [],
+      "l2_slug": "hvac-system-parts"
     },
     "砖石材料": {
       "en": "Masonry Materials",
@@ -198,7 +202,8 @@
         "690730",
         "690220",
         "690320"
-      ]
+      ],
+      "l2_slug": "masonry-materials"
     },
     "木材": {
       "en": "Timber",
@@ -302,7 +307,8 @@
         "440726",
         "440727",
         "440728"
-      ]
+      ],
+      "l2_slug": "timber"
     },
     "浴室和厨房产品": {
       "en": "Bathroom & Kitchen",
@@ -369,7 +375,8 @@
         "741820",
         "732490",
         "732421"
-      ]
+      ],
+      "l2_slug": "bathroom-kitchen"
     },
     "门、窗及其配件": {
       "en": "Door, Window & Accessories",
@@ -411,7 +418,8 @@
         "441820",
         "392530",
         "392520"
-      ]
+      ],
+      "l2_slug": "door-window-accessories"
     },
     "活动房屋与钢结构": {
       "en": "Prefabricated Buildings",
@@ -462,7 +470,8 @@
         "940610",
         "940620",
         "940690"
-      ]
+      ],
+      "l2_slug": "prefabricated-buildings"
     },
     "工作台面、洗面台与桌面": {
       "en": "Countertops, Vanity Tops & Table Tops",
@@ -488,7 +497,8 @@
           "zh": "天花龙骨组件"
         }
       ],
-      "hs_codes": []
+      "hs_codes": [],
+      "l2_slug": "ceilings"
     },
     "电梯和自动扶梯": {
       "en": "Elevators & Escalators",
@@ -514,7 +524,8 @@
       "hs_codes": [
         "842810",
         "842840"
-      ]
+      ],
+      "l2_slug": "elevators-escalators"
     },
     "建筑工业玻璃": {
       "en": "Building & Industrial Glass",
@@ -553,7 +564,8 @@
         "700800",
         "700729",
         "701690"
-      ]
+      ],
+      "l2_slug": "building-industrial-glass"
     },
     "墙纸/墙板": {
       "en": "Wallpapers/Wall panels",
@@ -574,7 +586,8 @@
       ],
       "hs_codes": [
         "481420"
-      ]
+      ],
+      "l2_slug": "wallpapers-wall-panels"
     },
     "塑料建材": {
       "en": "Plastic Building Materials",
@@ -589,7 +602,8 @@
           "zh": "塑料型材"
         }
       ],
-      "hs_codes": []
+      "hs_codes": [],
+      "l2_slug": "plastic-building-materials"
     },
     "户外设施类": {
       "en": "Outdoor Facilities",
@@ -604,7 +618,8 @@
           "zh": "凉亭"
         }
       ],
-      "hs_codes": []
+      "hs_codes": [],
+      "l2_slug": "outdoor-facilities"
     },
     "幕墙配件": {
       "en": "Curtain Walls & Accessories",
@@ -619,7 +634,8 @@
           "zh": "蜘蛛布"
         }
       ],
-      "hs_codes": []
+      "hs_codes": [],
+      "l2_slug": "curtain-walls-accessories"
     },
     "地板及配件": {
       "en": "Flooring & Accessories",
@@ -670,7 +686,8 @@
         "441879",
         "690490",
         "441873"
-      ]
+      ],
+      "l2_slug": "flooring-accessories"
     },
     "瓷砖及配件": {
       "en": "Tiles & Accessories",
@@ -695,7 +712,8 @@
         "690721",
         "690723",
         "690730"
-      ]
+      ],
+      "l2_slug": "tiles-accessories"
     },
     "建筑板材": {
       "en": "Building Boards",
@@ -747,7 +765,8 @@
         "441899",
         "441882",
         "441891"
-      ]
+      ],
+      "l2_slug": "building-boards"
     },
     "楼梯及楼梯配件": {
       "en": "Stairs & Stair Parts",
@@ -762,7 +781,8 @@
           "zh": "楼梯"
         }
       ],
-      "hs_codes": []
+      "hs_codes": [],
+      "l2_slug": "stairs-stair-parts"
     },
     "防火材料": {
       "en": "Fireproofing Materials",
@@ -776,7 +796,8 @@
       "hs_codes": [
         "381600",
         "680690"
-      ]
+      ],
+      "l2_slug": "fireproofing-materials"
     },
     "隔热材料": {
       "en": "Heat Insulation Materials",
@@ -789,7 +810,8 @@
       ],
       "hs_codes": [
         "392111"
-      ]
+      ],
+      "l2_slug": "heat-insulation-materials"
     },
     "隔音材料": {
       "en": "Soundproofing Materials",
@@ -800,7 +822,8 @@
           "zh": "吸音板"
         }
       ],
-      "hs_codes": []
+      "hs_codes": [],
+      "l2_slug": "soundproofing-materials"
     },
     "防水材料": {
       "en": "Waterproofing Materials",
@@ -821,7 +844,8 @@
       ],
       "hs_codes": [
         "680710"
-      ]
+      ],
+      "l2_slug": "waterproofing-materials"
     },
     "装饰线条": {
       "en": "Mouldings",
@@ -846,7 +870,8 @@
       "hs_codes": [
         "732190",
         "732189"
-      ]
+      ],
+      "l2_slug": "fireplaces-stoves"
     },
     "多功能材料": {
       "en": "Multifunctional Materials",
