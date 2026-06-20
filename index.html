@@ -231,7 +231,7 @@ a:hover{text-decoration:underline}
 .cat-l2-item:hover{background:var(--bg)}
 .cat-l2-item.active{background:rgba(201,168,76,.08);border-left:3px solid var(--gold);font-weight:600;color:var(--navy)}
 .cat-l2-item .count{font-size:11px;color:var(--text-light);background:var(--bg);padding:1px 6px;border-radius:8px}
-.cat-detail{padding:24px;overflow-y:auto;max-height:600px}
+.cat-detail{padding:24px;overflow-y:auto;max-height:80vh}
 .cat-detail h3{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:4px}
 .cat-detail .cat-en{font-size:13px;color:var(--text-light);margin-bottom:16px}
 .cat-l3-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px}
@@ -242,6 +242,52 @@ a:hover{text-decoration:underline}
 .cat-hs h4{font-size:14px;font-weight:600;color:var(--navy);margin-bottom:10px}
 .hs-tags{display:flex;flex-wrap:wrap;gap:6px}
 .hs-tag{font-size:12px;padding:4px 10px;background:var(--navy);color:var(--gold-light);border-radius:6px;font-family:'SF Mono',Consolas,monospace;letter-spacing:.5px}
+
+/* Category Rich Detail */
+.cd-section{margin-top:24px;border-top:1px solid var(--border);padding-top:20px}
+.cd-section:first-of-type{border-top:none;margin-top:16px}
+.cd-title{font-size:13px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:1px;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.cd-title::before{content:'';width:3px;height:14px;background:var(--gold);border-radius:2px;display:inline-block}
+.cd-loading{padding:20px;text-align:center;color:var(--text-light);font-size:13px}
+.cd-trend-summary{padding:16px 20px;border-radius:10px;border:1px solid rgba(201,168,76,.3);background:linear-gradient(135deg,rgba(201,168,76,.04),rgba(26,35,50,.03));font-size:13px;line-height:1.7;color:var(--text)}
+.cd-profile-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.cd-profile-card{padding:12px 16px;border-radius:8px;background:var(--bg);border:1px solid var(--border)}
+.cd-profile-card .label{font-size:11px;font-weight:600;color:var(--text-light);margin-bottom:4px;text-transform:uppercase}
+.cd-profile-card .value{font-size:13px;color:var(--text);line-height:1.5}
+.cd-reasons{list-style:none;padding:0;margin:0}
+.cd-reasons li{position:relative;padding:8px 0 8px 20px;font-size:13px;color:var(--text);line-height:1.6}
+.cd-reasons li::before{content:'';position:absolute;left:0;top:14px;width:8px;height:8px;background:var(--gold);border-radius:50%}
+.cd-signals{display:flex;flex-wrap:wrap;gap:8px}
+.cd-signal{font-size:12px;padding:5px 12px;border-radius:20px;font-weight:500;display:inline-flex;align-items:center;gap:4px;white-space:nowrap;max-width:320px;overflow:hidden;text-overflow:ellipsis}
+.cd-signal.social{background:#fff0f3;color:#c0392b;border:1px solid #fdd}
+.cd-signal.search{background:#e8f8f0;color:#1a7a4c;border:1px solid #b8e6cc}
+.cd-signal.media{background:#e8f4fd;color:#2471a3;border:1px solid #b3d9f2}
+.cd-signal.amazon{background:#fef9e7;color:#7d6608;border:1px solid #f9e79f}
+.cd-export-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.cd-export-card{padding:14px;border-radius:8px;background:var(--bg);border:1px solid var(--border)}
+.cd-export-card .hs{font-size:11px;color:var(--text-light);font-family:monospace;margin-bottom:6px}
+.cd-export-card .yr-row{display:flex;justify-content:space-between;font-size:13px;padding:3px 0}
+.cd-export-card .yr-row .amt{font-weight:600;color:var(--text)}
+.cd-export-card .yr-row .yoy-up{color:var(--accent-green)}
+.cd-export-card .yr-row .yoy-dn{color:var(--accent-red)}
+.cd-top5{margin-top:8px;padding-top:8px;border-top:1px dashed var(--border)}
+.cd-top5-row{display:flex;justify-content:space-between;font-size:12px;padding:2px 0;color:var(--text)}
+.cd-analysis-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.cd-analysis-card{padding:14px;border-radius:8px;background:var(--bg);border-left:3px solid var(--border)}
+.cd-analysis-card .dim-label{font-size:12px;font-weight:600;margin-bottom:6px}
+.cd-analysis-card .dim-text{font-size:13px;color:var(--text);line-height:1.6}
+.cd-compliance-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.cd-compliance-card{padding:14px;border-radius:8px;background:var(--bg);border:1px solid var(--border)}
+.cd-compliance-card .mkt{font-size:12px;font-weight:700;color:var(--navy);margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid var(--border)}
+.cd-compliance-card .row{font-size:12px;color:var(--text);margin-bottom:4px}
+.cd-compliance-card .row b{color:var(--text-light);font-weight:500}
+.cd-demand-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.cd-demand-card{padding:14px;border-radius:8px;background:var(--bg);border:1px solid var(--border)}
+.cd-demand-card .scene{font-size:14px;font-weight:600;color:var(--navy);margin-bottom:4px}
+.cd-demand-card .crowd{font-size:12px;color:var(--gold);margin-bottom:6px}
+.cd-demand-card .reason{font-size:13px;color:var(--text);line-height:1.5}
+.cd-kw-badges{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.cd-kw-badge{font-size:11px;padding:3px 10px;background:rgba(41,128,185,.08);color:var(--accent-blue);border-radius:12px;border:1px solid rgba(41,128,185,.2)}
 
 /* Events Calendar */
 .events-list{display:flex;flex-direction:column;gap:10px}
@@ -487,12 +533,28 @@ let WEEK_DATA = {};
 // ===================== INIT =====================
 async function init() {
   try {
-    const [taxRes, dataRes] = await Promise.all([
-      fetch('data/taxonomy.json').then(r => r.ok ? r.json() : null).catch(() => null),
-      fetch('data/week-2026-25.json').then(r => r.ok ? r.json() : null).catch(() => null)
-    ]);
+    const taxRes = await fetch('data/taxonomy.json').then(r => r.ok ? r.json() : null).catch(() => null);
     if (taxRes) TAXONOMY = taxRes;
-    if (dataRes) WEEK_DATA = dataRes;
+    // Auto-detect latest week file
+    var weekData = null;
+    // Try current week first, then fall back to embedded
+    var now = new Date();
+    var yr = now.getFullYear();
+    var wk = Math.ceil(((now - new Date(yr, 0, 1)) / 86400000 + new Date(yr, 0, 1).getDay() + 1) / 7);
+    for (var tryWk = wk; tryWk >= Math.max(wk - 4, 1); tryWk--) {
+      var fn = 'data/week-' + yr + '-' + String(tryWk).padStart(2, '0') + '.json';
+      weekData = await fetch(fn).then(r => r.ok ? r.json() : null).catch(() => null);
+      if (weekData) break;
+    }
+    // Also try previous year's last weeks
+    if (!weekData) {
+      for (var tryWk = 52; tryWk >= 48; tryWk--) {
+        var fn = 'data/week-' + (yr - 1) + '-' + String(tryWk).padStart(2, '0') + '.json';
+        weekData = await fetch(fn).then(r => r.ok ? r.json() : null).catch(() => null);
+        if (weekData) break;
+      }
+    }
+    if (weekData) WEEK_DATA = weekData;
   } catch(e) { console.warn('Data load failed, using embedded data:', e); }
 
   // Fallback embedded data
@@ -873,6 +935,7 @@ function selectCategory(el, key) {
   const cat = (TAXONOMY.categories||{})[key];
   if (!cat) return;
   const detail = document.getElementById('cat-detail');
+  // Render basic info immediately
   const l3html = (cat.l3||[]).map(l =>
     '<div class="cat-l3-item"><div class="l3zh">' + esc(l.zh) + '</div>' +
     '<div class="l3en">' + esc(l.en) + '</div></div>'
@@ -881,10 +944,218 @@ function selectCategory(el, key) {
     '<div class="cat-hs"><h4>海关HS编码</h4><div class="hs-tags">' +
     cat.hs_codes.map(c => '<span class="hs-tag">' + esc(c) + '</span>').join('') +
     '</div></div>' : '';
+  const kwHtml = (cat.keywords_cn||cat.keywords_en||[]).length ?
+    '<div class="cd-kw-badges">' + (cat.keywords_cn||cat.keywords_en||[]).slice(0,6).map(
+      k => '<span class="cd-kw-badge">' + esc(k) + '</span>').join('') + '</div>' : '';
   detail.innerHTML = '<h3>' + esc(cat.zh) + '</h3>' +
     '<div class="cat-en">' + esc(cat.en||'') + ' | 三级品类: ' + (cat.l3||[]).length + ' | HS编码: ' + (cat.hs_codes||[]).length + '</div>' +
+    kwHtml +
     (l3html ? '<div class="cat-l3-grid">' + l3html + '</div>' : '<p style="color:#999;font-size:13px">暂无三级品类数据</p>') +
     hshtml;
+  // Fetch rich data if slug exists
+  if (cat.l2_slug) {
+    var richDiv = document.createElement('div');
+    richDiv.innerHTML = '<div class="cd-loading">Loading rich data...</div>';
+    detail.appendChild(richDiv);
+    fetch('data/categories/建材与房地产/' + cat.l2_slug + '.json')
+      .then(r => r.ok ? r.json() : null)
+      .then(d => { if (d) renderRichDetail(richDiv, d); else richDiv.innerHTML = ''; })
+      .catch(() => { richDiv.innerHTML = ''; });
+  }
+}
+
+function renderRichDetail(container, d) {
+  var html = '';
+  // 1. Dynamic Insight
+  if (d.dynamic_insight) html += renderDynamicInsight(d.dynamic_insight);
+  // 2. Export Data
+  if (d.export_data && d.export_data.length) html += renderExportData(d.export_data);
+  // 3. Industry Analysis
+  if (d.industry_analysis) html += renderIndustryAnalysis(d.industry_analysis);
+  // 4. Compliance
+  if (d.compliance_detail) html += renderCompliance(d.compliance_detail);
+  // 5. Demand Scenarios
+  if (d.demand_scenarios) html += renderDemandScenarios(d.demand_scenarios);
+  // 6. Footer
+  if (d.last_updated) {
+    html += '<div style="margin-top:20px;font-size:11px;color:var(--text-light);text-align:right">';
+    html += '数据更新: ' + esc(d.last_updated);
+    if (d.data_source) html += ' | ' + esc(d.data_source);
+    html += '</div>';
+  }
+  container.innerHTML = html;
+}
+
+function renderDynamicInsight(ins) {
+  var html = '<div class="cd-section">';
+  // Trend Summary
+  if (ins.trend_summary) {
+    html += '<div class="cd-title">趋势聚焦</div>';
+    html += '<div class="cd-trend-summary">' + esc(ins.trend_summary) + '</div>';
+  }
+  // Product Profile
+  if (ins.product_profile) {
+    html += '<div class="cd-title" style="margin-top:16px">产品画像</div>';
+    html += '<div class="cd-profile-grid">';
+    var fields = [
+      {k:'外观',c:'#c9a84c'},{k:'成分',c:'#5cf2bd'},{k:'工艺',c:'#e8d49b'},
+      {k:'色彩',c:'#a78bff'},{k:'包装',c:'#7fdcff'},{k:'技术趋势',c:'#3eecae'}
+    ];
+    for (var i=0; i<fields.length; i++) {
+      var v = ins.product_profile[fields[i].k];
+      if (v) {
+        html += '<div class="cd-profile-card" style="border-top:2px solid ' + fields[i].c + '">';
+        html += '<div class="label" style="color:' + fields[i].c + '">' + fields[i].k + '</div>';
+        html += '<div class="value">' + esc(v) + '</div></div>';
+      }
+    }
+    html += '</div>';
+  }
+  // Reasons
+  if (ins.reasons && ins.reasons.length) {
+    html += '<div class="cd-title" style="margin-top:16px">驱动力</div>';
+    html += '<ul class="cd-reasons">';
+    for (var i=0; i<ins.reasons.length; i++) {
+      html += '<li>' + esc(ins.reasons[i]) + '</li>';
+    }
+    html += '</ul>';
+  }
+  // Signals
+  if (ins.signals && ins.signals.length) {
+    html += '<div class="cd-title" style="margin-top:16px">市场信号</div>';
+    html += '<div class="cd-signals">';
+    var dimClass = {'海外社媒':'social','搜索':'search','媒体':'media','Amazon':'amazon'};
+    for (var i=0; i<Math.min(ins.signals.length, 12); i++) {
+      var s = ins.signals[i];
+      var cls = dimClass[s.dim] || 'search';
+      var label = '';
+      if (s.dim === '媒体') label = (s.source||'') + ': ' + (s.title||'').substring(0,36);
+      else if (s.dim === 'Amazon') label = (s.market||'') + ' #' + (s.rank||'') + ' ' + (s.title||'').substring(0,24);
+      else label = (s.kw||'') + (s.growth ? ' +' + s.growth + '%' : '');
+      if (s.url) html += '<a class="cd-signal ' + cls + '" href="' + esc(s.url) + '" target="_blank">' + esc(label) + '</a>';
+      else html += '<span class="cd-signal ' + cls + '">' + esc(label) + '</span>';
+    }
+    html += '</div>';
+  }
+  html += '</div>';
+  return html;
+}
+
+function renderExportData(exports) {
+  var html = '<div class="cd-section">';
+  html += '<div class="cd-title">出口数据 (亿美元)</div>';
+  html += '<div class="cd-export-grid">';
+  for (var i=0; i<exports.length; i++) {
+    var e = exports[i];
+    html += '<div class="cd-export-card">';
+    html += '<div class="hs">HS ' + esc(e.hs_code||'') + ' - ' + esc(e.name||'') + '</div>';
+    if (e.data) {
+      for (var j=0; j<e.data.length; j++) {
+        var yr = e.data[j];
+        var yoyCls = (yr.yoy||0) >= 0 ? 'yoy-up' : 'yoy-dn';
+        var yoyStr = (yr.yoy||0) >= 0 ? '+' + yr.yoy + '%' : yr.yoy + '%';
+        html += '<div class="yr-row"><span>' + esc(yr.yr) + '</span>';
+        html += '<span class="amt">' + (yr.amt||0) + '</span>';
+        html += '<span class="' + yoyCls + '">' + yoyStr + '</span></div>';
+      }
+    }
+    if (e.top5 && e.top5.length) {
+      html += '<div class="cd-top5">';
+      for (var k=0; k<Math.min(e.top5.length, 5); k++) {
+        var t = e.top5[k];
+        html += '<div class="cd-top5-row"><span>' + esc(t.c) + '</span>';
+        html += '<span>' + t.amt + (t.yoy ? ' (' + (t.yoy>=0?'+':'') + t.yoy + '%)' : '') + '</span></div>';
+      }
+      html += '</div>';
+    }
+    html += '</div>';
+  }
+  html += '</div></div>';
+  return html;
+}
+
+function renderIndustryAnalysis(ia) {
+  var dims = [
+    {k:'culture',zh:'文化因素',c:'#c9a84c'},
+    {k:'consumer',zh:'消费趋势',c:'#e74c3c'},
+    {k:'infra',zh:'基础设施',c:'#2980b9'},
+    {k:'population',zh:'人口结构',c:'#27ae60'},
+    {k:'social',zh:'社会法规',c:'#8e44ad'},
+    {k:'environment',zh:'环境因素',c:'#16a085'},
+    {k:'opportunity',zh:'机会点',c:'#f39c12'}
+  ];
+  var html = '<div class="cd-section">';
+  html += '<div class="cd-title">行业分析 (7维度)</div>';
+  html += '<div class="cd-analysis-grid">';
+  for (var i=0; i<dims.length; i++) {
+    var v = ia[dims[i].k];
+    if (v) {
+      html += '<div class="cd-analysis-card" style="border-left-color:' + dims[i].c + '">';
+      html += '<div class="dim-label" style="color:' + dims[i].c + '">' + dims[i].zh + '</div>';
+      html += '<div class="dim-text">' + esc(v) + '</div></div>';
+    }
+  }
+  html += '</div></div>';
+  return html;
+}
+
+function renderCompliance(comp) {
+  var markets = {'US':'美国','EU':'欧盟','JP':'日本','AU':'澳大利亚'};
+  var html = '<div class="cd-section">';
+  html += '<div class="cd-title">合规要求</div>';
+  html += '<div class="cd-compliance-grid">';
+  var keys = Object.keys(comp);
+  for (var i=0; i<keys.length; i++) {
+    var mk = keys[i];
+    var m = comp[mk];
+    if (!m || typeof m !== 'object') continue;
+    html += '<div class="cd-compliance-card">';
+    html += '<div class="mkt">' + (markets[mk]||mk) + '</div>';
+    if (m.cert) html += '<div class="row"><b>认证: </b>' + esc(Array.isArray(m.cert)?m.cert.join(', '):m.cert) + '</div>';
+    if (m.std) html += '<div class="row"><b>标准: </b>' + esc(Array.isArray(m.std)?m.std.join(', '):m.std) + '</div>';
+    if (m.label) html += '<div class="row"><b>标签: </b>' + esc(Array.isArray(m.label)?m.label.join(', '):m.label) + '</div>';
+    if (m.customs) html += '<div class="row"><b>通关: </b>' + esc(m.customs) + '</div>';
+    html += '</div>';
+  }
+  html += '</div></div>';
+  return html;
+}
+
+function renderDemandScenarios(ds) {
+  var html = '<div class="cd-section">';
+  html += '<div class="cd-title">需求场景</div>';
+  if (ds.scenes && ds.scenes.length) {
+    html += '<div class="cd-demand-grid">';
+    for (var i=0; i<ds.scenes.length; i++) {
+      var s = ds.scenes[i];
+      html += '<div class="cd-demand-card">';
+      html += '<div class="scene">' + esc(s.scene||'') + '</div>';
+      if (s.crowd) html += '<div class="crowd">' + esc(s.crowd) + '</div>';
+      if (s.reason) html += '<div class="reason">' + esc(s.reason) + '</div>';
+      html += '</div>';
+    }
+    html += '</div>';
+  }
+  // Product specs
+  if (ds.products) {
+    var p = ds.products;
+    if (p.cert && p.cert.length) {
+      html += '<div style="margin-top:12px"><div class="cd-title" style="font-size:12px">产品认证要求</div>';
+      html += '<div class="hs-tags" style="margin-top:6px">';
+      for (var i=0; i<p.cert.length; i++) html += '<span class="hs-tag">' + esc(p.cert[i]) + '</span>';
+      html += '</div></div>';
+    }
+    if (p.priceRange) {
+      html += '<div style="margin-top:12px"><div class="cd-title" style="font-size:12px">价格区间</div>';
+      var prKeys = Object.keys(p.priceRange);
+      for (var i=0; i<prKeys.length; i++) {
+        html += '<span style="font-size:12px;margin-right:12px;color:var(--text)">' + esc(prKeys[i]) + ': <b>' + esc(p.priceRange[prKeys[i]]) + '</b></span>';
+      }
+      html += '</div>';
+    }
+  }
+  html += '</div>';
+  return html;
 }
 
 function filterCategories() {
