@@ -338,6 +338,16 @@ def run_pipeline():
     log.info(f"  Sources: {', '.join(sources_parts) if sources_parts else 'none'}")
     log.info(f"{'='*60}")
 
+    # ============================================================
+    # Chain: 品类数据同步 (从 GlobalAlpha Compass)
+    # ============================================================
+    try:
+        log.info("--- Chaining: Category enrichment from Compass ---")
+        from scripts.collectors.category_enrichment import main as enrich_main
+        enrich_main()
+    except Exception as e:
+        log.warning(f"Category enrichment failed (non-critical): {e}")
+
     return week_data
 
 
