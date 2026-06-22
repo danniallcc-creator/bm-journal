@@ -224,17 +224,38 @@ def collect_customs_monthly(year: int = None, month: int = None,
     if compare_year is None:
         compare_year = year - 1
 
-    period_current = _build_period_str(year, month)
-    period_previous = _build_period_str(compare_year, month)
+    # 月份回退: 如首选月无数据(Comtrade延迟可达4个月),向前最多退3个月
+    _original_year, _original_month = year, month
+    for _attempt in range(4):  # 首选月 + 最多退3次
+        period_current = _build_period_str(year, month)
+        period_previous = _build_period_str(compare_year, month)
 
-    # 缓存检查 (月度数据30天TTL)
-    cache_key = f"customs_monthly_{period_current}"
-    cached = cache_get(cache_key, "customs_monthly", ttl=3600 * 24 * 30)
-    if cached:
-        log.info(f"Customs monthly {period_current}: using cache")
-        return cached
+        # 缓存检查 (月度数据30天TTL)
+        cache_key = f"customs_monthly_{period_current}"
+        cached = cache_get(cache_key, "customs_monthly", ttl=3600 * 24 * 30)
+        if cached:
+            if cached.get("total_current_usd", 0) > 0:
+                log.info(f"Customs monthly {period_current}: using cache (has data)")
+                return cached
+            else:
+                log.info(f"Customs monthly {period_current}: cache shows 0, try earlier month")
+                # 退一个月
+                if month == 1:
+                    month = 12
+                    year -= 1
+                    compare_year -= 1
+                else:
+                    month -= 1
+                continue
 
-    log.info(f"Fetching: China exports {period_current} vs {period_previous}")
+        log.info(f"Fetching: China exports {period_current} vs {period_previous} (attempt {_attempt+1})")
+        break
+    else:
+        # 4次回退后仍为缓存0值,使用最后一个period继续尝试在线获取
+        period_current = _build_period_str(year, month)
+        period_previous = _build_period_str(compare_year, month)
+        cache_key = f"customs_monthly_{period_current}"
+        log.info(f"Fetching: China exports {period_current} vs {period_previous} (final fallback)")
     log.info(f"Categories: {len(HS_FULL_MAPPING)}, HS codes: {len(ALL_HS_CODES)}")
 
     # 按品类逐批采集 (每个品类的HS码一次性查询,分块≤20个)
@@ -350,6 +371,21 @@ def collect_customs_monthly(year: int = None, month: int = None,
     # 缓存与存储
     cache_set(cache_key, "customs_monthly", output)
     save_raw("customs_monthly", f"china_exports_{period_current}", output)
+
+    # 如果当期无数据且还有回退余地,尝试前一个月
+    if total_current == 0 and (year, month) != (
+        _original_year - 1 if _original_month <= 3 else _original_year,
+        (_original_month - 4) if _original_month > 4 else (_original_month + 8)
+    ):
+        prev_month = month - 1 if month > 1 else 12
+        prev_year = year if month > 1 else year - 1
+        prev_compare_year = prev_year - 1
+        log.info(f"Customs monthly {period_current} returned $0 — "
+                 f"falling back to {_build_period_str(prev_year, prev_month)}")
+        return collect_customs_monthly(
+            year=prev_year, month=prev_month, compare_year=prev_compare_year
+        )
+
     log.info(f"Customs monthly complete: {period_current}, "
              f"total=${total_current/1e6:.1f}M, YoY={output['total_yoy_pct']}%")
     return output

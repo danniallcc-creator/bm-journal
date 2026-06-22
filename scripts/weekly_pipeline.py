@@ -44,6 +44,139 @@ from scripts.config import COUNTRIES_BY_REGION
 DATA_DIR = ROOT / "data"
 
 
+def _build_data_sources(all_banks, wb_data, shipping_data, social_data,
+                        trade_data, customs_data, reg_data, news_data,
+                        events_data, innovation_data, research_data,
+                        emerging_data):
+    """从各collector状态自动生成dataSources列表"""
+    sources = []
+
+    # FRED / 央行
+    cb_stats = all_banks.get("stats", {})
+    cb_ok = cb_stats.get("ok", 0)
+    cb_total = cb_stats.get("total", 0)
+    sources.append({
+        "name": "FRED 央行利率",
+        "status": "ok" if cb_ok > 0 else "failed",
+        "count": cb_ok,
+        "detail": f"{cb_ok}/{cb_total} 央行"
+    })
+
+    # World Bank
+    wb_stats = wb_data.get("stats", {})
+    wb_ok = wb_stats.get("ok", 0) + wb_stats.get("partial", 0)
+    sources.append({
+        "name": "World Bank 国别指标",
+        "status": "ok" if wb_ok > 0 else "failed",
+        "count": wb_ok,
+        "detail": f"{wb_ok} 国家"
+    })
+
+    # SCFI
+    scfi_status = shipping_data.get("scfi", {}).get("status", "failed")
+    sources.append({
+        "name": "SCFI 集装箱运价",
+        "status": scfi_status,
+        "count": 1 if scfi_status == "ok" else 0
+    })
+
+    # BDI
+    bdi_status = shipping_data.get("bdi", {}).get("status", "failed")
+    sources.append({
+        "name": "BDI 干散货指数",
+        "status": bdi_status,
+        "count": 1 if bdi_status == "ok" else 0
+    })
+
+    # UN Comtrade 贸易流
+    trade_status = trade_data.get("status", "failed")
+    sources.append({
+        "name": "UN Comtrade 贸易流",
+        "status": trade_status,
+        "count": trade_data.get("categories_collected", 0),
+        "detail": f"{trade_data.get('categories_collected', 0)} 品类"
+    })
+
+    # 海关月度
+    customs_status = customs_data.get("status", "failed")
+    sources.append({
+        "name": "海关月度出口 (UN Comtrade)",
+        "status": customs_status,
+        "count": customs_data.get("categories_count", 0),
+        "detail": f"{customs_data.get('categories_count', 0)} 品类×{customs_data.get('period', '')}"
+    })
+
+    # Google Trends
+    gt_status = social_data.get("google_trends", {}).get("status", "skipped")
+    sources.append({
+        "name": "Google Trends",
+        "status": gt_status,
+        "count": social_data.get("google_trends", {}).get("keywords_ok", 0)
+    })
+
+    # Reddit
+    reddit_status = social_data.get("reddit", {}).get("status", "skipped")
+    sources.append({
+        "name": "Reddit 讨论",
+        "status": reddit_status,
+        "count": social_data.get("reddit", {}).get("posts", 0)
+    })
+
+    # EUR-Lex
+    eu_status = reg_data.get("eu_regulations", {}).get("status", "failed")
+    sources.append({
+        "name": "EUR-Lex 欧盟法规",
+        "status": eu_status,
+        "count": reg_data.get("eu_regulations", {}).get("relevant_count", 0)
+    })
+
+    # RSS 新闻
+    news_status = news_data.get("status", "failed")
+    sources.append({
+        "name": "RSS 新闻聚合",
+        "status": news_status,
+        "count": news_data.get("relevant_count", 0),
+        "detail": f"{news_data.get('relevant_count', 0)} 篇/{news_data.get('sources_ok', 0)} 源"
+    })
+
+    # 事件日历
+    events_status = events_data.get("status", "failed")
+    sources.append({
+        "name": "展会/事件日历",
+        "status": events_status,
+        "count": events_data.get("total", 0)
+    })
+
+    # 学术论文
+    inno_status = innovation_data.get("status", "failed")
+    sources.append({
+        "name": "学术论文 (Crossref/arXiv/DOAJ)",
+        "status": inno_status,
+        "count": innovation_data.get("topics_with_papers", 0),
+        "detail": f"{innovation_data.get('topics_with_papers', 0)} 主题"
+    })
+
+    # 投研报告
+    research_status = research_data.get("status", "failed")
+    sources.append({
+        "name": "投研报告",
+        "status": research_status,
+        "count": research_data.get("total_reports", 0),
+        "detail": f"{research_data.get('total_reports', 0)} 篇"
+    })
+
+    # 新兴需求
+    emerging_status = emerging_data.get("status", "failed")
+    sources.append({
+        "name": "新兴需求探测",
+        "status": emerging_status,
+        "count": emerging_data.get("strong_signals", 0),
+        "detail": f"{emerging_data.get('strong_signals', 0)} 强信号"
+    })
+
+    return sources
+
+
 def run_pipeline():
     """完整管道: P0(央行+World Bank+房地产) + P1(海运+社交信号+贸易流)"""
     now = datetime.now()
@@ -321,7 +454,11 @@ def run_pipeline():
         "researchHighlights": research_highlights,
         "researchSummary": research_summary,
         "customsDashboard": customs_dashboard,
-        "dataSources": []
+        "dataSources": _build_data_sources(
+            all_banks, wb_data, shipping_data, social_data, trade_data,
+            customs_data, reg_data, news_data, events_data,
+            innovation_data, research_data, emerging_data
+        )
     }
 
     # 保存

@@ -109,6 +109,7 @@ def _get_upcoming_events(days_ahead: int = 90) -> list[dict]:
 
     # 展会
     for show in TRADE_SHOWS:
+        found_upcoming = False
         for date_str in show.get("next_dates", []):
             try:
                 event_date = datetime.strptime(date_str, "%Y-%m-%d").date()
@@ -123,18 +124,55 @@ def _get_upcoming_events(days_ahead: int = 90) -> list[dict]:
                         "website": show.get("website", ""),
                         "days_away": (event_date - today).days
                     })
+                    found_upcoming = True
+            except ValueError:
+                pass
+
+        # 日期推算: 如硬编码日期全部过期,按频率自动推算下一届
+        if not found_upcoming and show.get("next_dates"):
+            freq_years = {"annual": 1, "biennial": 2, "triennial": 3}.get(
+                show.get("frequency", "annual"), 1
+            )
+            try:
+                last_date = datetime.strptime(show["next_dates"][-1], "%Y-%m-%d").date()
+                # 从最后已知日期向后推算,直到找到未来日期
+                projected = last_date
+                for _ in range(10):  # 最多推10个周期
+                    projected = projected.replace(year=projected.year + freq_years)
+                    if today <= projected <= end_date:
+                        upcoming.append({
+                            "name": show["name"] + " (预估)",
+                            "date": projected.strftime("%Y-%m-%d"),
+                            "location": show["location"],
+                            "type": "trade_show",
+                            "importance": show.get("importance", "medium"),
+                            "categories": show.get("categories", []),
+                            "website": show.get("website", ""),
+                            "days_away": (projected - today).days
+                        })
+                        break
+                    elif projected > end_date:
+                        break
             except ValueError:
                 pass
 
     # 央行会议
+    current_year = today.year
     for bank in CENTRAL_BANK_DATES_2026:
+        bank_found = False
         for date_str in bank["dates"]:
             try:
                 event_date = datetime.strptime(date_str, "%Y-%m-%d").date()
+                # 如果当前年份超过2026,尝试同月同日推算到当前年
+                if current_year > 2026:
+                    try:
+                        event_date = event_date.replace(year=current_year)
+                    except ValueError:
+                        continue  # 跳过不合法日期(如2月29)
                 if today <= event_date <= end_date:
                     upcoming.append({
                         "name": bank["event"],
-                        "date": date_str,
+                        "date": event_date.strftime("%Y-%m-%d"),
                         "location": bank["institution"],
                         "type": "central_bank",
                         "importance": "high",
@@ -142,6 +180,7 @@ def _get_upcoming_events(days_ahead: int = 90) -> list[dict]:
                         "website": "",
                         "days_away": (event_date - today).days
                     })
+                    bank_found = True
             except ValueError:
                 pass
 

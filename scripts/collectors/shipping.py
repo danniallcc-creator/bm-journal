@@ -203,6 +203,29 @@ def collect_bdi() -> dict:
         log.error(f"BDI error: {e}")
         result["status"] = "fetch_failed"
 
+    # 备用源: 如TE失败,尝试从 Markets Insider 获取BDI
+    if result["status"] != "ok":
+        log.info("BDI: TradingEconomics failed, trying fallback source...")
+        try:
+            fb_url = "https://markets.businessinsider.com/index/baltic-dry-index"
+            fb_resp = requests.get(fb_url,
+                                   headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"},
+                                   timeout=15)
+            if fb_resp.status_code == 200:
+                # 尝试从HTML提取价格 (多种regex模式)
+                price_match = re.search(r'"price":\s*([\d,.]+)', fb_resp.text)
+                if not price_match:
+                    price_match = re.search(r'class="[^"]*price[^"]*"[^>]*>([\d,.]+)', fb_resp.text)
+                if price_match:
+                    bdi_val = safe_float(price_match.group(1).replace(",", ""))
+                    if bdi_val and bdi_val > 100:  # 合理性检查
+                        result["value"] = round(bdi_val, 0)
+                        result["source"] = "markets.businessinsider.com"
+                        result["status"] = "ok"
+                        log.info(f"BDI fallback: {bdi_val}")
+        except Exception as e:
+            log.warning(f"BDI fallback error: {e}")
+
     cache_set(cache_key, "shipping", result)
     save_raw("shipping", "bdi", result)
 

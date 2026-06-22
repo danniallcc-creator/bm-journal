@@ -17,14 +17,24 @@ from ..utils import cache_get, cache_set, save_raw, log
 # EUR-Lex RSS: 建筑产品相关法规
 EU_OJ_RSS = "https://eur-lex.europa.eu/OJUDirective?locale=en&dateRange=true&startDate=&endDate=&year=&type=LEG&seriesCode=L"
 
-# 建材相关关键词
+# 建材相关关键词 (宽泛匹配提高召回率)
 REGULATION_KEYWORDS = [
     "construction product", "building material", "cement", "steel",
     "timber", "glass", "ceramic", "insulation", "fire safety",
     "energy performance", "building regulation", "CPR",
     "REACH", "CBAM", "carbon border", "environmental product declaration",
     "green building", "sustainable construction", "waste framework",
-    "circular economy", "recycl", "emission standard"
+    "circular economy", "recycl", "emission standard",
+    # 扩展: 宽泛行业术语
+    "construction sector", "building sector", "renovation",
+    "infrastructure", "CE marking", "harmonised standard", "EN standard",
+    "concrete", "brick", "tile", "plaster", "mortar", "aggregate",
+    "thermal insulation", "ventilation", "roofing",
+    "construction waste", "demolition", "prefabricat",
+    "energy efficien", "zero emission building", "nearly zero",
+    "EPBD", "construction regulation", "building code",
+    "tariff", "anti-dumping", "safeguard measure", "import duty",
+    "product safety", "recall", "non-compliance",
 ]
 
 
@@ -99,14 +109,20 @@ def collect_eu_regulations() -> dict:
     import requests
     result = {"items": [], "total_scanned": 0, "relevant_count": 0, "status": "ok"}
 
-    # 尝试多个EUR-Lex RSS端点
+    # 尝试多个EUR-Lex / EU RSS端点
     rss_urls = [
-        "https://eur-lex.europa.eu/feeds/decision?lang=en&type=LEG",
-        "https://eur-lex.europa.eu/feeds/regulation?lang=en&type=LEG",
-        "https://eur-lex.europa.eu/feeds/directive?lang=en&type=LEG",
-        # 备选: EU Commission新闻
+        # EUR-Lex CELLAR RSS - recent legislation (L series)
+        "https://eur-lex.europa.eu/collection/oj/new-daily.feed?format=rss&locale=en",
+        # EUR-Lex search RSS for construction-related topics
+        "https://eur-lex.europa.eu/search.html?type=named&name=browse-by:legislation-in-force&CC_1_CODED=CODED14&qid=&DD_YEAR=&FM_CODED=REG&displayProfile=allRelAllCons498Doc&language=en&format=rss",
+        # EU Commission GROW DG (Internal Market, Industry) - covers CPR
+        "https://ec.europa.eu/growth/content/news_en/rss",
+        # EU Commission press corner
         "https://ec.europa.eu/commission/presscorner/home/en/rss",
+        # EU Single Market Economy news (covers construction products regulation)
         "https://single-market-economy.ec.europa.eu/news_en/rss",
+        # RAPEX/Safety Gate - product recalls including building materials
+        "https://ec.europa.eu/safety-gate-alerts/screen/webReport/alertDetail/rss",
     ]
 
     all_items = []
@@ -168,16 +184,37 @@ def collect_carbon_prices() -> dict:
     import requests
     result = {"markets": {}, "status": "ok"}
 
-    # EU ETS - 尝试从公开数据源获取
+    # EU ETS - 尝试从多个公开数据源获取
     ets_sources = [
         # ICAP ETS数据库 (CSV)
         ("EU ETS", "https://icapcarbonaction.com/system/files/ets/eu-ets-historical-prices.csv"),
+        # Ember Climate carbon price tracker (JSON API)
+        ("EU ETS", "https://ember-climate.org/api/carbon-price/eu-ets/"),
     ]
 
     for name, url in ets_sources:
+        if name in result["markets"]:
+            break  # 已有数据,跳过
         try:
             resp = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=15)
             if resp.status_code == 200 and len(resp.text) > 100:
+                # 尝试JSON格式 (Ember等API)
+                if resp.headers.get("content-type", "").startswith("application/json"):
+                    try:
+                        jdata = resp.json()
+                        # Ember格式: {"price": X, "date": "YYYY-MM-DD", "currency": "EUR"}
+                        if isinstance(jdata, dict) and "price" in jdata:
+                            result["markets"][name] = {
+                                "price": str(jdata["price"]),
+                                "date": jdata.get("date", ""),
+                                "unit": "EUR/tCO2",
+                                "source": url.split("/")[2]
+                            }
+                            log.info(f"  {name}: {jdata['price']} EUR/tCO2 (JSON)")
+                            continue
+                    except (json.JSONDecodeError, ValueError):
+                        pass
+                # CSV格式 (ICAP)
                 lines = resp.text.strip().split("\n")
                 if len(lines) >= 2:
                     header = lines[0].split(",")
@@ -192,7 +229,7 @@ def collect_carbon_prices() -> dict:
                             "unit": "EUR/tCO2",
                             "source": url.split("/")[2]
                         }
-                        log.info(f"  {name}: {result['markets'][name]['price']} EUR/tCO2")
+                        log.info(f"  {name}: {result['markets'][name]['price']} EUR/tCO2 (CSV)")
         except Exception as e:
             log.warning(f"  {name} fetch error: {e}")
 

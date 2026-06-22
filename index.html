@@ -452,6 +452,15 @@ a:hover{text-decoration:underline}
       <div class="sc-grid" id="sc-grid"></div>
     </div>
 
+    <!-- Section 5.5: Customs Dashboard (海关月度出口看板) -->
+    <div class="section" id="customs-dashboard" style="display:none">
+      <div class="section-header">
+        <div class="num">5b</div>
+        <h2>海关月度出口看板<span class="en">Customs Export Dashboard</span></h2>
+      </div>
+      <div id="customs-dash-content"></div>
+    </div>
+
     <!-- Section 6: Regulation & ESG -->
     <div class="section" id="regulation">
       <div class="section-header">
@@ -591,6 +600,7 @@ function renderAll() {
   renderTrends(d.trends || []);
   renderInnovation(d.innovation || []);
   renderSupplyChain(d.supplyChain || []);
+  renderCustomsDashboard(d.customsDashboard || null);
   renderRegulation(d.regulation || []);
   renderResearch(d.researchHighlights || [], d.researchSummary || '');
   renderEmerging(d.emergingDemand || []);
@@ -813,6 +823,61 @@ function renderSupplyChain(items) {
     return '<div class="sc-card"><h4>' + esc(it.title) + '</h4>' +
       '<table class="sc-table"><tr><th>指标</th><th>数值</th><th>变动</th></tr>' + rows + '</table></div>';
   }).join('');
+}
+
+// ===================== CUSTOMS DASHBOARD =====================
+function renderCustomsDashboard(data) {
+  const section = document.getElementById('customs-dashboard');
+  const el = document.getElementById('customs-dash-content');
+  if (!data || !data.categories || data.summary.total_usd === 0) {
+    section.style.display = 'none';
+    return;
+  }
+  section.style.display = '';
+
+  const fmtUSD = v => v >= 1e9 ? (v/1e9).toFixed(1) + 'B' : v >= 1e6 ? (v/1e6).toFixed(1) + 'M' : v >= 1e3 ? (v/1e3).toFixed(0) + 'K' : v.toFixed(0);
+  const fmtPct = v => v === null || v === undefined ? '-' : (v > 0 ? '+' : '') + v.toFixed(1) + '%';
+  const pctColor = v => v === null || v === undefined ? '#888' : v > 0 ? '#4caf50' : v < 0 ? '#f44336' : '#888';
+
+  let html = '';
+
+  // 期间与总览
+  html += '<div style="display:flex;gap:24px;flex-wrap:wrap;margin-bottom:16px">';
+  html += '<div class="ds-card" style="flex:1;min-width:200px"><h5>数据期间</h5><p style="font-size:20px;font-weight:700;margin:8px 0">' + esc(data.period) + '</p><p style="font-size:11px;color:#999">数据来源: ' + esc(data.data_source || 'UN Comtrade') + ' | 延迟: ' + esc(data.data_lag || '~3月') + '</p></div>';
+  html += '<div class="ds-card" style="flex:1;min-width:200px"><h5>出口总额</h5><p style="font-size:20px;font-weight:700;margin:8px 0">$' + fmtUSD(data.summary.total_usd) + '</p><p style="font-size:13px;color:' + pctColor(data.summary.total_yoy_pct) + '">同比 ' + fmtPct(data.summary.total_yoy_pct) + '</p></div>';
+  html += '<div class="ds-card" style="flex:1;min-width:200px"><h5>覆盖品类</h5><p style="font-size:20px;font-weight:700;margin:8px 0">' + data.summary.categories_count + '</p><p style="font-size:11px;color:#999">24大建材品类</p></div>';
+  html += '</div>';
+
+  // 品类排行
+  const cats = (data.categories || []).filter(c => c.value_usd > 0).sort((a,b) => b.value_usd - a.value_usd);
+  if (cats.length) {
+    html += '<h4 style="margin:16px 0 8px;font-size:14px">品类出口排行</h4>';
+    html += '<div style="overflow-x:auto"><table style="width:100%;font-size:12px;border-collapse:collapse">';
+    html += '<tr style="border-bottom:1px solid #333"><th style="text-align:left;padding:6px">品类</th><th style="text-align:right;padding:6px">出口额</th><th style="text-align:right;padding:6px">同比</th></tr>';
+    cats.slice(0, 15).forEach(c => {
+      html += '<tr style="border-bottom:1px solid #222"><td style="padding:6px">' + esc(c.name) + '</td><td style="text-align:right;padding:6px">$' + fmtUSD(c.value_usd) + '</td><td style="text-align:right;padding:6px;color:' + pctColor(c.yoy_pct) + '">' + fmtPct(c.yoy_pct) + '</td></tr>';
+    });
+    html += '</table></div>';
+  }
+
+  // 区域概览
+  const regs = (data.regions || []).filter(r => r.value_usd > 0).sort((a,b) => b.value_usd - a.value_usd);
+  if (regs.length) {
+    html += '<h4 style="margin:16px 0 8px;font-size:14px">区域出口分布</h4>';
+    html += '<div style="display:flex;gap:8px;flex-wrap:wrap">';
+    regs.forEach(r => {
+      html += '<div class="ds-card" style="flex:1;min-width:140px"><h5>' + esc(r.name) + '</h5><p style="font-size:16px;font-weight:600">$' + fmtUSD(r.value_usd) + '</p><p style="font-size:12px;color:' + pctColor(r.yoy_pct) + '">' + fmtPct(r.yoy_pct) + '</p>' + (r.top_growth_category ? '<p style="font-size:10px;color:#aaa">热门: ' + esc(r.top_growth_category) + '</p>' : '') + '</div>';
+    });
+    html += '</div>';
+  }
+
+  // 异常警报
+  if (data.alerts && data.alerts.length) {
+    html += '<h4 style="margin:16px 0 8px;font-size:14px;color:#f44336">异常警报</h4>';
+    html += data.alerts.map(a => '<div style="padding:8px;border-left:3px solid #f44336;margin-bottom:6px;font-size:12px">' + esc(a.text || a.message || JSON.stringify(a)) + '</div>').join('');
+  }
+
+  el.innerHTML = html;
 }
 
 // ===================== REGULATION =====================
@@ -1208,33 +1273,40 @@ function renderDataSources(items) {
     el.innerHTML = renderDefaultSources();
     return;
   }
-  el.innerHTML = items.map(it => {
-    const typeClass = it.type === 'auto' ? 'ds-auto' : it.type === 'semi' ? 'ds-semi' : 'ds-manual';
-    const typeLabel = it.type === 'auto' ? '自动化' : it.type === 'semi' ? '半自动' : '人工';
-    return '<div class="ds-card"><h5>' + esc(it.name) + '</h5>' +
-      '<span class="ds-type ' + typeClass + '">' + typeLabel + '</span>' +
-      '<p>' + esc(it.description) + '</p></div>';
+  // 新格式: {name, status, count, detail}
+  const statusDot = s => s === 'ok' ? '🟢' : s === 'partial' || s === 'skipped' ? '🟡' : '🔴';
+  const statusLabel = s => s === 'ok' ? '正常' : s === 'partial' ? '部分' : s === 'skipped' ? '跳过' : '失败';
+  const okCount = items.filter(i => i.status === 'ok').length;
+  const totalCount = items.length;
+  let html = '<div style="margin-bottom:12px;font-size:13px;color:#aaa">本期数据采集状态: ' +
+    okCount + '/' + totalCount + ' 数据源正常</div>';
+  html += items.map(it => {
+    const dot = statusDot(it.status);
+    const label = statusLabel(it.status);
+    const detail = it.detail || (it.count ? it.count + ' 条' : '');
+    return '<div class="ds-card">' +
+      '<h5>' + dot + ' ' + esc(it.name) + '</h5>' +
+      '<span class="ds-type ' + (it.status === 'ok' ? 'ds-auto' : it.status === 'skipped' ? 'ds-semi' : 'ds-manual') + '">' + label + '</span>' +
+      (detail ? '<p>' + esc(detail) + '</p>' : '') +
+      '</div>';
   }).join('');
+  el.innerHTML = html;
 }
 
 function renderDefaultSources() {
   const sources = [
-    {name:'各国央行官网',type:'semi',desc:'Fed/ECB/BOJ/PBOC等利率决议、政策声明、经济展望'},
-    {name:'国际投研机构',type:'semi',desc:'高盛、摩根大通、美银、瑞银、德银、中金、中信等研报'},
-    {name:'Bloomberg / Reuters',type:'semi',desc:'全球财经新闻、大宗商品价格、汇率数据'},
-    {name:'各国统计局',type:'semi',desc:'人口、GDP、CPI、建筑许可证、PMI等官方数据'},
-    {name:'UN Comtrade',type:'auto',desc:'全球贸易流数据、HS编码维度进出口统计'},
-    {name:'Google Trends',type:'auto',desc:'建材相关搜索关键词趋势、地区热度'},
-    {name:'社交平台',type:'semi',desc:'Instagram/YouTube/X/Pinterest建材话题热度与趋势'},
-    {name:'世界银行/IMF',type:'semi',desc:'全球经济展望、各国基建投资数据'},
-    {name:'行业会展',type:'manual',desc:'bauma/Canton Fair/Big 5等行业展会动态'},
-    {name:'各国智库',type:'semi',desc:'BRICS智库、兰德、查塔姆研究所等政策研究'},
-    {name:'权威媒体',type:'semi',desc:'人民日报、财联社、第一财经、日经新闻、联合早报'},
-    {name:'买方卖方报告',type:'manual',desc:'私募/公募/对冲基金/投行研究报告'},
-    {name:'各国海关数据',type:'auto',desc:'HS编码维度进出口量价数据'},
-    {name:'BDI/SCFI指数',type:'auto',desc:'波罗的海干散货指数、上海出口集装箱运价指数'},
-    {name:'碳交易市场',type:'auto',desc:'EU ETS/CCER等碳配额价格动态'},
-    {name:'各国住建部/建设部门',type:'semi',desc:'建筑法规、绿色建筑标准更新'}
+    {name:'FRED 央行利率',type:'auto',desc:'Fed/ECB/BOJ/PBOC等利率决议'},
+    {name:'World Bank 国别指标',type:'auto',desc:'全球25+国家宏观经济数据'},
+    {name:'UN Comtrade',type:'auto',desc:'全球贸易流数据、HS编码进出口统计'},
+    {name:'海关月度出口',type:'auto',desc:'24品类×207 HS编码×9区域68国'},
+    {name:'SCFI/BDI 海运指数',type:'auto',desc:'集装箱运价、干散货指数'},
+    {name:'RSS 新闻聚合',type:'auto',desc:'9源建材行业新闻实时聚合'},
+    {name:'学术论文',type:'auto',desc:'Crossref/arXiv/DOAJ多主题'},
+    {name:'投研报告',type:'auto',desc:'全球建材投研报告聚合'},
+    {name:'展会/事件日历',type:'auto',desc:'全球建材行业展会追踪'},
+    {name:'EUR-Lex 欧盟法规',type:'auto',desc:'欧盟建材相关法规监控'},
+    {name:'新兴需求探测',type:'auto',desc:'交叉分析新闻+社交信号'},
+    {name:'Google Trends',type:'auto',desc:'建材搜索关键词趋势'}
   ];
   return sources.map(s => {
     const typeClass = s.type === 'auto' ? 'ds-auto' : s.type === 'semi' ? 'ds-semi' : 'ds-manual';
