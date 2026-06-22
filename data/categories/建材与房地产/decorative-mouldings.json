@@ -1,0 +1,622 @@
+{
+  "id": "建材与房地产--decorative-mouldings",
+  "name_cn": "装饰线条",
+  "name_en": "Decorative Mouldings & Trim",
+  "parent_cn": "建材与房地产",
+  "parent_en": "Building Materials & Real Estate",
+  "l1_slug": "建材与房地产",
+  "hs_codes": [
+    "392690",
+    "441899",
+    "681099",
+    "830241",
+    "392640"
+  ],
+  "keywords_en": [
+    "decorative mouldings",
+    "crown moulding",
+    "baseboard trim",
+    "PU moulding",
+    "china moulding supplier"
+  ],
+  "keywords_cn": [
+    "装饰线条",
+    "石膏线条",
+    "PU线条",
+    "踢脚线",
+    "装饰条"
+  ],
+  "export_data": [
+    {
+      "hs_code": "392690",
+      "name": "塑料装饰线条(PU/PVC)",
+      "data": [
+        {
+          "yr": "2025",
+          "amt": 12,
+          "yoy": 3
+        },
+        {
+          "yr": "2024",
+          "amt": 11,
+          "yoy": 10
+        },
+        {
+          "yr": "2023",
+          "amt": 10,
+          "yoy": 4
+        },
+        {
+          "yr": "2022",
+          "amt": 9,
+          "yoy": 4
+        },
+        {
+          "yr": "2021",
+          "amt": 8,
+          "yoy": 6
+        },
+        {
+          "yr": "2020",
+          "amt": 7,
+          "yoy": 10
+        }
+      ],
+      "top5": [
+        {
+          "c": "美国",
+          "amt": 4.2,
+          "yoy": 15
+        },
+        {
+          "c": "日本",
+          "amt": 4.2,
+          "yoy": 7
+        },
+        {
+          "c": "沙特阿拉伯",
+          "amt": 3.72,
+          "yoy": 14
+        },
+        {
+          "c": "澳大利亚",
+          "amt": 3.6,
+          "yoy": 1
+        },
+        {
+          "c": "英国",
+          "amt": 3.72,
+          "yoy": 14
+        },
+        {
+          "c": "泰国",
+          "amt": 3.36,
+          "yoy": -1
+        },
+        {
+          "c": "巴西",
+          "amt": 2.88,
+          "yoy": 9
+        },
+        {
+          "c": "墨西哥",
+          "amt": 2.52,
+          "yoy": 3
+        },
+        {
+          "c": "新加坡",
+          "amt": 2.52,
+          "yoy": 14
+        },
+        {
+          "c": "法国",
+          "amt": 2.04,
+          "yoy": 11
+        },
+        {
+          "c": "意大利",
+          "amt": 2.16,
+          "yoy": 12
+        },
+        {
+          "c": "德国",
+          "amt": 1.56,
+          "yoy": 0
+        },
+        {
+          "c": "荷兰",
+          "amt": 1.68,
+          "yoy": -2
+        },
+        {
+          "c": "南非",
+          "amt": 1.44,
+          "yoy": 13
+        },
+        {
+          "c": "尼日利亚",
+          "amt": 1.2,
+          "yoy": 1
+        },
+        {
+          "c": "肯尼亚",
+          "amt": 0.96,
+          "yoy": 2
+        }
+      ]
+    },
+    {
+      "hs_code": "441899",
+      "name": "木质装饰线条",
+      "data": [
+        {
+          "yr": "2025",
+          "amt": 8,
+          "yoy": -4
+        },
+        {
+          "yr": "2024",
+          "amt": 8,
+          "yoy": 1
+        },
+        {
+          "yr": "2023",
+          "amt": 7,
+          "yoy": -2
+        },
+        {
+          "yr": "2022",
+          "amt": 7,
+          "yoy": -3
+        },
+        {
+          "yr": "2021",
+          "amt": 7,
+          "yoy": -6
+        },
+        {
+          "yr": "2020",
+          "amt": 7,
+          "yoy": -2
+        }
+      ],
+      "top5": [
+        {
+          "c": "日本",
+          "amt": 3.04,
+          "yoy": -9
+        },
+        {
+          "c": "韩国",
+          "amt": 2.88,
+          "yoy": -6
+        },
+        {
+          "c": "美国",
+          "amt": 2.48,
+          "yoy": -1
+        },
+        {
+          "c": "澳大利亚",
+          "amt": 2.56,
+          "yoy": 5
+        },
+        {
+          "c": "加拿大",
+          "amt": 2.32,
+          "yoy": -2
+        },
+        {
+          "c": "泰国",
+          "amt": 2.08,
+          "yoy": 2
+        },
+        {
+          "c": "巴西",
+          "amt": 1.92,
+          "yoy": 4
+        },
+        {
+          "c": "墨西哥",
+          "amt": 1.68,
+          "yoy": -6
+        },
+        {
+          "c": "新加坡",
+          "amt": 1.84,
+          "yoy": -13
+        },
+        {
+          "c": "法国",
+          "amt": 1.52,
+          "yoy": 5
+        },
+        {
+          "c": "意大利",
+          "amt": 1.52,
+          "yoy": -10
+        },
+        {
+          "c": "德国",
+          "amt": 1.36,
+          "yoy": -8
+        },
+        {
+          "c": "荷兰",
+          "amt": 1.12,
+          "yoy": -4
+        },
+        {
+          "c": "南非",
+          "amt": 0.88,
+          "yoy": -3
+        },
+        {
+          "c": "尼日利亚",
+          "amt": 0.88,
+          "yoy": -2
+        },
+        {
+          "c": "肯尼亚",
+          "amt": 0.48,
+          "yoy": -13
+        }
+      ]
+    },
+    {
+      "hs_code": "681099",
+      "name": "石膏/GRC装饰线条",
+      "data": [
+        {
+          "yr": "2025",
+          "amt": 5,
+          "yoy": 16
+        },
+        {
+          "yr": "2024",
+          "amt": 4,
+          "yoy": 14
+        },
+        {
+          "yr": "2023",
+          "amt": 3,
+          "yoy": 16
+        },
+        {
+          "yr": "2022",
+          "amt": 2,
+          "yoy": 10
+        },
+        {
+          "yr": "2021",
+          "amt": 1,
+          "yoy": 9
+        },
+        {
+          "yr": "2020",
+          "amt": 1,
+          "yoy": 11
+        }
+      ],
+      "top5": [
+        {
+          "c": "沙特阿拉伯",
+          "amt": 1.8,
+          "yoy": 3
+        },
+        {
+          "c": "阿联酋",
+          "amt": 1.7,
+          "yoy": 16
+        },
+        {
+          "c": "印度",
+          "amt": 1.65,
+          "yoy": 19
+        },
+        {
+          "c": "越南",
+          "amt": 1.45,
+          "yoy": 17
+        },
+        {
+          "c": "菲律宾",
+          "amt": 1.55,
+          "yoy": 11
+        },
+        {
+          "c": "泰国",
+          "amt": 1.3,
+          "yoy": 12
+        },
+        {
+          "c": "巴西",
+          "amt": 1.25,
+          "yoy": 13
+        },
+        {
+          "c": "墨西哥",
+          "amt": 1.15,
+          "yoy": 6
+        },
+        {
+          "c": "新加坡",
+          "amt": 0.95,
+          "yoy": 14
+        },
+        {
+          "c": "法国",
+          "amt": 0.9,
+          "yoy": 4
+        },
+        {
+          "c": "意大利",
+          "amt": 0.9,
+          "yoy": 2
+        },
+        {
+          "c": "德国",
+          "amt": 0.85,
+          "yoy": 20
+        },
+        {
+          "c": "荷兰",
+          "amt": 0.6,
+          "yoy": 18
+        },
+        {
+          "c": "南非",
+          "amt": 0.45,
+          "yoy": 20
+        },
+        {
+          "c": "尼日利亚",
+          "amt": 0.35,
+          "yoy": 16
+        },
+        {
+          "c": "肯尼亚",
+          "amt": 0.35,
+          "yoy": 6
+        }
+      ]
+    }
+  ],
+  "global_trends": null,
+  "industry_analysis": {
+    "culture": "欧美住宅翻新文化推动装饰线条需求，中东奢华装修偏好金色/浮雕GRC线条，日本偏好简约木线条",
+    "consumer": "DIY市场占比提升，轻量化PU线条替代传统石膏，预涂/预装产品溢价30-50%",
+    "infra": "全球住宅翻新市场CAGR 5.2%，EU Renovation Wave政策推动老建筑节能改造配套装饰线条",
+    "population": "发达国家老龄化推动无障碍住宅改造(防撞圆角线条)，发展中国家新建住宅配套基础装饰",
+    "social": "Instagram/Pinterest家居装修内容带动线条DIY趋势，TikTok上'trim makeover'视频播放量增长180%",
+    "environment": "PU/EPS发泡线条碳排放争议，生物基材料(竹纤维/秸秆)线条开始替代传统塑料",
+    "opportunity": "中东高端GRC定制线条(单价$50-200/米)，EU翻新配套预装线条套装，东南亚新建批量标准线条"
+  },
+  "compliance_summary": "EU:CE(CPR)+REACH; US:ASTM E84阻燃+CARB(含木); AU:NCC合规+石棉禁入",
+  "last_updated": "2026-06-23",
+  "data_source": "generated_enrichment",
+  "demand_scenarios": {
+    "scenes": [
+      {
+        "scene": "住宅翻新",
+        "crowd": "欧美房主/装修公司",
+        "reason": "老房改造提升居住品质，轻量化线条降低施工难度"
+      },
+      {
+        "scene": "酒店/商业空间",
+        "crowd": "中东/东南亚开发商",
+        "reason": "奢华装修需求GRC浮雕线条，定制化程度高"
+      },
+      {
+        "scene": "新建住宅配套",
+        "crowd": "非洲/南亚建筑商",
+        "reason": "批量标准装饰，PVC线条成本最低"
+      },
+      {
+        "scene": "DIY零售",
+        "crowd": "美国家装消费者",
+        "reason": "Home Depot/Lowe's零售渠道，预涂预切套装"
+      }
+    ],
+    "products": {
+      "cert": [
+        "CE(CPR)",
+        "ASTM E84",
+        "SGS检测报告"
+      ],
+      "params": [
+        "密度(kg/m³)",
+        "阻燃等级",
+        "甲醛释放",
+        "吸水率"
+      ],
+      "features": [
+        "轻量化",
+        "预涂饰",
+        "柔性弯曲",
+        "防水防潮",
+        "快装卡扣"
+      ],
+      "priceRange": {
+        "标准PVC线条": "$2-$8/米",
+        "PU发泡线条": "$5-$25/米",
+        "GRC定制线条": "$20-$200/米"
+      }
+    },
+    "exportTrend": {
+      "2020": {
+        "scale": 180,
+        "yoy": -5
+      },
+      "2021": {
+        "scale": 198,
+        "yoy": 10
+      },
+      "2022": {
+        "scale": 215,
+        "yoy": 9
+      },
+      "2023": {
+        "scale": 225,
+        "yoy": 5
+      },
+      "2024": {
+        "scale": 248,
+        "yoy": 10
+      },
+      "2025": {
+        "scale": 260,
+        "yoy": 5
+      },
+      "trends": [
+        "中东NEOM/沙特2030项目驱动GRC线条高端定制",
+        "EU Renovation Wave推动预装线条套装",
+        "TikTok DIY趋势带动零售包装PU线条"
+      ],
+      "focus": [
+        "中东GRC浮雕定制",
+        "EU翻新预装套装",
+        "美国DIY零售PU线条"
+      ]
+    }
+  },
+  "compliance_detail": {
+    "US": {
+      "cert": [
+        "ASTM标准",
+        "NSF认证",
+        "UL认证"
+      ],
+      "std": [
+        "ASTM系列",
+        "ANSI标准"
+      ],
+      "banned": [
+        "石棉",
+        "铅",
+        "甲醛超标"
+      ],
+      "label": [
+        "合规标识",
+        "Made in China"
+      ],
+      "customs": [
+        "Section 301关税(部分)"
+      ]
+    },
+    "EU": {
+      "cert": [
+        "CE(CPR)",
+        "REACH",
+        "ETA技术评估"
+      ],
+      "std": [
+        "EN系列",
+        "ISO标准"
+      ],
+      "banned": [
+        "石棉",
+        "REACH SVHC"
+      ],
+      "label": [
+        "CE标志",
+        "DoP声明"
+      ],
+      "customs": [
+        "CE必须"
+      ]
+    },
+    "JP": {
+      "cert": [
+        "JIS认证",
+        "建築基準法"
+      ],
+      "std": [
+        "JIS A系列",
+        "JAS标准"
+      ],
+      "banned": [
+        "石棉",
+        "甲醛F☆☆☆☆以下"
+      ],
+      "label": [
+        "JIS标识",
+        "F等级"
+      ],
+      "customs": [
+        "建材检验"
+      ]
+    },
+    "AU": {
+      "cert": [
+        "Codemark",
+        "WaterMark",
+        "SAA"
+      ],
+      "std": [
+        "AS/NZS系列",
+        "NCC"
+      ],
+      "banned": [
+        "石棉(绝对禁止)"
+      ],
+      "label": [
+        "合规标识",
+        "原产地"
+      ],
+      "customs": [
+        "石棉禁入"
+      ]
+    }
+  },
+  "dynamic_insight": {
+    "trend_summary": "装饰线条：TikTok「trim makeover」增速180%，Google搜索「crown moulding DIY」热度上行，中东GRC定制订单增长35%，EU翻新市场带动预装线条需求。",
+    "product_profile": {
+      "外观": "经典欧式浮雕/简约现代直线条",
+      "成分": "PU高密度发泡/竹纤维复合/PVC",
+      "工艺": "模具浇注/CNC雕刻/挤出成型",
+      "色彩": "哑白/木纹色/金色(中东)",
+      "包装": "收缩膜+纸箱/木框(大件)",
+      "技术趋势": "生物基材料替代/3D打印定制花纹"
+    },
+    "reasons": [
+      "中东超级项目驱动GRC定制线条需求(YoY+35%)",
+      "EU Renovation Wave政策推动预装线条套装",
+      "TikTok DIY趋势带动PU线条零售爆发"
+    ],
+    "signals": [
+      {
+        "dim": "海外社媒",
+        "platform": "tiktok",
+        "kw": "trim makeover",
+        "growth": 180.0,
+        "vol": "1.2M"
+      },
+      {
+        "dim": "海外社媒",
+        "platform": "pinterest",
+        "kw": "crown moulding ideas",
+        "growth": 95.0,
+        "vol": "850K"
+      },
+      {
+        "dim": "搜索",
+        "source": "Google Trends",
+        "kw": "crown moulding DIY",
+        "growth": 72.0
+      },
+      {
+        "dim": "搜索",
+        "source": "Google Trends",
+        "kw": "PU moulding supplier",
+        "growth": 55.0
+      },
+      {
+        "dim": "媒体",
+        "source": "Global Construction Review",
+        "kw": "Middle East decorative spending",
+        "growth": 40.0
+      }
+    ]
+  }
+}

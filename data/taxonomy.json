@@ -43,7 +43,8 @@
         "391722",
         "391723",
         "391721"
-      ]
+      ],
+      "l2_slug": "plastic-pipes"
     },
     "土工材料": {
       "en": "Earthwork Products",
@@ -482,7 +483,8 @@
           "zh": "工作台面、洗面台与桌面(从上级行业虚拟)"
         }
       ],
-      "hs_codes": []
+      "hs_codes": [],
+      "l2_slug": "countertops"
     },
     "天花板": {
       "en": "Ceilings",
@@ -856,7 +858,8 @@
           "zh": "装饰线条(从上级行业虚拟)"
         }
       ],
-      "hs_codes": []
+      "hs_codes": [],
+      "l2_slug": "decorative-mouldings"
     },
     "壁炉、炉灶": {
       "en": "Fireplaces & Stoves",
@@ -882,7 +885,8 @@
           "zh": "多功能材料(从上级行业虚拟)"
         }
       ],
-      "hs_codes": []
+      "hs_codes": [],
+      "l2_slug": "multifunctional-materials"
     },
     "防撞护角": {
       "en": "Corner Guards",
@@ -893,48 +897,54 @@
           "zh": "防撞护角(从上级行业虚拟)"
         }
       ],
-      "hs_codes": []
+      "hs_codes": [],
+      "l2_slug": "corner-guards"
     },
     "马赛克": {
-      "en": "",
+      "en": "Mosaic Tiles",
       "zh": "马赛克",
       "l3": [],
       "hs_codes": [
         "701610",
         "680210"
-      ]
+      ],
+      "l2_slug": "mosaic"
     },
     "金属建材": {
-      "en": "",
+      "en": "Metal Building Materials",
       "zh": "金属建材",
       "l3": [],
       "hs_codes": [
         "830241"
-      ]
+      ],
+      "l2_slug": "metal-building-materials"
     },
     "模架": {
-      "en": "",
+      "en": "Formwork & Shoring Systems",
       "zh": "模架",
       "l3": [],
       "hs_codes": [
         "441840"
-      ]
+      ],
+      "l2_slug": "formwork-scaffolding"
     },
     "栏杆与扶手": {
-      "en": "",
+      "en": "Railings & Balustrades",
       "zh": "栏杆与扶手",
       "l3": [],
       "hs_codes": [
         "730120"
-      ]
+      ],
+      "l2_slug": "railings-balustrades"
     },
     "地板供暖系统及配件": {
-      "en": "",
+      "en": "Underfloor Heating Systems & Accessories",
       "zh": "地板供暖系统及配件",
       "l3": [],
       "hs_codes": [
         "732219"
-      ]
+      ],
+      "l2_slug": "floor-heating"
     }
   }
 }

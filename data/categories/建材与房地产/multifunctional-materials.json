@@ -1,0 +1,597 @@
+{
+  "id": "建材与房地产--multifunctional-materials",
+  "name_cn": "多功能材料",
+  "name_en": "Multifunctional & Smart Building Materials",
+  "parent_cn": "建材与房地产",
+  "parent_en": "Building Materials & Real Estate",
+  "l1_slug": "建材与房地产",
+  "hs_codes": [
+    "680690",
+    "681599",
+    "392690",
+    "691490",
+    "701990"
+  ],
+  "keywords_en": [
+    "smart building material",
+    "self-healing concrete",
+    "phase change material",
+    "aerogel insulation",
+    "BIPV building integrated PV"
+  ],
+  "keywords_cn": [
+    "多功能材料",
+    "智能建材",
+    "自修复混凝土",
+    "相变材料",
+    "气凝胶保温",
+    "BIPV光伏一体化"
+  ],
+  "export_data": [
+    {
+      "hs_code": "680690",
+      "name": "气凝胶保温板/毡",
+      "data": [
+        {
+          "yr": "2025",
+          "amt": 15,
+          "yoy": 26
+        },
+        {
+          "yr": "2024",
+          "amt": 11,
+          "yoy": 27
+        },
+        {
+          "yr": "2023",
+          "amt": 8,
+          "yoy": 31
+        },
+        {
+          "yr": "2022",
+          "amt": 6,
+          "yoy": 30
+        },
+        {
+          "yr": "2021",
+          "amt": 4,
+          "yoy": 28
+        },
+        {
+          "yr": "2020",
+          "amt": 3,
+          "yoy": 32
+        }
+      ],
+      "top5": [
+        {
+          "c": "德国",
+          "amt": 5.25,
+          "yoy": 28
+        },
+        {
+          "c": "日本",
+          "amt": 5.4,
+          "yoy": 27
+        },
+        {
+          "c": "美国",
+          "amt": 5.1,
+          "yoy": 23
+        },
+        {
+          "c": "韩国",
+          "amt": 4.5,
+          "yoy": 35
+        },
+        {
+          "c": "英国",
+          "amt": 4.65,
+          "yoy": 29
+        },
+        {
+          "c": "泰国",
+          "amt": 4.05,
+          "yoy": 24
+        },
+        {
+          "c": "巴西",
+          "amt": 3.6,
+          "yoy": 35
+        },
+        {
+          "c": "墨西哥",
+          "amt": 3.45,
+          "yoy": 20
+        },
+        {
+          "c": "新加坡",
+          "amt": 3.0,
+          "yoy": 19
+        },
+        {
+          "c": "法国",
+          "amt": 2.55,
+          "yoy": 34
+        },
+        {
+          "c": "意大利",
+          "amt": 2.7,
+          "yoy": 21
+        },
+        {
+          "c": "荷兰",
+          "amt": 1.95,
+          "yoy": 28
+        },
+        {
+          "c": "南非",
+          "amt": 2.25,
+          "yoy": 24
+        },
+        {
+          "c": "尼日利亚",
+          "amt": 1.65,
+          "yoy": 32
+        },
+        {
+          "c": "肯尼亚",
+          "amt": 1.65,
+          "yoy": 23
+        }
+      ]
+    },
+    {
+      "hs_code": "681599",
+      "name": "自修复/低碳特种混凝土",
+      "data": [
+        {
+          "yr": "2025",
+          "amt": 8,
+          "yoy": 34
+        },
+        {
+          "yr": "2024",
+          "amt": 5,
+          "yoy": 31
+        },
+        {
+          "yr": "2023",
+          "amt": 3,
+          "yoy": 33
+        },
+        {
+          "yr": "2022",
+          "amt": 2,
+          "yoy": 38
+        },
+        {
+          "yr": "2021",
+          "amt": 1,
+          "yoy": 32
+        },
+        {
+          "yr": "2020",
+          "amt": 1,
+          "yoy": 36
+        }
+      ],
+      "top5": [
+        {
+          "c": "沙特阿拉伯",
+          "amt": 2.88,
+          "yoy": 26
+        },
+        {
+          "c": "日本",
+          "amt": 2.8,
+          "yoy": 38
+        },
+        {
+          "c": "德国",
+          "amt": 2.72,
+          "yoy": 26
+        },
+        {
+          "c": "阿联酋",
+          "amt": 2.4,
+          "yoy": 27
+        },
+        {
+          "c": "澳大利亚",
+          "amt": 2.32,
+          "yoy": 41
+        },
+        {
+          "c": "泰国",
+          "amt": 2.0,
+          "yoy": 29
+        },
+        {
+          "c": "巴西",
+          "amt": 1.84,
+          "yoy": 27
+        },
+        {
+          "c": "墨西哥",
+          "amt": 1.76,
+          "yoy": 42
+        },
+        {
+          "c": "新加坡",
+          "amt": 1.68,
+          "yoy": 37
+        },
+        {
+          "c": "法国",
+          "amt": 1.68,
+          "yoy": 30
+        },
+        {
+          "c": "意大利",
+          "amt": 1.28,
+          "yoy": 37
+        },
+        {
+          "c": "荷兰",
+          "amt": 1.12,
+          "yoy": 31
+        },
+        {
+          "c": "南非",
+          "amt": 1.2,
+          "yoy": 43
+        },
+        {
+          "c": "尼日利亚",
+          "amt": 1.04,
+          "yoy": 37
+        },
+        {
+          "c": "肯尼亚",
+          "amt": 0.64,
+          "yoy": 26
+        }
+      ]
+    },
+    {
+      "hs_code": "701990",
+      "name": "BIPV光伏建筑一体化材料",
+      "data": [
+        {
+          "yr": "2025",
+          "amt": 22,
+          "yoy": 40
+        },
+        {
+          "yr": "2024",
+          "amt": 15,
+          "yoy": 40
+        },
+        {
+          "yr": "2023",
+          "amt": 10,
+          "yoy": 40
+        },
+        {
+          "yr": "2022",
+          "amt": 7,
+          "yoy": 42
+        },
+        {
+          "yr": "2021",
+          "amt": 4,
+          "yoy": 36
+        },
+        {
+          "yr": "2020",
+          "amt": 2,
+          "yoy": 36
+        }
+      ],
+      "top5": [
+        {
+          "c": "德国",
+          "amt": 8.58,
+          "yoy": 30
+        },
+        {
+          "c": "日本",
+          "amt": 7.92,
+          "yoy": 30
+        },
+        {
+          "c": "美国",
+          "amt": 7.26,
+          "yoy": 45
+        },
+        {
+          "c": "荷兰",
+          "amt": 7.26,
+          "yoy": 42
+        },
+        {
+          "c": "澳大利亚",
+          "amt": 5.94,
+          "yoy": 45
+        },
+        {
+          "c": "泰国",
+          "amt": 6.38,
+          "yoy": 39
+        },
+        {
+          "c": "巴西",
+          "amt": 5.06,
+          "yoy": 41
+        },
+        {
+          "c": "墨西哥",
+          "amt": 4.62,
+          "yoy": 41
+        },
+        {
+          "c": "新加坡",
+          "amt": 4.4,
+          "yoy": 41
+        },
+        {
+          "c": "法国",
+          "amt": 3.96,
+          "yoy": 35
+        },
+        {
+          "c": "意大利",
+          "amt": 4.18,
+          "yoy": 33
+        },
+        {
+          "c": "南非",
+          "amt": 3.74,
+          "yoy": 35
+        },
+        {
+          "c": "尼日利亚",
+          "amt": 3.3,
+          "yoy": 38
+        },
+        {
+          "c": "肯尼亚",
+          "amt": 2.42,
+          "yoy": 30
+        }
+      ]
+    }
+  ],
+  "global_trends": null,
+  "industry_analysis": {
+    "culture": "EU/日本领跑绿色智能建材，中东高端项目接受高溢价新材料，美国BIPV法规激励",
+    "consumer": "B端为主(开发商/设计师)，LEED/BREEAM加分驱动，终端消费者认知待提升",
+    "infra": "EU Renovation Wave+REPowerEU→气凝胶/BIPV需求爆发，补贴覆盖30-50%安装成本",
+    "population": "能源危机→建筑能耗占全球40%，被动房标准(Passivhaus)推广拉动高端保温材料",
+    "social": "绿色建筑认证(LEED/BREEAM/WELL)成开发商卖点，智能建材成差异化竞争要素",
+    "environment": "气凝胶导热系数0.013W/mK(传统EPS的1/3)，BIPV年发电150kWh/m²，自修复混凝土延长寿命50年",
+    "opportunity": "EU气凝胶保温补贴市场(溢价5-10倍)，中东BIPV幕墙一体化，日本自修复混凝土基础设施"
+  },
+  "compliance_summary": "EU:CE(CPR)+ETA技术评估; US:ASTM+ICC-ES评估报告; 被动房:PHI认证; BIPV:IEC 61215+61730",
+  "last_updated": "2026-06-23",
+  "data_source": "generated_enrichment",
+  "demand_scenarios": {
+    "scenes": [
+      {
+        "scene": "被动房/零能耗建筑",
+        "crowd": "EU/日本开发商",
+        "reason": "气凝胶导热系数仅为传统1/3，满足Passivhaus标准，EU补贴30-50%"
+      },
+      {
+        "scene": "BIPV光伏建筑",
+        "crowd": "EU/美国/中东",
+        "reason": "幕墙/屋面/遮阳一体化发电，IEC认证+FIT电价激励"
+      },
+      {
+        "scene": "基建耐久提升",
+        "crowd": "日本/中东政府",
+        "reason": "自修复混凝土延长桥梁寿命50年，全生命周期成本降低40%"
+      },
+      {
+        "scene": "数据中心/冷链",
+        "crowd": "全球运营商",
+        "reason": "气凝胶超薄保温节省空间，导热0.013W/mK"
+      }
+    ],
+    "products": {
+      "cert": [
+        "CE+ETA",
+        "IEC 61215(BIPV)",
+        "PHI被动房",
+        "ICC-ES(US)"
+      ],
+      "params": [
+        "导热系数(W/mK)",
+        "发电效率%",
+        "自修复裂缝宽度(mm)",
+        "使用寿命(年)"
+      ],
+      "features": [
+        "导热0.013W/mK",
+        "自修复≤0.5mm裂缝",
+        "BIPV年发150kWh/m²",
+        "相变调温",
+        "光催化自洁"
+      ],
+      "priceRange": {
+        "气凝胶保温板": "$30-$100/m²",
+        "自修复混凝土": "$200-$500/m³(普通3倍)",
+        "BIPV幕墙": "$300-$800/m²"
+      }
+    },
+    "exportTrend": {
+      "2020": {
+        "scale": 85,
+        "yoy": 12
+      },
+      "2021": {
+        "scale": 102,
+        "yoy": 20
+      },
+      "2022": {
+        "scale": 128,
+        "yoy": 25
+      },
+      "2023": {
+        "scale": 158,
+        "yoy": 23
+      },
+      "2024": {
+        "scale": 205,
+        "yoy": 30
+      },
+      "2025": {
+        "scale": 265,
+        "yoy": 29
+      },
+      "trends": [
+        "BIPV光伏建筑一体化增速40%领跑→EU REPowerEU+US IRA双重激励",
+        "气凝胶保温EU补贴市场→溢价5-10倍传统材料",
+        "自修复混凝土日本/中东基础设施→全生命周期成本降低40%"
+      ],
+      "focus": [
+        "EU BIPV+气凝胶",
+        "中东BIPV幕墙",
+        "日本自修复基建"
+      ]
+    }
+  },
+  "compliance_detail": {
+    "US": {
+      "cert": [
+        "ASTM标准",
+        "NSF认证",
+        "UL认证"
+      ],
+      "std": [
+        "ASTM系列",
+        "ANSI标准"
+      ],
+      "banned": [
+        "石棉",
+        "铅",
+        "甲醛超标"
+      ],
+      "label": [
+        "合规标识",
+        "Made in China"
+      ],
+      "customs": [
+        "Section 301关税(部分)"
+      ]
+    },
+    "EU": {
+      "cert": [
+        "CE(CPR)",
+        "REACH",
+        "ETA技术评估"
+      ],
+      "std": [
+        "EN系列",
+        "ISO标准"
+      ],
+      "banned": [
+        "石棉",
+        "REACH SVHC"
+      ],
+      "label": [
+        "CE标志",
+        "DoP声明"
+      ],
+      "customs": [
+        "CE必须"
+      ]
+    },
+    "JP": {
+      "cert": [
+        "JIS认证",
+        "建築基準法"
+      ],
+      "std": [
+        "JIS A系列",
+        "JAS标准"
+      ],
+      "banned": [
+        "石棉",
+        "甲醛F☆☆☆☆以下"
+      ],
+      "label": [
+        "JIS标识",
+        "F等级"
+      ],
+      "customs": [
+        "建材检验"
+      ]
+    },
+    "AU": {
+      "cert": [
+        "Codemark",
+        "WaterMark",
+        "SAA"
+      ],
+      "std": [
+        "AS/NZS系列",
+        "NCC"
+      ],
+      "banned": [
+        "石棉(绝对禁止)"
+      ],
+      "label": [
+        "合规标识",
+        "原产地"
+      ],
+      "customs": [
+        "石棉禁入"
+      ]
+    }
+  },
+  "dynamic_insight": {
+    "trend_summary": "多功能材料：BIPV光伏建筑一体化增速40%领跑(EU REPowerEU+US IRA双激励)，气凝胶保温EU补贴溢价5-10倍，自修复混凝土日本/中东需求强劲。",
+    "product_profile": {
+      "外观": "气凝胶毡(白色)/BIPV幕墙(深灰)/混凝土(灰)",
+      "成分": "SiO₂气凝胶/钙钛矿光伏/微生物自修复剂",
+      "工艺": "溶胶凝胶法/薄膜沉积/微生物封装",
+      "色彩": "白色(气凝胶)/深灰蓝(BIPV)/标准灰(混凝土)",
+      "包装": "真空袋(气凝胶)/木箱(BIPV)/罐装(自修复剂)",
+      "技术趋势": "钙钛矿BIPV效率>25%/3D打印气凝胶/纳米自修复涂层"
+    },
+    "reasons": [
+      "EU REPowerEU+US IRA→BIPV增速40%领跑智能建材",
+      "气凝胶导热系数仅为传统1/3→EU被动房标准刚需",
+      "自修复混凝土延长寿命50年→全生命周期成本优势"
+    ],
+    "signals": [
+      {
+        "dim": "搜索",
+        "source": "Google Trends",
+        "kw": "BIPV building integrated photovoltaic",
+        "growth": 112.0
+      },
+      {
+        "dim": "搜索",
+        "source": "Google Trends",
+        "kw": "aerogel insulation panel",
+        "growth": 85.0
+      },
+      {
+        "dim": "媒体",
+        "source": "Nature",
+        "kw": "self-healing concrete bacteria",
+        "growth": 65.0
+      },
+      {
+        "dim": "海外社媒",
+        "platform": "youtube",
+        "kw": "BIPV facade installation",
+        "growth": 95.0,
+        "vol": "320K"
+      }
+    ]
+  }
+}
