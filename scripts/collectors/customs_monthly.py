@@ -12,6 +12,9 @@ from ..utils import fetch_json, cache_get, cache_set, save_raw, log, safe_float,
 COMTRADE_KEY = os.environ.get("UN_COMTRADE_KEY", "")
 COMTRADE_BASE = "https://comtradeapi.un.org/data/v1/get/C/M/HS"
 
+# API配额状态 (模块级,防止403时级联重试)
+_api_quota_exceeded = False
+
 # ===== 完整24品类 × 207 HS编码映射 (来源: 建材-hs编码大全.xlsx) =====
 HS_FULL_MAPPING = {
     "土工材料": ["560313"],
@@ -127,6 +130,38 @@ def _build_period_str(year: int, month: int) -> str:
     return f"{year}{month:02d}"
 
 
+def _probe_api(period: str) -> bool:
+    """快速探测API是否可用 (仅查1个HS码, 不重试)
+    Returns: True if API is accessible, False if quota exceeded or error
+    """
+    global _api_quota_exceeded
+    if _api_quota_exceeded:
+        return False
+
+    params = {
+        "reporterCode": CHINA_REPORTER,
+        "period": period,
+        "flowCode": "X",
+        "cmdCode": "560313",  # 土工材料, 单个HS码
+        "includeDesc": "false",
+        "subscription-key": COMTRADE_KEY,
+    }
+    import requests
+    try:
+        resp = requests.get(COMTRADE_BASE, params=params, timeout=20)
+        if resp.status_code == 403:
+            _api_quota_exceeded = True
+            log.warning("Comtrade API quota exceeded (403), skipping customs collection")
+            return False
+        if resp.status_code == 200:
+            return True
+        log.warning(f"Comtrade API probe: HTTP {resp.status_code}")
+        return False
+    except Exception as e:
+        log.warning(f"Comtrade API probe error: {e}")
+        return False
+
+
 def _fetch_monthly_batch(hs_codes: list[str], period: str,
                          partner_codes: list[str] = None) -> list[dict]:
     """批量查询: 中国出口 → 指定HS编码 × 指定伙伴国 × 单月
@@ -134,6 +169,10 @@ def _fetch_monthly_batch(hs_codes: list[str], period: str,
     Comtrade API支持逗号分隔的多HS码和多partner码 (单次上限约20个cmdCode)
     """
     if not COMTRADE_KEY:
+        return []
+
+    # 快速失败: API已知配额耗尽时直接跳过
+    if _api_quota_exceeded:
         return []
 
     params = {
@@ -258,6 +297,24 @@ def collect_customs_monthly(year: int = None, month: int = None,
         log.info(f"Fetching: China exports {period_current} vs {period_previous} (final fallback)")
     log.info(f"Categories: {len(HS_FULL_MAPPING)}, HS codes: {len(ALL_HS_CODES)}")
 
+    # API可用性探测 (防止403配额耗尽时级联重试)
+    if not _probe_api(period_current):
+        log.warning(f"Comtrade API unavailable for {period_current}, returning empty result")
+        return {
+            "period": period_current,
+            "compare_period": period_previous,
+            "year": year,
+            "month": month,
+            "categories": {},
+            "total_current_usd": 0,
+            "total_previous_usd": 0,
+            "total_yoy_pct": None,
+            "categories_count": 0,
+            "hs_codes_count": len(ALL_HS_CODES),
+            "collected_at": datetime.now().isoformat(),
+            "status": "api_unavailable",
+        }
+
     # 按品类逐批采集 (每个品类的HS码一次性查询,分块≤20个)
     categories_result = {}
     total_current = 0
@@ -373,10 +430,11 @@ def collect_customs_monthly(year: int = None, month: int = None,
     save_raw("customs_monthly", f"china_exports_{period_current}", output)
 
     # 如果当期无数据且还有回退余地,尝试前一个月
-    if total_current == 0 and (year, month) != (
+    # (但如果API配额已耗尽则不重试)
+    if (total_current == 0 and not _api_quota_exceeded and (year, month) != (
         _original_year - 1 if _original_month <= 3 else _original_year,
         (_original_month - 4) if _original_month > 4 else (_original_month + 8)
-    ):
+    )):
         prev_month = month - 1 if month > 1 else 12
         prev_year = year if month > 1 else year - 1
         prev_compare_year = prev_year - 1
