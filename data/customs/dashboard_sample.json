@@ -1,0 +1,268 @@
+{
+  "title": "中国建材出口月度看板",
+  "period": "2026年4月",
+  "summary": {
+    "total_usd": 5405158635.4673395,
+    "total_yoy_pct": 15.4,
+    "categories_count": 24,
+    "highlights": [
+      "最大品类: 建筑板材 $346.4M",
+      "7个品类同比增长超30%",
+      "2个品类同比下滑超20%"
+    ]
+  },
+  "categories": [
+    {
+      "name": "建筑板材",
+      "value_usd": 346385555.96962535,
+      "previous_usd": 267685943.28497413,
+      "yoy_pct": 29.4
+    },
+    {
+      "name": "防水材料",
+      "value_usd": 339303708.7632392,
+      "previous_usd": 220697980.10273066,
+      "yoy_pct": 53.7
+    },
+    {
+      "name": "防火材料",
+      "value_usd": 339204730.9143598,
+      "previous_usd": 273045032.82960415,
+      "yoy_pct": 24.2
+    },
+    {
+      "name": "模架",
+      "value_usd": 316855357.18816316,
+      "previous_usd": 261054501.69538012,
+      "yoy_pct": 21.4
+    },
+    {
+      "name": "塑料管",
+      "value_usd": 308898139.92182165,
+      "previous_usd": 206292457.8588789,
+      "yoy_pct": 49.7
+    },
+    {
+      "name": "梯子及脚手架",
+      "value_usd": 303288965.19588757,
+      "previous_usd": 191982364.97210777,
+      "yoy_pct": 58.0
+    },
+    {
+      "name": "瓷砖及配件",
+      "value_usd": 283007641.88231874,
+      "previous_usd": 210662310.2825849,
+      "yoy_pct": 34.3
+    },
+    {
+      "name": "电梯和自动扶梯",
+      "value_usd": 279394197.2077373,
+      "previous_usd": 296139034.09708506,
+      "yoy_pct": -5.7
+    },
+    {
+      "name": "砖石材料",
+      "value_usd": 268066226.0259272,
+      "previous_usd": 221822422.92211705,
+      "yoy_pct": 20.8
+    },
+    {
+      "name": "建筑工业玻璃",
+      "value_usd": 256531168.06364846,
+      "previous_usd": 193994974.2992117,
+      "yoy_pct": 32.2
+    },
+    {
+      "name": "墙纸/墙板",
+      "value_usd": 256348045.925183,
+      "previous_usd": 252155775.34775826,
+      "yoy_pct": 1.7
+    },
+    {
+      "name": "金属建材",
+      "value_usd": 253315220.73981282,
+      "previous_usd": 251986263.33514118,
+      "yoy_pct": 0.5
+    },
+    {
+      "name": "壁炉、炉灶",
+      "value_usd": 252576204.56288528,
+      "previous_usd": 273629915.36449975,
+      "yoy_pct": -7.7
+    },
+    {
+      "name": "门、窗及其配件",
+      "value_usd": 248077283.4941486,
+      "previous_usd": 314439514.76939917,
+      "yoy_pct": -21.1
+    },
+    {
+      "name": "地板供暖系统及配件",
+      "value_usd": 235314317.74229184,
+      "previous_usd": 148023555.98182175,
+      "yoy_pct": 59.0
+    },
+    {
+      "name": "活动房屋与钢结构",
+      "value_usd": 225602245.4679699,
+      "previous_usd": 292511599.7986252,
+      "yoy_pct": -22.9
+    },
+    {
+      "name": "木材",
+      "value_usd": 198672006.286287,
+      "previous_usd": 204115696.9639495,
+      "yoy_pct": -2.7
+    },
+    {
+      "name": "浴室和厨房产品",
+      "value_usd": 168972420.4440623,
+      "previous_usd": 138805415.51344934,
+      "yoy_pct": 21.7
+    },
+    {
+      "name": "马赛克",
+      "value_usd": 157545130.76015857,
+      "previous_usd": 169104035.7477197,
+      "yoy_pct": -6.8
+    },
+    {
+      "name": "隔热材料",
+      "value_usd": 149632595.790876,
+      "previous_usd": 120078661.9020913,
+      "yoy_pct": 24.6
+    },
+    {
+      "name": "栏杆与扶手",
+      "value_usd": 147982148.79421318,
+      "previous_usd": 115134274.29400007,
+      "yoy_pct": 28.5
+    },
+    {
+      "name": "土工材料",
+      "value_usd": 31731757.083333857,
+      "previous_usd": 31959663.739084736,
+      "yoy_pct": -0.7
+    },
+    {
+      "name": "地板及配件",
+      "value_usd": 29492614.673116226,
+      "previous_usd": 22925804.292474963,
+      "yoy_pct": 28.6
+    },
+    {
+      "name": "石材",
+      "value_usd": 8960952.570272774,
+      "previous_usd": 6576297.875195858,
+      "yoy_pct": 36.3
+    }
+  ],
+  "regions": [
+    {
+      "name": "南亚",
+      "value_usd": 803091876.3750341,
+      "yoy_pct": 17.4,
+      "top_growth_category": "梯子及脚手架",
+      "top_growth_yoy": 106.5
+    },
+    {
+      "name": "中东",
+      "value_usd": 796286787.5191541,
+      "yoy_pct": 15.1,
+      "top_growth_category": "塑料管",
+      "top_growth_yoy": 112.5
+    },
+    {
+      "name": "北美",
+      "value_usd": 793552121.1643612,
+      "yoy_pct": 19.6,
+      "top_growth_category": "防水材料",
+      "top_growth_yoy": 92.2
+    },
+    {
+      "name": "南美",
+      "value_usd": 781853202.5729929,
+      "yoy_pct": 17.3,
+      "top_growth_category": "梯子及脚手架",
+      "top_growth_yoy": 83.7
+    },
+    {
+      "name": "中亚",
+      "value_usd": 761681343.0623548,
+      "yoy_pct": 19.8,
+      "top_growth_category": "建筑工业玻璃",
+      "top_growth_yoy": 81.1
+    },
+    {
+      "name": "澳洲",
+      "value_usd": 752144690.2515678,
+      "yoy_pct": 12.3,
+      "top_growth_category": "塑料管",
+      "top_growth_yoy": 94.7
+    },
+    {
+      "name": "日韩",
+      "value_usd": 714011221.7617856,
+      "yoy_pct": 16.9,
+      "top_growth_category": "地板供暖系统及配件",
+      "top_growth_yoy": 83.8
+    },
+    {
+      "name": "东南亚",
+      "value_usd": 701962202.5373336,
+      "yoy_pct": 20.1,
+      "top_growth_category": "防水材料",
+      "top_growth_yoy": 109.1
+    },
+    {
+      "name": "西欧",
+      "value_usd": 689891127.3994093,
+      "yoy_pct": 16.7,
+      "top_growth_category": "防水材料",
+      "top_growth_yoy": 85.6
+    }
+  ],
+  "alerts": [
+    {
+      "type": "regional_surge",
+      "message": "塑料管→中东 同比+112%",
+      "category": "塑料管",
+      "region": "中东",
+      "yoy": 112.5
+    },
+    {
+      "type": "regional_surge",
+      "message": "防水材料→东南亚 同比+109%",
+      "category": "防水材料",
+      "region": "东南亚",
+      "yoy": 109.1
+    },
+    {
+      "type": "regional_surge",
+      "message": "梯子及脚手架→南亚 同比+106%",
+      "category": "梯子及脚手架",
+      "region": "南亚",
+      "yoy": 106.5
+    },
+    {
+      "type": "surge",
+      "message": "地板供暖系统及配件出口同比激增59.0%",
+      "category": "地板供暖系统及配件",
+      "yoy": 59.0
+    },
+    {
+      "type": "surge",
+      "message": "梯子及脚手架出口同比激增58.0%",
+      "category": "梯子及脚手架",
+      "yoy": 58.0
+    },
+    {
+      "type": "surge",
+      "message": "防水材料出口同比激增53.7%",
+      "category": "防水材料",
+      "yoy": 53.7
+    }
+  ],
+  "data_source": "UN Comtrade (中国海关总署上报)",
+  "data_lag": "约2-3个月"
+}
