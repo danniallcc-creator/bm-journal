@@ -79,6 +79,17 @@ HS_FULL_MAPPING = {
 # 去重: 某些HS码跨类目复用 → 构建全量唯一HS码列表
 ALL_HS_CODES = sorted(set(code for codes in HS_FULL_MAPPING.values() for code in codes))
 
+# === 4位码降级映射 ===
+# Comtrade中中国对部分品类只上报4位汇总码 (非6位细码)
+# 当6位码查询返回0时, 自动降级使用4位码查询
+HS_FALLBACK_4DIGIT = {
+    "木材": ["4403", "4407", "4408", "4409", "4412", "4413", "4414", "4415",
+             "4416", "4417", "4418"],
+    "建筑板材": ["4410", "4412", "6809", "6810"],
+    "石材": ["2507", "2508", "2513", "2515", "2520", "6802"],
+    "砖石材料": ["2523", "6810", "6811", "6901", "6902", "6903", "6907"],
+}
+
 # 中国 Comtrade reporter代码
 CHINA_REPORTER = "156"
 
@@ -260,6 +271,23 @@ def collect_customs_monthly(year: int = None, month: int = None,
                 partner_previous[rec["partner_code"]] += val
 
             time.sleep(0.5)
+
+        # 4位码降级: 如果6位码无数据,尝试4位码
+        if cat_current_total == 0 and category in HS_FALLBACK_4DIGIT:
+            fallback_codes = HS_FALLBACK_4DIGIT[category]
+            log.info(f"    ↳ Fallback to 4-digit codes: {fallback_codes}")
+            fb_chunks = _chunk_list(fallback_codes, 20)
+            for chunk in fb_chunks:
+                records = _fetch_monthly_batch(chunk, period_current)
+                for rec in records:
+                    cat_current_total += rec["value_usd"]
+                    partner_current[rec["partner_code"]] += rec["value_usd"]
+                time.sleep(0.5)
+                records_prev = _fetch_monthly_batch(chunk, period_previous)
+                for rec in records_prev:
+                    cat_previous_total += rec["value_usd"]
+                    partner_previous[rec["partner_code"]] += rec["value_usd"]
+                time.sleep(0.5)
 
         # 按区域汇总
         by_region = {}
