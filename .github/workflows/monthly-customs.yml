@@ -1,0 +1,89 @@
+name: Monthly Customs Data Update
+on:
+  schedule:
+    - cron: '0 3 5 * *'   # UTC 每月5日 03:00 = 北京 11:00 (等待Comtrade数据刷新)
+  workflow_dispatch:
+    inputs:
+      year:
+        description: 'Target year (default: auto)'
+        required: false
+      month:
+        description: 'Target month (default: auto - current minus 3)'
+        required: false
+permissions:
+  contents: write
+jobs:
+  update-customs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install requests comtradeapicall
+      - name: Collect monthly customs data
+        run: |
+          python -c "
+          import sys, os
+          sys.path.insert(0, '.')
+          from scripts.collectors.customs_monthly import collect_customs_monthly, collect_customs_ytd, format_customs_dashboard
+          from scripts.utils import save_raw, log
+          import json
+          from pathlib import Path
+
+          year = os.environ.get('INPUT_YEAR')
+          month = os.environ.get('INPUT_MONTH')
+          kwargs = {}
+          if year and month:
+              kwargs = {'year': int(year), 'month': int(month)}
+
+          # 单月数据
+          log.info('=== Monthly customs collection ===')
+          data = collect_customs_monthly(**kwargs)
+          if data.get('status') == 'ok':
+              dashboard = format_customs_dashboard(data)
+              out = Path('data/customs')
+              out.mkdir(parents=True, exist_ok=True)
+              period = data.get('period', 'unknown')
+              (out / f'monthly_{period}.json').write_text(
+                  json.dumps(data, ensure_ascii=False, indent=2), 'utf-8')
+              (out / f'dashboard_{period}.json').write_text(
+                  json.dumps(dashboard, ensure_ascii=False, indent=2), 'utf-8')
+              # 更新latest
+              (out / 'latest.json').write_text(
+                  json.dumps(dashboard, ensure_ascii=False, indent=2), 'utf-8')
+              log.info(f'Monthly data saved: {period}')
+          else:
+              log.error(f'Collection failed: {data.get(\"status\")}')
+              sys.exit(1)
+
+          # YTD累计数据
+          log.info('=== YTD customs collection ===')
+          ytd = collect_customs_ytd()
+          if ytd.get('status') == 'ok':
+              ytd_dashboard = format_customs_dashboard(ytd)
+              (out / f'ytd_{ytd[\"period\"]}.json').write_text(
+                  json.dumps(ytd, ensure_ascii=False, indent=2), 'utf-8')
+              (out / 'ytd_latest.json').write_text(
+                  json.dumps(ytd_dashboard, ensure_ascii=False, indent=2), 'utf-8')
+              log.info(f'YTD data saved: {ytd[\"period\"]}')
+          "
+        env:
+          UN_COMTRADE_KEY: ${{ secrets.UN_COMTRADE_KEY }}
+          INPUT_YEAR: ${{ github.event.inputs.year }}
+          INPUT_MONTH: ${{ github.event.inputs.month }}
+          PYTHONUNBUFFERED: '1'
+      - name: Commit and push
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git add -A data/customs/
+          if git diff --cached --quiet; then
+            echo "No changes to customs data"
+          else
+            git commit -m "Monthly customs update: $(date -u +%Y-%m)"
+            git push
+          fi
