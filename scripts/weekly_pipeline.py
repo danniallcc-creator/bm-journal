@@ -27,6 +27,9 @@ from scripts.collectors.customs_monthly import (
     format_customs_dashboard, format_customs_for_journal
 )
 from scripts.collectors.demand_analysis import build_demand_view
+from scripts.collectors.infra_intelligence import (
+    collect_all_infra_intelligence, format_infra_articles, format_regional_infra_summary
+)
 
 # P2 imports
 from scripts.collectors.regulation import collect_all_regulations, format_regulation_items
@@ -47,7 +50,7 @@ DATA_DIR = ROOT / "data"
 def _build_data_sources(all_banks, wb_data, shipping_data, social_data,
                         trade_data, customs_data, reg_data, news_data,
                         events_data, innovation_data, research_data,
-                        emerging_data):
+                        emerging_data, infra_data):
     """从各collector状态自动生成dataSources列表"""
     sources = []
 
@@ -174,6 +177,16 @@ def _build_data_sources(all_banks, wb_data, shipping_data, social_data,
         "detail": f"{emerging_data.get('strong_signals', 0)} 强信号"
     })
 
+    # 基建宏观情报
+    infra_status = infra_data.get("status", "failed") if infra_data else "skipped"
+    infra_count = infra_data.get("relevant_count", 0) if infra_data else 0
+    sources.append({
+        "name": "基建宏观情报",
+        "status": infra_status,
+        "count": infra_count,
+        "detail": f"{infra_count} 条区域基建动态"
+    })
+
     return sources
 
 
@@ -235,6 +248,10 @@ def run_pipeline():
     customs_data = collect_customs_monthly()
     customs_tables = format_customs_for_journal(customs_data)
     customs_dashboard = format_customs_dashboard(customs_data)
+
+    # 基建宏观情报 (全球基建/重建/翻新需求分析)
+    infra_data = collect_all_infra_intelligence()
+    infra_articles = format_infra_articles(infra_data)
 
     # ============================================================
     # P2: 监管法规 + 新闻聚合 + 事件日历
@@ -318,6 +335,17 @@ def run_pipeline():
             "detail": research_summary,
             "tag": "watch",
             "type": "research_summary"
+        })
+
+    # 区域基建宏观研判 → 全球基建/重建/翻新需求分析
+    infra_summary = format_regional_infra_summary(infra_data)
+    if infra_summary:
+        infra_relevant = infra_data.get("relevant_count", 0)
+        key_takeaways.append({
+            "headline": f"全球基建动态: {infra_relevant}条区域基建/重建/翻新情报追踪",
+            "detail": infra_summary,
+            "tag": "opportunity",
+            "type": "infra_summary"
         })
 
     # 社交趋势热点 → 产品需求信号
@@ -429,9 +457,16 @@ def run_pipeline():
         sources_parts.append(f"Research({research_data.get('total_reports',0)}篇)")
     if emerging_data.get("status") == "ok":
         sources_parts.append(f"Emerging({emerging_data.get('strong_signals',0)}强信号)")
+    if infra_data.get("status") == "ok":
+        sources_parts.append(f"Infra({infra_data.get('relevant_count',0)}条/{infra_data.get('feeds_ok',0)}源)")
 
-    # macro板块: P0央行 + P2新闻中的宏观文章
-    macro_articles = [macro_article] + news_macro_articles[:3]
+    # macro板块: P0央行 + P2新闻宏观 + P1基建情报
+    # 央行利率文章 (1条)
+    macro_articles = [macro_article]
+    # 新闻宏观文章 (最多5条, 从原3条扩展)
+    macro_articles.extend(news_macro_articles[:5])
+    # 基建宏观情报 (最多10条, 按impact排序)
+    macro_articles.extend(infra_articles[:10])
 
     # 最终JSON
     week_data = {
@@ -457,7 +492,7 @@ def run_pipeline():
         "dataSources": _build_data_sources(
             all_banks, wb_data, shipping_data, social_data, trade_data,
             customs_data, reg_data, news_data, events_data,
-            innovation_data, research_data, emerging_data
+            innovation_data, research_data, emerging_data, infra_data
         )
     }
 
@@ -485,6 +520,7 @@ def run_pipeline():
     if research_summary:
         log.info(f"  Research summary: {len(research_summary)} chars")
     log.info(f"  Emerging demands: {len(emerging_items)} ({emerging_data.get('strong_signals',0)} strong)")
+    log.info(f"  Infra intelligence: {len(infra_articles)} articles ({infra_data.get('relevant_count',0)} relevant, {infra_data.get('feeds_ok',0)}/{infra_data.get('feeds_total',0)} feeds)")
     log.info(f"  Sources: {', '.join(sources_parts) if sources_parts else 'none'}")
     log.info(f"{'='*60}")
 

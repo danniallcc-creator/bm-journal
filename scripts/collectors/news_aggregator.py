@@ -48,7 +48,22 @@ NEWS_KEYWORDS = {
         "interest rate", "central bank", "federal reserve", "inflation", "gdp",
         "construction pmi", "manufacturing pmi", "housing market", "mortgage rate",
         "infrastructure", "stimulus", "recession", "monetary policy", "fiscal",
-        "央行", "利率", "通胀", "基建", "房地产", "货币政策"
+        "央行", "利率", "通胀", "基建", "房地产", "货币政策",
+        # 扩展: 全球基建/重建/翻新
+        "infrastructure bill", "infrastructure investment", "infrastructure spending",
+        "reconstruction", "rebuild", "post-conflict", "recovery fund",
+        "next generation eu", "renovation wave", "european green deal",
+        "vision 2030", "neom", "saudi", "gulf construction",
+        "african development", "adb", "asian development bank",
+        "world bank project", "development bank", "bilateral aid",
+        "building permits", "construction spending", "capital expenditure",
+        "public works", "urbanization", "smart city", "new city",
+        "belt and road", "one belt one road", "silk road",
+        "nearshoring", "reshoring", "industrial corridor",
+        "highway", "railway", "port", "airport", "bridge",
+        "power grid", "energy transition", "renewable energy investment",
+        "water infrastructure", "sewage", "irrigation",
+        "灾后重建", "重建基金", "开发银行", "城市化",
     ],
     "supply_chain": [
         "shipping", "freight", "supply chain", "container", "port congestion",
