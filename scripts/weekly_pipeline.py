@@ -22,6 +22,10 @@ from scripts.collectors.shipping import collect_all_shipping, format_supply_chai
 from scripts.collectors.social_signals import collect_all_social_signals, format_product_trends
 from scripts.collectors.product_trends import synthesize_product_trends
 from scripts.collectors.trade_flow import collect_all_trade_flows, format_trade_summary
+from scripts.collectors.customs_monthly import (
+    collect_customs_monthly, collect_customs_ytd,
+    format_customs_dashboard, format_customs_for_journal
+)
 from scripts.collectors.demand_analysis import build_demand_view
 
 # P2 imports
@@ -93,6 +97,11 @@ def run_pipeline():
     # UN Comtrade 贸易流
     trade_data = collect_all_trade_flows()
     trade_tables = format_trade_summary(trade_data)
+
+    # 中国海关月度出口数据 (UN Comtrade月度API)
+    customs_data = collect_customs_monthly()
+    customs_tables = format_customs_for_journal(customs_data)
+    customs_dashboard = format_customs_dashboard(customs_data)
 
     # ============================================================
     # P2: 监管法规 + 新闻聚合 + 事件日历
@@ -251,6 +260,7 @@ def run_pipeline():
     if shipping_table.get("data"):
         supply_chain.append(shipping_table)
     supply_chain.extend(trade_tables)
+    supply_chain.extend(customs_tables)
 
     # 统计信息
     sources_parts = []
@@ -272,6 +282,8 @@ def run_pipeline():
         sources_parts.append("Google Trends")
     if trade_data.get("status") == "ok":
         sources_parts.append(f"UN Comtrade({trade_data.get('categories_collected',0)}品类)")
+    if customs_data.get("status") == "ok":
+        sources_parts.append(f"海关月度({customs_data.get('categories_count',0)}品类×{customs_data.get('period','')})")
     if reg_data.get("eu_regulations", {}).get("status") == "ok":
         sources_parts.append(f"EUR-Lex({reg_data.get('eu_regulations',{}).get('relevant_count',0)}条)")
     if news_data.get("status") == "ok":
@@ -308,6 +320,7 @@ def run_pipeline():
         "emergingDemand": emerging_items,
         "researchHighlights": research_highlights,
         "researchSummary": research_summary,
+        "customsDashboard": customs_dashboard,
         "dataSources": []
     }
 
