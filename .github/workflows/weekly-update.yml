@@ -1,0 +1,40 @@
+name: Weekly Data Update
+on:
+  schedule:
+    - cron: '0 2 * * 1'   # UTC 每周一 02:00 = 北京 10:00
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install requests beautifulsoup4 comtradeapicall
+      - name: Run weekly pipeline
+        run: python -m scripts.weekly_pipeline
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+          UN_COMTRADE_KEY: ${{ secrets.UN_COMTRADE_KEY }}
+          PYTHONUNBUFFERED: '1'
+      - name: Sync category data from Compass
+        run: python scripts/collectors/category_enrichment.py
+        env:
+          PYTHONUNBUFFERED: '1'
+      - name: Commit and push
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git add -A data/
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Weekly update: $(date -u +%Y-W%V)"
+            git push
+          fi
