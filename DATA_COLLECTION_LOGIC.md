@@ -866,3 +866,70 @@ class DataQualityChecker:
 | P2(第3周) | trade_flow + regulation + news_aggregator | 贸易和监管深度 |
 | P3(第4周) | innovation + emerging_demand + research_reports | 前瞻性内容 |
 | P4(持续) | 更多国别数据 + 数据质量优化 + UI增强 | 覆盖面扩展 |
+
+---
+
+### 十三、板块: 中国海关月度出口看板 (Customs Monthly Dashboard)
+
+> 新增于 2026-06-22 | 采集器: `scripts/collectors/customs_monthly.py`
+
+#### 13.1 概述
+
+独立的月度数据采集模块,专注于中国建材行业出口数据的品类×国家×区域多维分析。数据来源为UN Comtrade月度API(中国海关总署上报数据的国际镜像)。
+
+#### 13.2 数据源
+
+| 数据项 | 数据源 | 层级 | 采集方式 | 频率 | 延迟 |
+|--------|--------|------|----------|------|------|
+| 月度出口额(品类×国家) | UN Comtrade v1 API | A | REST API (GET) | 月度 | 2-3个月 |
+| 同比增长率 | 计算字段 | A | 当期/同期自动计算 | 月度 | -- |
+| YTD累计 | UN Comtrade v1 API | A | 多月period批量查询 | 月度 | 2-3个月 |
+
+**API端点**: `https://comtradeapi.un.org/data/v1/get/C/M/HS`
+**认证**: subscription-key (免费注册: comtradedeveloper.un.org)
+**限制**: 500次/天, 每次最多250,000条记录
+
+#### 13.3 数据覆盖
+
+- **品类**: 24个二级类目, 207个HS编码 (完整覆盖建材-hs编码大全.xlsx)
+- **国家**: 68个主要贸易伙伴, 分为9大区域 (北美/南美/西欧/中东/东南亚/中亚/澳洲/南亚/日韩)
+- **时间**: 单月 + YTD累计, 自动与去年同期对比
+
+#### 13.4 输出结构
+
+```json
+{
+  "title": "中国建材出口月度看板",
+  "period": "2026年4月",
+  "summary": {"total_usd": N, "total_yoy_pct": N, "highlights": [...]},
+  "categories": [{"name": "...", "value_usd": N, "yoy_pct": N}, ...],
+  "regions": [{"name": "...", "value_usd": N, "yoy_pct": N, "top_growth_category": "..."}, ...],
+  "alerts": [{"type": "surge|decline|regional_surge|regional_decline", "message": "...", "yoy": N}, ...]
+}
+```
+
+#### 13.5 CI集成
+
+- **周报管道** (`weekly-update.yml`): 集成到P1阶段, 输出到 `supplyChain` + `customsDashboard` 字段
+- **独立月度** (`monthly-customs.yml`): 每月5日自动运行, 输出到 `data/customs/` 目录
+  - `monthly_YYYYMM.json` - 原始月度数据
+  - `dashboard_YYYYMM.json` - 看板格式化数据
+  - `latest.json` - 最新月度看板 (前端直接引用)
+  - `ytd_latest.json` - YTD累计看板
+
+#### 13.6 异常预警逻辑
+
+| 预警类型 | 触发条件 | 说明 |
+|----------|----------|------|
+| `surge` | 品类YoY > +50% 且金额 > $100K | 品类出口激增 |
+| `decline` | 品类YoY < -30% 且金额 > $100K | 品类出口大幅下滑 |
+| `regional_surge` | 品类→区域 YoY > +100% 且金额 > $50K | 区域异常增长 |
+| `regional_decline` | 品类→区域 YoY < -50% 且金额 > $50K | 区域异常下滑 |
+
+#### 13.7 环境变量
+
+| 变量名 | 用途 | 获取方式 |
+|--------|------|----------|
+| `UN_COMTRADE_KEY` | Comtrade API认证 | https://comtradedeveloper.un.org/ 免费注册 |
+
+需在GitHub仓库 Settings → Secrets 中配置。
