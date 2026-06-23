@@ -223,12 +223,14 @@ def _chunk_list(lst: list, size: int) -> list[list]:
 
 
 def collect_customs_monthly(year: int = None, month: int = None,
-                            compare_year: int = None) -> dict:
+                            compare_year: int = None,
+                            _retry_count: int = 0) -> dict:
     """采集中国建材月度出口数据 (当月 + 去年同期用于同比计算)
 
     Args:
         year/month: 目标月份, 默认取最近可用月份 (当前月-3个月, Comtrade延迟)
         compare_year: 同比对照年份, 默认 year-1
+        _retry_count: 内部回退计数器, 最多回退2次(共3个月)
 
     Returns:
         {
@@ -430,18 +432,19 @@ def collect_customs_monthly(year: int = None, month: int = None,
     save_raw("customs_monthly", f"china_exports_{period_current}", output)
 
     # 如果当期无数据且还有回退余地,尝试前一个月
-    # (但如果API配额已耗尽则不重试)
-    if (total_current == 0 and not _api_quota_exceeded and (year, month) != (
-        _original_year - 1 if _original_month <= 3 else _original_year,
-        (_original_month - 4) if _original_month > 4 else (_original_month + 8)
-    )):
+    # (但如果API配额已耗尽或已回退2次则不重试)
+    if (total_current == 0 and not _api_quota_exceeded
+            and _retry_count < 2):
         prev_month = month - 1 if month > 1 else 12
         prev_year = year if month > 1 else year - 1
         prev_compare_year = prev_year - 1
         log.info(f"Customs monthly {period_current} returned $0 — "
-                 f"falling back to {_build_period_str(prev_year, prev_month)}")
+                 f"falling back to {_build_period_str(prev_year, prev_month)} "
+                 f"(retry {_retry_count + 1}/2)")
         return collect_customs_monthly(
-            year=prev_year, month=prev_month, compare_year=prev_compare_year
+            year=prev_year, month=prev_month,
+            compare_year=prev_compare_year,
+            _retry_count=_retry_count + 1
         )
 
     log.info(f"Customs monthly complete: {period_current}, "
