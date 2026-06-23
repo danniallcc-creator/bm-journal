@@ -254,30 +254,58 @@ def collect_youtube_trends(keywords: list[str]) -> dict:
     return output
 
 
-# ===================== Reddit 热度 =====================
+# ===================== Reddit 热度 (RSS方式, 免OAuth) =====================
 
-def _reddit_fetch_json(url: str) -> dict:
-    """Reddit单请求, 短超时, 快速失败"""
+def _reddit_fetch_rss(sub: str) -> list[dict]:
+    """Reddit RSS feed, 无需OAuth认证
+    URL: https://www.reddit.com/r/{sub}/.rss (Atom XML)
+    """
     import requests as _requests
+    from xml.etree import ElementTree
+    url = f"https://www.reddit.com/r/{sub}/.rss"
     headers = {"User-Agent": "BM-Journal/1.0 (Building Materials Research)"}
     try:
-        resp = _requests.get(url, params={"limit": 25}, headers=headers, timeout=10)
-        if resp.status_code == 200:
-            return resp.json()
-        elif resp.status_code == 429:
-            log.warning(f"Reddit rate limited: {url}")
-        else:
-            log.warning(f"Reddit HTTP {resp.status_code}: {url}")
+        resp = _requests.get(url, headers=headers, timeout=12)
+        if resp.status_code != 200:
+            log.warning(f"Reddit RSS HTTP {resp.status_code}: r/{sub}")
+            return []
+
+        # Atom XML解析
+        ns = {"atom": "http://www.w3.org/2005/Atom"}
+        root = ElementTree.fromstring(resp.text)
+        posts = []
+        for entry in root.findall("atom:entry", ns):
+            title = entry.findtext("atom:title", "", ns).strip()
+            link_el = entry.find("atom:link", ns)
+            link = link_el.get("href", "") if link_el is not None else ""
+            content = entry.findtext("atom:content", "", ns)
+            # 从content中提取score (Reddit RSS content中有score信息)
+            score = 0
+            import re
+            score_match = re.search(r'(\d+)\s*(?:points?|upvotes?)', content, re.I)
+            if score_match:
+                score = int(score_match.group(1))
+            comment_match = re.search(r'(\d+)\s*comments?', content, re.I)
+            num_comments = int(comment_match.group(1)) if comment_match else 0
+            if title:
+                posts.append({
+                    "title": title[:200],
+                    "score": score,
+                    "num_comments": num_comments,
+                    "subreddit": sub,
+                    "url": link
+                })
+        return posts
     except Exception as e:
-        log.warning(f"Reddit timeout: {url.split('/')[-3]}")
-    return {}
+        log.warning(f"Reddit RSS error r/{sub}: {e}")
+    return []
 
 
 def collect_reddit_trends() -> dict:
-    """Reddit API - 建筑/装修subreddit热帖分析
-    快速失败策略: 10s超时, 无重试, 单个subreddit失败不阻塞
+    """Reddit RSS - 建筑/装修subreddit热帖分析 (免OAuth)
+    快速失败策略: 12s超时, 无重试, 单个subreddit失败不阻塞
     """
-    log.info("=== Collecting Reddit trends ===")
+    log.info("=== Collecting Reddit trends (RSS) ===")
 
     cache_key = "reddit_trends"
     cached = cache_get(cache_key, "social_signals", ttl=3600 * 24 * 3)
@@ -292,19 +320,8 @@ def collect_reddit_trends() -> dict:
     results = {}
 
     for sub in subreddits:
-        url = f"https://www.reddit.com/r/{sub}/hot.json"
-        data = _reddit_fetch_json(url)
-        if data and "data" in data:
-            posts = []
-            for child in data["data"].get("children", []):
-                p = child.get("data", {})
-                posts.append({
-                    "title": p.get("title", ""),
-                    "score": p.get("score", 0),
-                    "num_comments": p.get("num_comments", 0),
-                    "subreddit": sub,
-                    "url": f"https://reddit.com{p.get('permalink', '')}"
-                })
+        posts = _reddit_fetch_rss(sub)
+        if posts:
             results[sub] = {
                 "posts": posts,
                 "total": len(posts),
