@@ -1,14 +1,14 @@
 {
   "issue": 26,
-  "date": "2026-06-22",
+  "date": "2026-06-23",
   "title": "建材行业全球资讯期刊",
   "tagline": "Global Building Materials Weekly Intelligence Report",
   "coverage": "25 国家 | 35 品类 | 207+ HS编码",
-  "sources": "FRED(9/9央行) + World Bank(25国) + SCFI + BDI + UN Comtrade(13品类) + EUR-Lex(0条) + RSS(55篇/9源) + Events(13场) + Academia(10主题) + Research(72篇) + Emerging(1强信号) + Infra(4条/1源)",
+  "sources": "FRED(9/9央行) + World Bank(25国) + SCFI + BDI + UN Comtrade(13品类) + EUR-Lex(0条) + RSS(53篇/9源) + Events(13场) + Academia(10主题) + Research(72篇) + Emerging(2强信号) + Infra(4条/1源)",
   "keyTakeaways": [
     {
       "headline": "投研周报: 综合7大方向72篇报告核心发现",
-      "detail": "本期投研周报综合了7个主题方向共72篇研究报告的核心发现。住房市场领域: 初始房地产发行：低估和学习行为(被引2次)。基础设施投资领域: 评估金融科技、技术基础设施、。大宗商品领域: 硫酸盐对水泥浆体性能的积极影响(被引11次)。绿色金融领域: 绿色混凝土促进可持续基础设施发展。贸易流向领域: 自由贸易港建设对区域进口商的影响(被引2次)。建材行业领域: 为buildi启用可扩展的模型预测控制设计(被引10次)。房地产市场领域: 房价调控对房地产的影响M(被引1次)。行业新闻动态方面，本周重点关注: macro(24篇)、房地产市场(12篇)、innovation(8篇)、regulation(5篇)、commodity(5篇)。宏观环境方面，美联储维持利率3.63%不变。综合来看，本周投研关注重点集中在住房市场调整与新房/成屋销售趋势、基础设施投资与建造技术发展、大宗商品(钢铁/水泥/有色金属)价格波动、绿色建材与可持续金融创新、以及全球建材贸易流向变化等方向。建议重点关注建材品类中与基建、住房需求强相关的细分领域。",
+      "detail": "本期投研周报综合了7个主题方向共72篇研究报告的核心发现。住房市场领域: 初始房地产发行：低估和学习行为(被引2次)。基础设施投资领域: 评估金融科技、技术基础设施、。大宗商品领域: 硫酸盐对水泥浆体性能的积极影响(被引11次)。绿色金融领域: 绿色混凝土促进可持续基础设施发展。贸易流向领域: 自由贸易港建设对区域进口商的影响(被引2次)。建材行业领域: 为buildi启用可扩展的模型预测控制设计(被引10次)。房地产市场领域: 房价调控对房地产的影响M(被引1次)。行业新闻动态方面，本周重点关注: macro(24篇)、房地产市场(10篇)、innovation(8篇)、regulation(5篇)、commodity(5篇)。宏观环境方面，美联储维持利率3.63%不变。综合来看，本周投研关注重点集中在住房市场调整与新房/成屋销售趋势、基础设施投资与建造技术发展、大宗商品(钢铁/水泥/有色金属)价格波动、绿色建材与可持续金融创新、以及全球建材贸易流向变化等方向。建议重点关注建材品类中与基建、住房需求强相关的细分领域。",
       "tag": "watch",
       "type": "research_summary"
     },
@@ -25,7 +25,7 @@
     },
     {
       "headline": "美联储维持利率3.63%不变",
-      "detail": "联邦基金有效利率3.63%。10年期国债收益率4.49%。全球央行: 欧央行(ECB) 2.25%; 英央行(BOE) 3.73%; 日央行(BOJ) 0.73%; 澳联储(RBA) 4.31%; 加央行(BOC) 2.24%。对建材行业影...",
+      "detail": "联邦基金有效利率3.63%。10年期国债收益率4.46%。全球央行: 欧央行(ECB) 2.25%; 英央行(BOE) 3.73%; 日央行(BOJ) 0.73%; 澳联储(RBA) 4.31%; 加央行(BOC) 2.24%。对建材行业影...",
       "tag": "watch"
     },
     {
@@ -38,10 +38,10 @@
     {
       "tag": "央行政策",
       "title": "美联储维持利率3.63%不变",
-      "summary": "联邦基金有效利率3.63%。10年期国债收益率4.49%。全球央行: 欧央行(ECB) 2.25%; 英央行(BOE) 3.73%; 日央行(BOJ) 0.73%; 澳联储(RBA) 4.31%; 加央行(BOC) 2.24%。对建材行业影响: 利率变动通过房贷利率和建筑融资成本传导至房地产投资和新开工。",
+      "summary": "联邦基金有效利率3.63%。10年期国债收益率4.46%。全球央行: 欧央行(ECB) 2.25%; 英央行(BOE) 3.73%; 日央行(BOJ) 0.73%; 澳联储(RBA) 4.31%; 加央行(BOC) 2.24%。对建材行业影响: 利率变动通过房贷利率和建筑融资成本传导至房地产投资和新开工。",
       "source": "FRED / 各国央行",
       "link": "https://fred.stlouisfed.org/series/FEDFUNDS",
-      "date": "2026-06-17",
+      "date": "2026-06-19",
       "impact": 3
     },
     {
@@ -77,12 +77,12 @@
       "title_en": "£7.4bn supply chain hunt starts for electricity network upgrade"
     },
     {
-      "tag": "宏观 / 贸易",
-      "title": "价格下跌对您的房地产业务意味着什么",
-      "summary": "报告中最重要的数字不是价格下跌。降价从未到来。",
-      "source": "HousingWire",
-      "link": "https://www.housingwire.com/articles/what-falling-prices-mean-for-your-real-estate-business/",
-      "title_en": "What falling prices mean for your real estate business"
+      "tag": "宏观 / 房地产",
+      "title": "单户住宅从5月份开始下跌",
+      "summary": "根据美国人口普查局和美国住房和城市发展部的数据，在高利率和建筑成本上升的情况下，单户住宅楼在5月份下滑。",
+      "source": "Builder Online",
+      "link": "https://www.builderonline.com/data-analysis/single-family-starts-fall-in-may",
+      "title_en": "Single-Family Starts Fall in May"
     },
     {
       "tag": "战后重建",
@@ -1867,7 +1867,7 @@
       "location": "中国人民银行",
       "type": "central_bank",
       "importance": "high",
-      "days_away": 28,
+      "days_away": 27,
       "categories": [
         "货币政策",
         "利率"
@@ -1880,7 +1880,7 @@
       "location": "欧洲央行",
       "type": "central_bank",
       "importance": "high",
-      "days_away": 31,
+      "days_away": 30,
       "categories": [
         "货币政策",
         "利率"
@@ -1893,7 +1893,7 @@
       "location": "美联储",
       "type": "central_bank",
       "importance": "high",
-      "days_away": 37,
+      "days_away": 36,
       "categories": [
         "货币政策",
         "利率"
@@ -1906,7 +1906,7 @@
       "location": "日本央行",
       "type": "central_bank",
       "importance": "high",
-      "days_away": 38,
+      "days_away": 37,
       "categories": [
         "货币政策",
         "利率"
@@ -1919,7 +1919,7 @@
       "location": "英国央行",
       "type": "central_bank",
       "importance": "high",
-      "days_away": 45,
+      "days_away": 44,
       "categories": [
         "货币政策",
         "利率"
@@ -1932,7 +1932,7 @@
       "location": "上海, 中国",
       "type": "trade_show",
       "importance": "medium",
-      "days_away": 54,
+      "days_away": 53,
       "categories": [
         "建筑设计",
         "建材"
@@ -1945,7 +1945,7 @@
       "location": "上海, 中国",
       "type": "trade_show",
       "importance": "medium",
-      "days_away": 56,
+      "days_away": 55,
       "categories": [
         "建筑设计",
         "建材"
@@ -1958,7 +1958,7 @@
       "location": "中国人民银行",
       "type": "central_bank",
       "importance": "high",
-      "days_away": 59,
+      "days_away": 58,
       "categories": [
         "货币政策",
         "利率"
@@ -1971,7 +1971,7 @@
       "location": "欧洲央行",
       "type": "central_bank",
       "importance": "high",
-      "days_away": 80,
+      "days_away": 79,
       "categories": [
         "货币政策",
         "利率"
@@ -1984,7 +1984,7 @@
       "location": "美联储",
       "type": "central_bank",
       "importance": "high",
-      "days_away": 86,
+      "days_away": 85,
       "categories": [
         "货币政策",
         "利率"
@@ -1997,7 +1997,7 @@
       "location": "英国央行",
       "type": "central_bank",
       "importance": "high",
-      "days_away": 87,
+      "days_away": 86,
       "categories": [
         "货币政策",
         "利率"
@@ -2010,7 +2010,7 @@
       "location": "日本央行",
       "type": "central_bank",
       "importance": "high",
-      "days_away": 88,
+      "days_away": 87,
       "categories": [
         "货币政策",
         "利率"
@@ -2023,7 +2023,7 @@
       "location": "中国人民银行",
       "type": "central_bank",
       "importance": "high",
-      "days_away": 90,
+      "days_away": 89,
       "categories": [
         "货币政策",
         "利率"
@@ -2044,8 +2044,38 @@
           "source": "Global Construction Review"
         },
         {
-          "title": "亚马逊计划$ 100亿密苏里州数据中心园区",
+          "title": "基础设施、数据中心保持建设在5月开始强劲",
           "source": "Construction Dive"
+        }
+      ]
+    },
+    {
+      "name": "灾后重建",
+      "signal_count": 2,
+      "strength": "strong",
+      "signal_types": [],
+      "description": "检测到2条需求信号信号。来源: UN News-Economic。",
+      "example_articles": [
+        {
+          "title": "From favelas to informal settlements, new UN report points to housing solutions ",
+          "source": "基建情报/战后重建"
+        },
+        {
+          "title": "Gaza reconstruction envisages building ‘islands’ out of rubble",
+          "source": "基建情报/战后重建"
+        }
+      ]
+    },
+    {
+      "name": "东南亚工业化",
+      "signal_count": 1,
+      "strength": "medium",
+      "signal_types": [],
+      "description": "检测到1条需求信号信号。来源: UN News-Economic。",
+      "example_articles": [
+        {
+          "title": "From favelas to informal settlements, new UN report points to housing solutions ",
+          "source": "基建情报/战后重建"
         }
       ]
     }
@@ -2152,7 +2182,7 @@
       "citations": 0
     }
   ],
-  "researchSummary": "本期投研周报综合了7个主题方向共72篇研究报告的核心发现。住房市场领域: 初始房地产发行：低估和学习行为(被引2次)。基础设施投资领域: 评估金融科技、技术基础设施、。大宗商品领域: 硫酸盐对水泥浆体性能的积极影响(被引11次)。绿色金融领域: 绿色混凝土促进可持续基础设施发展。贸易流向领域: 自由贸易港建设对区域进口商的影响(被引2次)。建材行业领域: 为buildi启用可扩展的模型预测控制设计(被引10次)。房地产市场领域: 房价调控对房地产的影响M(被引1次)。行业新闻动态方面，本周重点关注: macro(24篇)、房地产市场(12篇)、innovation(8篇)、regulation(5篇)、commodity(5篇)。宏观环境方面，美联储维持利率3.63%不变。综合来看，本周投研关注重点集中在住房市场调整与新房/成屋销售趋势、基础设施投资与建造技术发展、大宗商品(钢铁/水泥/有色金属)价格波动、绿色建材与可持续金融创新、以及全球建材贸易流向变化等方向。建议重点关注建材品类中与基建、住房需求强相关的细分领域。",
+  "researchSummary": "本期投研周报综合了7个主题方向共72篇研究报告的核心发现。住房市场领域: 初始房地产发行：低估和学习行为(被引2次)。基础设施投资领域: 评估金融科技、技术基础设施、。大宗商品领域: 硫酸盐对水泥浆体性能的积极影响(被引11次)。绿色金融领域: 绿色混凝土促进可持续基础设施发展。贸易流向领域: 自由贸易港建设对区域进口商的影响(被引2次)。建材行业领域: 为buildi启用可扩展的模型预测控制设计(被引10次)。房地产市场领域: 房价调控对房地产的影响M(被引1次)。行业新闻动态方面，本周重点关注: macro(24篇)、房地产市场(10篇)、innovation(8篇)、regulation(5篇)、commodity(5篇)。宏观环境方面，美联储维持利率3.63%不变。综合来看，本周投研关注重点集中在住房市场调整与新房/成屋销售趋势、基础设施投资与建造技术发展、大宗商品(钢铁/水泥/有色金属)价格波动、绿色建材与可持续金融创新、以及全球建材贸易流向变化等方向。建议重点关注建材品类中与基建、住房需求强相关的细分领域。",
   "customsDashboard": {
     "title": "中国建材出口月度看板",
     "status": "api_unavailable"
@@ -2190,7 +2220,7 @@
       "name": "海关月度出口 (UN Comtrade)",
       "status": "api_unavailable",
       "count": 0,
-      "detail": "0 品类×202603"
+      "detail": "0 品类×202602"
     },
     {
       "name": "Google Trends",
@@ -2210,8 +2240,8 @@
     {
       "name": "RSS 新闻聚合",
       "status": "ok",
-      "count": 55,
-      "detail": "55 篇/9 源"
+      "count": 53,
+      "detail": "53 篇/9 源"
     },
     {
       "name": "展会/事件日历",
@@ -2233,8 +2263,8 @@
     {
       "name": "新兴需求探测",
       "status": "ok",
-      "count": 1,
-      "detail": "1 强信号"
+      "count": 2,
+      "detail": "2 强信号"
     },
     {
       "name": "基建宏观情报",
