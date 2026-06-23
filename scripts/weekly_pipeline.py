@@ -288,7 +288,8 @@ def run_pipeline():
     )
 
     # 新兴需求探测 (交叉分析P1社交信号 + P2新闻)
-    emerging_data = detect_emerging_demands(news_data=news_data, social_data=social_data)
+    emerging_data = detect_emerging_demands(news_data=news_data, social_data=social_data,
+                                            infra_data=infra_data)
     emerging_items = format_emerging_demands(emerging_data)
 
     # ============================================================
