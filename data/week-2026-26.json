@@ -4,11 +4,11 @@
   "title": "建材行业全球资讯期刊",
   "tagline": "Global Building Materials Weekly Intelligence Report",
   "coverage": "25 国家 | 35 品类 | 207+ HS编码",
-  "sources": "FRED(9/9央行) + World Bank(25国) + SCFI + BDI + UN Comtrade(13品类) + EUR-Lex(0条) + RSS(53篇/9源) + Events(13场) + Academia(10主题) + Research(72篇) + Emerging(2强信号) + Infra(4条/1源)",
+  "sources": "FRED(9/9央行) + World Bank(25国) + SCFI + BDI + Reddit + UN Comtrade(13品类) + EUR-Lex(0条) + RSS(69篇/10源) + Events(13场) + Academia(10主题) + Research(72篇) + Emerging(2强信号) + Infra(4条/1源)",
   "keyTakeaways": [
     {
       "headline": "投研周报: 综合7大方向72篇报告核心发现",
-      "detail": "本期投研周报综合了7个主题方向共72篇研究报告的核心发现。住房市场领域: 初始房地产发行：低估和学习行为(被引2次)。基础设施投资领域: 评估金融科技、技术基础设施、。大宗商品领域: 硫酸盐对水泥浆体性能的积极影响(被引11次)。绿色金融领域: 绿色混凝土促进可持续基础设施发展。贸易流向领域: 自由贸易港建设对区域进口商的影响(被引2次)。建材行业领域: 为buildi启用可扩展的模型预测控制设计(被引10次)。房地产市场领域: 房价调控对房地产的影响M(被引1次)。行业新闻动态方面，本周重点关注: macro(24篇)、房地产市场(10篇)、innovation(8篇)、regulation(5篇)、commodity(5篇)。宏观环境方面，美联储维持利率3.63%不变。综合来看，本周投研关注重点集中在住房市场调整与新房/成屋销售趋势、基础设施投资与建造技术发展、大宗商品(钢铁/水泥/有色金属)价格波动、绿色建材与可持续金融创新、以及全球建材贸易流向变化等方向。建议重点关注建材品类中与基建、住房需求强相关的细分领域。",
+      "detail": "本期投研周报综合了7个主题方向共72篇研究报告的核心发现。住房市场领域: 初始房地产发行：低估和学习行为(被引2次)。基础设施投资领域: 评估金融科技、技术基础设施、。大宗商品领域: 硫酸盐对水泥浆体性能的积极影响(被引11次)。绿色金融领域: 绿色混凝土促进可持续基础设施发展。贸易流向领域: 自由贸易港建设对区域进口商的影响(被引2次)。建材行业领域: 为buildi启用可扩展的模型预测控制设计(被引10次)。房地产市场领域: 房价调控对房地产的影响M(被引1次)。行业新闻动态方面，本周重点关注: macro(27篇)、commodity(8篇)、regulation(7篇)、房地产市场(7篇)、supply_chain(6篇)。宏观环境方面，美联储维持利率3.63%不变。综合来看，本周投研关注重点集中在住房市场调整与新房/成屋销售趋势、基础设施投资与建造技术发展、大宗商品(钢铁/水泥/有色金属)价格波动、绿色建材与可持续金融创新、以及全球建材贸易流向变化等方向。建议重点关注建材品类中与基建、住房需求强相关的细分领域。",
       "tag": "watch",
       "type": "research_summary"
     },
@@ -45,6 +45,30 @@
       "impact": 3
     },
     {
+      "tag": "宏观 / 供应链 / 贸易",
+      "title": "专栏：巴西的稀土困境--战略自主还是另一个原材料出口周期？",
+      "summary": "Serra Verde是巴西稀土的关键，影响着它们在非中国矿山到磁铁供应链中的作用。",
+      "source": "Mining.com",
+      "link": "https://www.mining.com/op-ed-brazils-rare-earth-dilemma-strategic-autonomy-or-another-raw-material-export-cycle/",
+      "title_en": "Op-Ed: Brazil’s rare earth dilemma — strategic autonomy or another raw-material export cycle?"
+    },
+    {
+      "tag": "宏观 / 大宗 / 贸易",
+      "title": "力拓的Oyu Tolgoi在蒙古封锁后恢复出口",
+      "summary": "有一天，抗议者中断了蒙古旗舰铜矿的运输，货物恢复正常。",
+      "source": "Mining.com",
+      "link": "https://www.mining.com/rio-tintos-oyu-tolgoi-resumes-exports-after-mongolia-blockade/",
+      "title_en": "Rio Tinto’s Oyu Tolgoi resumes exports after Mongolia blockade"
+    },
+    {
+      "tag": "宏观 / 监管 / 创新",
+      "title": "AM研究报告称，到2034年，无人机3D打印可能达到9亿美元（ $ ）",
+      "summary": "多年来，增材制造一直在寻找其优势明显超过传统生产方法局限性的应用。现在，根据Additive Manufac的一份新报告",
+      "source": "3DPrint.com",
+      "link": "https://3dprint.com/327362/3d-printing-in-drones-could-reach-900-million-by-2034-am-research-report-says/",
+      "title_en": "3D Printing in Drones Could Reach $900 Million by 2034, AM Research Report Says"
+    },
+    {
       "tag": "宏观 / 监管",
       "title": "500平方米的葡萄牙回收中心，九天印刷完成",
       "summary": "波尔图一个500平方米的公共回收中心办公室已由葡萄牙建筑公司Havelar使用Bod 2建筑在九天内由四人组成的预算内打印...... &lt;/p",
@@ -59,30 +83,6 @@
       "source": "Global Construction Review",
       "link": "https://www.globalconstructionreview.com/heads-up-skanska-on-where-were-at-with-tariffs-war-and-the-data-centre-boom/",
       "title_en": "Heads up: Skanska on where we’re at with tariffs, war and the data centre boom"
-    },
-    {
-      "tag": "宏观 / 供应链",
-      "title": "沙特阿拉伯计划建设货运铁路走廊",
-      "summary": "西班牙OHLA集团和埃及Hassan Allam Holding的当地子公司赢得了国营沙特铁路公司的合同，在……建造一条22.7公里的单轨货运铁路。&lt;/",
-      "source": "Global Construction Review",
-      "link": "https://www.globalconstructionreview.com/saudi-arabia-plans-freight-rail-corridor/",
-      "title_en": "Saudi Arabia plans freight rail corridor"
-    },
-    {
-      "tag": "宏观 / 供应链",
-      "title": "£ 7.4十亿供应链寻找电力网络升级开始",
-      "summary": "SSEN Transmission正在寻找公司来帮助进行大量的基础设施工作",
-      "source": "Construction Enquirer",
-      "link": "https://www.constructionenquirer.com/2026/06/19/7-4bn-supply-chain-hunt-starts-for-electricity-network-upgrade/",
-      "title_en": "£7.4bn supply chain hunt starts for electricity network upgrade"
-    },
-    {
-      "tag": "宏观 / 房地产",
-      "title": "单户住宅从5月份开始下跌",
-      "summary": "根据美国人口普查局和美国住房和城市发展部的数据，在高利率和建筑成本上升的情况下，单户住宅楼在5月份下滑。",
-      "source": "Builder Online",
-      "link": "https://www.builderonline.com/data-analysis/single-family-starts-fall-in-may",
-      "title_en": "Single-Family Starts Fall in May"
     },
     {
       "tag": "战后重建",
@@ -1603,7 +1603,7 @@
         "灵活办公",
         "灾后安置",
         "新兴市场",
-        "6篇最新论文"
+        "7篇最新论文"
       ],
       "socialSignals": [
         {
@@ -1733,7 +1733,7 @@
       "data": [
         {
           "item": "BDI(波罗的海干散货)",
-          "value": "2684",
+          "value": "2667",
           "change": 0
         },
         {
@@ -1807,10 +1807,10 @@
     {
       "title": "Façade systems for industrialised prefabricated prefinished modular construction",
       "title_zh": "工业化预制预制模块化结构的外立面系统",
-      "summary": "模块化建筑: 共6篇相关论文(近期6篇)。代表研究: Hajirezaei; Sharafi; Farsangi et al.(2025)，被引8次。",
+      "summary": "模块化建筑: 共7篇相关论文(近期7篇)。代表研究: Hajirezaei; Sharafi; Farsangi et al.(2025)，被引8次。",
       "tag": "innovation",
       "topic": "模块化建筑",
-      "paper_count": 6,
+      "paper_count": 7,
       "source": "Crossref/DOAJ",
       "doi": "10.1016/j.autcon.2025.106269",
       "tech_direction": "设计标准化模块接口系统；开发轻量化结构板材；实现工厂预制率80%+的快速装配"
@@ -2037,7 +2037,7 @@
       "signal_count": 3,
       "strength": "strong",
       "signal_types": [],
-      "description": "检测到3条需求信号信号。来源: Global Construction Review, Construction Dive。",
+      "description": "检测到3条需求信号信号。来源: Construction Dive, Global Construction Review。",
       "example_articles": [
         {
           "title": "小心：斯堪斯卡公司在关税、战争和数据中心热潮方面的处境",
@@ -2051,18 +2051,31 @@
     },
     {
       "name": "灾后重建",
-      "signal_count": 2,
+      "signal_count": 3,
       "strength": "strong",
       "signal_types": [],
-      "description": "检测到2条需求信号信号。来源: UN News-Economic。",
+      "description": "检测到3条需求信号信号。来源: Construction Enquirer, UN News-Economic。",
       "example_articles": [
+        {
+          "title": "B + K获得£ 4000万坎布里亚学校重建的绿灯",
+          "source": "Construction Enquirer"
+        },
         {
           "title": "From favelas to informal settlements, new UN report points to housing solutions ",
           "source": "基建情报/战后重建"
-        },
+        }
+      ]
+    },
+    {
+      "name": "中东超级工程",
+      "signal_count": 1,
+      "strength": "medium",
+      "signal_types": [],
+      "description": "检测到1条需求信号信号。来源: Reddit。",
+      "example_articles": [
         {
-          "title": "Gaza reconstruction envisages building ‘islands’ out of rubble",
-          "source": "基建情报/战后重建"
+          "title": "Need Help Identifying Water Softener Supply and Outlet Lines",
+          "source": "Reddit/HomeImprovement"
         }
       ]
     },
@@ -2076,6 +2089,32 @@
         {
           "title": "From favelas to informal settlements, new UN report points to housing solutions ",
           "source": "基建情报/战后重建"
+        }
+      ]
+    },
+    {
+      "name": "战后重建",
+      "signal_count": 1,
+      "strength": "medium",
+      "signal_types": [],
+      "description": "检测到1条需求信号信号。来源: UN News-Economic。",
+      "example_articles": [
+        {
+          "title": "Gaza reconstruction envisages building ‘islands’ out of rubble",
+          "source": "基建情报/战后重建"
+        }
+      ]
+    },
+    {
+      "name": "非洲城市化",
+      "signal_count": 1,
+      "strength": "medium",
+      "signal_types": [],
+      "description": "检测到1条需求信号信号。来源: UN News-Economic。",
+      "example_articles": [
+        {
+          "title": "Guterres highlights Africa’s leadership in speech to summit in Nairobi",
+          "source": "基建情报/非洲基建"
         }
       ]
     }
@@ -2182,7 +2221,7 @@
       "citations": 0
     }
   ],
-  "researchSummary": "本期投研周报综合了7个主题方向共72篇研究报告的核心发现。住房市场领域: 初始房地产发行：低估和学习行为(被引2次)。基础设施投资领域: 评估金融科技、技术基础设施、。大宗商品领域: 硫酸盐对水泥浆体性能的积极影响(被引11次)。绿色金融领域: 绿色混凝土促进可持续基础设施发展。贸易流向领域: 自由贸易港建设对区域进口商的影响(被引2次)。建材行业领域: 为buildi启用可扩展的模型预测控制设计(被引10次)。房地产市场领域: 房价调控对房地产的影响M(被引1次)。行业新闻动态方面，本周重点关注: macro(24篇)、房地产市场(10篇)、innovation(8篇)、regulation(5篇)、commodity(5篇)。宏观环境方面，美联储维持利率3.63%不变。综合来看，本周投研关注重点集中在住房市场调整与新房/成屋销售趋势、基础设施投资与建造技术发展、大宗商品(钢铁/水泥/有色金属)价格波动、绿色建材与可持续金融创新、以及全球建材贸易流向变化等方向。建议重点关注建材品类中与基建、住房需求强相关的细分领域。",
+  "researchSummary": "本期投研周报综合了7个主题方向共72篇研究报告的核心发现。住房市场领域: 初始房地产发行：低估和学习行为(被引2次)。基础设施投资领域: 评估金融科技、技术基础设施、。大宗商品领域: 硫酸盐对水泥浆体性能的积极影响(被引11次)。绿色金融领域: 绿色混凝土促进可持续基础设施发展。贸易流向领域: 自由贸易港建设对区域进口商的影响(被引2次)。建材行业领域: 为buildi启用可扩展的模型预测控制设计(被引10次)。房地产市场领域: 房价调控对房地产的影响M(被引1次)。行业新闻动态方面，本周重点关注: macro(27篇)、commodity(8篇)、regulation(7篇)、房地产市场(7篇)、supply_chain(6篇)。宏观环境方面，美联储维持利率3.63%不变。综合来看，本周投研关注重点集中在住房市场调整与新房/成屋销售趋势、基础设施投资与建造技术发展、大宗商品(钢铁/水泥/有色金属)价格波动、绿色建材与可持续金融创新、以及全球建材贸易流向变化等方向。建议重点关注建材品类中与基建、住房需求强相关的细分领域。",
   "customsDashboard": {
     "title": "中国建材出口月度看板",
     "status": "api_unavailable"
@@ -2220,7 +2259,7 @@
       "name": "海关月度出口 (UN Comtrade)",
       "status": "api_unavailable",
       "count": 0,
-      "detail": "0 品类×202602"
+      "detail": "0 品类×202603"
     },
     {
       "name": "Google Trends",
@@ -2229,7 +2268,7 @@
     },
     {
       "name": "Reddit 讨论",
-      "status": "no_data",
+      "status": "ok",
       "count": 0
     },
     {
@@ -2240,8 +2279,8 @@
     {
       "name": "RSS 新闻聚合",
       "status": "ok",
-      "count": 53,
-      "detail": "53 篇/9 源"
+      "count": 69,
+      "detail": "69 篇/10 源"
     },
     {
       "name": "展会/事件日历",
