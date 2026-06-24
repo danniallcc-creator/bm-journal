@@ -116,12 +116,24 @@ def collect_google_trends(keywords: list[str], timeframe: str = "today 3-m",
 
 
 def _check_pytrends_available() -> bool:
-    """检查pytrends是否已安装且可用"""
+    """检查pytrends是否已安装且可用, 未安装则自动安装"""
     try:
         from pytrends.request import TrendReq
         return True
     except ImportError:
-        return False
+        log.info("pytrends not found, attempting auto-install...")
+        import subprocess, sys
+        try:
+            subprocess.check_call(
+                [sys.executable, "-m", "pip", "install", "pytrends", "-q"],
+                timeout=60
+            )
+            from pytrends.request import TrendReq
+            log.info("pytrends auto-installed successfully")
+            return True
+        except Exception as e:
+            log.warning(f"pytrends auto-install failed: {e}")
+            return False
 
 
 def collect_google_trends_batch() -> dict:
