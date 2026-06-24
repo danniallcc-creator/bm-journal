@@ -338,10 +338,12 @@ a:hover{text-decoration:underline}
   p,h3,h4,li{orphans:3;widows:3}
   .cat-explorer{page-break-inside:auto}
   .cat-body{grid-template-columns:1fr!important}
-  .cat-l2-list{max-height:none!important;border-right:none!important;overflow:visible!important}
-  .cat-detail{max-height:none!important;overflow:visible!important;padding:16px!important}
+  .cat-l2-list{display:none!important}
+  .cat-detail{max-height:none!important;overflow:visible!important;padding:16px!important;width:100%!important}
+  .cat-print-rich .cd-section{page-break-inside:avoid;margin-bottom:16px!important}
+  .cat-print-rich table{font-size:10px!important}
+  .cat-print-rich .cd-trend-summary,.cat-print-rich .cd-analysis{font-size:11px!important;line-height:1.6!important}
   #weekly-insights-container{padding:8px 0!important;border-bottom:none!important}
-  .cat-detail .cd-section{page-break-inside:avoid;margin-bottom:12px!important}
   h2,h3{page-break-after:avoid}
   @page{margin:1cm 1.2cm;size:A4}
 }
@@ -1721,45 +1723,51 @@ function buildSelectedCategoriesHTML(entries) {
 }
 
 function buildAllCategoriesPrintHTML(cats, allData, filterEntries) {
-  var entries = filterEntries || window._catEntries || [];
+  var entries = filterEntries || [];
   var html = '';
   entries.forEach(function(e) {
     var key = e[0], cat = e[1] || cats[key];
     if (!cat) return;
-    html += '<div class="cat-print-item" style="margin-bottom:20px;padding-bottom:16px;border-bottom:2px solid #ddd;page-break-inside:auto">';
-    html += '<h3 style="font-size:16px;margin:0 0 4px;color:#1a1a2e">' + esc(cat.zh) + '</h3>';
-    html += '<div style="font-size:12px;color:#666;margin-bottom:10px">' + esc(cat.en||'') + ' | 三级: ' + (cat.l3||[]).length + ' | HS: ' + (cat.hs_codes||[]).length + '</div>';
+
+    // Category header
+    html += '<div class="cat-print-item" style="margin-bottom:24px;padding-bottom:20px;border-bottom:2px solid #ddd;page-break-before:auto">';
+    html += '<h3 style="font-size:18px;margin:0 0 4px;color:#1a1a2e">' + esc(cat.zh) + '</h3>';
+    html += '<div style="font-size:13px;color:#666;margin-bottom:8px">' + esc(cat.en||'') + '</div>';
+
+    // L3 sub-categories
+    if ((cat.l3||[]).length) {
+      html += '<div style="margin-bottom:10px"><span style="font-size:12px;font-weight:600;color:#444">三级品类: </span>';
+      html += '<span style="font-size:12px;color:#888">' + cat.l3.map(function(l){ return esc(l.zh); }).join(' / ') + '</span></div>';
+    }
+
     // HS codes
     if ((cat.hs_codes||[]).length) {
-      html += '<div style="margin-bottom:8px"><span style="font-size:11px;font-weight:600;color:#555">HS编码: </span>';
-      html += '<span style="font-size:11px;color:#888">' + cat.hs_codes.slice(0,20).join(', ') + (cat.hs_codes.length > 20 ? '...' : '') + '</span></div>';
+      html += '<div style="margin-bottom:12px"><span style="font-size:12px;font-weight:600;color:#444">HS编码 (' + cat.hs_codes.length + '): </span>';
+      html += '<span style="font-size:11px;color:#888">' + cat.hs_codes.join(', ') + '</span></div>';
     }
-    // Rich data
+
+    // Keywords
+    var kws = cat.keywords_cn || cat.keywords_en || [];
+    if (kws.length) {
+      html += '<div style="margin-bottom:12px;display:flex;gap:4px;flex-wrap:wrap">';
+      kws.slice(0,8).forEach(function(k) {
+        html += '<span style="padding:2px 8px;background:#e3f2fd;color:#1565c0;border-radius:10px;font-size:11px">' + esc(k) + '</span>';
+      });
+      html += '</div>';
+    }
+
+    // Full rich data rendering using the same functions as browser view
     var d = allData[key];
     if (d) {
-      // Dynamic Insight
-      if (d.dynamic_insight && d.dynamic_insight.trend_summary) {
-        html += '<div style="margin-bottom:8px;padding:8px 10px;background:#f8f9fa;border-left:3px solid #4fc3f7;border-radius:0 4px 4px 0;font-size:12px;line-height:1.6">';
-        html += '<b style="color:#333">趋势: </b>' + esc(d.dynamic_insight.trend_summary) + '</div>';
+      var tempDiv = document.createElement('div');
+      renderRichDetail(tempDiv, d);
+      if (tempDiv.innerHTML) {
+        html += '<div class="cat-print-rich" style="margin-top:8px">' + tempDiv.innerHTML + '</div>';
       }
-      // Export data summary
-      if (d.export_data && d.export_data.length) {
-        html += '<div style="margin-bottom:8px"><span style="font-size:11px;font-weight:600;color:#555">出口数据: </span>';
-        d.export_data.slice(0,3).forEach(function(ed) {
-          var latest = (ed.data||[])[0];
-          html += '<span style="font-size:11px;color:#666">' + esc(ed.name) + (latest ? ' ($' + latest.amt + 'M, YoY ' + (latest.yoy>0?'+':'') + latest.yoy + '%)' : '') + ' | </span>';
-        });
-        html += '</div>';
-      }
-      // Industry analysis (brief)
-      if (d.industry_analysis && d.industry_analysis.opportunity) {
-        html += '<div style="margin-bottom:8px;font-size:12px;line-height:1.6"><b style="color:#333">机会: </b>' + esc(d.industry_analysis.opportunity) + '</div>';
-      }
-      // Compliance summary
-      if (d.compliance_summary) {
-        html += '<div style="margin-bottom:8px;font-size:11px;color:#666"><b>合规: </b>' + esc(d.compliance_summary) + '</div>';
-      }
+    } else {
+      html += '<div style="font-size:12px;color:#999;padding:8px 0">暂无详细数据</div>';
     }
+
     html += '</div>';
   });
   return html;
