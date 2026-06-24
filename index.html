@@ -221,6 +221,8 @@ a:hover{text-decoration:underline}
 
 /* Category Explorer */
 .cat-explorer{background:var(--surface);border-radius:12px;border:1px solid var(--border);overflow:hidden}
+#weekly-insights-container{padding:16px 20px;border-bottom:1px solid var(--border)}
+#weekly-insights-container:empty{display:none;padding:0;border:none}
 .cat-toolbar{padding:16px 20px;border-bottom:1px solid var(--border);display:flex;gap:12px;align-items:center}
 .cat-search{flex:1;padding:8px 14px;border:1.5px solid var(--border);border-radius:8px;font-size:13px;outline:none;transition:border-color .2s}
 .cat-search:focus{border-color:var(--gold)}
@@ -495,6 +497,7 @@ a:hover{text-decoration:underline}
         <h2>品类浏览器<span class="en">Category Explorer</span></h2>
       </div>
       <div class="cat-explorer">
+        <div id="weekly-insights-container"></div>
         <div class="cat-toolbar">
           <input class="cat-search" type="text" placeholder="搜索品类名称或HS编码..." id="cat-search-input" oninput="filterCategories()">
           <select class="cat-filter" id="cat-filter" onchange="filterCategories()">
@@ -1003,8 +1006,14 @@ function renderCategoryExplorer() {
   const entries = Object.entries(cats).sort((a,b) => a[1].zh.localeCompare(b[1].zh,'zh'));
   window._catEntries = entries;
 
-  // Insert weekly insights at top
-  list.innerHTML = renderWeeklyInsights() + entries.map(([key, val]) => {
+  // Render weekly insights into dedicated container above search box
+  var insightsContainer = document.getElementById('weekly-insights-container');
+  if (insightsContainer) {
+    insightsContainer.innerHTML = renderWeeklyInsights();
+  }
+
+  // Category list stays clean - just the items
+  list.innerHTML = entries.map(([key, val]) => {
     const total = (val.l3||[]).length + (val.hs_codes||[]).length;
     return '<div class="cat-l2-item" data-key="' + esc(key) + '" onclick="selectCategory(this,\'' + esc(key) + '\')">' +
       '<span>' + esc(val.zh) + (val.en ? ' <small style="color:#999">' + esc(val.en) + '</small>' : '') + '</span>' +
@@ -1604,9 +1613,8 @@ function renderWeeklyInsights() {
   var d = WEEK_DATA;
   if (!d || !d.issue) return '';
 
-  var html = '<div id="weekly-insights" style="margin-bottom:24px;padding:20px;background:linear-gradient(135deg,#0d1b2a,#1b2838);border:1px solid #2a3a4a;border-radius:12px">';
-  html += '<h3 style="margin:0 0 4px;font-size:16px;color:#e0e0e0">本周洞察 <span style="font-size:12px;color:#888;font-weight:400">Weekly Insights</span></h3>';
-  html += '<p style="margin:0 0 16px;font-size:12px;color:#999">汇总所有品类核心高增机会与风险提示</p>';
+  var html = '<div style="background:linear-gradient(135deg,#0d1b2a,#1b2838);border:1px solid #2a3a4a;border-radius:10px;padding:16px">';
+  html += '<div style="display:flex;align-items:center;gap:8px;margin-bottom:12px"><h3 style="margin:0;font-size:15px;color:#e0e0e0">本周洞察</h3><span style="font-size:11px;color:#888">Weekly Insights</span></div>';
 
   // 1. 高增机会 (从 keyTakeaways 提取 opportunity 标签)
   var opportunities = (d.keyTakeaways || []).filter(function(t) { return t.tag === 'opportunity'; });
