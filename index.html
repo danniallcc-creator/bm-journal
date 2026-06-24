@@ -327,15 +327,23 @@ a:hover{text-decoration:underline}
 @media print{
   .sidebar,.topbar,.btn,.cat-toolbar .cat-search,.cat-toolbar .cat-filter{display:none!important}
   .main{margin-left:0!important}
-  .content{padding:20px!important;max-width:100%!important}
-  .report-hero{margin:0!important;padding:24px!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
-  .section{page-break-inside:avoid}
+  .content{padding:10px 16px!important;max-width:100%!important}
+  .report-hero{margin:0!important;padding:16px!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .section{margin-bottom:16px!important;page-break-inside:auto;scroll-margin-top:0}
+  .section-header{margin-bottom:12px!important;padding-bottom:8px!important}
   .article-card,.country-card,.trend-card,.sc-card,.reg-item,.inno-card,.event-item,.demand-card{page-break-inside:avoid}
   .article-grid,.country-grid,.demand-grid,.sc-grid,.inno-grid{grid-template-columns:1fr 1fr!important}
   .demand-detail{display:block!important}
-  body{font-size:12px}
-  .cat-explorer{page-break-before:always}
-  @page{margin:1.5cm;size:A4}
+  body{font-size:11px;orphans:3;widows:3}
+  p,h3,h4,li{orphans:3;widows:3}
+  .cat-explorer{page-break-inside:auto}
+  .cat-body{grid-template-columns:1fr!important}
+  .cat-l2-list{max-height:none!important;border-right:none!important;overflow:visible!important}
+  .cat-detail{max-height:none!important;overflow:visible!important;padding:16px!important}
+  #weekly-insights-container{padding:8px 0!important;border-bottom:none!important}
+  .cat-detail .cd-section{page-break-inside:avoid;margin-bottom:12px!important}
+  h2,h3{page-break-after:avoid}
+  @page{margin:1cm 1.2cm;size:A4}
 }
 @media(max-width:900px){
   .sidebar{display:none}
@@ -1554,7 +1562,8 @@ const PDF_SECTIONS = [
   {id:'regulation', name:'监管与ESG', en:'Regulation & ESG'},
   {id:'research', name:'投研摘要', en:'Research Highlights'},
   {id:'emerging', name:'新兴需求', en:'Emerging Demand'},
-  {id:'categories', name:'品类浏览器', en:'Category Explorer'},
+  {id:'weekly-insights-container', name:'本周洞察(品类汇总)', en:'Weekly Insights'},
+  {id:'categories', name:'品类浏览器(完整类目)', en:'Category Explorer'},
   {id:'events', name:'事件日历', en:'Events Calendar'},
   {id:'sources', name:'数据源管理', en:'Data Sources'}
 ];
@@ -1584,12 +1593,165 @@ function confirmPDFExport() {
   document.querySelectorAll('#pdf-sections input[type=checkbox]:checked').forEach(function(cb) {
     checked[cb.value] = true;
   });
-  // Hide unchecked sections
+
+  // Handle weekly-insights-container independently (it's inside #categories section)
+  var insightsEl = document.getElementById('weekly-insights-container');
+  if (insightsEl) insightsEl.style.display = checked['weekly-insights-container'] ? '' : 'none';
+
+  // Handle categories section
+  var categoriesChecked = checked['categories'];
+
+  // Hide unchecked top-level sections (skip categories and weekly-insights-container, handled separately)
   PDF_SECTIONS.forEach(function(s) {
+    if (s.id === 'weekly-insights-container') return; // handled above
+    if (s.id === 'categories') return; // handled below
     var el = document.getElementById(s.id);
     if (el) el.style.display = checked[s.id] ? '' : 'none';
   });
-  // Also hide sidebar and topbar for cleaner print
+
+  // Handle categories section visibility
+  var catSection = document.getElementById('categories');
+  if (catSection) {
+    if (!categoriesChecked && !checked['weekly-insights-container']) {
+      catSection.style.display = 'none';
+    } else {
+      catSection.style.display = '';
+      // If categories not checked but insights is, hide the cat-body
+      var catBody = catSection.querySelector('.cat-body');
+      var catToolbar = catSection.querySelector('.cat-toolbar');
+      if (!categoriesChecked) {
+        if (catBody) catBody.style.display = 'none';
+        if (catToolbar) catToolbar.style.display = 'none';
+      }
+    }
+  }
+
+  // If categories is selected, pre-load all category details
+  if (categoriesChecked && window._catEntries) {
+    var detail = document.getElementById('cat-detail');
+    if (detail) {
+      detail.innerHTML = '<div class="cd-loading" style="padding:20px;text-align:center;color:#999">正在加载所有类目详情用于导出...</div>';
+    }
+    loadAllCategoriesForPrint().then(function() {
+      finishPDFExport();
+    });
+  } else {
+    finishPDFExport();
+  }
+}
+
+function loadAllCategoriesForPrint() {
+  var entries = window._catEntries || [];
+  var cats = TAXONOMY.categories || {};
+  var detail = document.getElementById('cat-detail');
+  var withSlug = entries.filter(function(e) { return cats[e[0]] && cats[e[0]].l2_slug; });
+
+  if (!withSlug.length) {
+    // No rich data to load, just show all category basic info
+    if (detail) detail.innerHTML = buildAllCategoriesBasicHTML();
+    return Promise.resolve();
+  }
+
+  // Fetch all category JSONs in parallel (max 6 at a time)
+  var allData = {};
+  var queue = withSlug.slice();
+  var running = 0;
+  var maxConcurrent = 6;
+
+  return new Promise(function(resolve) {
+    function processNext() {
+      if (!queue.length && running === 0) {
+        // All done - render combined output
+        if (detail) detail.innerHTML = buildAllCategoriesPrintHTML(cats, allData);
+        resolve();
+        return;
+      }
+      while (running < maxConcurrent && queue.length) {
+        var entry = queue.shift();
+        var key = entry[0];
+        var cat = cats[key];
+        running++;
+        (function(k, c) {
+          fetch('data/categories/建材与房地产/' + c.l2_slug + '.json')
+            .then(function(r) { return r.ok ? r.json() : null; })
+            .then(function(d) {
+              allData[k] = d;
+              running--;
+              processNext();
+            })
+            .catch(function() {
+              running--;
+              processNext();
+            });
+        })(key, cat);
+      }
+    }
+    processNext();
+  });
+}
+
+function buildAllCategoriesBasicHTML() {
+  var entries = window._catEntries || [];
+  var cats = TAXONOMY.categories || {};
+  var html = '';
+  entries.forEach(function(e) {
+    var key = e[0], cat = cats[key];
+    if (!cat) return;
+    html += '<div style="margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid #eee">';
+    html += '<h3 style="font-size:15px;margin:0 0 4px">' + esc(cat.zh) + '</h3>';
+    html += '<div style="font-size:12px;color:#999">' + esc(cat.en||'') + ' | HS: ' + (cat.hs_codes||[]).length + '</div>';
+    html += '</div>';
+  });
+  return html;
+}
+
+function buildAllCategoriesPrintHTML(cats, allData) {
+  var entries = window._catEntries || [];
+  var html = '';
+  entries.forEach(function(e) {
+    var key = e[0], cat = cats[key];
+    if (!cat) return;
+    html += '<div class="cat-print-item" style="margin-bottom:20px;padding-bottom:16px;border-bottom:2px solid #ddd;page-break-inside:auto">';
+    html += '<h3 style="font-size:16px;margin:0 0 4px;color:#1a1a2e">' + esc(cat.zh) + '</h3>';
+    html += '<div style="font-size:12px;color:#666;margin-bottom:10px">' + esc(cat.en||'') + ' | 三级: ' + (cat.l3||[]).length + ' | HS: ' + (cat.hs_codes||[]).length + '</div>';
+    // HS codes
+    if ((cat.hs_codes||[]).length) {
+      html += '<div style="margin-bottom:8px"><span style="font-size:11px;font-weight:600;color:#555">HS编码: </span>';
+      html += '<span style="font-size:11px;color:#888">' + cat.hs_codes.slice(0,20).join(', ') + (cat.hs_codes.length > 20 ? '...' : '') + '</span></div>';
+    }
+    // Rich data
+    var d = allData[key];
+    if (d) {
+      // Dynamic Insight
+      if (d.dynamic_insight && d.dynamic_insight.trend_summary) {
+        html += '<div style="margin-bottom:8px;padding:8px 10px;background:#f8f9fa;border-left:3px solid #4fc3f7;border-radius:0 4px 4px 0;font-size:12px;line-height:1.6">';
+        html += '<b style="color:#333">趋势: </b>' + esc(d.dynamic_insight.trend_summary) + '</div>';
+      }
+      // Export data summary
+      if (d.export_data && d.export_data.length) {
+        html += '<div style="margin-bottom:8px"><span style="font-size:11px;font-weight:600;color:#555">出口数据: </span>';
+        d.export_data.slice(0,3).forEach(function(ed) {
+          var latest = (ed.data||[])[0];
+          html += '<span style="font-size:11px;color:#666">' + esc(ed.name) + (latest ? ' ($' + latest.amt + 'M, YoY ' + (latest.yoy>0?'+':'') + latest.yoy + '%)' : '') + ' | </span>';
+        });
+        html += '</div>';
+      }
+      // Industry analysis (brief)
+      if (d.industry_analysis && d.industry_analysis.opportunity) {
+        html += '<div style="margin-bottom:8px;font-size:12px;line-height:1.6"><b style="color:#333">机会: </b>' + esc(d.industry_analysis.opportunity) + '</div>';
+      }
+      // Compliance summary
+      if (d.compliance_summary) {
+        html += '<div style="margin-bottom:8px;font-size:11px;color:#666"><b>合规: </b>' + esc(d.compliance_summary) + '</div>';
+      }
+    }
+    html += '</div>';
+  });
+  return html;
+}
+
+function finishPDFExport() {
+  // Hide sidebar and topbar for cleaner print
   var sidebar = document.querySelector('.sidebar');
   var topbar = document.querySelector('.topbar');
   if (sidebar) sidebar.style.display = 'none';
@@ -1598,14 +1760,24 @@ function confirmPDFExport() {
   // Add print restore handler
   window.addEventListener('afterprint', function restore() {
     PDF_SECTIONS.forEach(function(s) {
+      if (s.id === 'weekly-insights-container') return;
       var el = document.getElementById(s.id);
       if (el) el.style.display = '';
     });
+    var insightsEl = document.getElementById('weekly-insights-container');
+    if (insightsEl) insightsEl.style.display = '';
+    var catSection = document.getElementById('categories');
+    if (catSection) {
+      var catBody = catSection.querySelector('.cat-body');
+      var catToolbar = catSection.querySelector('.cat-toolbar');
+      if (catBody) catBody.style.display = '';
+      if (catToolbar) catToolbar.style.display = '';
+    }
     if (sidebar) sidebar.style.display = '';
     if (topbar) topbar.style.display = '';
     window.removeEventListener('afterprint', restore);
   });
-  setTimeout(function() { window.print(); }, 100);
+  setTimeout(function() { window.print(); }, 200);
 }
 
 // ===================== 品类浏览器: 本周洞察汇总 =====================
