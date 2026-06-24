@@ -964,12 +964,12 @@ function renderResearch(items, summary) {
   let html = '';
   // 投研周报摘要卡片 (放在最前面)
   if (summary) {
-    html += '<div class="research-summary-card">' +
+    html += '<div id="research-summary-block"><div class="research-summary-card">' +
       '<div class="rs-header"><h3>本期投研摘要</h3></div>' +
-      '<div class="rs-body"><p>' + esc(summary) + '</p></div></div>';
+      '<div class="rs-body"><p>' + esc(summary) + '</p></div></div></div>';
   }
   // 研报列表
-  html += items.map(it => {
+  html += '<div id="research-items-block">' + items.map(it => {
     const themeZh = themeLabels[it.theme] || it.theme || '综合';
     const doiHtml = it.doi ? ' <a href="https://doi.org/' + esc(it.doi) + '" target="_blank" style="color:var(--accent-blue);font-size:11px">DOI</a>' : '';
     return '<div class="research-item">' +
@@ -982,7 +982,7 @@ function renderResearch(items, summary) {
       (it.citations ? '<span class="citations">被引 ' + it.citations + '</span>' : '') +
       doiHtml +
       '</div></div></div>';
-  }).join('');
+  }).join('') + '</div>';
   el.innerHTML = html;
 }
 
@@ -1029,9 +1029,11 @@ function renderCategoryExplorer() {
   }).join('');
 }
 
+window._viewedCategories = new Set();
 function selectCategory(el, key) {
   document.querySelectorAll('.cat-l2-item').forEach(i => i.classList.remove('active'));
   el.classList.add('active');
+  window._viewedCategories.add(key);
   const cat = (TAXONOMY.categories||{})[key];
   if (!cat) return;
   const detail = document.getElementById('cat-detail');
@@ -1560,10 +1562,11 @@ const PDF_SECTIONS = [
   {id:'supplychain', name:'供应链与贸易', en:'Supply Chain'},
   {id:'customs-dashboard', name:'海关月度出口看板', en:'Customs Dashboard'},
   {id:'regulation', name:'监管与ESG', en:'Regulation & ESG'},
-  {id:'research', name:'投研摘要', en:'Research Highlights'},
+  {id:'research-summary-block', name:'投研摘要(综合)', en:'Research Summary'},
+  {id:'research-items-block', name:'研报列表(详情)', en:'Research Items'},
   {id:'emerging', name:'新兴需求', en:'Emerging Demand'},
   {id:'weekly-insights-container', name:'本周洞察(品类汇总)', en:'Weekly Insights'},
-  {id:'categories', name:'品类浏览器(完整类目)', en:'Category Explorer'},
+  {id:'categories', name:'品类浏览器(已选类目)', en:'Selected Categories'},
   {id:'events', name:'事件日历', en:'Events Calendar'},
   {id:'sources', name:'数据源管理', en:'Data Sources'}
 ];
@@ -1594,29 +1597,42 @@ function confirmPDFExport() {
     checked[cb.value] = true;
   });
 
-  // Handle weekly-insights-container independently (it's inside #categories section)
+  // Handle sub-blocks inside sections
+  // weekly-insights-container (inside #categories)
   var insightsEl = document.getElementById('weekly-insights-container');
   if (insightsEl) insightsEl.style.display = checked['weekly-insights-container'] ? '' : 'none';
+  // research-summary-block (inside #research)
+  var resSummaryEl = document.getElementById('research-summary-block');
+  if (resSummaryEl) resSummaryEl.style.display = checked['research-summary-block'] ? '' : 'none';
+  // research-items-block (inside #research)
+  var resItemsEl = document.getElementById('research-items-block');
+  if (resItemsEl) resItemsEl.style.display = checked['research-items-block'] ? '' : 'none';
 
-  // Handle categories section
+  // Handle parent sections with sub-blocks
   var categoriesChecked = checked['categories'];
+  var researchChecked = checked['research-summary-block'] || checked['research-items-block'];
 
-  // Hide unchecked top-level sections (skip categories and weekly-insights-container, handled separately)
+  // Hide unchecked top-level sections
   PDF_SECTIONS.forEach(function(s) {
-    if (s.id === 'weekly-insights-container') return; // handled above
-    if (s.id === 'categories') return; // handled below
+    if (s.id === 'weekly-insights-container') return;
+    if (s.id === 'categories') return;
+    if (s.id === 'research-summary-block') return;
+    if (s.id === 'research-items-block') return;
     var el = document.getElementById(s.id);
     if (el) el.style.display = checked[s.id] ? '' : 'none';
   });
 
-  // Handle categories section visibility
+  // Handle #research section
+  var researchSection = document.getElementById('research');
+  if (researchSection) researchSection.style.display = researchChecked ? '' : 'none';
+
+  // Handle #categories section
   var catSection = document.getElementById('categories');
   if (catSection) {
     if (!categoriesChecked && !checked['weekly-insights-container']) {
       catSection.style.display = 'none';
     } else {
       catSection.style.display = '';
-      // If categories not checked but insights is, hide the cat-body
       var catBody = catSection.querySelector('.cat-body');
       var catToolbar = catSection.querySelector('.cat-toolbar');
       if (!categoriesChecked) {
@@ -1626,33 +1642,36 @@ function confirmPDFExport() {
     }
   }
 
-  // If categories is selected, pre-load all category details
-  if (categoriesChecked && window._catEntries) {
+  // If categories is selected, pre-load viewed category details only
+  if (categoriesChecked) {
     var detail = document.getElementById('cat-detail');
-    if (detail) {
-      detail.innerHTML = '<div class="cd-loading" style="padding:20px;text-align:center;color:#999">正在加载所有类目详情用于导出...</div>';
-    }
-    loadAllCategoriesForPrint().then(function() {
+    var viewed = Array.from(window._viewedCategories || []);
+    if (!viewed.length) {
+      // No categories viewed yet - show message
+      if (detail) detail.innerHTML = '<div style="padding:20px;text-align:center;color:#999;font-size:13px">请先在品类浏览器中点击查看需要导出的类目</div>';
       finishPDFExport();
-    });
+    } else {
+      if (detail) detail.innerHTML = '<div class="cd-loading" style="padding:20px;text-align:center;color:#999">正在加载 ' + viewed.length + ' 个已选类目详情...</div>';
+      loadViewedCategoriesForPrint(viewed).then(function() {
+        finishPDFExport();
+      });
+    }
   } else {
     finishPDFExport();
   }
 }
 
-function loadAllCategoriesForPrint() {
-  var entries = window._catEntries || [];
+function loadViewedCategoriesForPrint(viewedKeys) {
   var cats = TAXONOMY.categories || {};
   var detail = document.getElementById('cat-detail');
-  var withSlug = entries.filter(function(e) { return cats[e[0]] && cats[e[0]].l2_slug; });
+  var entries = viewedKeys.map(function(k) { return [k, cats[k]]; }).filter(function(e) { return e[1]; });
+  var withSlug = entries.filter(function(e) { return e[1].l2_slug; });
 
   if (!withSlug.length) {
-    // No rich data to load, just show all category basic info
-    if (detail) detail.innerHTML = buildAllCategoriesBasicHTML();
+    if (detail) detail.innerHTML = buildSelectedCategoriesHTML(entries);
     return Promise.resolve();
   }
 
-  // Fetch all category JSONs in parallel (max 6 at a time)
   var allData = {};
   var queue = withSlug.slice();
   var running = 0;
@@ -1661,15 +1680,14 @@ function loadAllCategoriesForPrint() {
   return new Promise(function(resolve) {
     function processNext() {
       if (!queue.length && running === 0) {
-        // All done - render combined output
-        if (detail) detail.innerHTML = buildAllCategoriesPrintHTML(cats, allData);
+        if (detail) detail.innerHTML = buildAllCategoriesPrintHTML(cats, allData, entries);
         resolve();
         return;
       }
       while (running < maxConcurrent && queue.length) {
         var entry = queue.shift();
         var key = entry[0];
-        var cat = cats[key];
+        var cat = entry[1];
         running++;
         (function(k, c) {
           fetch('data/categories/建材与房地产/' + c.l2_slug + '.json')
@@ -1690,13 +1708,10 @@ function loadAllCategoriesForPrint() {
   });
 }
 
-function buildAllCategoriesBasicHTML() {
-  var entries = window._catEntries || [];
-  var cats = TAXONOMY.categories || {};
+function buildSelectedCategoriesHTML(entries) {
   var html = '';
   entries.forEach(function(e) {
-    var key = e[0], cat = cats[key];
-    if (!cat) return;
+    var key = e[0], cat = e[1];
     html += '<div style="margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid #eee">';
     html += '<h3 style="font-size:15px;margin:0 0 4px">' + esc(cat.zh) + '</h3>';
     html += '<div style="font-size:12px;color:#999">' + esc(cat.en||'') + ' | HS: ' + (cat.hs_codes||[]).length + '</div>';
@@ -1705,11 +1720,11 @@ function buildAllCategoriesBasicHTML() {
   return html;
 }
 
-function buildAllCategoriesPrintHTML(cats, allData) {
-  var entries = window._catEntries || [];
+function buildAllCategoriesPrintHTML(cats, allData, filterEntries) {
+  var entries = filterEntries || window._catEntries || [];
   var html = '';
   entries.forEach(function(e) {
-    var key = e[0], cat = cats[key];
+    var key = e[0], cat = e[1] || cats[key];
     if (!cat) return;
     html += '<div class="cat-print-item" style="margin-bottom:20px;padding-bottom:16px;border-bottom:2px solid #ddd;page-break-inside:auto">';
     html += '<h3 style="font-size:16px;margin:0 0 4px;color:#1a1a2e">' + esc(cat.zh) + '</h3>';
@@ -1759,13 +1774,16 @@ function finishPDFExport() {
   closePDFModal();
   // Add print restore handler
   window.addEventListener('afterprint', function restore() {
-    PDF_SECTIONS.forEach(function(s) {
-      if (s.id === 'weekly-insights-container') return;
-      var el = document.getElementById(s.id);
+    // Restore all sections
+    ['summary','macro','regional','products','innovation','supplychain','customs-dashboard','regulation','research','emerging','categories','events','sources'].forEach(function(id) {
+      var el = document.getElementById(id);
       if (el) el.style.display = '';
     });
-    var insightsEl = document.getElementById('weekly-insights-container');
-    if (insightsEl) insightsEl.style.display = '';
+    // Restore sub-blocks
+    ['weekly-insights-container','research-summary-block','research-items-block'].forEach(function(id) {
+      var el = document.getElementById(id);
+      if (el) el.style.display = '';
+    });
     var catSection = document.getElementById('categories');
     if (catSection) {
       var catBody = catSection.querySelector('.cat-body');
