@@ -385,7 +385,7 @@ a:hover{text-decoration:underline}
       <span id="topbar-stats"></span>
     </div>
     <div class="btn-group">
-      <button class="btn btn-outline" onclick="window.print()">导出 PDF</button>
+      <button class="btn btn-outline" onclick="showPDFExport()">导出 PDF</button>
       <button class="btn btn-primary" onclick="refreshData()">刷新数据</button>
     </div>
   </div>
@@ -530,6 +530,23 @@ a:hover{text-decoration:underline}
         <h2>数据源管理<span class="en">Data Sources</span></h2>
       </div>
       <div class="ds-grid" id="ds-grid"></div>
+    </div>
+  </div>
+</div>
+
+<!-- PDF Export Modal -->
+<div id="pdf-modal" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);z-index:9999;justify-content:center;align-items:center">
+  <div style="background:#1a1a2e;border:1px solid #333;border-radius:12px;padding:28px;max-width:520px;width:90%;max-height:80vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,0.5)">
+    <h3 style="margin:0 0 6px;font-size:18px;color:#e0e0e0">选择导出板块</h3>
+    <p style="margin:0 0 16px;font-size:12px;color:#999">勾选需要包含在PDF中的板块，未勾选的板块将被隐藏</p>
+    <div style="display:flex;gap:8px;margin-bottom:14px">
+      <button onclick="pdfToggleAll(true)" style="padding:4px 12px;font-size:12px;background:#2a2a4a;color:#aaa;border:1px solid #444;border-radius:6px;cursor:pointer">全选</button>
+      <button onclick="pdfToggleAll(false)" style="padding:4px 12px;font-size:12px;background:#2a2a4a;color:#aaa;border:1px solid #444;border-radius:6px;cursor:pointer">全不选</button>
+    </div>
+    <div id="pdf-sections"></div>
+    <div style="display:flex;gap:10px;margin-top:20px;justify-content:flex-end">
+      <button onclick="closePDFModal()" style="padding:8px 20px;background:transparent;color:#aaa;border:1px solid #444;border-radius:8px;cursor:pointer;font-size:14px">取消</button>
+      <button onclick="confirmPDFExport()" style="padding:8px 24px;background:var(--accent-blue,#4fc3f7);color:#000;border:none;border-radius:8px;cursor:pointer;font-weight:600;font-size:14px">生成 PDF</button>
     </div>
   </div>
 </div>
@@ -986,7 +1003,8 @@ function renderCategoryExplorer() {
   const entries = Object.entries(cats).sort((a,b) => a[1].zh.localeCompare(b[1].zh,'zh'));
   window._catEntries = entries;
 
-  list.innerHTML = entries.map(([key, val]) => {
+  // Insert weekly insights at top
+  list.innerHTML = renderWeeklyInsights() + entries.map(([key, val]) => {
     const total = (val.l3||[]).length + (val.hs_codes||[]).length;
     return '<div class="cat-l2-item" data-key="' + esc(key) + '" onclick="selectCategory(this,\'' + esc(key) + '\')">' +
       '<span>' + esc(val.zh) + (val.en ? ' <small style="color:#999">' + esc(val.en) + '</small>' : '') + '</span>' +
@@ -1513,6 +1531,135 @@ function getEmbeddedTaxonomy() {
       '建筑工业玻璃':{en:'Building & Industrial Glass',zh:'建筑工业玻璃',l3:[{en:'Clear Glass',zh:'透明玻璃'},{en:'Medical Glass',zh:'医用玻璃'},{en:'Insulated Glass',zh:'中空玻璃'},{en:'Laminated Glass',zh:'夹层玻璃'},{en:'Tinted Glass',zh:'颜色玻璃'},{en:'Decorative Glass',zh:'装饰玻璃'},{en:'Low-E glass',zh:'低辐射玻璃'}],hs_codes:['700800','700729','701690']}
     }
   };
+}
+
+// ===================== PDF EXPORT =====================
+const PDF_SECTIONS = [
+  {id:'summary', name:'本期核心观点', en:'Executive Summary'},
+  {id:'macro', name:'宏观环境', en:'Macro Environment'},
+  {id:'regional', name:'区域与国别分析', en:'Regional Analysis'},
+  {id:'products', name:'产品趋势与需求', en:'Product Trends'},
+  {id:'innovation', name:'技术创新', en:'Innovation'},
+  {id:'supplychain', name:'供应链与贸易', en:'Supply Chain'},
+  {id:'customs-dashboard', name:'海关月度出口看板', en:'Customs Dashboard'},
+  {id:'regulation', name:'监管与ESG', en:'Regulation & ESG'},
+  {id:'research', name:'投研摘要', en:'Research Highlights'},
+  {id:'emerging', name:'新兴需求', en:'Emerging Demand'},
+  {id:'categories', name:'品类浏览器', en:'Category Explorer'},
+  {id:'events', name:'事件日历', en:'Events Calendar'},
+  {id:'sources', name:'数据源管理', en:'Data Sources'}
+];
+
+function showPDFExport() {
+  var modal = document.getElementById('pdf-modal');
+  var container = document.getElementById('pdf-sections');
+  container.innerHTML = PDF_SECTIONS.map(function(s) {
+    return '<label style="display:flex;align-items:center;gap:10px;padding:8px 12px;margin:2px 0;border-radius:6px;cursor:pointer;transition:background 0.15s" onmouseover="this.style.background=\'#2a2a4a\'" onmouseout="this.style.background=\'transparent\'">' +
+      '<input type="checkbox" value="' + s.id + '" checked style="width:16px;height:16px;accent-color:#4fc3f7">' +
+      '<span style="flex:1;font-size:14px;color:#ddd">' + s.name + '</span>' +
+      '<span style="font-size:11px;color:#888">' + s.en + '</span></label>';
+  }).join('');
+  modal.style.display = 'flex';
+}
+
+function pdfToggleAll(check) {
+  document.querySelectorAll('#pdf-sections input[type=checkbox]').forEach(function(cb) { cb.checked = check; });
+}
+
+function closePDFModal() {
+  document.getElementById('pdf-modal').style.display = 'none';
+}
+
+function confirmPDFExport() {
+  var checked = {};
+  document.querySelectorAll('#pdf-sections input[type=checkbox]:checked').forEach(function(cb) {
+    checked[cb.value] = true;
+  });
+  // Hide unchecked sections
+  PDF_SECTIONS.forEach(function(s) {
+    var el = document.getElementById(s.id);
+    if (el) el.style.display = checked[s.id] ? '' : 'none';
+  });
+  // Also hide sidebar and topbar for cleaner print
+  var sidebar = document.querySelector('.sidebar');
+  var topbar = document.querySelector('.topbar');
+  if (sidebar) sidebar.style.display = 'none';
+  if (topbar) topbar.style.display = 'none';
+  closePDFModal();
+  // Add print restore handler
+  window.addEventListener('afterprint', function restore() {
+    PDF_SECTIONS.forEach(function(s) {
+      var el = document.getElementById(s.id);
+      if (el) el.style.display = '';
+    });
+    if (sidebar) sidebar.style.display = '';
+    if (topbar) topbar.style.display = '';
+    window.removeEventListener('afterprint', restore);
+  });
+  setTimeout(function() { window.print(); }, 100);
+}
+
+// ===================== 品类浏览器: 本周洞察汇总 =====================
+function renderWeeklyInsights() {
+  var d = WEEK_DATA;
+  if (!d || !d.issue) return '';
+
+  var html = '<div id="weekly-insights" style="margin-bottom:24px;padding:20px;background:linear-gradient(135deg,#0d1b2a,#1b2838);border:1px solid #2a3a4a;border-radius:12px">';
+  html += '<h3 style="margin:0 0 4px;font-size:16px;color:#e0e0e0">本周洞察 <span style="font-size:12px;color:#888;font-weight:400">Weekly Insights</span></h3>';
+  html += '<p style="margin:0 0 16px;font-size:12px;color:#999">汇总所有品类核心高增机会与风险提示</p>';
+
+  // 1. 高增机会 (从 keyTakeaways 提取 opportunity 标签)
+  var opportunities = (d.keyTakeaways || []).filter(function(t) { return t.tag === 'opportunity'; });
+  if (opportunities.length) {
+    html += '<div style="margin-bottom:14px"><div style="display:flex;align-items:center;gap:6px;margin-bottom:8px"><span style="display:inline-block;width:8px;height:8px;background:#4caf50;border-radius:50%"></span><span style="font-size:13px;font-weight:600;color:#81c784">高增机会</span><span style="font-size:11px;color:#888">(' + opportunities.length + '条)</span></div>';
+    html += '<div style="display:flex;flex-direction:column;gap:6px">';
+    opportunities.slice(0, 5).forEach(function(o) {
+      html += '<div style="padding:8px 12px;background:#1a2a1a;border-left:3px solid #4caf50;border-radius:0 6px 6px 0;font-size:12px;color:#c8e6c9"><b>' + esc(o.headline || '') + '</b>' +
+        (o.detail ? '<div style="margin-top:3px;color:#a5d6a7;font-size:11px;line-height:1.5">' + esc((o.detail || '').substring(0, 150)) + '</div>' : '') +
+        '</div>';
+    });
+    html += '</div></div>';
+  }
+
+  // 2. 风险提示 (从 keyTakeaways 提取 risk 标签)
+  var risks = (d.keyTakeaways || []).filter(function(t) { return t.tag === 'risk'; });
+  if (risks.length) {
+    html += '<div style="margin-bottom:14px"><div style="display:flex;align-items:center;gap:6px;margin-bottom:8px"><span style="display:inline-block;width:8px;height:8px;background:#f44336;border-radius:50%"></span><span style="font-size:13px;font-weight:600;color:#ef9a9a">风险提示</span><span style="font-size:11px;color:#888">(' + risks.length + '条)</span></div>';
+    html += '<div style="display:flex;flex-direction:column;gap:6px">';
+    risks.slice(0, 5).forEach(function(r) {
+      html += '<div style="padding:8px 12px;background:#2a1a1a;border-left:3px solid #f44336;border-radius:0 6px 6px 0;font-size:12px;color:#ffcdd2"><b>' + esc(r.headline || '') + '</b>' +
+        (r.detail ? '<div style="margin-top:3px;color:#ef9a9a;font-size:11px;line-height:1.5">' + esc((r.detail || '').substring(0, 150)) + '</div>' : '') +
+        '</div>';
+    });
+    html += '</div></div>';
+  }
+
+  // 3. 关注动态 (watch 标签 + emerging demands)
+  var watches = (d.keyTakeaways || []).filter(function(t) { return t.tag === 'watch'; });
+  var emerging = d.emergingDemand || [];
+  if (watches.length || emerging.length) {
+    html += '<div style="margin-bottom:14px"><div style="display:flex;align-items:center;gap:6px;margin-bottom:8px"><span style="display:inline-block;width:8px;height:8px;background:#ff9800;border-radius:50%"></span><span style="font-size:13px;font-weight:600;color:#ffcc80">关注动态</span><span style="font-size:11px;color:#888">(' + (watches.length + emerging.length) + '条)</span></div>';
+    html += '<div style="display:flex;flex-direction:column;gap:6px">';
+    watches.slice(0, 3).forEach(function(w) {
+      html += '<div style="padding:8px 12px;background:#2a2210;border-left:3px solid #ff9800;border-radius:0 6px 6px 0;font-size:12px;color:#ffe0b2"><b>' + esc(w.headline || '') + '</b></div>';
+    });
+    emerging.slice(0, 3).forEach(function(e) {
+      var strengthIcon = e.strength === 'strong' ? '🔥' : e.strength === 'medium' ? '⬆' : '→';
+      html += '<div style="padding:8px 12px;background:#2a2210;border-left:3px solid #ff9800;border-radius:0 6px 6px 0;font-size:12px;color:#ffe0b2">' + strengthIcon + ' <b>' + esc(e.name || '') + '</b> (x' + (e.signal_count || 0) + ') - ' + esc(e.description || '').substring(0, 80) + '</div>';
+    });
+    html += '</div></div>';
+  }
+
+  // 4. 数据概览 (sources summary)
+  var sources = d.sources || '';
+  if (sources) {
+    html += '<div style="padding:10px 12px;background:#1a1a2e;border-radius:8px;font-size:11px;color:#aaa;line-height:1.8">';
+    html += '<span style="font-weight:600;color:#90a4ae">数据覆盖: </span>' + esc(sources);
+    html += '</div>';
+  }
+
+  html += '</div>';
+  return html;
 }
 
 // Start
