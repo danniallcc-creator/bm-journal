@@ -1,14 +1,14 @@
 {
   "issue": 26,
-  "date": "2026-06-23",
+  "date": "2026-06-24",
   "title": "建材行业全球资讯期刊",
   "tagline": "Global Building Materials Weekly Intelligence Report",
   "coverage": "25 国家 | 35 品类 | 207+ HS编码",
-  "sources": "FRED(9/9央行) + World Bank(25国) + SCFI + BDI + Reddit + UN Comtrade(13品类) + EUR-Lex(0条) + RSS(69篇/10源) + Events(13场) + Academia(10主题) + Research(72篇) + Emerging(2强信号) + Infra(4条/1源)",
+  "sources": "FRED(9/9央行) + World Bank(25国) + SCFI + BDI + Reddit + Google Trends + UN Comtrade(13品类) + 海关月度(24品类×202601) + EUR-Lex(0条) + RSS(56篇/9源) + Events(13场) + Academia(9主题) + Research(72篇) + Emerging(2强信号) + Infra(4条/1源)",
   "keyTakeaways": [
     {
       "headline": "投研周报: 综合7大方向72篇报告核心发现",
-      "detail": "本期投研周报综合了7个主题方向共72篇研究报告的核心发现。住房市场领域: 初始房地产发行：低估和学习行为(被引2次)。基础设施投资领域: 评估金融科技、技术基础设施、。大宗商品领域: 硫酸盐对水泥浆体性能的积极影响(被引11次)。绿色金融领域: 绿色混凝土促进可持续基础设施发展。贸易流向领域: 自由贸易港建设对区域进口商的影响(被引2次)。建材行业领域: 为buildi启用可扩展的模型预测控制设计(被引10次)。房地产市场领域: 房价调控对房地产的影响M(被引1次)。行业新闻动态方面，本周重点关注: macro(27篇)、commodity(8篇)、regulation(7篇)、房地产市场(7篇)、supply_chain(6篇)。宏观环境方面，美联储维持利率3.63%不变。综合来看，本周投研关注重点集中在住房市场调整与新房/成屋销售趋势、基础设施投资与建造技术发展、大宗商品(钢铁/水泥/有色金属)价格波动、绿色建材与可持续金融创新、以及全球建材贸易流向变化等方向。建议重点关注建材品类中与基建、住房需求强相关的细分领域。",
+      "detail": "本期投研周报综合了7个主题方向共72篇研究报告的核心发现。住房市场领域: 初始房地产发行：低估和学习行为(被引2次)。基础设施投资领域: 评估金融科技、技术基础设施、。大宗商品领域: 硫酸盐对水泥浆体性能的积极影响(被引11次)。绿色金融领域: 绿色混凝土促进可持续基础设施发展。贸易流向领域: 自由贸易港建设对区域进口商的影响(被引2次)。建材行业领域: 为buildi启用可扩展的模型预测控制设计(被引10次)。房地产市场领域: 房价调控对房地产的影响M(被引1次)。行业新闻动态方面，本周重点关注: macro(28篇)、房地产市场(11篇)、innovation(7篇)、regulation(6篇)、supply_chain(4篇)。宏观环境方面，美联储维持利率3.63%不变。综合来看，本周投研关注重点集中在住房市场调整与新房/成屋销售趋势、基础设施投资与建造技术发展、大宗商品(钢铁/水泥/有色金属)价格波动、绿色建材与可持续金融创新、以及全球建材贸易流向变化等方向。建议重点关注建材品类中与基建、住房需求强相关的细分领域。",
       "tag": "watch",
       "type": "research_summary"
     },
@@ -25,7 +25,7 @@
     },
     {
       "headline": "美联储维持利率3.63%不变",
-      "detail": "联邦基金有效利率3.63%。10年期国债收益率4.46%。全球央行: 欧央行(ECB) 2.25%; 英央行(BOE) 3.73%; 日央行(BOJ) 0.73%; 澳联储(RBA) 4.31%; 加央行(BOC) 2.24%。对建材行业影...",
+      "detail": "联邦基金有效利率3.63%。10年期国债收益率4.51%。全球央行: 欧央行(ECB) 2.25%; 英央行(BOE) 3.73%; 日央行(BOJ) 0.73%; 澳联储(RBA) 4.31%; 加央行(BOC) 2.24%。对建材行业影...",
       "tag": "watch"
     },
     {
@@ -38,27 +38,11 @@
     {
       "tag": "央行政策",
       "title": "美联储维持利率3.63%不变",
-      "summary": "联邦基金有效利率3.63%。10年期国债收益率4.46%。全球央行: 欧央行(ECB) 2.25%; 英央行(BOE) 3.73%; 日央行(BOJ) 0.73%; 澳联储(RBA) 4.31%; 加央行(BOC) 2.24%。对建材行业影响: 利率变动通过房贷利率和建筑融资成本传导至房地产投资和新开工。",
+      "summary": "联邦基金有效利率3.63%。10年期国债收益率4.51%。全球央行: 欧央行(ECB) 2.25%; 英央行(BOE) 3.73%; 日央行(BOJ) 0.73%; 澳联储(RBA) 4.31%; 加央行(BOC) 2.24%。对建材行业影响: 利率变动通过房贷利率和建筑融资成本传导至房地产投资和新开工。",
       "source": "FRED / 各国央行",
       "link": "https://fred.stlouisfed.org/series/FEDFUNDS",
-      "date": "2026-06-19",
+      "date": "2026-06-22",
       "impact": 3
-    },
-    {
-      "tag": "宏观 / 供应链 / 贸易",
-      "title": "专栏：巴西的稀土困境--战略自主还是另一个原材料出口周期？",
-      "summary": "Serra Verde是巴西稀土的关键，影响着它们在非中国矿山到磁铁供应链中的作用。",
-      "source": "Mining.com",
-      "link": "https://www.mining.com/op-ed-brazils-rare-earth-dilemma-strategic-autonomy-or-another-raw-material-export-cycle/",
-      "title_en": "Op-Ed: Brazil’s rare earth dilemma — strategic autonomy or another raw-material export cycle?"
-    },
-    {
-      "tag": "宏观 / 大宗 / 贸易",
-      "title": "力拓的Oyu Tolgoi在蒙古封锁后恢复出口",
-      "summary": "有一天，抗议者中断了蒙古旗舰铜矿的运输，货物恢复正常。",
-      "source": "Mining.com",
-      "link": "https://www.mining.com/rio-tintos-oyu-tolgoi-resumes-exports-after-mongolia-blockade/",
-      "title_en": "Rio Tinto’s Oyu Tolgoi resumes exports after Mongolia blockade"
     },
     {
       "tag": "宏观 / 监管 / 创新",
@@ -83,6 +67,22 @@
       "source": "Global Construction Review",
       "link": "https://www.globalconstructionreview.com/heads-up-skanska-on-where-were-at-with-tariffs-war-and-the-data-centre-boom/",
       "title_en": "Heads up: Skanska on where we’re at with tariffs, war and the data centre boom"
+    },
+    {
+      "tag": "宏观 / 供应链",
+      "title": "沙特阿拉伯计划建设货运铁路走廊",
+      "summary": "西班牙OHLA集团和埃及Hassan Allam Holding的当地子公司赢得了国营沙特铁路公司的合同，在……建造一条22.7公里的单轨货运铁路。&lt;/",
+      "source": "Global Construction Review",
+      "link": "https://www.globalconstructionreview.com/saudi-arabia-plans-freight-rail-corridor/",
+      "title_en": "Saudi Arabia plans freight rail corridor"
+    },
+    {
+      "tag": "宏观 / 房地产",
+      "title": "为什么抵押贷款利率没有跟随油价走低",
+      "summary": "房地产行业的许多人都在想，为什么抵押贷款利率没有下降，即使油价从每桶111 $下降到今天的不到73 $。10年期美国国债收益率为4.48%",
+      "source": "HousingWire",
+      "link": "https://www.housingwire.com/articles/why-mortgage-rates-havent-followed-oil-prices-by-moving-lower/",
+      "title_en": "Why mortgage rates haven’t followed oil prices by moving lower"
     },
     {
       "tag": "战后重建",
@@ -1867,7 +1867,7 @@
       "location": "中国人民银行",
       "type": "central_bank",
       "importance": "high",
-      "days_away": 27,
+      "days_away": 26,
       "categories": [
         "货币政策",
         "利率"
@@ -1880,7 +1880,7 @@
       "location": "欧洲央行",
       "type": "central_bank",
       "importance": "high",
-      "days_away": 30,
+      "days_away": 29,
       "categories": [
         "货币政策",
         "利率"
@@ -1893,7 +1893,7 @@
       "location": "美联储",
       "type": "central_bank",
       "importance": "high",
-      "days_away": 36,
+      "days_away": 35,
       "categories": [
         "货币政策",
         "利率"
@@ -1906,7 +1906,7 @@
       "location": "日本央行",
       "type": "central_bank",
       "importance": "high",
-      "days_away": 37,
+      "days_away": 36,
       "categories": [
         "货币政策",
         "利率"
@@ -1919,7 +1919,7 @@
       "location": "英国央行",
       "type": "central_bank",
       "importance": "high",
-      "days_away": 44,
+      "days_away": 43,
       "categories": [
         "货币政策",
         "利率"
@@ -1932,7 +1932,7 @@
       "location": "上海, 中国",
       "type": "trade_show",
       "importance": "medium",
-      "days_away": 53,
+      "days_away": 52,
       "categories": [
         "建筑设计",
         "建材"
@@ -1945,7 +1945,7 @@
       "location": "上海, 中国",
       "type": "trade_show",
       "importance": "medium",
-      "days_away": 55,
+      "days_away": 54,
       "categories": [
         "建筑设计",
         "建材"
@@ -1958,7 +1958,7 @@
       "location": "中国人民银行",
       "type": "central_bank",
       "importance": "high",
-      "days_away": 58,
+      "days_away": 57,
       "categories": [
         "货币政策",
         "利率"
@@ -1971,7 +1971,7 @@
       "location": "欧洲央行",
       "type": "central_bank",
       "importance": "high",
-      "days_away": 79,
+      "days_away": 78,
       "categories": [
         "货币政策",
         "利率"
@@ -1984,7 +1984,7 @@
       "location": "美联储",
       "type": "central_bank",
       "importance": "high",
-      "days_away": 85,
+      "days_away": 84,
       "categories": [
         "货币政策",
         "利率"
@@ -1997,7 +1997,7 @@
       "location": "英国央行",
       "type": "central_bank",
       "importance": "high",
-      "days_away": 86,
+      "days_away": 85,
       "categories": [
         "货币政策",
         "利率"
@@ -2010,7 +2010,7 @@
       "location": "日本央行",
       "type": "central_bank",
       "importance": "high",
-      "days_away": 87,
+      "days_away": 86,
       "categories": [
         "货币政策",
         "利率"
@@ -2023,7 +2023,7 @@
       "location": "中国人民银行",
       "type": "central_bank",
       "importance": "high",
-      "days_away": 89,
+      "days_away": 88,
       "categories": [
         "货币政策",
         "利率"
@@ -2037,7 +2037,7 @@
       "signal_count": 3,
       "strength": "strong",
       "signal_types": [],
-      "description": "检测到3条需求信号信号。来源: Construction Dive, Global Construction Review。",
+      "description": "检测到3条需求信号信号。来源: Global Construction Review, Construction Dive。",
       "example_articles": [
         {
           "title": "小心：斯堪斯卡公司在关税、战争和数据中心热潮方面的处境",
@@ -2067,19 +2067,6 @@
       ]
     },
     {
-      "name": "中东超级工程",
-      "signal_count": 1,
-      "strength": "medium",
-      "signal_types": [],
-      "description": "检测到1条需求信号信号。来源: Reddit。",
-      "example_articles": [
-        {
-          "title": "Need Help Identifying Water Softener Supply and Outlet Lines",
-          "source": "Reddit/HomeImprovement"
-        }
-      ]
-    },
-    {
       "name": "东南亚工业化",
       "signal_count": 1,
       "strength": "medium",
@@ -2089,32 +2076,6 @@
         {
           "title": "From favelas to informal settlements, new UN report points to housing solutions ",
           "source": "基建情报/战后重建"
-        }
-      ]
-    },
-    {
-      "name": "战后重建",
-      "signal_count": 1,
-      "strength": "medium",
-      "signal_types": [],
-      "description": "检测到1条需求信号信号。来源: UN News-Economic。",
-      "example_articles": [
-        {
-          "title": "Gaza reconstruction envisages building ‘islands’ out of rubble",
-          "source": "基建情报/战后重建"
-        }
-      ]
-    },
-    {
-      "name": "非洲城市化",
-      "signal_count": 1,
-      "strength": "medium",
-      "signal_types": [],
-      "description": "检测到1条需求信号信号。来源: UN News-Economic。",
-      "example_articles": [
-        {
-          "title": "Guterres highlights Africa’s leadership in speech to summit in Nairobi",
-          "source": "基建情报/非洲基建"
         }
       ]
     }
@@ -2221,10 +2182,232 @@
       "citations": 0
     }
   ],
-  "researchSummary": "本期投研周报综合了7个主题方向共72篇研究报告的核心发现。住房市场领域: 初始房地产发行：低估和学习行为(被引2次)。基础设施投资领域: 评估金融科技、技术基础设施、。大宗商品领域: 硫酸盐对水泥浆体性能的积极影响(被引11次)。绿色金融领域: 绿色混凝土促进可持续基础设施发展。贸易流向领域: 自由贸易港建设对区域进口商的影响(被引2次)。建材行业领域: 为buildi启用可扩展的模型预测控制设计(被引10次)。房地产市场领域: 房价调控对房地产的影响M(被引1次)。行业新闻动态方面，本周重点关注: macro(27篇)、commodity(8篇)、regulation(7篇)、房地产市场(7篇)、supply_chain(6篇)。宏观环境方面，美联储维持利率3.63%不变。综合来看，本周投研关注重点集中在住房市场调整与新房/成屋销售趋势、基础设施投资与建造技术发展、大宗商品(钢铁/水泥/有色金属)价格波动、绿色建材与可持续金融创新、以及全球建材贸易流向变化等方向。建议重点关注建材品类中与基建、住房需求强相关的细分领域。",
+  "researchSummary": "本期投研周报综合了7个主题方向共72篇研究报告的核心发现。住房市场领域: 初始房地产发行：低估和学习行为(被引2次)。基础设施投资领域: 评估金融科技、技术基础设施、。大宗商品领域: 硫酸盐对水泥浆体性能的积极影响(被引11次)。绿色金融领域: 绿色混凝土促进可持续基础设施发展。贸易流向领域: 自由贸易港建设对区域进口商的影响(被引2次)。建材行业领域: 为buildi启用可扩展的模型预测控制设计(被引10次)。房地产市场领域: 房价调控对房地产的影响M(被引1次)。行业新闻动态方面，本周重点关注: macro(28篇)、房地产市场(11篇)、innovation(7篇)、regulation(6篇)、supply_chain(4篇)。宏观环境方面，美联储维持利率3.63%不变。综合来看，本周投研关注重点集中在住房市场调整与新房/成屋销售趋势、基础设施投资与建造技术发展、大宗商品(钢铁/水泥/有色金属)价格波动、绿色建材与可持续金融创新、以及全球建材贸易流向变化等方向。建议重点关注建材品类中与基建、住房需求强相关的细分领域。",
   "customsDashboard": {
     "title": "中国建材出口月度看板",
-    "status": "api_unavailable"
+    "period": "2026年1月",
+    "summary": {
+      "total_usd": 0,
+      "total_yoy_pct": null,
+      "categories_count": 24,
+      "highlights": [
+        "最大品类: 土工材料 $0.0M"
+      ]
+    },
+    "categories": [
+      {
+        "name": "土工材料",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "地板供暖系统及配件",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "地板及配件",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "塑料管",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "墙纸/墙板",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "壁炉、炉灶",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "建筑工业玻璃",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "建筑板材",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "木材",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "栏杆与扶手",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "梯子及脚手架",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "模架",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "活动房屋与钢结构",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "浴室和厨房产品",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "瓷砖及配件",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "电梯和自动扶梯",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "石材",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "砖石材料",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "金属建材",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "门、窗及其配件",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "防水材料",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "防火材料",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "隔热材料",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "马赛克",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      }
+    ],
+    "regions": [
+      {
+        "name": "北美",
+        "value_usd": 0,
+        "yoy_pct": null,
+        "top_growth_category": "",
+        "top_growth_yoy": null
+      },
+      {
+        "name": "南美",
+        "value_usd": 0,
+        "yoy_pct": null,
+        "top_growth_category": "",
+        "top_growth_yoy": null
+      },
+      {
+        "name": "西欧",
+        "value_usd": 0,
+        "yoy_pct": null,
+        "top_growth_category": "",
+        "top_growth_yoy": null
+      },
+      {
+        "name": "中东",
+        "value_usd": 0,
+        "yoy_pct": null,
+        "top_growth_category": "",
+        "top_growth_yoy": null
+      },
+      {
+        "name": "东南亚",
+        "value_usd": 0,
+        "yoy_pct": null,
+        "top_growth_category": "",
+        "top_growth_yoy": null
+      },
+      {
+        "name": "中亚",
+        "value_usd": 0,
+        "yoy_pct": null,
+        "top_growth_category": "",
+        "top_growth_yoy": null
+      },
+      {
+        "name": "澳洲",
+        "value_usd": 0,
+        "yoy_pct": null,
+        "top_growth_category": "",
+        "top_growth_yoy": null
+      },
+      {
+        "name": "南亚",
+        "value_usd": 0,
+        "yoy_pct": null,
+        "top_growth_category": "",
+        "top_growth_yoy": null
+      },
+      {
+        "name": "日韩",
+        "value_usd": 0,
+        "yoy_pct": null,
+        "top_growth_category": "",
+        "top_growth_yoy": null
+      }
+    ],
+    "alerts": [],
+    "data_source": "UN Comtrade (中国海关总署上报)",
+    "data_lag": "约2-3个月"
   },
   "dataSources": [
     {
@@ -2257,13 +2440,13 @@
     },
     {
       "name": "海关月度出口 (UN Comtrade)",
-      "status": "api_unavailable",
-      "count": 0,
-      "detail": "0 品类×202603"
+      "status": "ok",
+      "count": 24,
+      "detail": "24 品类×202601"
     },
     {
       "name": "Google Trends",
-      "status": "pytrends_not_installed",
+      "status": "ok",
       "count": 0
     },
     {
@@ -2279,8 +2462,8 @@
     {
       "name": "RSS 新闻聚合",
       "status": "ok",
-      "count": 69,
-      "detail": "69 篇/10 源"
+      "count": 56,
+      "detail": "56 篇/9 源"
     },
     {
       "name": "展会/事件日历",
@@ -2290,8 +2473,8 @@
     {
       "name": "学术论文 (Crossref/arXiv/DOAJ)",
       "status": "ok",
-      "count": 10,
-      "detail": "10 主题"
+      "count": 9,
+      "detail": "9 主题"
     },
     {
       "name": "投研报告",
