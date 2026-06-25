@@ -1407,7 +1407,9 @@ const FX_PAIRS = [
   {code:'JPY', name:'日元', flag:'🇯🇵', precision:6, scale:100, scaleLabel:'/ 100'},
   {code:'GBP', name:'英镑', flag:'🇬🇧', precision:4},
   {code:'AUD', name:'澳元', flag:'🇦🇺', precision:4},
-  {code:'SGD', name:'新加坡元', flag:'🇸🇬', precision:4}
+  {code:'SGD', name:'新加坡元', flag:'🇸🇬', precision:4},
+  {code:'CAD', name:'加元', flag:'🇨🇦', precision:4},
+  {code:'CHF', name:'瑞郎', flag:'🇨🇭', precision:4}
 ];
 let _fxLastRates = {};      // previous successful rates for delta calc
 let _fxRefreshTimer = null;
@@ -1435,7 +1437,7 @@ async function fetchFXRates() {
   // Source 1: exchangerate.host (free, no key, base=CNY then invert OR base=foreign)
   let result = await fetchFXFromSource(
     'exchangerate.host',
-    'https://api.exchangerate.host/latest?base=CNY&symbols=USD,EUR,JPY,GBP,AUD,SGD',
+    'https://api.exchangerate.host/latest?base=CNY&symbols=USD,EUR,JPY,GBP,AUD,SGD,CAD,CHF',
     j => {
       if (!j || !j.rates) return null;
       const out = {};
@@ -1454,7 +1456,7 @@ async function fetchFXRates() {
       j => {
         if (!j || !j.rates) return null;
         const out = {};
-        ['USD','EUR','JPY','GBP','AUD','SGD'].forEach(k => {
+        ['USD','EUR','JPY','GBP','AUD','SGD','CAD','CHF'].forEach(k => {
           const r = j.rates[k];
           if (r && isFinite(r) && r > 0) out[k] = 1 / r;
         });
@@ -1466,7 +1468,7 @@ async function fetchFXRates() {
   if (!result) {
     result = await fetchFXFromSource(
       'frankfurter.app',
-      'https://api.frankfurter.app/latest?from=CNY&to=USD,EUR,JPY,GBP,AUD,SGD',
+      'https://api.frankfurter.app/latest?from=CNY&to=USD,EUR,JPY,GBP,AUD,SGD,CAD,CHF',
       j => {
         if (!j || !j.rates) return null;
         const out = {};
