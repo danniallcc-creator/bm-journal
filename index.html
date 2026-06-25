@@ -312,6 +312,31 @@ a:hover{text-decoration:underline}
 .ds-manual{background:#fde8e8;color:#e74c3c}
 .ds-card p{font-size:12px;color:var(--text-light);line-height:1.5}
 
+/* FX Rates */
+.fx-toolbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;gap:12px;flex-wrap:wrap}
+.fx-meta{font-size:12px;color:var(--text-light)}
+.fx-meta .fx-status-ok{color:#27ae60;font-weight:600}
+.fx-meta .fx-status-warn{color:#f39c12;font-weight:600}
+.fx-meta .fx-status-err{color:#e74c3c;font-weight:600}
+.fx-refresh{padding:6px 14px;font-size:12px;background:var(--surface);color:var(--navy);border:1px solid var(--border);border-radius:6px;cursor:pointer;font-weight:600}
+.fx-refresh:hover{background:#f0f4ff;border-color:#4fc3f7}
+.fx-refresh:disabled{opacity:.5;cursor:wait}
+.fx-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.fx-card{background:var(--surface);border-radius:10px;padding:16px;border:1px solid var(--border);position:relative;overflow:hidden}
+.fx-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--accent,#4fc3f7)}
+.fx-card .fx-pair{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--text-light);margin-bottom:6px;font-weight:600}
+.fx-card .fx-flag{font-size:18px}
+.fx-card .fx-rate{font-size:26px;font-weight:700;color:var(--navy);font-feature-settings:'tnum';letter-spacing:-0.5px}
+.fx-card .fx-rate small{font-size:13px;color:var(--text-light);font-weight:500;margin-left:4px}
+.fx-card .fx-change{font-size:12px;margin-top:4px;font-weight:600}
+.fx-card .fx-change.up{color:#e74c3c}
+.fx-card .fx-change.down{color:#27ae60}
+.fx-card .fx-change.flat{color:#999}
+.fx-card .fx-source{font-size:10px;color:#aaa;margin-top:8px}
+.fx-card.fx-loading{opacity:.6}
+.fx-card.fx-error{border-color:#e74c3c33;background:#fff5f5}
+.fx-disclaimer{font-size:11px;color:#999;margin-top:12px;line-height:1.5}
+
 /* Empty state */
 .empty-state{text-align:center;padding:40px;color:var(--text-light)}
 .empty-state .es-icon{font-size:36px;margin-bottom:12px;opacity:.3}
@@ -379,7 +404,8 @@ a:hover{text-decoration:underline}
     <div class="group-label">工具</div>
     <a href="#categories"><span class="icon">9</span>品类浏览器</a>
     <a href="#events"><span class="icon">10</span>事件日历</a>
-    <a href="#sources"><span class="icon">11</span>数据源管理</a>
+    <a href="#fx-rates"><span class="icon">11</span>实时汇率</a>
+    <a href="#sources"><span class="icon">12</span>数据源管理</a>
   </div>
   <div class="sidebar-footer">
     &copy; 2026 BM Global Journal<br>数据更新至 <span id="footer-date"></span>
@@ -536,10 +562,24 @@ a:hover{text-decoration:underline}
       <div class="events-list" id="events-list"></div>
     </div>
 
+    <!-- FX Rates -->
+    <div class="section" id="fx-rates">
+      <div class="section-header">
+        <div class="num">11</div>
+        <h2>实时汇率<span class="en">FX Rates (CNY)</span></h2>
+      </div>
+      <div class="fx-toolbar">
+        <span class="fx-meta" id="fx-meta">正在加载汇率数据…</span>
+        <button class="fx-refresh" onclick="refreshFXRates(true)">立即刷新</button>
+      </div>
+      <div class="fx-grid" id="fx-grid"></div>
+      <p class="fx-disclaimer">数据来源: exchangerate.host / open.er-api.com / frankfurter.app（多源自动回退），每 10 分钟刷新一次。仅供参考，实盘请以银行牌价为准。</p>
+    </div>
+
     <!-- Data Sources -->
     <div class="section" id="sources">
       <div class="section-header">
-        <div class="num">11</div>
+        <div class="num">12</div>
         <h2>数据源管理<span class="en">Data Sources</span></h2>
       </div>
       <div class="ds-grid" id="ds-grid"></div>
@@ -602,6 +642,10 @@ async function init() {
 
   renderAll();
   setupNavigation();
+
+  // Kick off live FX rates (non-blocking; multi-source fallback inside)
+  refreshFXRates(false);
+  startFXAutoRefresh();
 }
 
 function renderAll() {
@@ -1356,6 +1400,193 @@ function renderDefaultSources() {
   }).join('');
 }
 
+// ===================== FX RATES =====================
+const FX_PAIRS = [
+  {code:'USD', name:'美元', flag:'🇺🇸', precision:4},
+  {code:'EUR', name:'欧元', flag:'🇪🇺', precision:4},
+  {code:'JPY', name:'日元', flag:'🇯🇵', precision:6, scale:100, scaleLabel:'/ 100'},
+  {code:'GBP', name:'英镑', flag:'🇬🇧', precision:4},
+  {code:'AUD', name:'澳元', flag:'🇦🇺', precision:4},
+  {code:'SGD', name:'新加坡元', flag:'🇸🇬', precision:4}
+];
+let _fxLastRates = {};      // previous successful rates for delta calc
+let _fxRefreshTimer = null;
+const FX_REFRESH_MS = 10 * 60 * 1000;
+
+async function fetchFXFromSource(srcName, url, parser) {
+  try {
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), 8000);
+    const res = await fetch(url, {signal: ctrl.signal});
+    clearTimeout(timer);
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const j = await res.json();
+    const rates = parser(j);
+    if (!rates || !rates.USD || !rates.EUR) throw new Error('rates missing');
+    return {source: srcName, rates: rates, ts: Date.now()};
+  } catch (e) {
+    console.warn('[FX]', srcName, 'failed:', e.message);
+    return null;
+  }
+}
+
+async function fetchFXRates() {
+  // Try sources sequentially; each returns CNY rate vs base unit (1 unit foreign = X CNY).
+  // Source 1: exchangerate.host (free, no key, base=CNY then invert OR base=foreign)
+  let result = await fetchFXFromSource(
+    'exchangerate.host',
+    'https://api.exchangerate.host/latest?base=CNY&symbols=USD,EUR,JPY,GBP,AUD,SGD',
+    j => {
+      if (!j || !j.rates) return null;
+      const out = {};
+      Object.keys(j.rates).forEach(k => {
+        const r = j.rates[k];
+        if (r && isFinite(r) && r > 0) out[k] = 1 / r;  // CNY per 1 foreign
+      });
+      return out;
+    }
+  );
+  // Source 2: open.er-api.com (free, no key)
+  if (!result) {
+    result = await fetchFXFromSource(
+      'open.er-api.com',
+      'https://open.er-api.com/v6/latest/CNY',
+      j => {
+        if (!j || !j.rates) return null;
+        const out = {};
+        ['USD','EUR','JPY','GBP','AUD','SGD'].forEach(k => {
+          const r = j.rates[k];
+          if (r && isFinite(r) && r > 0) out[k] = 1 / r;
+        });
+        return out;
+      }
+    );
+  }
+  // Source 3: frankfurter.app (free, ECB-based)
+  if (!result) {
+    result = await fetchFXFromSource(
+      'frankfurter.app',
+      'https://api.frankfurter.app/latest?from=CNY&to=USD,EUR,JPY,GBP,AUD,SGD',
+      j => {
+        if (!j || !j.rates) return null;
+        const out = {};
+        Object.keys(j.rates).forEach(k => {
+          const r = j.rates[k];
+          if (r && isFinite(r) && r > 0) out[k] = 1 / r;
+        });
+        return out;
+      }
+    );
+  }
+  return result;
+}
+
+function formatFXTime(ts) {
+  if (!ts) return '';
+  const d = new Date(ts);
+  const pad = n => String(n).padStart(2,'0');
+  return d.getFullYear() + '-' + pad(d.getMonth()+1) + '-' + pad(d.getDate()) +
+    ' ' + pad(d.getHours()) + ':' + pad(d.getMinutes()) + ':' + pad(d.getSeconds());
+}
+
+function renderFXLoading() {
+  const grid = document.getElementById('fx-grid');
+  if (!grid) return;
+  grid.innerHTML = FX_PAIRS.map(p =>
+    '<div class="fx-card fx-loading">' +
+      '<div class="fx-pair"><span class="fx-flag">' + p.flag + '</span>' + p.code + '/CNY · ' + p.name + '</div>' +
+      '<div class="fx-rate">— <small>CNY</small></div>' +
+      '<div class="fx-source">加载中…</div>' +
+    '</div>'
+  ).join('');
+}
+
+function renderFXRates(rates, source, ts) {
+  const grid = document.getElementById('fx-grid');
+  if (!grid) return;
+  grid.innerHTML = FX_PAIRS.map(p => {
+    const r = rates[p.code];
+    if (r == null || !isFinite(r)) {
+      return '<div class="fx-card fx-error">' +
+        '<div class="fx-pair"><span class="fx-flag">' + p.flag + '</span>' + p.code + '/CNY · ' + p.name + '</div>' +
+        '<div class="fx-rate">N/A</div>' +
+        '<div class="fx-source">数据缺失</div>' +
+      '</div>';
+    }
+    const scale = p.scale || 1;
+    const display = r * scale;
+    const rateStr = display.toFixed(p.precision);
+    const scaleLabel = p.scaleLabel ? '<small>CNY ' + p.scaleLabel + '</small>' : '<small>CNY</small>';
+    let changeHTML = '';
+    const prev = _fxLastRates[p.code];
+    if (prev != null && isFinite(prev) && prev > 0) {
+      const diff = r - prev;
+      const pct = (diff / prev) * 100;
+      const cls = diff > 0.00001 ? 'up' : diff < -0.00001 ? 'down' : 'flat';
+      const arrow = cls === 'up' ? '▲' : cls === 'down' ? '▼' : '—';
+      changeHTML = '<div class="fx-change ' + cls + '">' + arrow + ' ' +
+        (diff>0?'+':'') + (diff*scale).toFixed(p.precision) + ' (' +
+        (pct>0?'+':'') + pct.toFixed(3) + '%)</div>';
+    }
+    return '<div class="fx-card">' +
+      '<div class="fx-pair"><span class="fx-flag">' + p.flag + '</span>' + p.code + '/CNY · ' + p.name + '</div>' +
+      '<div class="fx-rate">' + rateStr + ' ' + scaleLabel + '</div>' +
+      changeHTML +
+      '<div class="fx-source">来源: ' + esc(source) + '</div>' +
+    '</div>';
+  }).join('');
+  const meta = document.getElementById('fx-meta');
+  if (meta) {
+    meta.innerHTML = '<span class="fx-status-ok">● 已更新</span> · ' +
+      formatFXTime(ts) + ' · 数据源: ' + esc(source) + ' · 自动刷新间隔 10 分钟';
+  }
+}
+
+function renderFXError(msg) {
+  const grid = document.getElementById('fx-grid');
+  if (!grid) return;
+  grid.innerHTML = FX_PAIRS.map(p =>
+    '<div class="fx-card fx-error">' +
+      '<div class="fx-pair"><span class="fx-flag">' + p.flag + '</span>' + p.code + '/CNY · ' + p.name + '</div>' +
+      '<div class="fx-rate">— <small>CNY</small></div>' +
+      '<div class="fx-source">抓取失败</div>' +
+    '</div>'
+  ).join('');
+  const meta = document.getElementById('fx-meta');
+  if (meta) {
+    meta.innerHTML = '<span class="fx-status-err">● 抓取失败</span> · ' + esc(msg || '所有数据源不可达，请稍后再试') + ' · 点击右侧按钮重试';
+  }
+}
+
+async function refreshFXRates(manual) {
+  const btn = document.querySelector('.fx-refresh');
+  if (manual && btn) { btn.disabled = true; btn.textContent = '刷新中…'; }
+  if (!Object.keys(_fxLastRates).length) renderFXLoading();
+  const meta = document.getElementById('fx-meta');
+  if (meta && !Object.keys(_fxLastRates).length) {
+    meta.innerHTML = '<span class="fx-status-warn">● 加载中</span> · 正在尝试多个数据源…';
+  }
+  try {
+    const result = await fetchFXRates();
+    if (!result) {
+      renderFXError('exchangerate.host / open.er-api.com / frankfurter.app 均不可达');
+      return;
+    }
+    renderFXRates(result.rates, result.source, result.ts);
+    // Save for next delta computation
+    _fxLastRates = Object.assign({}, result.rates);
+  } catch (e) {
+    renderFXError(e.message);
+  } finally {
+    if (manual && btn) { btn.disabled = false; btn.textContent = '立即刷新'; }
+  }
+}
+
+function startFXAutoRefresh() {
+  if (_fxRefreshTimer) clearInterval(_fxRefreshTimer);
+  _fxRefreshTimer = setInterval(() => refreshFXRates(false), FX_REFRESH_MS);
+}
+
 // ===================== NAVIGATION =====================
 function setupNavigation() {
   const links = document.querySelectorAll('.sidebar-nav a');
@@ -1570,6 +1801,7 @@ const PDF_SECTIONS = [
   {id:'weekly-insights-container', name:'本周洞察(品类汇总)', en:'Weekly Insights'},
   {id:'categories', name:'品类浏览器(已选类目)', en:'Selected Categories'},
   {id:'events', name:'事件日历', en:'Events Calendar'},
+  {id:'fx-rates', name:'实时汇率', en:'FX Rates'},
   {id:'sources', name:'数据源管理', en:'Data Sources'}
 ];
 
@@ -1783,7 +2015,7 @@ function finishPDFExport() {
   // Add print restore handler
   window.addEventListener('afterprint', function restore() {
     // Restore all sections
-    ['summary','macro','regional','products','innovation','supplychain','customs-dashboard','regulation','research','emerging','categories','events','sources'].forEach(function(id) {
+    ['summary','macro','regional','products','innovation','supplychain','customs-dashboard','regulation','research','emerging','categories','events','fx-rates','sources'].forEach(function(id) {
       var el = document.getElementById(id);
       if (el) el.style.display = '';
     });
