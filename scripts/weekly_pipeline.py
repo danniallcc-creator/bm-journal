@@ -217,11 +217,11 @@ def _build_section_insights(macro_articles, all_banks, country_metrics,
     scfi = shipping_data.get("scfi", {})
     bdi = shipping_data.get("bdi", {})
     if scfi.get("status") == "ok" and scfi.get("value"):
-        chg = scfi.get("change_pct", 0)
+        chg = scfi.get("change_pct") or 0
         arrow = "up" if chg > 0 else "down" if chg < 0 else "info"
         macro_bullets.append({"type": arrow, "text": f"SCFI运价指数 {scfi['value']:.0f} ({chg:+.1f}%)"})
     if bdi.get("status") == "ok" and bdi.get("value"):
-        chg = bdi.get("change_pct", 0)
+        chg = bdi.get("change_pct") or 0
         arrow = "up" if chg > 0 else "down" if chg < 0 else "info"
         macro_bullets.append({"type": arrow, "text": f"BDI干散货指数 {bdi['value']:.0f} ({chg:+.1f}%)"})
     # 大宗商品
