@@ -249,13 +249,30 @@ def _build_section_insights(macro_articles, all_banks, country_metrics,
     active_demands = [d for d in demands if d.get("country_count", 0) > 0]
     regional_summary = ""
     if active_demands:
-        top = active_demands[0]
-        regional_summary = f"需求热力排名: {top.get('name','')}{top.get('country_count',0)}国活跃(强度{top.get('total_strength',0)})。"
-        for d in active_demands[:4]:
-            regional_bullets.append({
-                "type": "up" if d.get("total_strength", 0) >= 50 else "info",
-                "text": f"{d.get('name','')}: {d.get('country_count',0)}国 | 强度{d.get('total_strength',0)}"
-            })
+        # Summary: mention top 3 demand categories
+        top_names = [f"{d.get('name','')}{d.get('country_count',0)}国" for d in active_demands[:3]]
+        regional_summary = "需求热力: " + "、".join(top_names) + "。"
+        # Bullets: each demand type shows top countries with specific reasons
+        for d in active_demands[:6]:
+            countries = d.get("countries", [])
+            country_details = []
+            for c in countries[:3]:
+                name = c.get("name", "")
+                reason = c.get("reason", "")
+                # Keep reason concise: max 2 items
+                if reason:
+                    parts = reason.split("、")
+                    short_reason = "、".join(parts[:2])
+                    country_details.append(f"{name}({short_reason})")
+                else:
+                    country_details.append(name)
+            detail_text = "、".join(country_details)
+            btype = "up" if d.get("total_strength", 0) >= 50 else "info"
+            text = f"{d.get('name','')}: {detail_text}"
+            # Truncate if too long
+            if len(text) > 100:
+                text = text[:97] + "..."
+            regional_bullets.append({"type": btype, "text": text})
     else:
         # fallback: 直接从 country_metrics 计算
         total = len(country_metrics)
@@ -271,7 +288,7 @@ def _build_section_insights(macro_articles, all_banks, country_metrics,
 
     regional_insight = {
         "summary": regional_summary,
-        "bullets": regional_bullets[:5]
+        "bullets": regional_bullets[:6]
     }
 
     # === 产品洞察 ===
