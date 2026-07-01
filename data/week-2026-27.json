@@ -4,11 +4,11 @@
   "title": "建材行业全球资讯期刊",
   "tagline": "Global Building Materials Weekly Intelligence Report",
   "coverage": "25 国家 | 35 品类 | 207+ HS编码",
-  "sources": "FRED(9/9央行) + World Bank(25国) + SCFI + BDI + Reddit + UN Comtrade(13品类) + 海关月度(24品类×202602) + EUR-Lex(0条) + RSS(52篇/9源) + Events(14场) + Academia(9主题) + Research(72篇) + Emerging(3强信号) + Infra(3条/1源)",
+  "sources": "FRED(9/9央行) + World Bank(25国) + SCFI + BDI + Reddit + UN Comtrade(13品类) + EUR-Lex(0条) + RSS(62篇/10源) + Events(14场) + Academia(9主题) + Research(67篇) + Emerging(2强信号) + Infra(3条/1源)",
   "keyTakeaways": [
     {
-      "headline": "投研周报: 综合7大方向72篇报告核心发现",
-      "detail": "本期投研周报综合了7个主题方向共72篇研究报告的核心发现。住房市场领域: 初始房地产发行：低估和学习行为(被引2次)。基础设施投资领域: 评估金融科技、技术基础设施、。大宗商品领域: 硫酸盐对水泥浆体性能的积极影响(被引12次)。绿色金融领域: 绿色混凝土促进可持续基础设施发展。贸易流向领域: 自由贸易港建设对区域进口商的影响(被引2次)。建材行业领域: 为buildi启用可扩展的模型预测控制设计(被引11次)。房地产市场领域: 房价调控对房地产的影响M(被引1次)。行业新闻动态方面，本周重点关注: macro(35篇)、regulation(8篇)、房地产市场(8篇)、innovation(7篇)、supply_chain(5篇)。宏观环境方面，美联储维持利率3.63%不变。综合来看，本周投研关注重点集中在住房市场调整与新房/成屋销售趋势、基础设施投资与建造技术发展、大宗商品(钢铁/水泥/有色金属)价格波动、绿色建材与可持续金融创新、以及全球建材贸易流向变化等方向。建议重点关注建材品类中与基建、住房需求强相关的细分领域。",
+      "headline": "投研周报: 综合7大方向67篇报告核心发现",
+      "detail": "本期投研周报综合了7个主题方向共67篇研究报告的核心发现。住房市场领域: 初始房地产发行：低估和学习行为(被引2次)。基础设施投资领域: 评估金融科技、技术基础设施、。大宗商品领域: 硫酸盐对水泥浆体性能的积极影响(被引12次)。绿色金融领域: 绿色混凝土促进可持续基础设施发展。贸易流向领域: 自由贸易港建设对区域进口商的影响(被引2次)。建材行业领域: 预制混凝土夹层墙的热性能(被引9次)。房地产市场领域: 房价调控对房地产的影响M(被引1次)。行业新闻动态方面，本周重点关注: macro(34篇)、commodity(10篇)、房地产市场(9篇)、regulation(7篇)、supply_chain(4篇)。宏观环境方面，美联储维持利率3.63%不变。综合来看，本周投研关注重点集中在住房市场调整与新房/成屋销售趋势、基础设施投资与建造技术发展、大宗商品(钢铁/水泥/有色金属)价格波动、绿色建材与可持续金融创新、以及全球建材贸易流向变化等方向。建议重点关注建材品类中与基建、住房需求强相关的细分领域。",
       "tag": "watch",
       "type": "research_summary"
     },
@@ -45,6 +45,14 @@
       "impact": 3
     },
     {
+      "tag": "宏观 / 大宗 / 贸易",
+      "title": "Op-Ed ：酸正在成为铜的新价格信号",
+      "summary": "随着硫磺重塑精矿价格和利润率，酸而不是铜可能是市场最重要的信号。",
+      "source": "Mining.com",
+      "link": "https://www.mining.com/op-ed-acid-is-becoming-coppers-new-price-signal/",
+      "title_en": "Op-Ed: Acid is becoming copper’s new price signal"
+    },
+    {
       "tag": "宏观 / 监管 / 贸易",
       "title": "韩国的太阳能十字路口",
       "summary": "韩国太阳能正在进入一个新阶段，结构质量和可持续性被认为比增长速度更重要。预计2026年该国的年度太阳能安装量",
@@ -75,14 +83,6 @@
       "source": "Global Construction Review",
       "link": "https://www.globalconstructionreview.com/heads-up-skanska-on-where-were-at-with-tariffs-war-and-the-data-centre-boom/",
       "title_en": "Heads up: Skanska on where we’re at with tariffs, war and the data centre boom"
-    },
-    {
-      "tag": "宏观 / 供应链",
-      "title": "沙特阿拉伯计划建设货运铁路走廊",
-      "summary": "西班牙OHLA集团和埃及Hassan Allam Holding的当地子公司赢得了国营沙特铁路公司的合同，在……建造一条22.7公里的单轨货运铁路。&lt;/",
-      "source": "Global Construction Review",
-      "link": "https://www.globalconstructionreview.com/saudi-arabia-plans-freight-rail-corridor/",
-      "title_en": "Saudi Arabia plans freight rail corridor"
     },
     {
       "tag": "战后重建",
@@ -1446,7 +1446,7 @@
         "设计自由度",
         "快速建造",
         "太空探索",
-        "3篇最新论文"
+        "4篇最新论文"
       ],
       "socialSignals": [
         {
@@ -1472,7 +1472,7 @@
         "能效法规",
         "极端气候",
         "空间受限场景",
-        "10篇最新论文"
+        "9篇最新论文"
       ],
       "socialSignals": [
         {
@@ -1518,7 +1518,7 @@
         "RePowerEU",
         "ESG合规",
         "电费上涨",
-        "10篇最新论文"
+        "9篇最新论文"
       ],
       "socialSignals": [
         {
@@ -1765,10 +1765,10 @@
     {
       "title": "Enhancing thermal insulation in cement mortar with silica aerogel and recycled P",
       "title_zh": "用二氧化硅气凝胶和再生P增强水泥砂浆的隔热性能",
-      "summary": "气凝胶保温: 共10篇相关论文(近期10篇)。代表研究: Marof; Šiller(2025)，被引19次。",
+      "summary": "气凝胶保温: 共9篇相关论文(近期9篇)。代表研究: Marof; Šiller(2025)，被引19次。",
       "tag": "innovation",
       "topic": "气凝胶保温",
-      "paper_count": 10,
+      "paper_count": 9,
       "source": "Crossref/DOAJ",
       "doi": "10.1016/j.conbuildmat.2025.140320",
       "tech_direction": "开发低成本气凝胶复合保温板材；解决脆性问题提升施工性；目标导热系数<0.015 W/mK"
@@ -1776,10 +1776,10 @@
     {
       "title": "Optimized community-level distributed photovoltaic generation (DPVG): Aesthetic,",
       "title_zh": "优化社区级分布式光伏发电（ DPVG ） ：美学、",
-      "summary": "光伏一体化(BIPV): 共10篇相关论文(近期10篇)。代表研究: Zhang; Cao; Chen et al.(2025)，被引14次。",
+      "summary": "光伏一体化(BIPV): 共9篇相关论文(近期9篇)。代表研究: Zhang; Cao; Chen et al.(2025)，被引14次。",
       "tag": "innovation",
       "topic": "光伏一体化(BIPV)",
-      "paper_count": 10,
+      "paper_count": 9,
       "source": "Crossref/DOAJ",
       "doi": "10.1016/j.jobe.2025.112085",
       "tech_direction": "研发建筑外立面集成光伏组件；兼顾美观与发电效率；开发透明/彩色光伏玻璃"
@@ -1831,24 +1831,24 @@
     {
       "title": "Technological aspects of fabricating a reinforced concrete shell using 3D concre",
       "title_zh": "使用3D混凝土制造钢筋混凝土壳的技术方面",
-      "summary": "3D打印建筑: 共3篇相关论文(近期3篇)。代表研究: Tenesesku(2025)，被引1次。",
+      "summary": "3D打印建筑: 共4篇相关论文(近期4篇)。代表研究: Tenesesku(2025)，被引1次。",
       "tag": "innovation",
       "topic": "3D打印建筑",
-      "paper_count": 3,
+      "paper_count": 4,
       "source": "Crossref/DOAJ",
       "doi": "10.32347/2522-4182.17.2025.141-152",
       "tech_direction": "开发适用于大型3D打印的速凝特种水泥配方；优化打印路径和结构强度；降低建造成本30%+"
     },
     {
-      "title": "Low Carbon Cement, SCMs, and Embodied Carbon of Concrete",
-      "title_zh": "混凝土的低碳水泥、SCMS和碳化物",
-      "summary": "低碳水泥: 共1篇相关论文(近期1篇)。代表研究: Sadique(2025)，被引0次。",
+      "title": "Performance Evaluation of Recycled Self-Compacting Concrete Incorporating Recycl",
+      "title_zh": "再生自密实混凝土回收利用性能评价",
+      "summary": "再生钢材: 共2篇相关论文(近期2篇)。代表研究: Abdulrahman; Taha; Younis(2025)，被引1次。",
       "tag": "innovation",
-      "topic": "低碳水泥",
-      "paper_count": 1,
+      "topic": "再生钢材",
+      "paper_count": 2,
       "source": "Crossref/DOAJ",
-      "doi": "10.1108/978-1-83608-474-720251005",
-      "tech_direction": "开发低碳/零碳水泥配方，替代传统硅酸盐水泥；研究地质聚合物和LC3复合配方降低碳排放50%+"
+      "doi": "10.20944/preprints202504.1804.v1",
+      "tech_direction": "开发氢基直接还原铁(DRI-H2)炼钢工艺；提升废钢回收利用率；实现近零碳排放钢铁生产"
     }
   ],
   "events": [
@@ -2037,6 +2037,23 @@
   ],
   "emergingDemand": [
     {
+      "name": "灾后重建",
+      "signal_count": 3,
+      "strength": "strong",
+      "signal_types": [],
+      "description": "检测到3条需求信号信号。来源: Mining.com, UN News-Economic。",
+      "example_articles": [
+        {
+          "title": "邦克山重建船舶第一爱达荷矿石，眼睛银色",
+          "source": "Mining.com"
+        },
+        {
+          "title": "From favelas to informal settlements, new UN report points to housing solutions ",
+          "source": "基建情报/战后重建"
+        }
+      ]
+    },
+    {
       "name": "数据中心",
       "signal_count": 2,
       "strength": "strong",
@@ -2055,35 +2072,14 @@
     },
     {
       "name": "新能源基建",
-      "signal_count": 2,
-      "strength": "strong",
+      "signal_count": 1,
+      "strength": "medium",
       "signal_types": [],
-      "description": "检测到2条需求信号信号。来源: PV Magazine。",
+      "description": "检测到1条需求信号信号。来源: PV Magazine。",
       "example_articles": [
         {
           "title": "Goldbeck Solar开发用于公用事业规模光伏电站自动化建设的三步解决方案",
           "source": "PV Magazine"
-        },
-        {
-          "title": "葡萄牙9月拍卖1.05 GW储能",
-          "source": "PV Magazine"
-        }
-      ]
-    },
-    {
-      "name": "灾后重建",
-      "signal_count": 2,
-      "strength": "strong",
-      "signal_types": [],
-      "description": "检测到2条需求信号信号。来源: UN News-Economic。",
-      "example_articles": [
-        {
-          "title": "From favelas to informal settlements, new UN report points to housing solutions ",
-          "source": "基建情报/战后重建"
-        },
-        {
-          "title": "Gaza reconstruction envisages building ‘islands’ out of rubble",
-          "source": "基建情报/战后重建"
         }
       ]
     },
@@ -2139,16 +2135,6 @@
       "citations": 12
     },
     {
-      "title": "Enabling scalable Model Predictive Control design for building HVAC systems usin",
-      "summary": "Elsevier BV journal-article (2025)",
-      "publisher": "Elsevier BV",
-      "year": 2025,
-      "theme": "building_materials",
-      "doi": "10.1016/j.autcon.2024.105929",
-      "source": "Crossref",
-      "citations": 11
-    },
-    {
       "title": "Thermal performance of precast concrete sandwich walls with a double-layer insul",
       "summary": "Elsevier BV journal-article (2025)",
       "publisher": "Elsevier BV",
@@ -2167,6 +2153,16 @@
       "doi": "10.1787/28b61a5e-en",
       "source": "Crossref",
       "citations": 6
+    },
+    {
+      "title": "Automated layout generation of HVAC piping from building floor plans",
+      "summary": "Elsevier BV journal-article (2025)",
+      "publisher": "Elsevier BV",
+      "year": 2025,
+      "theme": "building_materials",
+      "doi": "10.1016/j.autcon.2025.106359",
+      "source": "Crossref",
+      "citations": 4
     },
     {
       "title": "Initial Property Offering: Underpricing and Learning Behavior in the Presale Hou",
@@ -2229,232 +2225,10 @@
       "citations": 0
     }
   ],
-  "researchSummary": "本期投研周报综合了7个主题方向共72篇研究报告的核心发现。住房市场领域: 初始房地产发行：低估和学习行为(被引2次)。基础设施投资领域: 评估金融科技、技术基础设施、。大宗商品领域: 硫酸盐对水泥浆体性能的积极影响(被引12次)。绿色金融领域: 绿色混凝土促进可持续基础设施发展。贸易流向领域: 自由贸易港建设对区域进口商的影响(被引2次)。建材行业领域: 为buildi启用可扩展的模型预测控制设计(被引11次)。房地产市场领域: 房价调控对房地产的影响M(被引1次)。行业新闻动态方面，本周重点关注: macro(35篇)、regulation(8篇)、房地产市场(8篇)、innovation(7篇)、supply_chain(5篇)。宏观环境方面，美联储维持利率3.63%不变。综合来看，本周投研关注重点集中在住房市场调整与新房/成屋销售趋势、基础设施投资与建造技术发展、大宗商品(钢铁/水泥/有色金属)价格波动、绿色建材与可持续金融创新、以及全球建材贸易流向变化等方向。建议重点关注建材品类中与基建、住房需求强相关的细分领域。",
+  "researchSummary": "本期投研周报综合了7个主题方向共67篇研究报告的核心发现。住房市场领域: 初始房地产发行：低估和学习行为(被引2次)。基础设施投资领域: 评估金融科技、技术基础设施、。大宗商品领域: 硫酸盐对水泥浆体性能的积极影响(被引12次)。绿色金融领域: 绿色混凝土促进可持续基础设施发展。贸易流向领域: 自由贸易港建设对区域进口商的影响(被引2次)。建材行业领域: 预制混凝土夹层墙的热性能(被引9次)。房地产市场领域: 房价调控对房地产的影响M(被引1次)。行业新闻动态方面，本周重点关注: macro(34篇)、commodity(10篇)、房地产市场(9篇)、regulation(7篇)、supply_chain(4篇)。宏观环境方面，美联储维持利率3.63%不变。综合来看，本周投研关注重点集中在住房市场调整与新房/成屋销售趋势、基础设施投资与建造技术发展、大宗商品(钢铁/水泥/有色金属)价格波动、绿色建材与可持续金融创新、以及全球建材贸易流向变化等方向。建议重点关注建材品类中与基建、住房需求强相关的细分领域。",
   "customsDashboard": {
     "title": "中国建材出口月度看板",
-    "period": "2026年2月",
-    "summary": {
-      "total_usd": 0,
-      "total_yoy_pct": null,
-      "categories_count": 24,
-      "highlights": [
-        "最大品类: 土工材料 $0.0M"
-      ]
-    },
-    "categories": [
-      {
-        "name": "土工材料",
-        "value_usd": 0,
-        "previous_usd": 0,
-        "yoy_pct": null
-      },
-      {
-        "name": "地板供暖系统及配件",
-        "value_usd": 0,
-        "previous_usd": 0,
-        "yoy_pct": null
-      },
-      {
-        "name": "地板及配件",
-        "value_usd": 0,
-        "previous_usd": 0,
-        "yoy_pct": null
-      },
-      {
-        "name": "塑料管",
-        "value_usd": 0,
-        "previous_usd": 0,
-        "yoy_pct": null
-      },
-      {
-        "name": "墙纸/墙板",
-        "value_usd": 0,
-        "previous_usd": 0,
-        "yoy_pct": null
-      },
-      {
-        "name": "壁炉、炉灶",
-        "value_usd": 0,
-        "previous_usd": 0,
-        "yoy_pct": null
-      },
-      {
-        "name": "建筑工业玻璃",
-        "value_usd": 0,
-        "previous_usd": 0,
-        "yoy_pct": null
-      },
-      {
-        "name": "建筑板材",
-        "value_usd": 0,
-        "previous_usd": 0,
-        "yoy_pct": null
-      },
-      {
-        "name": "木材",
-        "value_usd": 0,
-        "previous_usd": 0,
-        "yoy_pct": null
-      },
-      {
-        "name": "栏杆与扶手",
-        "value_usd": 0,
-        "previous_usd": 0,
-        "yoy_pct": null
-      },
-      {
-        "name": "梯子及脚手架",
-        "value_usd": 0,
-        "previous_usd": 0,
-        "yoy_pct": null
-      },
-      {
-        "name": "模架",
-        "value_usd": 0,
-        "previous_usd": 0,
-        "yoy_pct": null
-      },
-      {
-        "name": "活动房屋与钢结构",
-        "value_usd": 0,
-        "previous_usd": 0,
-        "yoy_pct": null
-      },
-      {
-        "name": "浴室和厨房产品",
-        "value_usd": 0,
-        "previous_usd": 0,
-        "yoy_pct": null
-      },
-      {
-        "name": "瓷砖及配件",
-        "value_usd": 0,
-        "previous_usd": 0,
-        "yoy_pct": null
-      },
-      {
-        "name": "电梯和自动扶梯",
-        "value_usd": 0,
-        "previous_usd": 0,
-        "yoy_pct": null
-      },
-      {
-        "name": "石材",
-        "value_usd": 0,
-        "previous_usd": 0,
-        "yoy_pct": null
-      },
-      {
-        "name": "砖石材料",
-        "value_usd": 0,
-        "previous_usd": 0,
-        "yoy_pct": null
-      },
-      {
-        "name": "金属建材",
-        "value_usd": 0,
-        "previous_usd": 0,
-        "yoy_pct": null
-      },
-      {
-        "name": "门、窗及其配件",
-        "value_usd": 0,
-        "previous_usd": 0,
-        "yoy_pct": null
-      },
-      {
-        "name": "防水材料",
-        "value_usd": 0,
-        "previous_usd": 0,
-        "yoy_pct": null
-      },
-      {
-        "name": "防火材料",
-        "value_usd": 0,
-        "previous_usd": 0,
-        "yoy_pct": null
-      },
-      {
-        "name": "隔热材料",
-        "value_usd": 0,
-        "previous_usd": 0,
-        "yoy_pct": null
-      },
-      {
-        "name": "马赛克",
-        "value_usd": 0,
-        "previous_usd": 0,
-        "yoy_pct": null
-      }
-    ],
-    "regions": [
-      {
-        "name": "北美",
-        "value_usd": 0,
-        "yoy_pct": null,
-        "top_growth_category": "",
-        "top_growth_yoy": null
-      },
-      {
-        "name": "南美",
-        "value_usd": 0,
-        "yoy_pct": null,
-        "top_growth_category": "",
-        "top_growth_yoy": null
-      },
-      {
-        "name": "西欧",
-        "value_usd": 0,
-        "yoy_pct": null,
-        "top_growth_category": "",
-        "top_growth_yoy": null
-      },
-      {
-        "name": "中东",
-        "value_usd": 0,
-        "yoy_pct": null,
-        "top_growth_category": "",
-        "top_growth_yoy": null
-      },
-      {
-        "name": "东南亚",
-        "value_usd": 0,
-        "yoy_pct": null,
-        "top_growth_category": "",
-        "top_growth_yoy": null
-      },
-      {
-        "name": "中亚",
-        "value_usd": 0,
-        "yoy_pct": null,
-        "top_growth_category": "",
-        "top_growth_yoy": null
-      },
-      {
-        "name": "澳洲",
-        "value_usd": 0,
-        "yoy_pct": null,
-        "top_growth_category": "",
-        "top_growth_yoy": null
-      },
-      {
-        "name": "南亚",
-        "value_usd": 0,
-        "yoy_pct": null,
-        "top_growth_category": "",
-        "top_growth_yoy": null
-      },
-      {
-        "name": "日韩",
-        "value_usd": 0,
-        "yoy_pct": null,
-        "top_growth_category": "",
-        "top_growth_yoy": null
-      }
-    ],
-    "alerts": [],
-    "data_source": "UN Comtrade (中国海关总署上报)",
-    "data_lag": "约2-3个月"
+    "status": "api_unavailable"
   },
   "dataSources": [
     {
@@ -2487,9 +2261,9 @@
     },
     {
       "name": "海关月度出口 (UN Comtrade)",
-      "status": "ok",
-      "count": 24,
-      "detail": "24 品类×202602"
+      "status": "api_unavailable",
+      "count": 0,
+      "detail": "0 品类×202604"
     },
     {
       "name": "Google Trends",
@@ -2509,8 +2283,8 @@
     {
       "name": "RSS 新闻聚合",
       "status": "ok",
-      "count": 52,
-      "detail": "52 篇/9 源"
+      "count": 62,
+      "detail": "62 篇/10 源"
     },
     {
       "name": "展会/事件日历",
@@ -2526,14 +2300,14 @@
     {
       "name": "投研报告",
       "status": "ok",
-      "count": 72,
-      "detail": "72 篇"
+      "count": 67,
+      "detail": "67 篇"
     },
     {
       "name": "新兴需求探测",
       "status": "ok",
-      "count": 3,
-      "detail": "3 强信号"
+      "count": 2,
+      "detail": "2 强信号"
     },
     {
       "name": "基建宏观情报",
@@ -2541,5 +2315,91 @@
       "count": 3,
       "detail": "3 条区域基建动态"
     }
-  ]
+  ],
+  "sectionInsights": {
+    "macro": {
+      "summary": "联邦基金有效利率3.63%。10年期国债收益率4.38%。全球央行: 欧央行(ECB) 2.25%; 英央行(BOE) 3.73%; 日央行(BOJ) 0.73%; 澳联储(RBA) 4.31%; 加央行(BOC) 2.24%。对建材行业影；本周5条建材宏观新闻",
+      "bullets": [
+        {
+          "type": "up",
+          "text": "全球基建情报: 3条区域基建/重建动态"
+        },
+        {
+          "type": "info",
+          "text": "BDI干散货指数 2501 (+0.0%)"
+        },
+        {
+          "type": "alert",
+          "text": "大宗涨幅>3%: 铜, 锌, 镍"
+        },
+        {
+          "type": "down",
+          "text": "大宗跌幅>3%: Brent原油"
+        }
+      ]
+    },
+    "regional": {
+      "summary": "需求热力排名: 基建投资8国活跃(强度100)。",
+      "bullets": [
+        {
+          "type": "up",
+          "text": "基建投资: 8国 | 强度100"
+        },
+        {
+          "type": "up",
+          "text": "绿色建筑: 13国 | 强度75"
+        },
+        {
+          "type": "up",
+          "text": "商业地产: 15国 | 强度73"
+        },
+        {
+          "type": "up",
+          "text": "住房建设: 6国 | 强度60"
+        }
+      ]
+    },
+    "products": {
+      "summary": "本周10个品类趋势信号",
+      "bullets": [
+        {
+          "type": "up",
+          "text": "自修复混凝土 (+96%)"
+        },
+        {
+          "type": "up",
+          "text": "3D打印建筑 (+85%)"
+        },
+        {
+          "type": "up",
+          "text": "气凝胶保温材料 (+100%)"
+        },
+        {
+          "type": "up",
+          "text": "低碳水泥/绿色水泥 (+70%)"
+        }
+      ]
+    },
+    "innovation": {
+      "summary": "本周追踪8项技术创新/学术动态",
+      "bullets": [
+        {
+          "type": "up",
+          "text": "用二氧化硅气凝胶和再生P增强水泥砂浆的隔热性能"
+        },
+        {
+          "type": "up",
+          "text": "优化社区级分布式光伏发电（ DPVG ） ：美学、"
+        },
+        {
+          "type": "up",
+          "text": "细菌混凝土：自我修复和可持续基础设施的未来"
+        },
+        {
+          "type": "up",
+          "text": "工业化预制预制模块化结构的外立面系统"
+        }
+      ]
+    }
+  }
 }
