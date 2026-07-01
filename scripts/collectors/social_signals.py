@@ -154,6 +154,13 @@ def collect_google_trends_batch() -> dict:
                 "collected_at": datetime.now().isoformat(),
                 "status": "pytrends_not_installed"}
 
+    # 环境变量开关：CI 环境下可跳过 Google Trends 采集 (避免429/超时)
+    if os.environ.get("SKIP_GTRENDS", "").lower() in ("1", "true", "yes"):
+        log.warning("SKIP_GTRENDS=1, skipping Google Trends collection")
+        return {"results": {}, "groups_attempted": 0,
+                "collected_at": datetime.now().isoformat(),
+                "status": "skipped_by_env"}
+
     # 构建关键词组 (每组5个)
     groups = []
     for category, keywords in CATEGORY_KEYWORDS.items():
