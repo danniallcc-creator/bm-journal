@@ -420,14 +420,15 @@ def run_pipeline():
     social_data = collect_all_social_signals()
     product_trends = format_product_trends(social_data)
 
-    # UN Comtrade 贸易流
-    trade_data = collect_all_trade_flows()
-    trade_tables = format_trade_summary(trade_data)
-
     # 中国海关月度出口数据 (UN Comtrade月度API)
+    # NOTE: 先于贸易流采集,因为月度数据更重要且Comtrade免费配额有限
     customs_data = collect_customs_monthly()
     customs_tables = format_customs_for_journal(customs_data)
     customs_dashboard = format_customs_dashboard(customs_data)
+
+    # UN Comtrade 贸易流 (年度数据,配额消耗后不影响月度)
+    trade_data = collect_all_trade_flows()
+    trade_tables = format_trade_summary(trade_data)
 
     # 基建宏观情报 (全球基建/重建/翻新需求分析)
     infra_data = collect_all_infra_intelligence()

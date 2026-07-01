@@ -155,12 +155,14 @@ def collect_google_trends_batch() -> dict:
                 "status": "pytrends_not_installed"}
 
     # 环境变量开关：CI 环境下可跳过 Google Trends 采集 (避免429/超时)
-    # 自动在 GitHub Actions 中跳过 (pytrends 频繁被限流会拖垮 30min timeout)
+    # SKIP_GTRENDS=1 完全跳过; CI环境下自动进入轻量模式(仅采3组,短间隔)
     skip = os.environ.get("SKIP_GTRENDS", "").lower() in ("1", "true", "yes")
+    ci_lite_mode = False
     if not skip and os.environ.get("GITHUB_ACTIONS", "").lower() == "true":
-        skip = True  # CI 默认跳过, 避免拖垮 workflow timeout
+        ci_lite_mode = True  # CI轻量模式: 仅采3组,30s间隔,保证有部分数据
+        log.info("Google Trends: CI lite mode (3 groups, 30s interval)")
     if skip:
-        log.warning("Skipping Google Trends collection (SKIP_GTRENDS or GITHUB_ACTIONS)")
+        log.warning("Skipping Google Trends collection (SKIP_GTRENDS)")
         return {"results": {}, "groups_attempted": 0,
                 "collected_at": datetime.now().isoformat(),
                 "status": "skipped_by_env"}
@@ -175,7 +177,7 @@ def collect_google_trends_batch() -> dict:
             })
 
     # 限制批次数量 (避免429)
-    max_groups = 15
+    max_groups = 3 if ci_lite_mode else 15
     if len(groups) > max_groups:
         log.info(f"Limiting to {max_groups}/{len(groups)} groups to avoid rate limiting")
         groups = groups[:max_groups]
@@ -201,7 +203,7 @@ def collect_google_trends_batch() -> dict:
 
         # 间隔等待 (避免429)
         if idx < len(groups) - 1:
-            wait = 120 + (idx % 3) * 60  # 120-300秒随机间隔
+            wait = 30 if ci_lite_mode else (120 + (idx % 3) * 60)  # CI轻量30s; 本地120-300s
             log.info(f"  Waiting {wait}s before next request...")
             time.sleep(wait)
 
