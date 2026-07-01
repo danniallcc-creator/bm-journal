@@ -3,30 +3,46 @@
   "date": "2026-07-01",
   "title": "建材行业全球资讯期刊",
   "tagline": "Global Building Materials Weekly Intelligence Report",
-  "coverage": "25 国家 | 35 品类 | 207+ HS编码",
-  "sources": "World Bank(25国) + SCFI + BDI + EUR-Lex(0条) + RSS(46篇/7源) + Events(14场) + Academia(9主题) + Research(72篇) + Emerging(1强信号) + Infra(0条/0源)",
+  "coverage": "1 国家 | 35 品类 | 207+ HS编码",
+  "sources": "FRED(9/9央行) + SCFI + BDI + Reddit + UN Comtrade(13品类) + 海关月度(24品类×202602) + EUR-Lex(0条) + RSS(62篇/10源) + Events(14场) + Academia(9主题) + Research(72篇) + Emerging(2强信号) + Infra(3条/1源)",
   "keyTakeaways": [
     {
       "headline": "投研周报: 综合7大方向72篇报告核心发现",
-      "detail": "本期投研周报综合了7个主题方向共72篇研究报告的核心发现。住房市场领域: 住房市场动态与价格走势(被引2次)。基础设施投资领域: 基础设施投资与技术发展。大宗商品领域: 大宗商品(钢/水泥/铝/铜)价格与需求(被引12次)。绿色金融领域: 绿色金融与可持续建材。贸易流向领域: 建材贸易流向与政策(被引2次)。建材行业领域: 建材行业(地板/瓷砖/玻璃/门窗/防水)(被引11次)。房地产市场领域: 房地产市场(新房/成屋/商业地产)(被引1次)。行业新闻动态方面，本周重点关注: macro(31篇)、commodity(9篇)、regulation(8篇)、房地产市场(4篇)、innovation(3篇)。综合来看，本周投研关注重点集中在住房市场调整与新房/成屋销售趋势、基础设施投资与建造技术发展、大宗商品(钢铁/水泥/有色金属)价格波动、绿色建材与可持续金融创新、以及全球建材贸易流向变化等方向。建议重点关注建材品类中与基建、住房需求强相关的细分领域。",
+      "detail": "本期投研周报综合了7个主题方向共72篇研究报告的核心发现。住房市场领域: 初始房地产发行：低估和学习行为(被引2次)。基础设施投资领域: 评估金融科技、技术基础设施、。大宗商品领域: 硫酸盐对水泥浆体性能的积极影响(被引12次)。绿色金融领域: 绿色混凝土促进可持续基础设施发展。贸易流向领域: 自由贸易港建设对区域进口商的影响(被引2次)。建材行业领域: 为buildi启用可扩展的模型预测控制设计(被引11次)。房地产市场领域: 房价调控对房地产的影响M(被引1次)。行业新闻动态方面，本周重点关注: macro(36篇)、commodity(9篇)、regulation(8篇)、房地产市场(7篇)、supply_chain(4篇)。宏观环境方面，美联储维持利率3.63%不变。综合来看，本周投研关注重点集中在住房市场调整与新房/成屋销售趋势、基础设施投资与建造技术发展、大宗商品(钢铁/水泥/有色金属)价格波动、绿色建材与可持续金融创新、以及全球建材贸易流向变化等方向。建议重点关注建材品类中与基建、住房需求强相关的细分领域。",
       "tag": "watch",
       "type": "research_summary"
+    },
+    {
+      "headline": "全球基建动态: 3条区域基建/重建/翻新情报追踪",
+      "detail": "全球基建宏观研判:\n• 非洲 Africa: Guterres highlights Africa’s leadership in speech to summit in Nairobi\n• 亚非拉重建 Post-conflict: From favelas to informal settlements, new UN report points to housing solutions ",
+      "tag": "opportunity",
+      "type": "infra_summary"
     },
     {
       "headline": "'自修复混凝土'搜索热度增长96%",
       "detail": "利用细菌或微胶囊技术实现混凝土裂缝自修复。荷兰代尔夫特理工大学和比利时Ghent大学技术领先。可延长基础设施寿命50%+，降低全生命周期成本。",
       "tag": "opportunity"
+    },
+    {
+      "headline": "美联储维持利率3.63%不变",
+      "detail": "联邦基金有效利率3.63%。10年期国债收益率4.38%。全球央行: 欧央行(ECB) 2.25%; 英央行(BOE) 3.73%; 日央行(BOJ) 0.73%; 澳联储(RBA) 4.31%; 加央行(BOC) 2.24%。对建材行业影...",
+      "tag": "watch"
+    },
+    {
+      "headline": "美国Case-Shiller房价同比上涨0.7%",
+      "detail": "全美指数329.938。房价趋势影响翻新和新建投资。",
+      "tag": "info"
     }
   ],
   "macro": [
     {
       "tag": "央行政策",
-      "title": "央行利率数据暂不可用",
-      "summary": "FRED API Key未配置或数据获取失败。请检查配置。",
-      "source": "FRED",
+      "title": "美联储维持利率3.63%不变",
+      "summary": "联邦基金有效利率3.63%。10年期国债收益率4.38%。全球央行: 欧央行(ECB) 2.25%; 英央行(BOE) 3.73%; 日央行(BOJ) 0.73%; 澳联储(RBA) 4.31%; 加央行(BOC) 2.24%。对建材行业影响: 利率变动通过房贷利率和建筑融资成本传导至房地产投资和新开工。",
+      "source": "FRED / 各国央行",
       "link": "https://fred.stlouisfed.org/series/FEDFUNDS",
-      "date": "2026-07-01",
-      "impact": 0
+      "date": "2026-06-29",
+      "impact": 3
     },
     {
       "tag": "宏观 / 大宗 / 贸易",
@@ -67,383 +83,107 @@
       "source": "Global Construction Review",
       "link": "https://www.globalconstructionreview.com/saudi-arabia-plans-freight-rail-corridor/",
       "title_en": "Saudi Arabia plans freight rail corridor"
+    },
+    {
+      "tag": "战后重建",
+      "title": "From favelas to informal settlements, new UN report points to housing solutions that work",
+      "summary": "[乌克兰战后重建、中东重建、国际援助基建] From Thailand to Jordan, from Brazil to Germany, new approaches to housing are quietly taking shape. Residents of informal settlements once facing eviction are rebuilding their communities with State support. Refugees and host communities are reclaiming neglected spaces, turning them greener and saf",
+      "source": "UN News-Economic",
+      "link": "https://news.un.org/feed/view/en/story/2026/05/1167543",
+      "impact": 1,
+      "date": "Tue, 19 May 2026 12:00:00 +0000"
+    },
+    {
+      "tag": "战后重建",
+      "title": "Gaza reconstruction envisages building ‘islands’ out of rubble",
+      "summary": "[乌克兰战后重建、中东重建、国际援助基建] A feasibility study is underway to examine whether Gaza’s war debris could be recycled to reclaim coastal land and build artificial islands, as part of reconstruction.",
+      "source": "UN News-Economic",
+      "link": "https://news.un.org/feed/view/en/story/2026/05/1167506",
+      "impact": 1,
+      "date": "Thu, 14 May 2026 12:00:00 +0000"
+    },
+    {
+      "tag": "非洲基建",
+      "title": "Guterres highlights Africa’s leadership in speech to summit in Nairobi",
+      "summary": "[AfDB基建融资、城市化住房、跨境交通走廊] Africa continues to advance and demands investment at scale, justice in global systems, and partnerships grounded in respect, UN Secretary-General António Guterres said on Tuesday.",
+      "source": "UN News-Economic",
+      "link": "https://news.un.org/feed/view/en/story/2026/05/1167493",
+      "impact": 1,
+      "date": "Tue, 12 May 2026 12:00:00 +0000"
     }
   ],
   "regional": {
-    "亚太": [
-      {
-        "name": "中国",
-        "flag": "",
-        "metrics": [
-          {
-            "label": "人口",
-            "value": "14.1亿",
-            "change": -0.2
-          }
-        ],
-        "comment": "World Bank(截至年)。GDP: N/A。",
-        "data_year": "",
-        "source": "World Bank"
-      },
-      {
-        "name": "印度",
-        "flag": "",
-        "metrics": [
-          {
-            "label": "人口",
-            "value": "14.6亿",
-            "change": 0.9
-          }
-        ],
-        "comment": "World Bank(截至年)。GDP: N/A。",
-        "data_year": "",
-        "source": "World Bank"
-      },
-      {
-        "name": "日本",
-        "flag": "",
-        "metrics": [
-          {
-            "label": "人口",
-            "value": "1.2亿",
-            "change": -0.5
-          }
-        ],
-        "comment": "World Bank(截至年)。GDP: N/A。",
-        "data_year": "",
-        "source": "World Bank"
-      },
-      {
-        "name": "韩国",
-        "flag": "",
-        "metrics": [
-          {
-            "label": "人口",
-            "value": "5168.5万",
-            "change": -0.1
-          }
-        ],
-        "comment": "World Bank(截至年)。GDP: N/A。",
-        "data_year": "",
-        "source": "World Bank"
-      },
-      {
-        "name": "印尼",
-        "flag": "",
-        "metrics": [
-          {
-            "label": "人口",
-            "value": "2.9亿",
-            "change": 0.8
-          }
-        ],
-        "comment": "World Bank(截至年)。GDP: N/A。",
-        "data_year": "",
-        "source": "World Bank"
-      },
-      {
-        "name": "越南",
-        "flag": "",
-        "metrics": [
-          {
-            "label": "人口",
-            "value": "1.0亿",
-            "change": 0.6
-          }
-        ],
-        "comment": "World Bank(截至年)。GDP: N/A。",
-        "data_year": "",
-        "source": "World Bank"
-      },
-      {
-        "name": "菲律宾",
-        "flag": "",
-        "metrics": [
-          {
-            "label": "人口",
-            "value": "1.2亿",
-            "change": 0.8
-          }
-        ],
-        "comment": "World Bank(截至年)。GDP: N/A。",
-        "data_year": "",
-        "source": "World Bank"
-      },
-      {
-        "name": "泰国",
-        "flag": "",
-        "metrics": [
-          {
-            "label": "人口",
-            "value": "7162.0万",
-            "change": -0.1
-          }
-        ],
-        "comment": "World Bank(截至年)。GDP: N/A。",
-        "data_year": "",
-        "source": "World Bank"
-      },
-      {
-        "name": "澳大利亚",
-        "flag": "",
-        "metrics": [
-          {
-            "label": "人口",
-            "value": "2761.4万",
-            "change": 1.5
-          }
-        ],
-        "comment": "World Bank(截至年)。GDP: N/A。",
-        "data_year": "",
-        "source": "World Bank"
-      }
-    ],
-    "中东非洲": [
-      {
-        "name": "沙特",
-        "flag": "",
-        "metrics": [
-          {
-            "label": "人口",
-            "value": "3697.4万",
-            "change": 4.7
-          }
-        ],
-        "comment": "World Bank(截至年)。GDP: N/A。",
-        "data_year": "",
-        "source": "World Bank"
-      },
-      {
-        "name": "阿联酋",
-        "flag": "",
-        "metrics": [
-          {
-            "label": "人口",
-            "value": "1151.3万",
-            "change": 4.8
-          }
-        ],
-        "comment": "World Bank(截至年)。GDP: N/A。",
-        "data_year": "",
-        "source": "World Bank"
-      },
-      {
-        "name": "尼日利亚",
-        "flag": "",
-        "metrics": [
-          {
-            "label": "人口",
-            "value": "2.4亿",
-            "change": 2.1
-          }
-        ],
-        "comment": "World Bank(截至年)。GDP: N/A。",
-        "data_year": "",
-        "source": "World Bank"
-      },
-      {
-        "name": "南非",
-        "flag": "",
-        "metrics": [
-          {
-            "label": "人口",
-            "value": "6474.7万",
-            "change": 1.2
-          }
-        ],
-        "comment": "World Bank(截至年)。GDP: N/A。",
-        "data_year": "",
-        "source": "World Bank"
-      },
-      {
-        "name": "埃及",
-        "flag": "",
-        "metrics": [
-          {
-            "label": "人口",
-            "value": "1.2亿",
-            "change": 1.6
-          }
-        ],
-        "comment": "World Bank(截至年)。GDP: N/A。",
-        "data_year": "",
-        "source": "World Bank"
-      }
-    ],
-    "欧洲": [
-      {
-        "name": "德国",
-        "flag": "",
-        "metrics": [
-          {
-            "label": "人口",
-            "value": "8349.1万",
-            "change": -0.0
-          }
-        ],
-        "comment": "World Bank(截至年)。GDP: N/A。",
-        "data_year": "",
-        "source": "World Bank"
-      },
-      {
-        "name": "英国",
-        "flag": "",
-        "metrics": [
-          {
-            "label": "人口",
-            "value": "6948.7万",
-            "change": 0.3
-          }
-        ],
-        "comment": "World Bank(截至年)。GDP: N/A。",
-        "data_year": "",
-        "source": "World Bank"
-      },
-      {
-        "name": "法国",
-        "flag": "",
-        "metrics": [
-          {
-            "label": "人口",
-            "value": "6872.0万",
-            "change": 0.2
-          }
-        ],
-        "comment": "World Bank(截至年)。GDP: N/A。",
-        "data_year": "",
-        "source": "World Bank"
-      },
-      {
-        "name": "波兰",
-        "flag": "",
-        "metrics": [
-          {
-            "label": "人口",
-            "value": "3643.6万",
-            "change": -0.3
-          }
-        ],
-        "comment": "World Bank(截至年)。GDP: N/A。",
-        "data_year": "",
-        "source": "World Bank"
-      },
-      {
-        "name": "土耳其",
-        "flag": "",
-        "metrics": [
-          {
-            "label": "人口",
-            "value": "8587.9万",
-            "change": 0.4
-          }
-        ],
-        "comment": "World Bank(截至年)。GDP: N/A。",
-        "data_year": "",
-        "source": "World Bank"
-      },
-      {
-        "name": "意大利",
-        "flag": "",
-        "metrics": [
-          {
-            "label": "人口",
-            "value": "5891.6万",
-            "change": -0.1
-          }
-        ],
-        "comment": "World Bank(截至年)。GDP: N/A。",
-        "data_year": "",
-        "source": "World Bank"
-      },
-      {
-        "name": "西班牙",
-        "flag": "",
-        "metrics": [
-          {
-            "label": "人口",
-            "value": "4935.5万",
-            "change": 1.0
-          }
-        ],
-        "comment": "World Bank(截至年)。GDP: N/A。",
-        "data_year": "",
-        "source": "World Bank"
-      }
-    ],
+    "亚太": [],
+    "中东非洲": [],
+    "欧洲": [],
     "美洲": [
       {
         "name": "美国",
         "flag": "",
         "metrics": [
           {
-            "label": "人口",
-            "value": "3.4亿",
-            "change": 0.5
-          }
-        ],
-        "comment": "World Bank(截至年)。GDP: N/A。",
-        "data_year": "",
-        "source": "World Bank"
-      },
-      {
-        "name": "巴西",
-        "flag": "",
-        "metrics": [
+            "label": "Case-Shiller房价(YoY)",
+            "value": "0.7%",
+            "change": 0.7
+          },
           {
-            "label": "人口",
-            "value": "2.1亿",
-            "change": 0.4
-          }
-        ],
-        "comment": "World Bank(截至年)。GDP: N/A。",
-        "data_year": "",
-        "source": "World Bank"
-      },
-      {
-        "name": "墨西哥",
-        "flag": "",
-        "metrics": [
+            "label": "新屋开工",
+            "value": "1177千套",
+            "change": -8.7
+          },
           {
-            "label": "人口",
-            "value": "1.3亿",
-            "change": 0.8
-          }
-        ],
-        "comment": "World Bank(截至年)。GDP: N/A。",
-        "data_year": "",
-        "source": "World Bank"
-      },
-      {
-        "name": "加拿大",
-        "flag": "",
-        "metrics": [
+            "label": "建筑许可证",
+            "value": "1410千套",
+            "change": -0.4
+          },
           {
-            "label": "人口",
-            "value": "4165.2万",
+            "label": "30Y房贷利率",
+            "value": "6.49%",
+            "change": 0.3
+          },
+          {
+            "label": "成屋库存",
+            "value": "10.3月",
+            "change": 10.8
+          },
+          {
+            "label": "建筑支出",
+            "value": "$2172397B",
             "change": 0.9
           }
         ],
-        "comment": "World Bank(截至年)。GDP: N/A。",
-        "data_year": "",
-        "source": "World Bank"
+        "comment": "房价同比上涨0.7%，新屋开工同比下降8.7%，30Y房贷6.49%。",
+        "source": "FRED / Case-Shiller / Census Bureau",
+        "data_date": "2026-03-01"
       }
     ]
   },
   "demandView": [
     {
-      "type": "infra",
-      "name": "基建投资",
-      "icon": "🏗️",
-      "desc": "交通、能源、水利等大型基础设施建设",
-      "total_strength": 0,
-      "country_count": 0,
-      "countries": []
-    },
-    {
       "type": "housing",
       "name": "住房建设",
       "icon": "🏠",
       "desc": "新建住宅、保障房、城市化住房需求",
+      "total_strength": 45,
+      "country_count": 1,
+      "countries": [
+        {
+          "name": "美国",
+          "region": "美洲",
+          "strength": 45,
+          "reason": "新屋开工1177千套、许可证1410千套",
+          "metrics": {
+            "新屋开工": "1177千套",
+            "建筑许可证": "1410千套"
+          }
+        }
+      ]
+    },
+    {
+      "type": "infra",
+      "name": "基建投资",
+      "icon": "🏗️",
+      "desc": "交通、能源、水利等大型基础设施建设",
       "total_strength": 0,
       "country_count": 0,
       "countries": []
@@ -713,13 +453,14 @@
     {
       "name": "铝幕墙与节能玻璃",
       "category": "幕墙配件",
-      "description": "全球高层建筑持续增长推动幕墙需求。中东(沙特NEOM)、东南亚为主要增量市场。Low-E玻璃、智能调光玻璃渗透率提升。铝价上涨推动替代材料研发。",
+      "description": "全球高层建筑持续增长推动幕墙需求。中东(沙特NEOM)、东南亚为主要增量市场。Low-E玻璃、智能调光玻璃渗透率提升。铝价上涨推动替代材料研发。 铝价格近期上涨1.7%。",
       "drivers": [
         "LEED认证",
         "高层建筑",
         "节能法规",
         "中东建设潮",
-        "5篇最新论文"
+        "5篇最新论文",
+        "铝价格上涨1.7%"
       ],
       "socialSignals": [
         {
@@ -736,6 +477,61 @@
   ],
   "supplyChain": [
     {
+      "title": "大宗商品价格追踪 (FRED)",
+      "data": [
+        {
+          "item": "铁矿石",
+          "value": "111.65 $/mt",
+          "change": 2.1
+        },
+        {
+          "item": "铝",
+          "value": "3654.02 $/mt",
+          "change": 1.7
+        },
+        {
+          "item": "铜",
+          "value": "13483.75 $/mt",
+          "change": 4.6
+        },
+        {
+          "item": "锌",
+          "value": "3458.04 $/mt",
+          "change": 3.1
+        },
+        {
+          "item": "铅",
+          "value": "1984.26 $/mt",
+          "change": 2.9
+        },
+        {
+          "item": "镍",
+          "value": "18879.23 $/mt",
+          "change": 5.7
+        },
+        {
+          "item": "天然气(HH)",
+          "value": "3.16 $/MMBtu",
+          "change": 2.6
+        },
+        {
+          "item": "WTI原油",
+          "value": "78.94 $/barrel",
+          "change": -1.8
+        },
+        {
+          "item": "Brent原油",
+          "value": "76.49 $/barrel",
+          "change": -4.9
+        },
+        {
+          "item": "动力煤",
+          "value": "141.45 $/mt",
+          "change": -0.5
+        }
+      ]
+    },
+    {
       "title": "海运运价指数",
       "data": [
         {
@@ -751,11 +547,36 @@
       ]
     }
   ],
-  "regulation": [],
+  "regulation": [
+    {
+      "title": "Combination Smoke and Carbon Monoxide (CO) Detectors Recalled Due to Risk of Ser",
+      "summary": "This recall involves Treatlife Smoke and Carbon Monoxide (CO) Detectors. The alarms are AA battery operated and have a colored light and test button. The alarms are white and circular in shape. The FC",
+      "tag": "warn",
+      "source": "US CPSC",
+      "link": "https://www.cpsc.gov/Recalls/2026/Combination-Smoke-and-Carbon-Monoxide-CO-Detectors-Recalled-Due-to-Risk-of-Serious-Injury-or-Death-from-Failure-to-Alert-Consumers-to-Fire-Sold-Exclusively-on-Amazon-com-by-Treatlife-Technology",
+      "date": "2026-06-25T00:00:00"
+    },
+    {
+      "title": "Daikin Comfort Technologies Manufacturing Recalls Amana Air Conditioners and Hea",
+      "summary": "This recall involves certain Amana brand Window-Room-Air-Conditioners and Through the Wall air conditioners or heat pumps. The products are white-colored, and the brand name is printed on most of the ",
+      "tag": "warn",
+      "source": "US CPSC",
+      "link": "https://www.cpsc.gov/Recalls/2026/Daikin-Comfort-Technologies-Manufacturing-Recalls-Amana-Air-Conditioners-and-Heat-Pumps-Due-to-Risk-of-Serious-Injury-from-Fire-and-Burns",
+      "date": "2026-06-25T00:00:00"
+    },
+    {
+      "title": "Honlyne LED Party Favors Recalled Due to Risk of Serious Injury Death from Batte",
+      "summary": "This recall involves Honlyn LED party favors. The party favors include 20 LED hair fiber optic clips, 16 LED glasses, 16 foam glow sticks, 10 light-up flower crowns, 40 finger lights and 200 glow stic",
+      "tag": "warn",
+      "source": "US CPSC",
+      "link": "https://www.cpsc.gov/Recalls/2026/Honlyne-LED-Party-Favors-Recalled-Due-to-Risk-of-Serious-Injury-or-Death-from-Battery-Ingestion-Violate-Mandatory-Standard-for-Consumer-Products-with-Button-Cell-Batteries-Sold-by-Huizhou-Rongheng-Network-Technology",
+      "date": "2026-06-25T00:00:00"
+    }
+  ],
   "innovation": [
     {
       "title": "Enhancing thermal insulation in cement mortar with silica aerogel and recycled P",
-      "title_zh": "气凝胶保温材料",
+      "title_zh": "用二氧化硅气凝胶和再生P增强水泥砂浆的隔热性能",
       "summary": "气凝胶保温: 共10篇相关论文(近期10篇)。代表研究: Marof; Šiller(2025)，被引19次。",
       "tag": "innovation",
       "topic": "气凝胶保温",
@@ -766,7 +587,7 @@
     },
     {
       "title": "Optimized community-level distributed photovoltaic generation (DPVG): Aesthetic,",
-      "title_zh": "建筑光伏一体化(BIPV)",
+      "title_zh": "优化社区级分布式光伏发电（ DPVG ） ：美学、",
       "summary": "光伏一体化(BIPV): 共10篇相关论文(近期10篇)。代表研究: Zhang; Cao; Chen et al.(2025)，被引14次。",
       "tag": "innovation",
       "topic": "光伏一体化(BIPV)",
@@ -777,7 +598,7 @@
     },
     {
       "title": "Bacterial concrete: the future of self-healing and sustainable infrastructure",
-      "title_zh": "自修复混凝土技术",
+      "title_zh": "细菌混凝土：自我修复和可持续基础设施的未来",
       "summary": "自修复混凝土: 共7篇相关论文(近期7篇)。代表研究: Sukumaran; Johnpaul; Balasundaram et al.(2025)，被引9次。",
       "tag": "innovation",
       "topic": "自修复混凝土",
@@ -788,7 +609,7 @@
     },
     {
       "title": "Façade systems for industrialised prefabricated prefinished modular construction",
-      "title_zh": "模块化与装配式建筑",
+      "title_zh": "工业化预制预制模块化结构的外立面系统",
       "summary": "模块化建筑: 共7篇相关论文(近期7篇)。代表研究: Hajirezaei; Sharafi; Farsangi et al.(2025)，被引8次。",
       "tag": "innovation",
       "topic": "模块化建筑",
@@ -799,7 +620,7 @@
     },
     {
       "title": "Building Sustainable Futures: Evaluating Embodied Carbon Emissions and Biogenic ",
-      "title_zh": "大木结构(CLT)技术",
+      "title_zh": "建设可持续的未来：评估碳排放和生物源性",
       "summary": "大木结构(CLT): 共5篇相关论文(近期5篇)。代表研究: Chapagain; Crovella(2025)，被引6次。",
       "tag": "innovation",
       "topic": "大木结构(CLT)",
@@ -810,7 +631,7 @@
     },
     {
       "title": "Spectral analysis of the discoloration process in architectural electrochromic g",
-      "title_zh": "智能调光玻璃",
+      "title_zh": "建筑电致变色中变色过程的光谱分析",
       "summary": "智能玻璃: 共5篇相关论文(近期5篇)。代表研究: Wen; Meng(2025)，被引9次。",
       "tag": "innovation",
       "topic": "智能玻璃",
@@ -821,7 +642,7 @@
     },
     {
       "title": "Technological aspects of fabricating a reinforced concrete shell using 3D concre",
-      "title_zh": "3D打印建筑技术",
+      "title_zh": "使用3D混凝土制造钢筋混凝土壳的技术方面",
       "summary": "3D打印建筑: 共4篇相关论文(近期4篇)。代表研究: Tenesesku(2025)，被引1次。",
       "tag": "innovation",
       "topic": "3D打印建筑",
@@ -832,7 +653,7 @@
     },
     {
       "title": "Performance Evaluation of Recycled Self-Compacting Concrete Incorporating Recycl",
-      "title_zh": "再生钢材与绿色钢铁",
+      "title_zh": "再生自密实混凝土回收利用性能评价",
       "summary": "再生钢材: 共2篇相关论文(近期2篇)。代表研究: Abdulrahman; Taha; Younis(2025)，被引1次。",
       "tag": "innovation",
       "topic": "再生钢材",
@@ -1026,7 +847,94 @@
       "website": "https://www.batimat.com"
     }
   ],
-  "emergingDemand": [],
+  "emergingDemand": [
+    {
+      "name": "灾后重建",
+      "signal_count": 3,
+      "strength": "strong",
+      "signal_types": [],
+      "description": "检测到3条需求信号信号。来源: UN News-Economic, Mining.com。",
+      "example_articles": [
+        {
+          "title": "邦克山重建船舶第一爱达荷矿石，眼睛银色",
+          "source": "Mining.com"
+        },
+        {
+          "title": "From favelas to informal settlements, new UN report points to housing solutions ",
+          "source": "基建情报/战后重建"
+        }
+      ]
+    },
+    {
+      "name": "数据中心",
+      "signal_count": 2,
+      "strength": "strong",
+      "signal_types": [],
+      "description": "检测到2条需求信号信号。来源: Global Construction Review。",
+      "example_articles": [
+        {
+          "title": "小心：斯堪斯卡公司在关税、战争和数据中心热潮方面的处境",
+          "source": "Global Construction Review"
+        },
+        {
+          "title": "密歇根州$ 160亿人工智能数据中心的突破性进展",
+          "source": "Global Construction Review"
+        }
+      ]
+    },
+    {
+      "name": "新能源基建",
+      "signal_count": 1,
+      "strength": "medium",
+      "signal_types": [],
+      "description": "检测到1条需求信号信号。来源: PV Magazine。",
+      "example_articles": [
+        {
+          "title": "Goldbeck Solar开发用于公用事业规模光伏电站自动化建设的三步解决方案",
+          "source": "PV Magazine"
+        }
+      ]
+    },
+    {
+      "name": "东南亚工业化",
+      "signal_count": 1,
+      "strength": "medium",
+      "signal_types": [],
+      "description": "检测到1条需求信号信号。来源: UN News-Economic。",
+      "example_articles": [
+        {
+          "title": "From favelas to informal settlements, new UN report points to housing solutions ",
+          "source": "基建情报/战后重建"
+        }
+      ]
+    },
+    {
+      "name": "战后重建",
+      "signal_count": 1,
+      "strength": "medium",
+      "signal_types": [],
+      "description": "检测到1条需求信号信号。来源: UN News-Economic。",
+      "example_articles": [
+        {
+          "title": "Gaza reconstruction envisages building ‘islands’ out of rubble",
+          "source": "基建情报/战后重建"
+        }
+      ]
+    },
+    {
+      "name": "非洲城市化",
+      "signal_count": 1,
+      "strength": "medium",
+      "signal_types": [],
+      "description": "检测到1条需求信号信号。来源: UN News-Economic。",
+      "example_articles": [
+        {
+          "title": "Guterres highlights Africa’s leadership in speech to summit in Nairobi",
+          "source": "基建情报/非洲基建"
+        }
+      ]
+    }
+  ],
   "researchHighlights": [
     {
       "title": "Positive effects of sulfates on performance of cement paste incorporating low-gr",
@@ -1129,23 +1037,245 @@
       "citations": 0
     }
   ],
-  "researchSummary": "本期投研周报综合了7个主题方向共72篇研究报告的核心发现。住房市场领域: 住房市场动态与价格走势(被引2次)。基础设施投资领域: 基础设施投资与技术发展。大宗商品领域: 大宗商品(钢/水泥/铝/铜)价格与需求(被引12次)。绿色金融领域: 绿色金融与可持续建材。贸易流向领域: 建材贸易流向与政策(被引2次)。建材行业领域: 建材行业(地板/瓷砖/玻璃/门窗/防水)(被引11次)。房地产市场领域: 房地产市场(新房/成屋/商业地产)(被引1次)。行业新闻动态方面，本周重点关注: macro(31篇)、commodity(9篇)、regulation(8篇)、房地产市场(4篇)、innovation(3篇)。综合来看，本周投研关注重点集中在住房市场调整与新房/成屋销售趋势、基础设施投资与建造技术发展、大宗商品(钢铁/水泥/有色金属)价格波动、绿色建材与可持续金融创新、以及全球建材贸易流向变化等方向。建议重点关注建材品类中与基建、住房需求强相关的细分领域。",
+  "researchSummary": "本期投研周报综合了7个主题方向共72篇研究报告的核心发现。住房市场领域: 初始房地产发行：低估和学习行为(被引2次)。基础设施投资领域: 评估金融科技、技术基础设施、。大宗商品领域: 硫酸盐对水泥浆体性能的积极影响(被引12次)。绿色金融领域: 绿色混凝土促进可持续基础设施发展。贸易流向领域: 自由贸易港建设对区域进口商的影响(被引2次)。建材行业领域: 为buildi启用可扩展的模型预测控制设计(被引11次)。房地产市场领域: 房价调控对房地产的影响M(被引1次)。行业新闻动态方面，本周重点关注: macro(36篇)、commodity(9篇)、regulation(8篇)、房地产市场(7篇)、supply_chain(4篇)。宏观环境方面，美联储维持利率3.63%不变。综合来看，本周投研关注重点集中在住房市场调整与新房/成屋销售趋势、基础设施投资与建造技术发展、大宗商品(钢铁/水泥/有色金属)价格波动、绿色建材与可持续金融创新、以及全球建材贸易流向变化等方向。建议重点关注建材品类中与基建、住房需求强相关的细分领域。",
   "customsDashboard": {
     "title": "中国建材出口月度看板",
-    "status": "no_key"
+    "period": "2026年2月",
+    "summary": {
+      "total_usd": 0,
+      "total_yoy_pct": null,
+      "categories_count": 24,
+      "highlights": [
+        "最大品类: 土工材料 $0.0M"
+      ]
+    },
+    "categories": [
+      {
+        "name": "土工材料",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "地板供暖系统及配件",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "地板及配件",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "塑料管",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "墙纸/墙板",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "壁炉、炉灶",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "建筑工业玻璃",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "建筑板材",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "木材",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "栏杆与扶手",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "梯子及脚手架",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "模架",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "活动房屋与钢结构",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "浴室和厨房产品",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "瓷砖及配件",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "电梯和自动扶梯",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "石材",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "砖石材料",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "金属建材",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "门、窗及其配件",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "防水材料",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "防火材料",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "隔热材料",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "马赛克",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      }
+    ],
+    "regions": [
+      {
+        "name": "北美",
+        "value_usd": 0,
+        "yoy_pct": null,
+        "top_growth_category": "",
+        "top_growth_yoy": null
+      },
+      {
+        "name": "南美",
+        "value_usd": 0,
+        "yoy_pct": null,
+        "top_growth_category": "",
+        "top_growth_yoy": null
+      },
+      {
+        "name": "西欧",
+        "value_usd": 0,
+        "yoy_pct": null,
+        "top_growth_category": "",
+        "top_growth_yoy": null
+      },
+      {
+        "name": "中东",
+        "value_usd": 0,
+        "yoy_pct": null,
+        "top_growth_category": "",
+        "top_growth_yoy": null
+      },
+      {
+        "name": "东南亚",
+        "value_usd": 0,
+        "yoy_pct": null,
+        "top_growth_category": "",
+        "top_growth_yoy": null
+      },
+      {
+        "name": "中亚",
+        "value_usd": 0,
+        "yoy_pct": null,
+        "top_growth_category": "",
+        "top_growth_yoy": null
+      },
+      {
+        "name": "澳洲",
+        "value_usd": 0,
+        "yoy_pct": null,
+        "top_growth_category": "",
+        "top_growth_yoy": null
+      },
+      {
+        "name": "南亚",
+        "value_usd": 0,
+        "yoy_pct": null,
+        "top_growth_category": "",
+        "top_growth_yoy": null
+      },
+      {
+        "name": "日韩",
+        "value_usd": 0,
+        "yoy_pct": null,
+        "top_growth_category": "",
+        "top_growth_yoy": null
+      }
+    ],
+    "alerts": [],
+    "data_source": "UN Comtrade (中国海关总署上报)",
+    "data_lag": "约2-3个月"
   },
   "dataSources": [
     {
       "name": "FRED 央行利率",
-      "status": "failed",
-      "count": 0,
-      "detail": "0/9 央行"
+      "status": "ok",
+      "count": 9,
+      "detail": "9/9 央行"
     },
     {
       "name": "World Bank 国别指标",
-      "status": "ok",
-      "count": 25,
-      "detail": "25 国家"
+      "status": "failed",
+      "count": 0,
+      "detail": "0 国家"
     },
     {
       "name": "SCFI 集装箱运价",
@@ -1159,15 +1289,15 @@
     },
     {
       "name": "UN Comtrade 贸易流",
-      "status": "no_key",
-      "count": 0,
-      "detail": "0 品类"
+      "status": "ok",
+      "count": 13,
+      "detail": "13 品类"
     },
     {
       "name": "海关月度出口 (UN Comtrade)",
-      "status": "no_key",
-      "count": 0,
-      "detail": "0 品类×"
+      "status": "ok",
+      "count": 24,
+      "detail": "24 品类×202602"
     },
     {
       "name": "Google Trends",
@@ -1176,7 +1306,7 @@
     },
     {
       "name": "Reddit 讨论",
-      "status": "no_data",
+      "status": "ok",
       "count": 0
     },
     {
@@ -1187,8 +1317,8 @@
     {
       "name": "RSS 新闻聚合",
       "status": "ok",
-      "count": 46,
-      "detail": "46 篇/7 源"
+      "count": 62,
+      "detail": "62 篇/10 源"
     },
     {
       "name": "展会/事件日历",
@@ -1210,14 +1340,14 @@
     {
       "name": "新兴需求探测",
       "status": "ok",
-      "count": 1,
-      "detail": "1 强信号"
+      "count": 2,
+      "detail": "2 强信号"
     },
     {
       "name": "基建宏观情报",
       "status": "ok",
-      "count": 0,
-      "detail": "0 条区域基建动态"
+      "count": 3,
+      "detail": "3 条区域基建动态"
     }
   ]
 }
