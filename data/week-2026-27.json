@@ -4,11 +4,11 @@
   "title": "建材行业全球资讯期刊",
   "tagline": "Global Building Materials Weekly Intelligence Report",
   "coverage": "25 国家 | 35 品类 | 207+ HS编码",
-  "sources": "FRED(9/9央行) + World Bank(25国) + SCFI + BDI + Reddit + Google Trends + UN Comtrade(13品类) + EUR-Lex(0条) + RSS(51篇/9源) + Events(14场) + Academia(9主题) + Research(71篇) + Emerging(2强信号) + Infra(3条/1源)",
+  "sources": "FRED(9/9央行) + World Bank(25国) + SCFI + BDI + Reddit + Google Trends + UN Comtrade(13品类) + EUR-Lex(0条) + RSS(51篇/9源) + Events(14场) + Academia(9主题) + Research(72篇) + Emerging(2强信号) + Infra(3条/1源)",
   "keyTakeaways": [
     {
-      "headline": "投研周报: 综合7大方向71篇报告核心发现",
-      "detail": "本期投研周报综合了7个主题方向共71篇研究报告的核心发现。住房市场领域: 初始房地产发行：低估和学习行为(被引2次)。基础设施投资领域: 评估金融科技、技术基础设施、。大宗商品领域: 硫酸盐对水泥浆体性能的积极影响(被引12次)。绿色金融领域: 绿色混凝土促进可持续基础设施发展。贸易流向领域: 自由贸易港建设对区域进口商的影响(被引2次)。建材行业领域: 为buildi启用可扩展的模型预测控制设计(被引11次)。房地产市场领域: 房价调控对房地产的影响M(被引1次)。行业新闻动态方面，本周重点关注: macro(32篇)、房地产市场(10篇)、regulation(7篇)、innovation(7篇)、supply_chain(4篇)。宏观环境方面，美联储维持利率3.63%不变。综合来看，本周投研关注重点集中在住房市场调整与新房/成屋销售趋势、基础设施投资与建造技术发展、大宗商品(钢铁/水泥/有色金属)价格波动、绿色建材与可持续金融创新、以及全球建材贸易流向变化等方向。建议重点关注建材品类中与基建、住房需求强相关的细分领域。",
+      "headline": "投研周报: 综合7大方向72篇报告核心发现",
+      "detail": "本期投研周报综合了7个主题方向共72篇研究报告的核心发现。住房市场领域: 初始房地产发行：低估和学习行为(被引2次)。基础设施投资领域: 评估金融科技、技术基础设施、。大宗商品领域: 硫酸盐对水泥浆体性能的积极影响(被引12次)。绿色金融领域: 绿色混凝土促进可持续基础设施发展。贸易流向领域: 自由贸易港建设对区域进口商的影响(被引2次)。建材行业领域: 为buildi启用可扩展的模型预测控制设计(被引11次)。房地产市场领域: 房价调控对房地产的影响M(被引1次)。行业新闻动态方面，本周重点关注: macro(32篇)、房地产市场(10篇)、regulation(7篇)、innovation(7篇)、supply_chain(4篇)。宏观环境方面，美联储维持利率3.63%不变。综合来看，本周投研关注重点集中在住房市场调整与新房/成屋销售趋势、基础设施投资与建造技术发展、大宗商品(钢铁/水泥/有色金属)价格波动、绿色建材与可持续金融创新、以及全球建材贸易流向变化等方向。建议重点关注建材品类中与基建、住房需求强相关的细分领域。",
       "tag": "watch",
       "type": "research_summary"
     },
@@ -1446,7 +1446,7 @@
         "设计自由度",
         "快速建造",
         "太空探索",
-        "4篇最新论文"
+        "3篇最新论文"
       ],
       "socialSignals": [
         {
@@ -1594,7 +1594,7 @@
         "灵活办公",
         "灾后安置",
         "新兴市场",
-        "7篇最新论文"
+        "5篇最新论文"
       ],
       "socialSignals": [
         {
@@ -1796,17 +1796,6 @@
       "tech_direction": "研发微生物/微胶囊自修复添加剂，延长混凝土结构寿命50%+；适用于基础设施和海洋工程"
     },
     {
-      "title": "Façade systems for industrialised prefabricated prefinished modular construction",
-      "title_zh": "工业化预制预制模块化结构的外立面系统",
-      "summary": "模块化建筑: 共7篇相关论文(近期7篇)。代表研究: Hajirezaei; Sharafi; Farsangi et al.(2025)，被引8次。",
-      "tag": "innovation",
-      "topic": "模块化建筑",
-      "paper_count": 7,
-      "source": "Crossref/DOAJ",
-      "doi": "10.1016/j.autcon.2025.106269",
-      "tech_direction": "设计标准化模块接口系统；开发轻量化结构板材；实现工厂预制率80%+的快速装配"
-    },
-    {
       "title": "Building Sustainable Futures: Evaluating Embodied Carbon Emissions and Biogenic ",
       "title_zh": "建设可持续的未来：评估碳排放和生物源性",
       "summary": "大木结构(CLT): 共5篇相关论文(近期5篇)。代表研究: Chapagain; Crovella(2025)，被引6次。",
@@ -1816,6 +1805,17 @@
       "source": "Crossref/DOAJ",
       "doi": "10.3390/su17125602",
       "tech_direction": "开发高强度CLT板材和连接节点系统；解决防火防潮技术难点；拓展中高层建筑应用"
+    },
+    {
+      "title": "Façade systems for industrialised prefabricated prefinished modular construction",
+      "title_zh": "工业化预制预制模块化结构的外立面系统",
+      "summary": "模块化建筑: 共5篇相关论文(近期5篇)。代表研究: Hajirezaei; Sharafi; Farsangi et al.(2025)，被引8次。",
+      "tag": "innovation",
+      "topic": "模块化建筑",
+      "paper_count": 5,
+      "source": "Crossref/DOAJ",
+      "doi": "10.1016/j.autcon.2025.106269",
+      "tech_direction": "设计标准化模块接口系统；开发轻量化结构板材；实现工厂预制率80%+的快速装配"
     },
     {
       "title": "Spectral analysis of the discoloration process in architectural electrochromic g",
@@ -1831,24 +1831,24 @@
     {
       "title": "Technological aspects of fabricating a reinforced concrete shell using 3D concre",
       "title_zh": "使用3D混凝土制造钢筋混凝土壳的技术方面",
-      "summary": "3D打印建筑: 共4篇相关论文(近期4篇)。代表研究: Tenesesku(2025)，被引1次。",
+      "summary": "3D打印建筑: 共3篇相关论文(近期3篇)。代表研究: Tenesesku(2025)，被引1次。",
       "tag": "innovation",
       "topic": "3D打印建筑",
-      "paper_count": 4,
+      "paper_count": 3,
       "source": "Crossref/DOAJ",
       "doi": "10.32347/2522-4182.17.2025.141-152",
       "tech_direction": "开发适用于大型3D打印的速凝特种水泥配方；优化打印路径和结构强度；降低建造成本30%+"
     },
     {
-      "title": "Performance Evaluation of Recycled Self-Compacting Concrete Incorporating Recycl",
-      "title_zh": "再生自密实混凝土回收利用性能评价",
-      "summary": "再生钢材: 共2篇相关论文(近期2篇)。代表研究: Abdulrahman; Taha; Younis(2025)，被引1次。",
+      "title": "Low Carbon Cement, SCMs, and Embodied Carbon of Concrete",
+      "title_zh": "混凝土的低碳水泥、SCMS和碳化物",
+      "summary": "低碳水泥: 共1篇相关论文(近期1篇)。代表研究: Sadique(2025)，被引0次。",
       "tag": "innovation",
-      "topic": "再生钢材",
-      "paper_count": 2,
+      "topic": "低碳水泥",
+      "paper_count": 1,
       "source": "Crossref/DOAJ",
-      "doi": "10.20944/preprints202504.1804.v1",
-      "tech_direction": "开发氢基直接还原铁(DRI-H2)炼钢工艺；提升废钢回收利用率；实现近零碳排放钢铁生产"
+      "doi": "10.1108/978-1-83608-474-720251005",
+      "tech_direction": "开发低碳/零碳水泥配方，替代传统硅酸盐水泥；研究地质聚合物和LC3复合配方降低碳排放50%+"
     }
   ],
   "events": [
@@ -2186,7 +2186,7 @@
       "citations": 0
     }
   ],
-  "researchSummary": "本期投研周报综合了7个主题方向共71篇研究报告的核心发现。住房市场领域: 初始房地产发行：低估和学习行为(被引2次)。基础设施投资领域: 评估金融科技、技术基础设施、。大宗商品领域: 硫酸盐对水泥浆体性能的积极影响(被引12次)。绿色金融领域: 绿色混凝土促进可持续基础设施发展。贸易流向领域: 自由贸易港建设对区域进口商的影响(被引2次)。建材行业领域: 为buildi启用可扩展的模型预测控制设计(被引11次)。房地产市场领域: 房价调控对房地产的影响M(被引1次)。行业新闻动态方面，本周重点关注: macro(32篇)、房地产市场(10篇)、regulation(7篇)、innovation(7篇)、supply_chain(4篇)。宏观环境方面，美联储维持利率3.63%不变。综合来看，本周投研关注重点集中在住房市场调整与新房/成屋销售趋势、基础设施投资与建造技术发展、大宗商品(钢铁/水泥/有色金属)价格波动、绿色建材与可持续金融创新、以及全球建材贸易流向变化等方向。建议重点关注建材品类中与基建、住房需求强相关的细分领域。",
+  "researchSummary": "本期投研周报综合了7个主题方向共72篇研究报告的核心发现。住房市场领域: 初始房地产发行：低估和学习行为(被引2次)。基础设施投资领域: 评估金融科技、技术基础设施、。大宗商品领域: 硫酸盐对水泥浆体性能的积极影响(被引12次)。绿色金融领域: 绿色混凝土促进可持续基础设施发展。贸易流向领域: 自由贸易港建设对区域进口商的影响(被引2次)。建材行业领域: 为buildi启用可扩展的模型预测控制设计(被引11次)。房地产市场领域: 房价调控对房地产的影响M(被引1次)。行业新闻动态方面，本周重点关注: macro(32篇)、房地产市场(10篇)、regulation(7篇)、innovation(7篇)、supply_chain(4篇)。宏观环境方面，美联储维持利率3.63%不变。综合来看，本周投研关注重点集中在住房市场调整与新房/成屋销售趋势、基础设施投资与建造技术发展、大宗商品(钢铁/水泥/有色金属)价格波动、绿色建材与可持续金融创新、以及全球建材贸易流向变化等方向。建议重点关注建材品类中与基建、住房需求强相关的细分领域。",
   "customsDashboard": {
     "title": "中国建材出口月度看板",
     "status": "api_unavailable"
@@ -2261,8 +2261,8 @@
     {
       "name": "投研报告",
       "status": "ok",
-      "count": 71,
-      "detail": "71 篇"
+      "count": 72,
+      "detail": "72 篇"
     },
     {
       "name": "新兴需求探测",
@@ -2366,7 +2366,7 @@
         },
         {
           "type": "up",
-          "text": "工业化预制预制模块化结构的外立面系统"
+          "text": "建设可持续的未来：评估碳排放和生物源性"
         }
       ]
     }
