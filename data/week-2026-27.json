@@ -4,11 +4,11 @@
   "title": "建材行业全球资讯期刊",
   "tagline": "Global Building Materials Weekly Intelligence Report",
   "coverage": "25 国家 | 35 品类 | 207+ HS编码",
-  "sources": "FRED(9/9央行) + World Bank(25国) + SCFI + BDI + Reddit + UN Comtrade(13品类) + EUR-Lex(0条) + RSS(62篇/10源) + Events(14场) + Academia(9主题) + Research(67篇) + Emerging(2强信号) + Infra(3条/1源)",
+  "sources": "FRED(9/9央行) + World Bank(25国) + SCFI + BDI + Reddit + UN Comtrade(13品类) + EUR-Lex(0条) + RSS(61篇/10源) + Events(14场) + Academia(9主题) + Research(66篇) + Emerging(2强信号) + Infra(3条/1源)",
   "keyTakeaways": [
     {
-      "headline": "投研周报: 综合7大方向67篇报告核心发现",
-      "detail": "本期投研周报综合了7个主题方向共67篇研究报告的核心发现。住房市场领域: 初始房地产发行：低估和学习行为(被引2次)。基础设施投资领域: 评估金融科技、技术基础设施、。大宗商品领域: 硫酸盐对水泥浆体性能的积极影响(被引12次)。绿色金融领域: 绿色混凝土促进可持续基础设施发展。贸易流向领域: 自由贸易港建设对区域进口商的影响(被引2次)。建材行业领域: 预制混凝土夹层墙的热性能(被引9次)。房地产市场领域: 房价调控对房地产的影响M(被引1次)。行业新闻动态方面，本周重点关注: macro(34篇)、commodity(10篇)、房地产市场(9篇)、regulation(7篇)、supply_chain(4篇)。宏观环境方面，美联储维持利率3.63%不变。综合来看，本周投研关注重点集中在住房市场调整与新房/成屋销售趋势、基础设施投资与建造技术发展、大宗商品(钢铁/水泥/有色金属)价格波动、绿色建材与可持续金融创新、以及全球建材贸易流向变化等方向。建议重点关注建材品类中与基建、住房需求强相关的细分领域。",
+      "headline": "投研周报: 综合7大方向66篇报告核心发现",
+      "detail": "本期投研周报综合了7个主题方向共66篇研究报告的核心发现。住房市场领域: 初始房地产发行：低估和学习行为(被引2次)。基础设施投资领域: 评估金融科技、技术基础设施、。大宗商品领域: 硫酸盐对水泥浆体性能的积极影响(被引12次)。绿色金融领域: 绿色混凝土促进可持续基础设施发展。贸易流向领域: 自由贸易港建设对区域进口商的影响(被引2次)。建材行业领域: 预制混凝土夹层墙的热性能(被引9次)。房地产市场领域: 房价调控对房地产的影响M(被引1次)。行业新闻动态方面，本周重点关注: macro(33篇)、commodity(10篇)、房地产市场(9篇)、regulation(7篇)、innovation(4篇)。宏观环境方面，美联储维持利率3.63%不变。综合来看，本周投研关注重点集中在住房市场调整与新房/成屋销售趋势、基础设施投资与建造技术发展、大宗商品(钢铁/水泥/有色金属)价格波动、绿色建材与可持续金融创新、以及全球建材贸易流向变化等方向。建议重点关注建材品类中与基建、住房需求强相关的细分领域。",
       "tag": "watch",
       "type": "research_summary"
     },
@@ -1472,7 +1472,7 @@
         "能效法规",
         "极端气候",
         "空间受限场景",
-        "9篇最新论文"
+        "10篇最新论文"
       ],
       "socialSignals": [
         {
@@ -1518,7 +1518,7 @@
         "RePowerEU",
         "ESG合规",
         "电费上涨",
-        "9篇最新论文"
+        "10篇最新论文"
       ],
       "socialSignals": [
         {
@@ -1765,10 +1765,10 @@
     {
       "title": "Enhancing thermal insulation in cement mortar with silica aerogel and recycled P",
       "title_zh": "用二氧化硅气凝胶和再生P增强水泥砂浆的隔热性能",
-      "summary": "气凝胶保温: 共9篇相关论文(近期9篇)。代表研究: Marof; Šiller(2025)，被引19次。",
+      "summary": "气凝胶保温: 共10篇相关论文(近期10篇)。代表研究: Marof; Šiller(2025)，被引19次。",
       "tag": "innovation",
       "topic": "气凝胶保温",
-      "paper_count": 9,
+      "paper_count": 10,
       "source": "Crossref/DOAJ",
       "doi": "10.1016/j.conbuildmat.2025.140320",
       "tech_direction": "开发低成本气凝胶复合保温板材；解决脆性问题提升施工性；目标导热系数<0.015 W/mK"
@@ -1776,10 +1776,10 @@
     {
       "title": "Optimized community-level distributed photovoltaic generation (DPVG): Aesthetic,",
       "title_zh": "优化社区级分布式光伏发电（ DPVG ） ：美学、",
-      "summary": "光伏一体化(BIPV): 共9篇相关论文(近期9篇)。代表研究: Zhang; Cao; Chen et al.(2025)，被引14次。",
+      "summary": "光伏一体化(BIPV): 共10篇相关论文(近期10篇)。代表研究: Zhang; Cao; Chen et al.(2025)，被引14次。",
       "tag": "innovation",
       "topic": "光伏一体化(BIPV)",
-      "paper_count": 9,
+      "paper_count": 10,
       "source": "Crossref/DOAJ",
       "doi": "10.1016/j.jobe.2025.112085",
       "tech_direction": "研发建筑外立面集成光伏组件；兼顾美观与发电效率；开发透明/彩色光伏玻璃"
@@ -2071,19 +2071,6 @@
       ]
     },
     {
-      "name": "新能源基建",
-      "signal_count": 1,
-      "strength": "medium",
-      "signal_types": [],
-      "description": "检测到1条需求信号信号。来源: PV Magazine。",
-      "example_articles": [
-        {
-          "title": "Goldbeck Solar开发用于公用事业规模光伏电站自动化建设的三步解决方案",
-          "source": "PV Magazine"
-        }
-      ]
-    },
-    {
       "name": "东南亚工业化",
       "signal_count": 1,
       "strength": "medium",
@@ -2093,32 +2080,6 @@
         {
           "title": "From favelas to informal settlements, new UN report points to housing solutions ",
           "source": "基建情报/战后重建"
-        }
-      ]
-    },
-    {
-      "name": "战后重建",
-      "signal_count": 1,
-      "strength": "medium",
-      "signal_types": [],
-      "description": "检测到1条需求信号信号。来源: UN News-Economic。",
-      "example_articles": [
-        {
-          "title": "Gaza reconstruction envisages building ‘islands’ out of rubble",
-          "source": "基建情报/战后重建"
-        }
-      ]
-    },
-    {
-      "name": "非洲城市化",
-      "signal_count": 1,
-      "strength": "medium",
-      "signal_types": [],
-      "description": "检测到1条需求信号信号。来源: UN News-Economic。",
-      "example_articles": [
-        {
-          "title": "Guterres highlights Africa’s leadership in speech to summit in Nairobi",
-          "source": "基建情报/非洲基建"
         }
       ]
     }
@@ -2225,7 +2186,7 @@
       "citations": 0
     }
   ],
-  "researchSummary": "本期投研周报综合了7个主题方向共67篇研究报告的核心发现。住房市场领域: 初始房地产发行：低估和学习行为(被引2次)。基础设施投资领域: 评估金融科技、技术基础设施、。大宗商品领域: 硫酸盐对水泥浆体性能的积极影响(被引12次)。绿色金融领域: 绿色混凝土促进可持续基础设施发展。贸易流向领域: 自由贸易港建设对区域进口商的影响(被引2次)。建材行业领域: 预制混凝土夹层墙的热性能(被引9次)。房地产市场领域: 房价调控对房地产的影响M(被引1次)。行业新闻动态方面，本周重点关注: macro(34篇)、commodity(10篇)、房地产市场(9篇)、regulation(7篇)、supply_chain(4篇)。宏观环境方面，美联储维持利率3.63%不变。综合来看，本周投研关注重点集中在住房市场调整与新房/成屋销售趋势、基础设施投资与建造技术发展、大宗商品(钢铁/水泥/有色金属)价格波动、绿色建材与可持续金融创新、以及全球建材贸易流向变化等方向。建议重点关注建材品类中与基建、住房需求强相关的细分领域。",
+  "researchSummary": "本期投研周报综合了7个主题方向共66篇研究报告的核心发现。住房市场领域: 初始房地产发行：低估和学习行为(被引2次)。基础设施投资领域: 评估金融科技、技术基础设施、。大宗商品领域: 硫酸盐对水泥浆体性能的积极影响(被引12次)。绿色金融领域: 绿色混凝土促进可持续基础设施发展。贸易流向领域: 自由贸易港建设对区域进口商的影响(被引2次)。建材行业领域: 预制混凝土夹层墙的热性能(被引9次)。房地产市场领域: 房价调控对房地产的影响M(被引1次)。行业新闻动态方面，本周重点关注: macro(33篇)、commodity(10篇)、房地产市场(9篇)、regulation(7篇)、innovation(4篇)。宏观环境方面，美联储维持利率3.63%不变。综合来看，本周投研关注重点集中在住房市场调整与新房/成屋销售趋势、基础设施投资与建造技术发展、大宗商品(钢铁/水泥/有色金属)价格波动、绿色建材与可持续金融创新、以及全球建材贸易流向变化等方向。建议重点关注建材品类中与基建、住房需求强相关的细分领域。",
   "customsDashboard": {
     "title": "中国建材出口月度看板",
     "status": "api_unavailable"
@@ -2283,8 +2244,8 @@
     {
       "name": "RSS 新闻聚合",
       "status": "ok",
-      "count": 62,
-      "detail": "62 篇/10 源"
+      "count": 61,
+      "detail": "61 篇/10 源"
     },
     {
       "name": "展会/事件日历",
@@ -2300,8 +2261,8 @@
     {
       "name": "投研报告",
       "status": "ok",
-      "count": 67,
-      "detail": "67 篇"
+      "count": 66,
+      "detail": "66 篇"
     },
     {
       "name": "新兴需求探测",
@@ -2339,23 +2300,31 @@
       ]
     },
     "regional": {
-      "summary": "需求热力排名: 基建投资8国活跃(强度100)。",
+      "summary": "需求热力: 基建投资8国、绿色建筑13国、商业地产15国。",
       "bullets": [
         {
           "type": "up",
-          "text": "基建投资: 8国 | 强度100"
+          "text": "基建投资: 中国(GDP增速5.0%、人口14.1亿)、印度(GDP增速7.6%、人口14.6亿)、印尼(GDP增速5.1%、人口2.9亿)"
         },
         {
           "type": "up",
-          "text": "绿色建筑: 13国 | 强度75"
+          "text": "绿色建筑: 日本(城市化成熟(92%)、经济转型需求)、韩国(城市化成熟(81%)、经济转型需求)、澳大利亚(城市化成熟(88%)、经济转型需求)"
         },
         {
           "type": "up",
-          "text": "商业地产: 15国 | 强度73"
+          "text": "商业地产: 中国(GDP增速5.0%、经济活跃)、尼日利亚(GDP增速4.0%、经济活跃)、波兰(GDP增速3.6%、城市化加速(60%))"
         },
         {
           "type": "up",
-          "text": "住房建设: 6国 | 强度60"
+          "text": "住房建设: 印度(城市化率36%偏低、人口基数大(14.6亿))、印尼(城市化率59%偏低、人口基数大(2.9亿))、菲律宾(城市化率56%偏低、人口基数大(1.2亿))"
+        },
+        {
+          "type": "up",
+          "text": "工业厂房: 印尼(GDP高增长5.1%、人口2.9亿,制造业潜力大)、印度(GDP高增长7.6%、人口14.6亿,制造业潜力大)、中国(人口14.1亿,制造业潜力大、工业化进程中(66%))"
+        },
+        {
+          "type": "up",
+          "text": "翻新改造: 日本(高城市化率92%、GDP增速放缓(1.2%))、韩国(高城市化率81%、GDP增速放缓(1.0%))、澳大利亚(高城市化率88%、GDP增速放缓(1.4%))"
         }
       ]
     },
