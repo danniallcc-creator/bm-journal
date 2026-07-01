@@ -182,11 +182,22 @@ def collect_google_trends_batch() -> dict:
         log.info(f"Limiting to {max_groups}/{len(groups)} groups to avoid rate limiting")
         groups = groups[:max_groups]
 
+    # CI环境首次请求前预热等待 (GitHub Actions IP易被Google限流)
+    if ci_lite_mode:
+        log.info("  Warming up: waiting 45s before first request...")
+        time.sleep(45)
+
     all_results = {}
     groups_done = 0
     for idx, group in enumerate(groups):
         log.info(f"  GTrends group {idx+1}/{max_groups}: {group['category']}")
         result = collect_google_trends(group["keywords"])
+
+        # 429重试: 首组被限流时等60s再试一次 (CI共享IP偶发)
+        if result["status"] == "rate_limited" and groups_done == 0:
+            log.info("  First request 429, retrying after 60s cooldown...")
+            time.sleep(60)
+            result = collect_google_trends(group["keywords"])
 
         cat = group["category"]
         if cat not in all_results:
