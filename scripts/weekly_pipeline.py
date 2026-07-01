@@ -211,6 +211,38 @@ def run_pipeline():
     wb_data = collect_all_countries()
     country_metrics = format_country_metrics(wb_data)
 
+    # WB API 容错回退: 若仅拿到极少数据(≤3国有>=2指标), 用上一期数据回填
+    _wb_healthy_count = sum(1 for c in country_metrics.values()
+                           if len(c.get("metrics", [])) >= 2)
+    if _wb_healthy_count < 10:
+        log.warning(f"World Bank data insufficient ({_wb_healthy_count}/25 healthy). "
+                    f"Attempting fallback from previous week file...")
+        # 找最近一期 week 文件 (排除当前正在生成的本周文件)
+        _current_wk_file = f"week-{year}-{week_num:02d}.json"
+        _prev_files = sorted(DATA_DIR.glob("week-*.json"), reverse=True)
+        for _pf in _prev_files:
+            if _pf.name == _current_wk_file:
+                continue  # 跳过本周文件
+            try:
+                _prev = json.loads(_pf.read_text("utf-8"))
+                _prev_reg = _prev.get("regional", {})
+                _prev_total = sum(len(v) for v in _prev_reg.values())
+                if _prev_total >= 15:
+                    # 将上期 regional 转回 country_metrics dict
+                    country_metrics = {}
+                    from scripts.config import COUNTRIES
+                    for _region, _items in _prev_reg.items():
+                        for _it in _items:
+                            _code = next((c for c, inf in COUNTRIES.items()
+                                          if inf.get("zh") == _it.get("name")), None)
+                            if _code:
+                                country_metrics[_code] = _it
+                    log.info(f"  Fallback loaded {len(country_metrics)} countries from {_pf.name}")
+                    break
+            except Exception as _e:
+                log.warning(f"  Fallback file {_pf.name} error: {_e}")
+                continue
+
     us_data = collect_all_us_real_estate()
     us_card = format_us_country_card(us_data)
     if us_card.get("metrics"):
