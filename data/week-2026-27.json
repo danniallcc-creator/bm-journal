@@ -4,11 +4,11 @@
   "title": "建材行业全球资讯期刊",
   "tagline": "Global Building Materials Weekly Intelligence Report",
   "coverage": "25 国家 | 35 品类 | 207+ HS编码",
-  "sources": "FRED(9/9央行) + World Bank(25国) + SCFI + BDI + Reddit + UN Comtrade(13品类) + EUR-Lex(0条) + RSS(61篇/10源) + Events(14场) + Academia(9主题) + Research(66篇) + Emerging(2强信号) + Infra(3条/1源)",
+  "sources": "FRED(9/9央行) + World Bank(25国) + SCFI + BDI + Reddit + Google Trends + UN Comtrade(13品类) + EUR-Lex(0条) + RSS(51篇/9源) + Events(14场) + Academia(9主题) + Research(71篇) + Emerging(2强信号) + Infra(3条/1源)",
   "keyTakeaways": [
     {
-      "headline": "投研周报: 综合7大方向66篇报告核心发现",
-      "detail": "本期投研周报综合了7个主题方向共66篇研究报告的核心发现。住房市场领域: 初始房地产发行：低估和学习行为(被引2次)。基础设施投资领域: 评估金融科技、技术基础设施、。大宗商品领域: 硫酸盐对水泥浆体性能的积极影响(被引12次)。绿色金融领域: 绿色混凝土促进可持续基础设施发展。贸易流向领域: 自由贸易港建设对区域进口商的影响(被引2次)。建材行业领域: 预制混凝土夹层墙的热性能(被引9次)。房地产市场领域: 房价调控对房地产的影响M(被引1次)。行业新闻动态方面，本周重点关注: macro(33篇)、commodity(10篇)、房地产市场(9篇)、regulation(7篇)、innovation(4篇)。宏观环境方面，美联储维持利率3.63%不变。综合来看，本周投研关注重点集中在住房市场调整与新房/成屋销售趋势、基础设施投资与建造技术发展、大宗商品(钢铁/水泥/有色金属)价格波动、绿色建材与可持续金融创新、以及全球建材贸易流向变化等方向。建议重点关注建材品类中与基建、住房需求强相关的细分领域。",
+      "headline": "投研周报: 综合7大方向71篇报告核心发现",
+      "detail": "本期投研周报综合了7个主题方向共71篇研究报告的核心发现。住房市场领域: 初始房地产发行：低估和学习行为(被引2次)。基础设施投资领域: 评估金融科技、技术基础设施、。大宗商品领域: 硫酸盐对水泥浆体性能的积极影响(被引12次)。绿色金融领域: 绿色混凝土促进可持续基础设施发展。贸易流向领域: 自由贸易港建设对区域进口商的影响(被引2次)。建材行业领域: 为buildi启用可扩展的模型预测控制设计(被引11次)。房地产市场领域: 房价调控对房地产的影响M(被引1次)。行业新闻动态方面，本周重点关注: macro(32篇)、房地产市场(10篇)、regulation(7篇)、innovation(7篇)、supply_chain(4篇)。宏观环境方面，美联储维持利率3.63%不变。综合来看，本周投研关注重点集中在住房市场调整与新房/成屋销售趋势、基础设施投资与建造技术发展、大宗商品(钢铁/水泥/有色金属)价格波动、绿色建材与可持续金融创新、以及全球建材贸易流向变化等方向。建议重点关注建材品类中与基建、住房需求强相关的细分领域。",
       "tag": "watch",
       "type": "research_summary"
     },
@@ -45,22 +45,6 @@
       "impact": 3
     },
     {
-      "tag": "宏观 / 大宗 / 贸易",
-      "title": "Op-Ed ：酸正在成为铜的新价格信号",
-      "summary": "随着硫磺重塑精矿价格和利润率，酸而不是铜可能是市场最重要的信号。",
-      "source": "Mining.com",
-      "link": "https://www.mining.com/op-ed-acid-is-becoming-coppers-new-price-signal/",
-      "title_en": "Op-Ed: Acid is becoming copper’s new price signal"
-    },
-    {
-      "tag": "宏观 / 监管 / 贸易",
-      "title": "韩国的太阳能十字路口",
-      "summary": "韩国太阳能正在进入一个新阶段，结构质量和可持续性被认为比增长速度更重要。预计2026年该国的年度太阳能安装量",
-      "source": "PV Magazine",
-      "link": "https://www.pv-magazine.com/2026/07/01/south-koreas-solar-crossroads/",
-      "title_en": "South Korea’s solar crossroads"
-    },
-    {
       "tag": "宏观 / 监管",
       "title": "花岗岩土地$ 1.17亿犹他州高速公路延伸",
       "summary": "< img src = \"https://imgproxy.divecdn.com/IiCHGBV_6iHNBG8zYE53Plu5l87EkqrRP_slDGBNE58/g: ce/rs: fill: 1600: 900: 1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9VdGFoX1NSLTE3N18weDR4NERoLmpwZw = = .web",
@@ -83,6 +67,22 @@
       "source": "Global Construction Review",
       "link": "https://www.globalconstructionreview.com/heads-up-skanska-on-where-were-at-with-tariffs-war-and-the-data-centre-boom/",
       "title_en": "Heads up: Skanska on where we’re at with tariffs, war and the data centre boom"
+    },
+    {
+      "tag": "宏观 / 供应链",
+      "title": "沙特阿拉伯计划建设货运铁路走廊",
+      "summary": "西班牙OHLA集团和埃及Hassan Allam Holding的当地子公司赢得了国营沙特铁路公司的合同，在……建造一条22.7公里的单轨货运铁路。&lt;/",
+      "source": "Global Construction Review",
+      "link": "https://www.globalconstructionreview.com/saudi-arabia-plans-freight-rail-corridor/",
+      "title_en": "Saudi Arabia plans freight rail corridor"
+    },
+    {
+      "tag": "宏观 / 房地产",
+      "title": "Case-Shiller指数显示4月份价格持平",
+      "summary": "根据最新的标准普尔Cotality Case-Shiller国家房价NSA指数，房价连续第11个月实际下跌。而房价的年增长率为0.8% d",
+      "source": "Builder Online",
+      "link": "https://www.builderonline.com/data-analysis/case-shiller-indices-show-prices-remained-flat-in-april",
+      "title_en": "Case-Shiller Indices Show Prices Remained Flat in April"
     },
     {
       "tag": "战后重建",
@@ -2037,23 +2037,6 @@
   ],
   "emergingDemand": [
     {
-      "name": "灾后重建",
-      "signal_count": 3,
-      "strength": "strong",
-      "signal_types": [],
-      "description": "检测到3条需求信号信号。来源: Mining.com, UN News-Economic。",
-      "example_articles": [
-        {
-          "title": "邦克山重建船舶第一爱达荷矿石，眼睛银色",
-          "source": "Mining.com"
-        },
-        {
-          "title": "From favelas to informal settlements, new UN report points to housing solutions ",
-          "source": "基建情报/战后重建"
-        }
-      ]
-    },
-    {
       "name": "数据中心",
       "signal_count": 2,
       "strength": "strong",
@@ -2067,6 +2050,23 @@
         {
           "title": "密歇根州$ 160亿人工智能数据中心的突破性进展",
           "source": "Global Construction Review"
+        }
+      ]
+    },
+    {
+      "name": "灾后重建",
+      "signal_count": 2,
+      "strength": "strong",
+      "signal_types": [],
+      "description": "检测到2条需求信号信号。来源: UN News-Economic。",
+      "example_articles": [
+        {
+          "title": "From favelas to informal settlements, new UN report points to housing solutions ",
+          "source": "基建情报/战后重建"
+        },
+        {
+          "title": "Gaza reconstruction envisages building ‘islands’ out of rubble",
+          "source": "基建情报/战后重建"
         }
       ]
     },
@@ -2096,6 +2096,16 @@
       "citations": 12
     },
     {
+      "title": "Enabling scalable Model Predictive Control design for building HVAC systems usin",
+      "summary": "Elsevier BV journal-article (2025)",
+      "publisher": "Elsevier BV",
+      "year": 2025,
+      "theme": "building_materials",
+      "doi": "10.1016/j.autcon.2024.105929",
+      "source": "Crossref",
+      "citations": 11
+    },
+    {
       "title": "Thermal performance of precast concrete sandwich walls with a double-layer insul",
       "summary": "Elsevier BV journal-article (2025)",
       "publisher": "Elsevier BV",
@@ -2114,16 +2124,6 @@
       "doi": "10.1787/28b61a5e-en",
       "source": "Crossref",
       "citations": 6
-    },
-    {
-      "title": "Automated layout generation of HVAC piping from building floor plans",
-      "summary": "Elsevier BV journal-article (2025)",
-      "publisher": "Elsevier BV",
-      "year": 2025,
-      "theme": "building_materials",
-      "doi": "10.1016/j.autcon.2025.106359",
-      "source": "Crossref",
-      "citations": 4
     },
     {
       "title": "Initial Property Offering: Underpricing and Learning Behavior in the Presale Hou",
@@ -2186,7 +2186,7 @@
       "citations": 0
     }
   ],
-  "researchSummary": "本期投研周报综合了7个主题方向共66篇研究报告的核心发现。住房市场领域: 初始房地产发行：低估和学习行为(被引2次)。基础设施投资领域: 评估金融科技、技术基础设施、。大宗商品领域: 硫酸盐对水泥浆体性能的积极影响(被引12次)。绿色金融领域: 绿色混凝土促进可持续基础设施发展。贸易流向领域: 自由贸易港建设对区域进口商的影响(被引2次)。建材行业领域: 预制混凝土夹层墙的热性能(被引9次)。房地产市场领域: 房价调控对房地产的影响M(被引1次)。行业新闻动态方面，本周重点关注: macro(33篇)、commodity(10篇)、房地产市场(9篇)、regulation(7篇)、innovation(4篇)。宏观环境方面，美联储维持利率3.63%不变。综合来看，本周投研关注重点集中在住房市场调整与新房/成屋销售趋势、基础设施投资与建造技术发展、大宗商品(钢铁/水泥/有色金属)价格波动、绿色建材与可持续金融创新、以及全球建材贸易流向变化等方向。建议重点关注建材品类中与基建、住房需求强相关的细分领域。",
+  "researchSummary": "本期投研周报综合了7个主题方向共71篇研究报告的核心发现。住房市场领域: 初始房地产发行：低估和学习行为(被引2次)。基础设施投资领域: 评估金融科技、技术基础设施、。大宗商品领域: 硫酸盐对水泥浆体性能的积极影响(被引12次)。绿色金融领域: 绿色混凝土促进可持续基础设施发展。贸易流向领域: 自由贸易港建设对区域进口商的影响(被引2次)。建材行业领域: 为buildi启用可扩展的模型预测控制设计(被引11次)。房地产市场领域: 房价调控对房地产的影响M(被引1次)。行业新闻动态方面，本周重点关注: macro(32篇)、房地产市场(10篇)、regulation(7篇)、innovation(7篇)、supply_chain(4篇)。宏观环境方面，美联储维持利率3.63%不变。综合来看，本周投研关注重点集中在住房市场调整与新房/成屋销售趋势、基础设施投资与建造技术发展、大宗商品(钢铁/水泥/有色金属)价格波动、绿色建材与可持续金融创新、以及全球建材贸易流向变化等方向。建议重点关注建材品类中与基建、住房需求强相关的细分领域。",
   "customsDashboard": {
     "title": "中国建材出口月度看板",
     "status": "api_unavailable"
@@ -2228,7 +2228,7 @@
     },
     {
       "name": "Google Trends",
-      "status": "skipped_by_env",
+      "status": "ok",
       "count": 0
     },
     {
@@ -2244,8 +2244,8 @@
     {
       "name": "RSS 新闻聚合",
       "status": "ok",
-      "count": 61,
-      "detail": "61 篇/10 源"
+      "count": 51,
+      "detail": "51 篇/9 源"
     },
     {
       "name": "展会/事件日历",
@@ -2261,8 +2261,8 @@
     {
       "name": "投研报告",
       "status": "ok",
-      "count": 66,
-      "detail": "66 篇"
+      "count": 71,
+      "detail": "71 篇"
     },
     {
       "name": "新兴需求探测",
