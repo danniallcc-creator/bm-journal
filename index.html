@@ -1106,7 +1106,8 @@ function selectCategory(el, key) {
     '<div class="cd-kw-badges">' + (cat.keywords_cn||cat.keywords_en||[]).slice(0,6).map(
       k => '<span class="cd-kw-badge">' + esc(k) + '</span>').join('') + '</div>' : '';
   detail.innerHTML = '<h3>' + esc(cat.zh) + '</h3>' +
-    '<div class="cat-en">' + esc(cat.en||'') + ' | 三级品类: ' + (cat.l3||[]).length + ' | HS编码: ' + (cat.hs_codes||[]).length + '</div>' +
+    '<div class="cat-en">' + esc(cat.en||'') + ' | 三级品类: ' + (cat.l3||[]).length + ' | HS编码: ' + (cat.hs_codes||[]).length +
+    '<button onclick="exportSingleCategory(\'' + esc(key) + '\')" style="margin-left:12px;padding:4px 14px;background:var(--accent-blue,#2980b9);color:#fff;border:none;border-radius:5px;font-size:12px;cursor:pointer;font-weight:600">导出此品类 PDF</button></div>' +
     kwHtml +
     (l3html ? '<div class="cat-l3-grid">' + l3html + '</div>' : '<p style="color:#999;font-size:13px">暂无三级品类数据</p>') +
     hshtml;
@@ -2084,6 +2085,116 @@ function finishPDFExport() {
     window.removeEventListener('afterprint', restore);
   });
   setTimeout(function() { window.print(); }, 200);
+}
+
+// ===================== 单品类导出 =====================
+function exportSingleCategory(key) {
+  var cats = (TAXONOMY || {}).categories || {};
+  var cat = cats[key];
+  if (!cat) return;
+
+  // Hide all sections except #categories
+  var allSections = document.querySelectorAll('.section');
+  allSections.forEach(function(s) {
+    if (s.id !== 'categories') s.style.display = 'none';
+  });
+
+  // Hide report hero, exec summary
+  var hero = document.querySelector('.report-hero');
+  if (hero) hero.style.display = 'none';
+  var execSummary = document.querySelector('.exec-summary');
+  if (execSummary) execSummary.style.display = 'none';
+
+  // Hide sidebar, topbar
+  var sidebar = document.querySelector('.sidebar');
+  var topbar = document.querySelector('.topbar');
+  if (sidebar) sidebar.style.display = 'none';
+  if (topbar) topbar.style.display = 'none';
+
+  // Hide category toolbar and L2 list, weekly insights
+  var catToolbar = document.querySelector('.cat-toolbar');
+  var catL2List = document.getElementById('cat-l2-list');
+  var weeklyInsights = document.getElementById('weekly-insights-container');
+  if (catToolbar) catToolbar.style.display = 'none';
+  if (catL2List) catL2List.style.display = 'none';
+  if (weeklyInsights) weeklyInsights.style.display = 'none';
+
+  // Hide the section header (numbered title)
+  var catSection = document.getElementById('categories');
+  var catSectionHeader = catSection ? catSection.querySelector('.section-header') : null;
+  if (catSectionHeader) catSectionHeader.style.display = 'none';
+
+  // Hide the export button itself in print
+  var exportBtns = document.querySelectorAll('.cat-detail button');
+  exportBtns.forEach(function(btn) { btn.style.display = 'none'; });
+
+  // Set detail area to full width
+  var catBody = document.querySelector('.cat-body');
+  if (catBody) catBody.style.gridTemplateColumns = '1fr';
+  var catDetail = document.getElementById('cat-detail');
+  if (catDetail) {
+    catDetail.style.maxHeight = 'none';
+    catDetail.style.overflow = 'visible';
+  }
+
+  // Load rich data if not already loaded, then print
+  function doPrint() {
+    // Add a print title header
+    var printHeader = document.createElement('div');
+    printHeader.id = '_single-cat-print-header';
+    printHeader.style.cssText = 'padding:16px 0 12px;border-bottom:2px solid #1a2332;margin-bottom:16px';
+    printHeader.innerHTML = '<h2 style="font-size:20px;color:#1a2332;margin:0">' + esc(cat.zh) +
+      ' <span style="font-size:14px;color:#6b7c93;font-weight:400">' + esc(cat.en || '') + '</span></h2>' +
+      '<div style="font-size:12px;color:#999;margin-top:4px">建材行业全球资讯期刊 | BM Global Journal | ' + (WEEK_DATA.date || '') + '</div>';
+    catDetail.insertBefore(printHeader, catDetail.firstChild);
+
+    window.addEventListener('afterprint', function restore() {
+      // Remove print header
+      var ph = document.getElementById('_single-cat-print-header');
+      if (ph) ph.remove();
+      // Restore all sections
+      allSections.forEach(function(s) { s.style.display = ''; });
+      if (hero) hero.style.display = '';
+      if (execSummary) execSummary.style.display = '';
+      if (sidebar) sidebar.style.display = '';
+      if (topbar) topbar.style.display = '';
+      if (catToolbar) catToolbar.style.display = '';
+      if (catL2List) catL2List.style.display = '';
+      if (weeklyInsights) weeklyInsights.style.display = '';
+      if (catSectionHeader) catSectionHeader.style.display = '';
+      exportBtns.forEach(function(btn) { btn.style.display = ''; });
+      if (catBody) catBody.style.gridTemplateColumns = '';
+      if (catDetail) {
+        catDetail.style.maxHeight = '';
+        catDetail.style.overflow = '';
+      }
+      window.removeEventListener('afterprint', restore);
+    });
+    setTimeout(function() { window.print(); }, 200);
+  }
+
+  // Check if rich data already loaded (look for .cd-section inside detail)
+  if (catDetail && catDetail.querySelector('.cd-section')) {
+    doPrint();
+  } else if (cat.l2_slug) {
+    // Load rich data first
+    fetch('data/categories/建材与房地产/' + cat.l2_slug + '.json')
+      .then(function(r) { return r.ok ? r.json() : null; })
+      .then(function(d) {
+        if (d) {
+          var richDiv = catDetail.querySelector('.cd-loading');
+          if (!richDiv) {
+            richDiv = document.createElement('div');
+            catDetail.appendChild(richDiv);
+          }
+          renderRichDetail(richDiv, d);
+        }
+        doPrint();
+      })
+      .catch(function() { doPrint(); });
+  } else {
+    doPrint();
+  }
 }
 
 // ===================== 各板块本周洞察 =====================
