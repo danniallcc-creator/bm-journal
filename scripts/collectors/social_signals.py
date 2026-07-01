@@ -155,8 +155,12 @@ def collect_google_trends_batch() -> dict:
                 "status": "pytrends_not_installed"}
 
     # 环境变量开关：CI 环境下可跳过 Google Trends 采集 (避免429/超时)
-    if os.environ.get("SKIP_GTRENDS", "").lower() in ("1", "true", "yes"):
-        log.warning("SKIP_GTRENDS=1, skipping Google Trends collection")
+    # 自动在 GitHub Actions 中跳过 (pytrends 频繁被限流会拖垮 30min timeout)
+    skip = os.environ.get("SKIP_GTRENDS", "").lower() in ("1", "true", "yes")
+    if not skip and os.environ.get("GITHUB_ACTIONS", "").lower() == "true":
+        skip = True  # CI 默认跳过, 避免拖垮 workflow timeout
+    if skip:
+        log.warning("Skipping Google Trends collection (SKIP_GTRENDS or GITHUB_ACTIONS)")
         return {"results": {}, "groups_attempted": 0,
                 "collected_at": datetime.now().isoformat(),
                 "status": "skipped_by_env"}
