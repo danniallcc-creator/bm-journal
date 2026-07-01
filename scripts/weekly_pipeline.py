@@ -190,6 +190,137 @@ def _build_data_sources(all_banks, wb_data, shipping_data, social_data,
     return sources
 
 
+def _build_section_insights(macro_articles, all_banks, country_metrics,
+                            demand_view, product_trends, supply_chain,
+                            innovation_items, shipping_data, news_sections):
+    """从各板块数据自动生成洞察摘要 (无需LLM)"""
+
+    # === 宏观洞察 ===
+    macro_summary_parts = []
+    macro_bullets = []
+    cb_stats = all_banks.get("stats", {})
+    if cb_stats.get("ok", 0):
+        # 找到央行政策文章
+        for art in macro_articles:
+            if art.get("tag") == "央行政策":
+                macro_summary_parts.append(art.get("summary", "")[:120])
+                break
+    # 新闻宏观条数
+    news_macro = news_sections.get("macro", []) if news_sections else []
+    if news_macro:
+        macro_summary_parts.append(f"本周{len(news_macro)}条建材宏观新闻")
+    # 基建情报
+    infra_arts = [a for a in macro_articles if a.get("tag") in ("非洲基建", "战后重建", "区域基建")]
+    if infra_arts:
+        macro_bullets.append({"type": "up", "text": f"全球基建情报: {len(infra_arts)}条区域基建/重建动态"})
+    # 航运运价
+    scfi = shipping_data.get("scfi", {})
+    bdi = shipping_data.get("bdi", {})
+    if scfi.get("status") == "ok" and scfi.get("value"):
+        chg = scfi.get("change_pct", 0)
+        arrow = "up" if chg > 0 else "down" if chg < 0 else "info"
+        macro_bullets.append({"type": arrow, "text": f"SCFI运价指数 {scfi['value']:.0f} ({chg:+.1f}%)"})
+    if bdi.get("status") == "ok" and bdi.get("value"):
+        chg = bdi.get("change_pct", 0)
+        arrow = "up" if chg > 0 else "down" if chg < 0 else "info"
+        macro_bullets.append({"type": arrow, "text": f"BDI干散货指数 {bdi['value']:.0f} ({chg:+.1f}%)"})
+    # 大宗商品
+    for sc in supply_chain:
+        if sc.get("title", "").startswith("大宗"):
+            data_items = sc.get("data", [])
+            up_items = [d for d in data_items if (d.get("change") or 0) > 3]
+            down_items = [d for d in data_items if (d.get("change") or 0) < -3]
+            if up_items:
+                names = ", ".join(d["item"] for d in up_items[:3])
+                macro_bullets.append({"type": "alert", "text": f"大宗涨幅>3%: {names}"})
+            if down_items:
+                names = ", ".join(d["item"] for d in down_items[:3])
+                macro_bullets.append({"type": "down", "text": f"大宗跌幅>3%: {names}"})
+            break
+
+    macro_insight = {
+        "summary": "；".join(macro_summary_parts) if macro_summary_parts else f"本周共{len(macro_articles)}条宏观资讯",
+        "bullets": macro_bullets[:5]
+    }
+
+    # === 国别洞察 ===
+    regional_bullets = []
+    demands = demand_view.get("demands", []) if demand_view else []
+    active_demands = [d for d in demands if d.get("country_count", 0) > 0]
+    regional_summary = ""
+    if active_demands:
+        top = active_demands[0]
+        regional_summary = f"需求热力排名: {top.get('name','')}{top.get('country_count',0)}国活跃(强度{top.get('total_strength',0)})。"
+        for d in active_demands[:4]:
+            regional_bullets.append({
+                "type": "up" if d.get("total_strength", 0) >= 50 else "info",
+                "text": f"{d.get('name','')}: {d.get('country_count',0)}国 | 强度{d.get('total_strength',0)}"
+            })
+    else:
+        # fallback: 直接从 country_metrics 计算
+        total = len(country_metrics)
+        regional_summary = f"覆盖{total}个重点市场宏观数据"
+        regions_count = {}
+        for code, m in country_metrics.items():
+            from scripts.config import COUNTRIES
+            info = COUNTRIES.get(code, {})
+            r = info.get("region", "其他")
+            regions_count[r] = regions_count.get(r, 0) + 1
+        for r, cnt in regions_count.items():
+            regional_bullets.append({"type": "info", "text": f"{r}: {cnt}国数据更新"})
+
+    regional_insight = {
+        "summary": regional_summary,
+        "bullets": regional_bullets[:5]
+    }
+
+    # === 产品洞察 ===
+    products_bullets = []
+    products_summary = ""
+    if product_trends:
+        products_summary = f"本周{len(product_trends)}个品类趋势信号"
+        for pt in product_trends[:4]:
+            signals = pt.get("socialSignals", [])
+            growth = max((s.get("growth", 0) for s in signals), default=0)
+            btype = "up" if growth > 30 else "alert" if growth > 0 else "info"
+            products_summary_text = pt.get("name", "")
+            if growth > 0:
+                products_summary_text += f" (+{growth:.0f}%)"
+            products_bullets.append({"type": btype, "text": products_summary_text})
+    else:
+        products_summary = "本周暂无明显产品趋势信号(Google Trends/Reddit采集受限)"
+
+    products_insight = {
+        "summary": products_summary,
+        "bullets": products_bullets[:5]
+    }
+
+    # === 创新洞察 ===
+    innovation_bullets = []
+    innovation_summary = ""
+    if innovation_items:
+        innovation_summary = f"本周追踪{len(innovation_items)}项技术创新/学术动态"
+        for inno in innovation_items[:4]:
+            title = inno.get("title_zh") or inno.get("title", "")
+            if len(title) > 40:
+                title = title[:38] + "..."
+            innovation_bullets.append({"type": "up", "text": title})
+    else:
+        innovation_summary = "本周暂无新增技术创新追踪"
+
+    innovation_insight = {
+        "summary": innovation_summary,
+        "bullets": innovation_bullets[:5]
+    }
+
+    return {
+        "macro": macro_insight,
+        "regional": regional_insight,
+        "products": products_insight,
+        "innovation": innovation_insight
+    }
+
+
 def run_pipeline():
     """完整管道: P0(央行+World Bank+房地产) + P1(海运+社交信号+贸易流)"""
     now = datetime.now()
@@ -501,6 +632,21 @@ def run_pipeline():
     # 基建宏观情报 (最多10条, 按impact排序)
     macro_articles.extend(infra_articles[:10])
 
+    # ============================================================
+    # 各板块本周洞察 (sectionInsights)
+    # ============================================================
+    section_insights = _build_section_insights(
+        macro_articles=macro_articles,
+        all_banks=all_banks,
+        country_metrics=country_metrics,
+        demand_view=demand_view,
+        product_trends=product_trends,
+        supply_chain=supply_chain,
+        innovation_items=innovation_items,
+        shipping_data=shipping_data,
+        news_sections=news_sections
+    )
+
     # 最终JSON
     week_data = {
         "issue": week_num,
@@ -526,7 +672,8 @@ def run_pipeline():
             all_banks, wb_data, shipping_data, social_data, trade_data,
             customs_data, reg_data, news_data, events_data,
             innovation_data, research_data, emerging_data, infra_data
-        )
+        ),
+        "sectionInsights": section_insights
     }
 
     # 保存

@@ -223,6 +223,8 @@ a:hover{text-decoration:underline}
 .cat-explorer{background:var(--surface);border-radius:12px;border:1px solid var(--border);overflow:hidden}
 #weekly-insights-container{padding:16px 20px;border-bottom:1px solid var(--border)}
 #weekly-insights-container:empty{display:none;padding:0;border:none}
+.section-insights{padding:0 20px 16px}
+.section-insights:empty{display:none;padding:0}
 .cat-toolbar{padding:16px 20px;border-bottom:1px solid var(--border);display:flex;gap:12px;align-items:center}
 .cat-search{flex:1;padding:8px 14px;border:1.5px solid var(--border);border-radius:8px;font-size:13px;outline:none;transition:border-color .2s}
 .cat-search:focus{border-color:var(--gold)}
@@ -369,6 +371,7 @@ a:hover{text-decoration:underline}
   .cat-print-rich table{font-size:10px!important}
   .cat-print-rich .cd-trend-summary,.cat-print-rich .cd-analysis{font-size:11px!important;line-height:1.6!important}
   #weekly-insights-container{padding:8px 0!important;border-bottom:none!important}
+  .section-insights{padding:4px 0!important}
   h2,h3{page-break-after:avoid}
   @page{margin:1cm 1.2cm;size:A4}
 }
@@ -451,6 +454,7 @@ a:hover{text-decoration:underline}
         <div class="num">1</div>
         <h2>宏观环境<span class="en">Macro Environment</span></h2>
       </div>
+      <div id="macro-insights" class="section-insights"></div>
       <div class="article-grid" id="macro-grid"></div>
     </div>
 
@@ -460,6 +464,7 @@ a:hover{text-decoration:underline}
         <div class="num">2</div>
         <h2>区域与国别分析<span class="en">Demand-Driven Regional Analysis</span></h2>
       </div>
+      <div id="regional-insights" class="section-insights"></div>
       <div class="demand-grid" id="demand-grid"></div>
     </div>
 
@@ -469,6 +474,7 @@ a:hover{text-decoration:underline}
         <div class="num">3</div>
         <h2>产品趋势与需求<span class="en">Product Trends & Demand</span></h2>
       </div>
+      <div id="products-insights" class="section-insights"></div>
       <div class="trend-list" id="trend-list"></div>
     </div>
 
@@ -478,6 +484,7 @@ a:hover{text-decoration:underline}
         <div class="num">4</div>
         <h2>技术创新<span class="en">Innovation & Technology</span></h2>
       </div>
+      <div id="innovation-insights" class="section-insights"></div>
       <div class="inno-grid" id="inno-grid"></div>
     </div>
 
@@ -665,6 +672,7 @@ function renderAll() {
 
   renderHero(d);
   renderSummary(d.keyTakeaways || []);
+  renderSectionInsights();
   renderMacro(d.macro || []);
   if (d.demandView && d.demandView.length) {
     renderDemandView(d.demandView);
@@ -1791,9 +1799,13 @@ function getEmbeddedTaxonomy() {
 const PDF_SECTIONS = [
   {id:'summary', name:'本期核心观点', en:'Executive Summary'},
   {id:'macro', name:'宏观环境', en:'Macro Environment'},
+  {id:'macro-insights', name:'  ↳ 宏观本周洞察', en:'Macro Insights'},
   {id:'regional', name:'区域与国别分析', en:'Regional Analysis'},
+  {id:'regional-insights', name:'  ↳ 国别本周洞察', en:'Regional Insights'},
   {id:'products', name:'产品趋势与需求', en:'Product Trends'},
+  {id:'products-insights', name:'  ↳ 产品本周洞察', en:'Product Insights'},
   {id:'innovation', name:'技术创新', en:'Innovation'},
+  {id:'innovation-insights', name:'  ↳ 创新本周洞察', en:'Innovation Insights'},
   {id:'supplychain', name:'供应链与贸易', en:'Supply Chain'},
   {id:'customs-dashboard', name:'海关月度出口看板', en:'Customs Dashboard'},
   {id:'regulation', name:'监管与ESG', en:'Regulation & ESG'},
@@ -1834,9 +1846,12 @@ function confirmPDFExport() {
   });
 
   // Handle sub-blocks inside sections
-  // weekly-insights-container (inside #categories)
-  var insightsEl = document.getElementById('weekly-insights-container');
-  if (insightsEl) insightsEl.style.display = checked['weekly-insights-container'] ? '' : 'none';
+  // Section insights (nested inside parent sections)
+  var insightIds = ['macro-insights','regional-insights','products-insights','innovation-insights','weekly-insights-container'];
+  insightIds.forEach(function(iid) {
+    var el = document.getElementById(iid);
+    if (el) el.style.display = checked[iid] ? '' : 'none';
+  });
   // research-summary-block (inside #research)
   var resSummaryEl = document.getElementById('research-summary-block');
   if (resSummaryEl) resSummaryEl.style.display = checked['research-summary-block'] ? '' : 'none';
@@ -1854,6 +1869,7 @@ function confirmPDFExport() {
     if (s.id === 'categories') return;
     if (s.id === 'research-summary-block') return;
     if (s.id === 'research-items-block') return;
+    if (s.id.endsWith('-insights')) return; // skip all insight sub-blocks
     var el = document.getElementById(s.id);
     if (el) el.style.display = checked[s.id] ? '' : 'none';
   });
@@ -1861,6 +1877,32 @@ function confirmPDFExport() {
   // Handle #research section
   var researchSection = document.getElementById('research');
   if (researchSection) researchSection.style.display = researchChecked ? '' : 'none';
+
+  // Handle sections with insight sub-blocks (show parent if insight is checked even if main content unchecked)
+  var insightParents = [
+    {parent:'macro', insight:'macro-insights', grid:'.article-grid'},
+    {parent:'regional', insight:'regional-insights', grid:'.demand-grid'},
+    {parent:'products', insight:'products-insights', grid:'.trend-list'},
+    {parent:'innovation', insight:'innovation-insights', grid:'.inno-grid'}
+  ];
+  insightParents.forEach(function(ip) {
+    var parentEl = document.getElementById(ip.parent);
+    if (!parentEl) return;
+    var parentChecked = checked[ip.parent];
+    var insightChecked = checked[ip.insight];
+    if (!parentChecked && insightChecked) {
+      // Show parent but hide its content grid
+      parentEl.style.display = '';
+      var grid = parentEl.querySelector(ip.grid);
+      if (grid) grid.style.display = 'none';
+    } else if (!parentChecked && !insightChecked) {
+      parentEl.style.display = 'none';
+    } else if (parentChecked) {
+      parentEl.style.display = '';
+      var grid = parentEl.querySelector(ip.grid);
+      if (grid) grid.style.display = '';
+    }
+  });
 
   // Handle #categories section
   var catSection = document.getElementById('categories');
@@ -2022,10 +2064,12 @@ function finishPDFExport() {
       if (el) el.style.display = '';
     });
     // Restore sub-blocks
-    ['weekly-insights-container','research-summary-block','research-items-block'].forEach(function(id) {
+    ['macro-insights','regional-insights','products-insights','innovation-insights','weekly-insights-container','research-summary-block','research-items-block'].forEach(function(id) {
       var el = document.getElementById(id);
       if (el) el.style.display = '';
     });
+    // Restore content grids that may have been hidden for insight-only export
+    document.querySelectorAll('.article-grid,.demand-grid,.trend-list,.inno-grid').forEach(function(el) { el.style.display = ''; });
     var catSection = document.getElementById('categories');
     if (catSection) {
       var catBody = catSection.querySelector('.cat-body');
@@ -2038,6 +2082,52 @@ function finishPDFExport() {
     window.removeEventListener('afterprint', restore);
   });
   setTimeout(function() { window.print(); }, 200);
+}
+
+// ===================== 各板块本周洞察 =====================
+function renderSectionInsights() {
+  var si = (WEEK_DATA || {}).sectionInsights;
+  if (!si) return;
+
+  var sections = [
+    {id:'macro-insights', key:'macro', color:'#4fc3f7', title:'宏观洞察', en:'Macro Insights'},
+    {id:'regional-insights', key:'regional', color:'#66bb6a', title:'国别洞察', en:'Regional Insights'},
+    {id:'products-insights', key:'products', color:'#ffa726', title:'产品洞察', en:'Product Insights'},
+    {id:'innovation-insights', key:'innovation', color:'#ab47bc', title:'创新洞察', en:'Innovation Insights'}
+  ];
+
+  sections.forEach(function(sec) {
+    var container = document.getElementById(sec.id);
+    if (!container) return;
+    var data = si[sec.key];
+    if (!data || (!data.summary && !(data.bullets && data.bullets.length))) {
+      container.innerHTML = '';
+      return;
+    }
+
+    var html = '<div style="background:linear-gradient(135deg,#0d1b2a,#1b2838);border:1px solid #2a3a4a;border-radius:10px;padding:14px 16px;margin-top:8px">';
+    html += '<div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">';
+    html += '<span style="display:inline-block;width:8px;height:8px;background:' + sec.color + ';border-radius:50%"></span>';
+    html += '<h4 style="margin:0;font-size:14px;color:#e0e0e0">' + sec.title + '</h4>';
+    html += '<span style="font-size:11px;color:#888">' + sec.en + '</span></div>';
+
+    if (data.summary) {
+      html += '<div style="font-size:12px;color:#b0bec5;line-height:1.7;margin-bottom:' + (data.bullets && data.bullets.length ? '10px' : '0') + '">' + esc(data.summary) + '</div>';
+    }
+
+    if (data.bullets && data.bullets.length) {
+      html += '<div style="display:flex;flex-direction:column;gap:5px">';
+      data.bullets.forEach(function(b) {
+        var bulletColor = b.type === 'up' ? '#81c784' : b.type === 'down' ? '#ef9a9a' : b.type === 'alert' ? '#ffcc80' : '#90a4ae';
+        var bulletBg = b.type === 'up' ? '#1a2a1a' : b.type === 'down' ? '#2a1a1a' : b.type === 'alert' ? '#2a2210' : '#1a1a2e';
+        html += '<div style="padding:6px 10px;background:' + bulletBg + ';border-left:3px solid ' + bulletColor + ';border-radius:0 6px 6px 0;font-size:12px;color:' + bulletColor + '">' + esc(b.text || '') + '</div>';
+      });
+      html += '</div>';
+    }
+
+    html += '</div>';
+    container.innerHTML = html;
+  });
 }
 
 // ===================== 品类浏览器: 本周洞察汇总 =====================
