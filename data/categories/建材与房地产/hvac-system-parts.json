@@ -186,8 +186,8 @@
     "opportunity": "中东超级项目定制建材（幕墙/清真建筑装饰石材）；非洲低成本预制板房系统；欧洲历史建筑修缮匹配建材；装配式整体卫浴/厨房出口（东南亚高端地产）；空调系统及配件(HVAC System & Parts)细分领域机会值得关注"
   },
   "compliance_summary": "US: CARB Phase II(木质板材), ASTM材料标准, ICC建筑认证 | EU: CE(建材法规CPR 305/2011), DoP性能声明 | JP: JIS认证(部分强制), 建築基準法确认 | AU: Codemark或StateAuth认证, CodeMark(自愿但推荐)",
-  "last_updated": "2026-06-10",
-  "data_source": "merged_existing",
+  "last_updated": "2026-07-02",
+  "data_source": "compass_sync",
   "demand_scenarios": {
     "scenes": [
       {

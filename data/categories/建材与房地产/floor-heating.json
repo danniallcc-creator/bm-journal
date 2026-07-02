@@ -378,8 +378,8 @@
     "opportunity": "EU热泵补贴→水地暖管+分集水器配套出口，韩国电地暖零售，中东新建豪宅地暖标配"
   },
   "compliance_summary": "EU:CE+EN 1264(地暖设计)+ErP能效; US:UL(电地暖)+NSF(水暖管); 热泵:EN 14511; AU:WaterMark+SAA(电气)",
-  "last_updated": "2026-06-23",
-  "data_source": "generated_enrichment",
+  "last_updated": "2026-07-02",
+  "data_source": "compass_sync",
   "demand_scenarios": {
     "scenes": [
       {

@@ -392,8 +392,8 @@
     "opportunity": "中东医院建设潮→整体防撞系统(护角+扶手+护墙板)打包出口，日本银发经济配套"
   },
   "compliance_summary": "US:ADA无障碍+ASTM F963(儿童); EU:EN 14988(儿童)+REACH; 医疗:ISO 22196抗菌; AU:AS 1428无障碍",
-  "last_updated": "2026-06-23",
-  "data_source": "generated_enrichment",
+  "last_updated": "2026-07-02",
+  "data_source": "compass_sync",
   "demand_scenarios": {
     "scenes": [
       {

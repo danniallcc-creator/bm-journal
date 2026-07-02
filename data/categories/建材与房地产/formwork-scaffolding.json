@@ -392,8 +392,8 @@
     "opportunity": "东南亚高层住宅铝模系统(单价$80-150/m²)，中东NEOM超级工程定制模架，非洲基建桥梁模架"
   },
   "compliance_summary": "EU:EN 12812(支撑)+EN 13670(模板); US:OSHA脚手架标准; AU:AS/NZS 1576; 中东:BS标准沿用",
-  "last_updated": "2026-06-23",
-  "data_source": "generated_enrichment",
+  "last_updated": "2026-07-02",
+  "data_source": "compass_sync",
   "demand_scenarios": {
     "scenes": [
       {

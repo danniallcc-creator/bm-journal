@@ -63,10 +63,16 @@ def full_clone():
 
 
 def sync_categories(src_dir):
-    """Copy L2 JSON files from compass to bm-journal."""
+    """Copy L2 JSON files from compass to bm-journal.
+
+    Always refresh `last_updated` on the destination so that the exported
+    PDF footer reflects the current journal build date, even when Compass
+    upstream content has not changed this week.
+    """
     CAT_DIR.mkdir(parents=True, exist_ok=True)
     copied = 0
     updated_slugs = {}
+    today = datetime.now().strftime("%Y-%m-%d")
 
     for fn in sorted(os.listdir(src_dir)):
         if not fn.endswith(".json"):
@@ -84,9 +90,21 @@ def sync_categories(src_dir):
                 existing = json.loads(dst_file.read_text(encoding="utf-8"))
                 if existing.get("dynamic_insight") == data.get("dynamic_insight") and \
                    existing.get("export_data") == data.get("export_data"):
+                    # 内容未变: 仍需刷新 last_updated 让期刊 PDF 底部与本周同步
+                    existing["last_updated"] = today
+                    if not existing.get("data_source") or existing.get("data_source") == "merged_existing":
+                        existing["data_source"] = "compass_sync"
+                    dst_file.write_text(
+                        json.dumps(existing, ensure_ascii=False, indent=2),
+                        encoding="utf-8"
+                    )
                     updated_slugs[name_cn] = slug
                     copied += 1
                     continue
+
+            # 内容变化: 用 Compass 最新数据 + 本地当日日期戳
+            data["last_updated"] = today
+            data["data_source"] = "compass_sync"
 
             # Write to destination
             dst_file.write_text(

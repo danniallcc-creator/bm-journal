@@ -393,8 +393,8 @@
     "opportunity": "中东NEOM/沙特2030→超大钢结构订单(万吨级)，东南亚工业园厂房钢结构，非洲桥梁基建"
   },
   "compliance_summary": "EU:CE(EN 1090 EXC2+)+CPR; US:AISC认证+ASTM; AU:AS/NZS 5131; 中东:BS/EN沿用",
-  "last_updated": "2026-06-23",
-  "data_source": "generated_enrichment",
+  "last_updated": "2026-07-02",
+  "data_source": "compass_sync",
   "demand_scenarios": {
     "scenes": [
       {

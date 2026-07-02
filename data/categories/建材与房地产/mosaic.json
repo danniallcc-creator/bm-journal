@@ -392,8 +392,8 @@
     "opportunity": "中东酒店/宫殿金箔马赛克(单价$200-800/m²)，欧美泳池回收玻璃马赛克，艺术拼花定制"
   },
   "compliance_summary": "EU:CE(CPR)+防滑R9-R13; US:ANSI A137.2(玻璃马赛克); AU:AS 4654防滑; 泳池:EN 13451",
-  "last_updated": "2026-06-23",
-  "data_source": "generated_enrichment",
+  "last_updated": "2026-07-02",
+  "data_source": "compass_sync",
   "demand_scenarios": {
     "scenes": [
       {

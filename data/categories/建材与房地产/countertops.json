@@ -760,8 +760,8 @@
     "opportunity": "美国反倾销后转东南亚建厂→中国石英石出口加拿大/澳洲替代路径，岩板高增长(单价$100-400/m²)"
   },
   "compliance_summary": "US:NSF 51(食品接触)+Greenguard(低VOC); EU:CE+REACH; AU:低VOC+食品接触合规; 反倾销:US对中国石英石AD 300%+",
-  "last_updated": "2026-06-23",
-  "data_source": "generated_enrichment",
+  "last_updated": "2026-07-02",
+  "data_source": "compass_sync",
   "demand_scenarios": {
     "scenes": [
       {

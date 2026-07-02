@@ -494,8 +494,8 @@
     "opportunity": "非洲农村供水(单价低/批量大)，中东海水淡化配套(耐高压PE管)，东南亚城市管网更新"
   },
   "compliance_summary": "EU:CE+REACH+饮用水接触NSF/EN 12201; US:NSF 61(饮用水)+ASTM D1785; AU:WaterMark认证(强制)",
-  "last_updated": "2026-06-23",
-  "data_source": "generated_enrichment",
+  "last_updated": "2026-07-02",
+  "data_source": "compass_sync",
   "demand_scenarios": {
     "scenes": [
       {

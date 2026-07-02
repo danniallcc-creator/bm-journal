@@ -393,8 +393,8 @@
     "opportunity": "中东酒店/宫殿锻铁栏杆(单价$300-1500/米)，澳洲阳台玻璃护栏(法规强制)，美国ADA无障碍扶手"
   },
   "compliance_summary": "EU:EN 1991-1-4(荷载)+EN 1090(钢结构); US:IBC/ADA无障碍; AU:AS 1170.1+NCC护栏高度≥1m; 泳池:EN 13451",
-  "last_updated": "2026-06-23",
-  "data_source": "generated_enrichment",
+  "last_updated": "2026-07-02",
+  "data_source": "compass_sync",
   "demand_scenarios": {
     "scenes": [
       {

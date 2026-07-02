@@ -393,8 +393,8 @@
     "opportunity": "中东高端GRC定制线条(单价$50-200/米)，EU翻新配套预装线条套装，东南亚新建批量标准线条"
   },
   "compliance_summary": "EU:CE(CPR)+REACH; US:ASTM E84阻燃+CARB(含木); AU:NCC合规+石棉禁入",
-  "last_updated": "2026-06-23",
-  "data_source": "generated_enrichment",
+  "last_updated": "2026-07-02",
+  "data_source": "compass_sync",
   "demand_scenarios": {
     "scenes": [
       {

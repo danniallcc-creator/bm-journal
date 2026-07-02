@@ -374,8 +374,8 @@
     "opportunity": "EU气凝胶保温补贴市场(溢价5-10倍)，中东BIPV幕墙一体化，日本自修复混凝土基础设施"
   },
   "compliance_summary": "EU:CE(CPR)+ETA技术评估; US:ASTM+ICC-ES评估报告; 被动房:PHI认证; BIPV:IEC 61215+61730",
-  "last_updated": "2026-06-23",
-  "data_source": "generated_enrichment",
+  "last_updated": "2026-07-02",
+  "data_source": "compass_sync",
   "demand_scenarios": {
     "scenes": [
       {
