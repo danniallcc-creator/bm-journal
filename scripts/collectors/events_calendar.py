@@ -204,7 +204,7 @@ def collect_events_calendar() -> dict:
     log.info("=== Collecting events calendar ===")
 
     cache_key = "events_calendar"
-    cached = cache_get(cache_key, "events", ttl=3600 * 24 * 7)  # 7天缓存
+    cached = cache_get(cache_key, "events", ttl=3600 * 24 * 5)  # 5天缓存: 保证周更(避免7d边界与CI周期重合)
     if cached:
         return cached
 

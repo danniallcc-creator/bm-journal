@@ -185,7 +185,7 @@ def collect_all_innovation() -> dict:
     log.info("=== Collecting innovation & technology data ===")
 
     cache_key = "innovation_all"
-    cached = cache_get(cache_key, "innovation", ttl=3600 * 24 * 7)  # 7天缓存
+    cached = cache_get(cache_key, "innovation", ttl=3600 * 24 * 5)  # 5天缓存: 保证周更(避免7d边界与CI周期重合)
     if cached:
         return cached
 

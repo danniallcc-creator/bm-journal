@@ -696,6 +696,9 @@ def format_customs_dashboard(data: dict) -> dict:
         "alerts": alerts,
         "data_source": "UN Comtrade (中国海关总署上报)",
         "data_lag": "约2-3个月",
+        # 数据本身可能来自缓存(30d TTL),但看板构建时间戳每次都刷新
+        "data_collected_at": data.get("collected_at"),
+        "dashboard_built_at": datetime.now().isoformat(),
     }
 
 

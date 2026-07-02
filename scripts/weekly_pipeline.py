@@ -384,8 +384,11 @@ def run_pipeline():
                             _code = next((c for c, inf in COUNTRIES.items()
                                           if inf.get("zh") == _it.get("name")), None)
                             if _code:
+                                # 标记数据来源为上期回退, 便于前端提示与运维排查
+                                _it["stale_since"] = _pf.name
+                                _it["stale_reason"] = "worldbank_unhealthy"
                                 country_metrics[_code] = _it
-                    log.info(f"  Fallback loaded {len(country_metrics)} countries from {_pf.name}")
+                    log.info(f"  Fallback loaded {len(country_metrics)} countries from {_pf.name} (marked stale_since)")
                     break
             except Exception as _e:
                 log.warning(f"  Fallback file {_pf.name} error: {_e}")

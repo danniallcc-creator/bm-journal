@@ -873,6 +873,7 @@ function renderCountries(countries) {
     return '<div class="country-card">' +
       '<div class="cc-header"><span class="cc-name">' + esc(c.name) + '</span>' +
       '<span class="cc-flag">' + (c.flag||'') + '</span></div>' +
+      (c.stale_since ? '<div style="font-size:10px;color:#c17d00;background:#fff8e6;padding:2px 6px;border-radius:3px;margin:4px 0;display:inline-block">数据回退自 ' + esc(c.stale_since.replace('week-','').replace('.json','')) + '</div>' : '') +
       '<div class="cc-metrics">' + metrics + '</div>' +
       (c.comment ? '<div class="cc-comment">' + esc(c.comment) + '</div>' : '') +
       '</div>';
@@ -939,7 +940,7 @@ function renderCustomsDashboard(data) {
 
   // 期间与总览
   html += '<div style="display:flex;gap:24px;flex-wrap:wrap;margin-bottom:16px">';
-  html += '<div class="ds-card" style="flex:1;min-width:200px"><h5>数据期间</h5><p style="font-size:20px;font-weight:700;margin:8px 0">' + esc(data.period) + '</p><p style="font-size:11px;color:#999">数据来源: ' + esc(data.data_source || 'UN Comtrade') + ' | 延迟: ' + esc(data.data_lag || '~3月') + '</p></div>';
+  html += '<div class="ds-card" style="flex:1;min-width:200px"><h5>数据期间</h5><p style="font-size:20px;font-weight:700;margin:8px 0">' + esc(data.period) + '</p><p style="font-size:11px;color:#999">数据来源: ' + esc(data.data_source || 'UN Comtrade') + ' | 延迟: ' + esc(data.data_lag || '~3月') + '</p>' + (data.dashboard_built_at ? '<p style="font-size:10px;color:#aaa;margin-top:4px">本周构建: ' + esc((data.dashboard_built_at||'').slice(0,10)) + '</p>' : '') + '</div>';
   html += '<div class="ds-card" style="flex:1;min-width:200px"><h5>出口总额</h5><p style="font-size:20px;font-weight:700;margin:8px 0">$' + fmtUSD(data.summary.total_usd) + '</p><p style="font-size:13px;color:' + pctColor(data.summary.total_yoy_pct) + '">同比 ' + fmtPct(data.summary.total_yoy_pct) + '</p></div>';
   html += '<div class="ds-card" style="flex:1;min-width:200px"><h5>覆盖品类</h5><p style="font-size:20px;font-weight:700;margin:8px 0">' + data.summary.categories_count + '</p><p style="font-size:11px;color:#999">24大建材品类</p></div>';
   html += '</div>';

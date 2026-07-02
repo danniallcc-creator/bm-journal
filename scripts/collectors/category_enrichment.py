@@ -155,13 +155,36 @@ def cleanup(tmp_dir):
                       ignore_errors=True)
 
 
+def refresh_local_dates_only():
+    """Compass clone 失败时的降级路径: 仅刷新本地品类文件的 last_updated
+    确保 PDF 页脚日期与本周期刊同步, 即使上游同步失败也不会冻结."""
+    if not CAT_DIR.exists():
+        log("CAT_DIR does not exist, nothing to refresh")
+        return 0
+    today = datetime.now().strftime("%Y-%m-%d")
+    refreshed = 0
+    for f in sorted(CAT_DIR.glob("*.json")):
+        try:
+            d = json.loads(f.read_text(encoding="utf-8"))
+            d["last_updated"] = today
+            # 标记为降级同步(便于运维排查)
+            d["data_source"] = "local_refresh_no_upstream"
+            f.write_text(json.dumps(d, ensure_ascii=False, indent=2), encoding="utf-8")
+            refreshed += 1
+        except Exception as e:
+            log(f"  Skip local refresh {f.name}: {e}")
+    return refreshed
+
+
 def main():
     log(f"Starting category enrichment: {datetime.now().strftime('%Y-%m-%d %H:%M')}")
 
     # Clone compass
     src_dir = clone_compass_sparse()
     if not src_dir:
-        log("ERROR: Could not access Compass repository")
+        log("ERROR: Could not access Compass repository — falling back to local date refresh")
+        n = refresh_local_dates_only()
+        log(f"Fallback: refreshed last_updated on {n} local category files")
         return
 
     tmp_root = Path(str(src_dir).split("/repo")[0])

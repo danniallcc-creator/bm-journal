@@ -184,7 +184,7 @@ def collect_all_research() -> dict:
     log.info("=== Collecting research reports ===")
 
     cache_key = "research_all"
-    cached = cache_get(cache_key, "research", ttl=3600 * 24 * 7)
+    cached = cache_get(cache_key, "research", ttl=3600 * 24 * 5)  # 5天缓存: 保证周更(避免7d边界与CI周期重合)
     if cached:
         return cached
 
