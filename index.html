@@ -374,8 +374,20 @@ a:hover{text-decoration:underline}
   .section-insights{padding:8px 0 12px!important;margin-bottom:14px!important;border-bottom:1.5px dashed #ccc!important}
   .section-insights:empty{display:none!important;margin:0!important;border:none!important;padding:0!important}
   .section-insights .insight-print-sep{display:block!important}
+  /* 禁止浏览器打印时在超链接后追加 (URL) 网址 */
+  a,a:link,a:visited{color:inherit!important;text-decoration:none!important}
+  a[href]::after,a[href]:after{content:""!important;display:none!important}
+  a[href^="http"]::after,a[href^="http"]:after,a[href^="//"]::after,a[href^="//"]:after{content:""!important;display:none!important}
   h2,h3{page-break-after:avoid}
   @page{margin:1cm 1.2cm;size:A4}
+  @page{
+    @top-left{content:""}
+    @top-center{content:""}
+    @top-right{content:""}
+    @bottom-left{content:""}
+    @bottom-center{content:counter(page)}
+    @bottom-right{content:""}
+  }
 }
 @media(max-width:900px){
   .sidebar{display:none}
