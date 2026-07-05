@@ -1,0 +1,228 @@
+{
+  "title": "中国建材出口月度看板",
+  "period": "202601-202604",
+  "summary": {
+    "total_usd": 0,
+    "total_yoy_pct": null,
+    "categories_count": 24,
+    "highlights": [
+      "最大品类: 土工材料 $0.0M"
+    ]
+  },
+  "categories": [
+    {
+      "name": "土工材料",
+      "value_usd": 0,
+      "previous_usd": 0,
+      "yoy_pct": null
+    },
+    {
+      "name": "地板供暖系统及配件",
+      "value_usd": 0,
+      "previous_usd": 0,
+      "yoy_pct": null
+    },
+    {
+      "name": "地板及配件",
+      "value_usd": 0,
+      "previous_usd": 0,
+      "yoy_pct": null
+    },
+    {
+      "name": "塑料管",
+      "value_usd": 0,
+      "previous_usd": 0,
+      "yoy_pct": null
+    },
+    {
+      "name": "墙纸/墙板",
+      "value_usd": 0,
+      "previous_usd": 0,
+      "yoy_pct": null
+    },
+    {
+      "name": "壁炉、炉灶",
+      "value_usd": 0,
+      "previous_usd": 0,
+      "yoy_pct": null
+    },
+    {
+      "name": "建筑工业玻璃",
+      "value_usd": 0,
+      "previous_usd": 0,
+      "yoy_pct": null
+    },
+    {
+      "name": "建筑板材",
+      "value_usd": 0,
+      "previous_usd": 0,
+      "yoy_pct": null
+    },
+    {
+      "name": "木材",
+      "value_usd": 0,
+      "previous_usd": 0,
+      "yoy_pct": null
+    },
+    {
+      "name": "栏杆与扶手",
+      "value_usd": 0,
+      "previous_usd": 0,
+      "yoy_pct": null
+    },
+    {
+      "name": "梯子及脚手架",
+      "value_usd": 0,
+      "previous_usd": 0,
+      "yoy_pct": null
+    },
+    {
+      "name": "模架",
+      "value_usd": 0,
+      "previous_usd": 0,
+      "yoy_pct": null
+    },
+    {
+      "name": "活动房屋与钢结构",
+      "value_usd": 0,
+      "previous_usd": 0,
+      "yoy_pct": null
+    },
+    {
+      "name": "浴室和厨房产品",
+      "value_usd": 0,
+      "previous_usd": 0,
+      "yoy_pct": null
+    },
+    {
+      "name": "瓷砖及配件",
+      "value_usd": 0,
+      "previous_usd": 0,
+      "yoy_pct": null
+    },
+    {
+      "name": "电梯和自动扶梯",
+      "value_usd": 0,
+      "previous_usd": 0,
+      "yoy_pct": null
+    },
+    {
+      "name": "石材",
+      "value_usd": 0,
+      "previous_usd": 0,
+      "yoy_pct": null
+    },
+    {
+      "name": "砖石材料",
+      "value_usd": 0,
+      "previous_usd": 0,
+      "yoy_pct": null
+    },
+    {
+      "name": "金属建材",
+      "value_usd": 0,
+      "previous_usd": 0,
+      "yoy_pct": null
+    },
+    {
+      "name": "门、窗及其配件",
+      "value_usd": 0,
+      "previous_usd": 0,
+      "yoy_pct": null
+    },
+    {
+      "name": "防水材料",
+      "value_usd": 0,
+      "previous_usd": 0,
+      "yoy_pct": null
+    },
+    {
+      "name": "防火材料",
+      "value_usd": 0,
+      "previous_usd": 0,
+      "yoy_pct": null
+    },
+    {
+      "name": "隔热材料",
+      "value_usd": 0,
+      "previous_usd": 0,
+      "yoy_pct": null
+    },
+    {
+      "name": "马赛克",
+      "value_usd": 0,
+      "previous_usd": 0,
+      "yoy_pct": null
+    }
+  ],
+  "regions": [
+    {
+      "name": "北美",
+      "value_usd": 0,
+      "yoy_pct": null,
+      "top_growth_category": "",
+      "top_growth_yoy": null
+    },
+    {
+      "name": "南美",
+      "value_usd": 0,
+      "yoy_pct": null,
+      "top_growth_category": "",
+      "top_growth_yoy": null
+    },
+    {
+      "name": "西欧",
+      "value_usd": 0,
+      "yoy_pct": null,
+      "top_growth_category": "",
+      "top_growth_yoy": null
+    },
+    {
+      "name": "中东",
+      "value_usd": 0,
+      "yoy_pct": null,
+      "top_growth_category": "",
+      "top_growth_yoy": null
+    },
+    {
+      "name": "东南亚",
+      "value_usd": 0,
+      "yoy_pct": null,
+      "top_growth_category": "",
+      "top_growth_yoy": null
+    },
+    {
+      "name": "中亚",
+      "value_usd": 0,
+      "yoy_pct": null,
+      "top_growth_category": "",
+      "top_growth_yoy": null
+    },
+    {
+      "name": "澳洲",
+      "value_usd": 0,
+      "yoy_pct": null,
+      "top_growth_category": "",
+      "top_growth_yoy": null
+    },
+    {
+      "name": "南亚",
+      "value_usd": 0,
+      "yoy_pct": null,
+      "top_growth_category": "",
+      "top_growth_yoy": null
+    },
+    {
+      "name": "日韩",
+      "value_usd": 0,
+      "yoy_pct": null,
+      "top_growth_category": "",
+      "top_growth_yoy": null
+    }
+  ],
+  "alerts": [],
+  "data_source": "UN Comtrade (中国海关总署上报)",
+  "data_lag": "约2-3个月",
+  "data_collected_at": "2026-07-05T06:45:48.382247",
+  "dashboard_built_at": "2026-07-05T06:45:48.386013"
+}
