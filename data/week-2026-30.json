@@ -1,0 +1,2375 @@
+{
+  "issue": 30,
+  "date": "2026-07-20",
+  "title": "建材行业全球资讯期刊",
+  "tagline": "Global Building Materials Weekly Intelligence Report",
+  "coverage": "25 国家 | 35 品类 | 207+ HS编码",
+  "sources": "FRED(9/9央行) + World Bank(25国) + SCFI + BDI + Reddit + Google Trends + UN Comtrade(13品类) + 海关月度(24品类×202602) + EUR-Lex(0条) + RSS(55篇/9源) + Events(16场) + Academia(9主题) + Research(72篇) + Emerging(1强信号) + Infra(3条/1源)",
+  "keyTakeaways": [
+    {
+      "headline": "投研周报: 综合7大方向72篇报告核心发现",
+      "detail": "本期投研周报综合了7个主题方向共72篇研究报告的核心发现。住房市场领域: 初始房地产发行：低估和学习行为(被引2次)。基础设施投资领域: 评估金融科技、技术基础设施、。大宗商品领域: 硫酸盐对水泥浆体性能的积极影响(被引12次)。绿色金融领域: 绿色混凝土促进可持续基础设施发展。贸易流向领域: 自由贸易港建设对区域进口商的影响(被引2次)。建材行业领域: 预制混凝土夹层墙的热性能(被引12次)。房地产市场领域: 整合宏观经济指标和住房市场动态。行业新闻动态方面，本周重点关注: macro(29篇)、房地产市场(14篇)、regulation(7篇)、innovation(7篇)、commodity(4篇)。宏观环境方面，美联储维持利率3.63%不变。综合来看，本周投研关注重点集中在住房市场调整与新房/成屋销售趋势、基础设施投资与建造技术发展、大宗商品(钢铁/水泥/有色金属)价格波动、绿色建材与可持续金融创新、以及全球建材贸易流向变化等方向。建议重点关注建材品类中与基建、住房需求强相关的细分领域。",
+      "tag": "watch",
+      "type": "research_summary"
+    },
+    {
+      "headline": "全球基建动态: 3条区域基建/重建/翻新情报追踪",
+      "detail": "全球基建宏观研判:\n• 非洲 Africa: Guterres highlights Africa’s leadership in speech to summit in Nairobi\n• 亚非拉重建 Post-conflict: From favelas to informal settlements, new UN report points to housing solutions ",
+      "tag": "opportunity",
+      "type": "infra_summary"
+    },
+    {
+      "headline": "'建筑板材'搜索热度增长-30%",
+      "detail": "Google搜索趋势显示'aluminum composite panel'近4周增长17%",
+      "tag": "opportunity"
+    },
+    {
+      "headline": "美联储维持利率3.63%不变",
+      "detail": "联邦基金有效利率3.63%。10年期国债收益率4.57%。全球央行: 欧央行(ECB) 2.25%; 英央行(BOE) 3.73%; 日央行(BOJ) 0.84%; 澳联储(RBA) 4.35%; 加央行(BOC) 2.27%。对建材行业影...",
+      "tag": "watch"
+    },
+    {
+      "headline": "美国Case-Shiller房价同比上涨0.8%",
+      "detail": "全美指数332.678。房价趋势影响翻新和新建投资。",
+      "tag": "info"
+    }
+  ],
+  "macro": [
+    {
+      "tag": "央行政策",
+      "title": "美联储维持利率3.63%不变",
+      "summary": "联邦基金有效利率3.63%。10年期国债收益率4.57%。全球央行: 欧央行(ECB) 2.25%; 英央行(BOE) 3.73%; 日央行(BOJ) 0.84%; 澳联储(RBA) 4.35%; 加央行(BOC) 2.27%。对建材行业影响: 利率变动通过房贷利率和建筑融资成本传导至房地产投资和新开工。",
+      "source": "FRED / 各国央行",
+      "link": "https://fred.stlouisfed.org/series/FEDFUNDS",
+      "date": "2026-07-16",
+      "impact": 3
+    },
+    {
+      "tag": "宏观 / 监管 / 创新",
+      "title": "Ingeteam宣布推出用于公用事业规模BESS的中央逆变器",
+      "summary": "Ingeteam推出了Ingecon Sun Storage M系列，这是一款适用于公用事业规模BESS应用的模块化中央逆变器平台，可提供高达4.54 MVA的额定功率和电池电压支持",
+      "source": "PV Magazine",
+      "link": "https://www.pv-magazine.com/2026/07/17/ingeteam-announces-central-inverter-for-utility-scale-bess/",
+      "title_en": "Ingeteam announces central inverter for utility-scale BESS"
+    },
+    {
+      "tag": "宏观 / 大宗 / 创新",
+      "title": "3D打印新闻简报， 2026年7月18日：专利、混凝土、钢构件等",
+      "summary": "在本周末的3D打印新闻简报中， Massivit开设了第一个欧洲服务中心，以支持其RapidWings平台，而nScrypt因其高粘度材料而获得专利",
+      "source": "3DPrint.com",
+      "link": "https://3dprint.com/329042/3d-printing-news-briefs-7-18-2026/",
+      "title_en": "3D Printing News Briefs, July 18, 2026: Patent, Concrete, Steel Components, & More"
+    },
+    {
+      "tag": "宏观 / 房地产",
+      "title": "项目类型“极有可能”导致纽约市的结构故障： ASCE工程师",
+      "summary": "< img src = \"https://imgproxy.divecdn.com/e8GJXMx_w7KwJX6PO8J5b7AoaawdAxvPIIRQSkblksU/g: ce/rs: fill: 1600: 900: 1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjg1MDgyMTk3LmpwZw = =",
+      "source": "Construction Dive",
+      "link": "https://www.constructiondive.com/news/manhattan-building-conversion-type-contributed-engineer/825223/",
+      "title_en": "Project type ‘more than likely’ contributed to structural failure in NYC: ASCE engineer"
+    },
+    {
+      "tag": "宏观 / 房地产",
+      "title": "参议员声称，肯尼迪中心的翻新“由总统的突发奇想驱动”",
+      "summary": "美国罗德岛州参议员、参议院环境与公共工程委员会高级成员谢尔顿·怀特豪斯（ Sheldon Whitehouse ）已向肯尼迪中心（ Kennedy Center ）发出了一封公开信，内容涉及……",
+      "source": "Global Construction Review",
+      "link": "https://www.globalconstructionreview.com/kennedy-center-renovation-driven-by-presidents-whims-senator-alleges/",
+      "title_en": "Kennedy Center renovation “driven by President’s whims”, senator alleges"
+    },
+    {
+      "tag": "宏观 / 房地产",
+      "title": "房地产市场能否经受住伊朗2.0及更高利率的冲击？",
+      "summary": "每周住房指标表明，随着上周大部分时间抵押贷款利率高于6.64% ，以及伊朗冲突升级，房市温和降温。",
+      "source": "HousingWire",
+      "link": "https://www.housingwire.com/articles/iran-conflict-664-mortgage-rates/",
+      "title_en": "Can the housing market weather Iran conflict 2.0 and higher rates?"
+    },
+    {
+      "tag": "战后重建",
+      "title": "From favelas to informal settlements, new UN report points to housing solutions that work",
+      "summary": "[乌克兰战后重建、中东重建、国际援助基建] From Thailand to Jordan, from Brazil to Germany, new approaches to housing are quietly taking shape. Residents of informal settlements once facing eviction are rebuilding their communities with State support. Refugees and host communities are reclaiming neglected spaces, turning them greener and saf",
+      "source": "UN News-Economic",
+      "link": "https://news.un.org/feed/view/en/story/2026/05/1167543",
+      "impact": 1,
+      "date": "Tue, 19 May 2026 12:00:00 +0000"
+    },
+    {
+      "tag": "战后重建",
+      "title": "Gaza reconstruction envisages building ‘islands’ out of rubble",
+      "summary": "[乌克兰战后重建、中东重建、国际援助基建] A feasibility study is underway to examine whether Gaza’s war debris could be recycled to reclaim coastal land and build artificial islands, as part of reconstruction.",
+      "source": "UN News-Economic",
+      "link": "https://news.un.org/feed/view/en/story/2026/05/1167506",
+      "impact": 1,
+      "date": "Thu, 14 May 2026 12:00:00 +0000"
+    },
+    {
+      "tag": "非洲基建",
+      "title": "Guterres highlights Africa’s leadership in speech to summit in Nairobi",
+      "summary": "[AfDB基建融资、城市化住房、跨境交通走廊] Africa continues to advance and demands investment at scale, justice in global systems, and partnerships grounded in respect, UN Secretary-General António Guterres said on Tuesday.",
+      "source": "UN News-Economic",
+      "link": "https://news.un.org/feed/view/en/story/2026/05/1167493",
+      "impact": 1,
+      "date": "Tue, 12 May 2026 12:00:00 +0000"
+    }
+  ],
+  "regional": {
+    "亚太": [
+      {
+        "name": "中国",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "GDP增速",
+            "value": "5.0%",
+            "change": 0.0
+          },
+          {
+            "label": "人口",
+            "value": "14.1亿",
+            "change": -0.2
+          },
+          {
+            "label": "城市化率",
+            "value": "66.3%",
+            "change": 0.7
+          },
+          {
+            "label": "CPI通胀",
+            "value": "0.1%",
+            "change": -72.7
+          }
+        ],
+        "comment": "World Bank(截至2025年)。GDP: 19.5万亿。",
+        "data_year": "2025",
+        "source": "World Bank"
+      },
+      {
+        "name": "印度",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "GDP增速",
+            "value": "7.6%",
+            "change": 6.6
+          },
+          {
+            "label": "人口",
+            "value": "14.6亿",
+            "change": 0.9
+          },
+          {
+            "label": "城市化率",
+            "value": "35.7%",
+            "change": 0.9
+          },
+          {
+            "label": "CPI通胀",
+            "value": "2.4%",
+            "change": -51.6
+          }
+        ],
+        "comment": "World Bank(截至2025年)。GDP: 4.0万亿。",
+        "data_year": "2025",
+        "source": "World Bank"
+      },
+      {
+        "name": "日本",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "GDP增速",
+            "value": "1.2%",
+            "change": 597.0
+          },
+          {
+            "label": "人口",
+            "value": "1.2亿",
+            "change": -0.5
+          },
+          {
+            "label": "城市化率",
+            "value": "92.3%",
+            "change": 0.1
+          },
+          {
+            "label": "CPI通胀",
+            "value": "3.2%",
+            "change": 15.8
+          }
+        ],
+        "comment": "World Bank(截至2025年)。GDP: 4.4万亿。",
+        "data_year": "2025",
+        "source": "World Bank"
+      },
+      {
+        "name": "韩国",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "GDP增速",
+            "value": "1.0%",
+            "change": -49.7
+          },
+          {
+            "label": "人口",
+            "value": "5168.5万",
+            "change": -0.1
+          },
+          {
+            "label": "城市化率",
+            "value": "81.2%",
+            "change": 0.0
+          },
+          {
+            "label": "CPI通胀",
+            "value": "2.1%",
+            "change": -8.6
+          }
+        ],
+        "comment": "World Bank(截至2025年)。GDP: 1.9万亿。",
+        "data_year": "2025",
+        "source": "World Bank"
+      },
+      {
+        "name": "印尼",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "GDP增速",
+            "value": "5.1%",
+            "change": 1.5
+          },
+          {
+            "label": "人口",
+            "value": "2.9亿",
+            "change": 0.8
+          },
+          {
+            "label": "城市化率",
+            "value": "59.4%",
+            "change": 1.1
+          },
+          {
+            "label": "CPI通胀",
+            "value": "1.9%",
+            "change": -12.3
+          }
+        ],
+        "comment": "World Bank(截至2025年)。GDP: 1.4万亿。",
+        "data_year": "2025",
+        "source": "World Bank"
+      },
+      {
+        "name": "越南",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "GDP增速",
+            "value": "8.0%",
+            "change": 13.9
+          },
+          {
+            "label": "人口",
+            "value": "1.0亿",
+            "change": 0.6
+          },
+          {
+            "label": "城市化率",
+            "value": "38.8%",
+            "change": 0.9
+          },
+          {
+            "label": "CPI通胀",
+            "value": "3.3%",
+            "change": -8.6
+          }
+        ],
+        "comment": "World Bank(截至2025年)。GDP: 5147.0亿。",
+        "data_year": "2025",
+        "source": "World Bank"
+      },
+      {
+        "name": "菲律宾",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "GDP增速",
+            "value": "4.4%",
+            "change": -23.0
+          },
+          {
+            "label": "人口",
+            "value": "1.2亿",
+            "change": 0.8
+          },
+          {
+            "label": "城市化率",
+            "value": "55.8%",
+            "change": 0.6
+          },
+          {
+            "label": "CPI通胀",
+            "value": "1.7%",
+            "change": -48.4
+          }
+        ],
+        "comment": "World Bank(截至2025年)。GDP: 4870.9亿。",
+        "data_year": "2025",
+        "source": "World Bank"
+      },
+      {
+        "name": "泰国",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "GDP增速",
+            "value": "2.4%",
+            "change": -17.2
+          },
+          {
+            "label": "人口",
+            "value": "7162.0万",
+            "change": -0.1
+          },
+          {
+            "label": "城市化率",
+            "value": "62.8%",
+            "change": 1.5
+          },
+          {
+            "label": "CPI通胀",
+            "value": "-0.1%",
+            "change": -133.5
+          }
+        ],
+        "comment": "World Bank(截至2025年)。GDP: 5770.1亿。",
+        "data_year": "2025",
+        "source": "World Bank"
+      },
+      {
+        "name": "澳大利亚",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "GDP增速",
+            "value": "1.4%",
+            "change": -1.7
+          },
+          {
+            "label": "人口",
+            "value": "2761.4万",
+            "change": 1.5
+          },
+          {
+            "label": "城市化率",
+            "value": "87.7%",
+            "change": 0.1
+          },
+          {
+            "label": "CPI通胀",
+            "value": "2.9%",
+            "change": -9.2
+          }
+        ],
+        "comment": "World Bank(截至2025年)。GDP: 1.8万亿。",
+        "data_year": "2025",
+        "source": "World Bank"
+      }
+    ],
+    "中东非洲": [
+      {
+        "name": "沙特",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "GDP增速",
+            "value": "4.5%",
+            "change": 70.0
+          },
+          {
+            "label": "人口",
+            "value": "3697.4万",
+            "change": 4.7
+          },
+          {
+            "label": "城市化率",
+            "value": "84.6%",
+            "change": 0.2
+          },
+          {
+            "label": "CPI通胀",
+            "value": "2.1%",
+            "change": 23.5
+          }
+        ],
+        "comment": "World Bank(截至2025年)。GDP: 1.3万亿。",
+        "data_year": "2025",
+        "source": "World Bank"
+      },
+      {
+        "name": "阿联酋",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "GDP增速",
+            "value": "4.0%",
+            "change": -7.2
+          },
+          {
+            "label": "人口",
+            "value": "1151.3万",
+            "change": 4.8
+          },
+          {
+            "label": "城市化率",
+            "value": "86.0%",
+            "change": 0.2
+          },
+          {
+            "label": "CPI通胀",
+            "value": "1.3%",
+            "change": -24.8
+          }
+        ],
+        "comment": "World Bank(截至2024年)。GDP: 5523.2亿。",
+        "data_year": "2024",
+        "source": "World Bank"
+      },
+      {
+        "name": "尼日利亚",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "GDP增速",
+            "value": "4.0%",
+            "change": -1.4
+          },
+          {
+            "label": "人口",
+            "value": "2.4亿",
+            "change": 2.1
+          },
+          {
+            "label": "城市化率",
+            "value": "63.8%",
+            "change": 1.3
+          },
+          {
+            "label": "CPI通胀",
+            "value": "23.0%",
+            "change": -30.8
+          }
+        ],
+        "comment": "World Bank(截至2025年)。GDP: 2907.9亿。",
+        "data_year": "2025",
+        "source": "World Bank"
+      },
+      {
+        "name": "南非",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "GDP增速",
+            "value": "1.1%",
+            "change": 108.4
+          },
+          {
+            "label": "人口",
+            "value": "6474.7万",
+            "change": 1.2
+          },
+          {
+            "label": "城市化率",
+            "value": "63.8%",
+            "change": 0.2
+          },
+          {
+            "label": "CPI通胀",
+            "value": "3.2%",
+            "change": -26.5
+          }
+        ],
+        "comment": "World Bank(截至2025年)。GDP: 4271.8亿。",
+        "data_year": "2025",
+        "source": "World Bank"
+      },
+      {
+        "name": "埃及",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "GDP增速",
+            "value": "4.4%",
+            "change": 83.1
+          },
+          {
+            "label": "人口",
+            "value": "1.2亿",
+            "change": 1.6
+          },
+          {
+            "label": "城市化率",
+            "value": "42.9%",
+            "change": 0.2
+          },
+          {
+            "label": "CPI通胀",
+            "value": "14.1%",
+            "change": -50.2
+          }
+        ],
+        "comment": "World Bank(截至2025年)。GDP: 3652.5亿。",
+        "data_year": "2025",
+        "source": "World Bank"
+      }
+    ],
+    "欧洲": [
+      {
+        "name": "德国",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "GDP增速",
+            "value": "0.2%",
+            "change": 148.3
+          },
+          {
+            "label": "人口",
+            "value": "8349.1万",
+            "change": -0.0
+          },
+          {
+            "label": "城市化率",
+            "value": "82.1%",
+            "change": 0.1
+          },
+          {
+            "label": "CPI通胀",
+            "value": "2.2%",
+            "change": -3.8
+          }
+        ],
+        "comment": "World Bank(截至2025年)。GDP: 5.1万亿。",
+        "data_year": "2025",
+        "source": "World Bank"
+      },
+      {
+        "name": "英国",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "GDP增速",
+            "value": "1.4%",
+            "change": 28.5
+          },
+          {
+            "label": "人口",
+            "value": "6948.7万",
+            "change": 0.3
+          },
+          {
+            "label": "城市化率",
+            "value": "83.3%",
+            "change": 0.1
+          },
+          {
+            "label": "CPI通胀",
+            "value": "3.9%",
+            "change": 18.7
+          }
+        ],
+        "comment": "World Bank(截至2025年)。GDP: 4.0万亿。",
+        "data_year": "2025",
+        "source": "World Bank"
+      },
+      {
+        "name": "法国",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "GDP增速",
+            "value": "0.8%",
+            "change": -29.4
+          },
+          {
+            "label": "人口",
+            "value": "6872.0万",
+            "change": 0.2
+          },
+          {
+            "label": "城市化率",
+            "value": "78.8%",
+            "change": 0.1
+          },
+          {
+            "label": "CPI通胀",
+            "value": "0.9%",
+            "change": -52.8
+          }
+        ],
+        "comment": "World Bank(截至2025年)。GDP: 3.4万亿。",
+        "data_year": "2025",
+        "source": "World Bank"
+      },
+      {
+        "name": "波兰",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "GDP增速",
+            "value": "3.6%",
+            "change": 18.0
+          },
+          {
+            "label": "人口",
+            "value": "3643.6万",
+            "change": -0.3
+          },
+          {
+            "label": "城市化率",
+            "value": "60.1%",
+            "change": 0.2
+          },
+          {
+            "label": "CPI通胀",
+            "value": "3.8%",
+            "change": 0.6
+          }
+        ],
+        "comment": "World Bank(截至2025年)。GDP: 1.0万亿。",
+        "data_year": "2025",
+        "source": "World Bank"
+      },
+      {
+        "name": "土耳其",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "GDP增速",
+            "value": "3.6%",
+            "change": 8.3
+          },
+          {
+            "label": "人口",
+            "value": "8587.9万",
+            "change": 0.4
+          },
+          {
+            "label": "城市化率",
+            "value": "89.5%",
+            "change": 0.2
+          },
+          {
+            "label": "CPI通胀",
+            "value": "34.9%",
+            "change": -40.4
+          }
+        ],
+        "comment": "World Bank(截至2025年)。GDP: 1.6万亿。",
+        "data_year": "2025",
+        "source": "World Bank"
+      },
+      {
+        "name": "意大利",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "GDP增速",
+            "value": "0.5%",
+            "change": -31.1
+          },
+          {
+            "label": "人口",
+            "value": "5891.6万",
+            "change": -0.1
+          },
+          {
+            "label": "城市化率",
+            "value": "69.7%",
+            "change": 0.1
+          },
+          {
+            "label": "CPI通胀",
+            "value": "1.5%",
+            "change": 55.9
+          }
+        ],
+        "comment": "World Bank(截至2025年)。GDP: 2.6万亿。",
+        "data_year": "2025",
+        "source": "World Bank"
+      },
+      {
+        "name": "西班牙",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "GDP增速",
+            "value": "2.8%",
+            "change": -18.2
+          },
+          {
+            "label": "人口",
+            "value": "4935.5万",
+            "change": 1.0
+          },
+          {
+            "label": "城市化率",
+            "value": "80.5%",
+            "change": 0.2
+          },
+          {
+            "label": "CPI通胀",
+            "value": "2.7%",
+            "change": -1.7
+          }
+        ],
+        "comment": "World Bank(截至2025年)。GDP: 1.9万亿。",
+        "data_year": "2025",
+        "source": "World Bank"
+      }
+    ],
+    "美洲": [
+      {
+        "name": "美国",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "Case-Shiller房价(YoY)",
+            "value": "0.8%",
+            "change": 0.8
+          },
+          {
+            "label": "新屋开工",
+            "value": "1427千套",
+            "change": 3.5
+          },
+          {
+            "label": "建筑许可证",
+            "value": "1367千套",
+            "change": -2.3
+          },
+          {
+            "label": "30Y房贷利率",
+            "value": "6.55%",
+            "change": 0.9
+          },
+          {
+            "label": "成屋库存",
+            "value": "10.3月",
+            "change": 10.8
+          },
+          {
+            "label": "建筑支出",
+            "value": "$2210214B",
+            "change": -1.5
+          }
+        ],
+        "comment": "房价同比上涨0.8%，新屋开工同比增长3.5%，30Y房贷6.55%。",
+        "source": "FRED / Case-Shiller / Census Bureau",
+        "data_date": "2026-04-01"
+      },
+      {
+        "name": "巴西",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "GDP增速",
+            "value": "2.3%",
+            "change": -33.2
+          },
+          {
+            "label": "人口",
+            "value": "2.1亿",
+            "change": 0.4
+          },
+          {
+            "label": "城市化率",
+            "value": "88.2%",
+            "change": 0.3
+          },
+          {
+            "label": "CPI通胀",
+            "value": "5.0%",
+            "change": 14.9
+          }
+        ],
+        "comment": "World Bank(截至2025年)。GDP: 2.3万亿。",
+        "data_year": "2025",
+        "source": "World Bank"
+      },
+      {
+        "name": "墨西哥",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "GDP增速",
+            "value": "0.6%",
+            "change": -58.4
+          },
+          {
+            "label": "人口",
+            "value": "1.3亿",
+            "change": 0.8
+          },
+          {
+            "label": "城市化率",
+            "value": "80.0%",
+            "change": 0.4
+          },
+          {
+            "label": "CPI通胀",
+            "value": "3.8%",
+            "change": -19.4
+          }
+        ],
+        "comment": "World Bank(截至2025年)。GDP: 1.8万亿。",
+        "data_year": "2025",
+        "source": "World Bank"
+      },
+      {
+        "name": "加拿大",
+        "flag": "",
+        "metrics": [
+          {
+            "label": "GDP增速",
+            "value": "1.7%",
+            "change": -14.8
+          },
+          {
+            "label": "人口",
+            "value": "4165.2万",
+            "change": 0.9
+          },
+          {
+            "label": "城市化率",
+            "value": "82.9%",
+            "change": 0.2
+          },
+          {
+            "label": "CPI通胀",
+            "value": "2.1%",
+            "change": -13.0
+          }
+        ],
+        "comment": "World Bank(截至2025年)。GDP: 2.3万亿。",
+        "data_year": "2025",
+        "source": "World Bank"
+      }
+    ]
+  },
+  "demandView": [
+    {
+      "type": "infra",
+      "name": "基建投资",
+      "icon": "🏗️",
+      "desc": "交通、能源、水利等大型基础设施建设",
+      "total_strength": 100,
+      "country_count": 8,
+      "countries": [
+        {
+          "name": "中国",
+          "region": "亚太",
+          "strength": 100,
+          "reason": "GDP增速5.0%、人口14.1亿、城市化率66%有提升空间",
+          "metrics": {
+            "GDP增速": "5.0%",
+            "人口": "14.1亿",
+            "城市化率": "66.3%"
+          }
+        },
+        {
+          "name": "印度",
+          "region": "亚太",
+          "strength": 100,
+          "reason": "GDP增速7.6%、人口14.6亿、城市化率36%有提升空间",
+          "metrics": {
+            "GDP增速": "7.6%",
+            "人口": "14.6亿",
+            "城市化率": "35.7%"
+          }
+        },
+        {
+          "name": "印尼",
+          "region": "亚太",
+          "strength": 100,
+          "reason": "GDP增速5.1%、人口2.9亿、城市化率59%有提升空间",
+          "metrics": {
+            "GDP增速": "5.1%",
+            "人口": "2.9亿",
+            "城市化率": "59.4%"
+          }
+        },
+        {
+          "name": "菲律宾",
+          "region": "亚太",
+          "strength": 100,
+          "reason": "GDP增速4.4%、人口1.2亿、城市化率56%有提升空间",
+          "metrics": {
+            "GDP增速": "4.4%",
+            "人口": "1.2亿",
+            "城市化率": "55.8%"
+          }
+        },
+        {
+          "name": "埃及",
+          "region": "中东非洲",
+          "strength": 100,
+          "reason": "GDP增速4.4%、人口1.2亿、城市化率43%有提升空间",
+          "metrics": {
+            "GDP增速": "4.4%",
+            "人口": "1.2亿",
+            "城市化率": "42.9%"
+          }
+        },
+        {
+          "name": "越南",
+          "region": "亚太",
+          "strength": 75,
+          "reason": "GDP增速8.0%、城市化率39%有提升空间",
+          "metrics": {
+            "GDP增速": "8.0%",
+            "人口": "1.0亿",
+            "城市化率": "38.8%"
+          }
+        },
+        {
+          "name": "尼日利亚",
+          "region": "中东非洲",
+          "strength": 70,
+          "reason": "人口2.4亿、城市化率64%有提升空间",
+          "metrics": {
+            "GDP增速": "4.0%",
+            "人口": "2.4亿",
+            "城市化率": "63.8%"
+          }
+        },
+        {
+          "name": "沙特",
+          "region": "中东非洲",
+          "strength": 30,
+          "reason": "GDP增速4.5%",
+          "metrics": {
+            "GDP增速": "4.5%",
+            "人口": "3697.4万",
+            "城市化率": "84.6%"
+          }
+        }
+      ]
+    },
+    {
+      "type": "green",
+      "name": "绿色建筑",
+      "icon": "🌿",
+      "desc": "节能建筑、绿色建筑认证、低碳建材",
+      "total_strength": 75,
+      "country_count": 13,
+      "countries": [
+        {
+          "name": "日本",
+          "region": "亚太",
+          "strength": 75,
+          "reason": "城市化成熟(92%)、经济转型需求、发达市场绿色法规趋严",
+          "metrics": {
+            "GDP增速": "1.2%",
+            "人口": "1.2亿",
+            "城市化率": "92.3%"
+          }
+        },
+        {
+          "name": "韩国",
+          "region": "亚太",
+          "strength": 75,
+          "reason": "城市化成熟(81%)、经济转型需求、发达市场绿色法规趋严",
+          "metrics": {
+            "GDP增速": "1.0%",
+            "人口": "5168.5万",
+            "城市化率": "81.2%"
+          }
+        },
+        {
+          "name": "澳大利亚",
+          "region": "亚太",
+          "strength": 75,
+          "reason": "城市化成熟(88%)、经济转型需求、发达市场绿色法规趋严",
+          "metrics": {
+            "GDP增速": "1.4%",
+            "人口": "2761.4万",
+            "城市化率": "87.7%"
+          }
+        },
+        {
+          "name": "德国",
+          "region": "欧洲",
+          "strength": 75,
+          "reason": "城市化成熟(82%)、经济转型需求、发达市场绿色法规趋严",
+          "metrics": {
+            "GDP增速": "0.2%",
+            "人口": "8349.1万",
+            "城市化率": "82.1%"
+          }
+        },
+        {
+          "name": "英国",
+          "region": "欧洲",
+          "strength": 75,
+          "reason": "城市化成熟(83%)、经济转型需求、发达市场绿色法规趋严",
+          "metrics": {
+            "GDP增速": "1.4%",
+            "人口": "6948.7万",
+            "城市化率": "83.3%"
+          }
+        },
+        {
+          "name": "西班牙",
+          "region": "欧洲",
+          "strength": 75,
+          "reason": "城市化成熟(80%)、经济转型需求、发达市场绿色法规趋严",
+          "metrics": {
+            "GDP增速": "2.8%",
+            "人口": "4935.5万",
+            "城市化率": "80.5%"
+          }
+        },
+        {
+          "name": "巴西",
+          "region": "美洲",
+          "strength": 75,
+          "reason": "城市化成熟(88%)、经济转型需求、发达市场绿色法规趋严",
+          "metrics": {
+            "GDP增速": "2.3%",
+            "人口": "2.1亿",
+            "城市化率": "88.2%"
+          }
+        },
+        {
+          "name": "加拿大",
+          "region": "美洲",
+          "strength": 75,
+          "reason": "城市化成熟(83%)、经济转型需求、发达市场绿色法规趋严",
+          "metrics": {
+            "GDP增速": "1.7%",
+            "人口": "4165.2万",
+            "城市化率": "82.9%"
+          }
+        }
+      ]
+    },
+    {
+      "type": "commercial",
+      "name": "商业地产",
+      "icon": "🏢",
+      "desc": "写字楼、商场、酒店等商业建筑",
+      "total_strength": 73,
+      "country_count": 15,
+      "countries": [
+        {
+          "name": "中国",
+          "region": "亚太",
+          "strength": 90,
+          "reason": "GDP增速5.0%、经济活跃、城市化加速(66%)、通胀可控",
+          "metrics": {
+            "GDP增速": "5.0%",
+            "人口": "14.1亿",
+            "城市化率": "66.3%"
+          }
+        },
+        {
+          "name": "尼日利亚",
+          "region": "中东非洲",
+          "strength": 75,
+          "reason": "GDP增速4.0%、经济活跃、城市化加速(64%)",
+          "metrics": {
+            "GDP增速": "4.0%",
+            "人口": "2.4亿",
+            "城市化率": "63.8%"
+          }
+        },
+        {
+          "name": "波兰",
+          "region": "欧洲",
+          "strength": 70,
+          "reason": "GDP增速3.6%、城市化加速(60%)、通胀可控",
+          "metrics": {
+            "GDP增速": "3.6%",
+            "人口": "3643.6万",
+            "城市化率": "60.1%"
+          }
+        },
+        {
+          "name": "印度",
+          "region": "亚太",
+          "strength": 65,
+          "reason": "GDP增速7.6%、经济活跃、通胀可控",
+          "metrics": {
+            "GDP增速": "7.6%",
+            "人口": "14.6亿",
+            "城市化率": "35.7%"
+          }
+        },
+        {
+          "name": "印尼",
+          "region": "亚太",
+          "strength": 65,
+          "reason": "GDP增速5.1%、经济活跃、通胀可控",
+          "metrics": {
+            "GDP增速": "5.1%",
+            "人口": "2.9亿",
+            "城市化率": "59.4%"
+          }
+        },
+        {
+          "name": "越南",
+          "region": "亚太",
+          "strength": 65,
+          "reason": "GDP增速8.0%、经济活跃、通胀可控",
+          "metrics": {
+            "GDP增速": "8.0%",
+            "人口": "1.0亿",
+            "城市化率": "38.8%"
+          }
+        },
+        {
+          "name": "菲律宾",
+          "region": "亚太",
+          "strength": 65,
+          "reason": "GDP增速4.4%、经济活跃、通胀可控",
+          "metrics": {
+            "GDP增速": "4.4%",
+            "人口": "1.2亿",
+            "城市化率": "55.8%"
+          }
+        },
+        {
+          "name": "埃及",
+          "region": "中东非洲",
+          "strength": 50,
+          "reason": "GDP增速4.4%、经济活跃",
+          "metrics": {
+            "GDP增速": "4.4%",
+            "人口": "1.2亿",
+            "城市化率": "42.9%"
+          }
+        }
+      ]
+    },
+    {
+      "type": "housing",
+      "name": "住房建设",
+      "icon": "🏠",
+      "desc": "新建住宅、保障房、城市化住房需求",
+      "total_strength": 60,
+      "country_count": 6,
+      "countries": [
+        {
+          "name": "印度",
+          "region": "亚太",
+          "strength": 70,
+          "reason": "城市化率36%偏低、人口基数大(14.6亿)、GDP增速7.6%",
+          "metrics": {
+            "GDP增速": "7.6%",
+            "人口": "14.6亿",
+            "城市化率": "35.7%"
+          }
+        },
+        {
+          "name": "印尼",
+          "region": "亚太",
+          "strength": 70,
+          "reason": "城市化率59%偏低、人口基数大(2.9亿)、GDP增速5.1%",
+          "metrics": {
+            "GDP增速": "5.1%",
+            "人口": "2.9亿",
+            "城市化率": "59.4%"
+          }
+        },
+        {
+          "name": "菲律宾",
+          "region": "亚太",
+          "strength": 55,
+          "reason": "城市化率56%偏低、人口基数大(1.2亿)",
+          "metrics": {
+            "GDP增速": "4.4%",
+            "人口": "1.2亿",
+            "城市化率": "55.8%"
+          }
+        },
+        {
+          "name": "埃及",
+          "region": "中东非洲",
+          "strength": 55,
+          "reason": "城市化率43%偏低、人口基数大(1.2亿)",
+          "metrics": {
+            "GDP增速": "4.4%",
+            "人口": "1.2亿",
+            "城市化率": "42.9%"
+          }
+        },
+        {
+          "name": "越南",
+          "region": "亚太",
+          "strength": 50,
+          "reason": "城市化率39%偏低、GDP增速8.0%",
+          "metrics": {
+            "GDP增速": "8.0%",
+            "人口": "1.0亿",
+            "城市化率": "38.8%"
+          }
+        },
+        {
+          "name": "美国",
+          "region": "美洲",
+          "strength": 45,
+          "reason": "新屋开工1427千套、许可证1367千套",
+          "metrics": {
+            "新屋开工": "1427千套",
+            "建筑许可证": "1367千套"
+          }
+        }
+      ]
+    },
+    {
+      "type": "industrial",
+      "name": "工业厂房",
+      "icon": "🏭",
+      "desc": "工厂、仓库、数据中心等工业设施",
+      "total_strength": 57,
+      "country_count": 7,
+      "countries": [
+        {
+          "name": "印尼",
+          "region": "亚太",
+          "strength": 80,
+          "reason": "GDP高增长5.1%、人口2.9亿,制造业潜力大、工业化进程中(59%)",
+          "metrics": {
+            "GDP增速": "5.1%",
+            "人口": "2.9亿",
+            "城市化率": "59.4%"
+          }
+        },
+        {
+          "name": "印度",
+          "region": "亚太",
+          "strength": 55,
+          "reason": "GDP高增长7.6%、人口14.6亿,制造业潜力大",
+          "metrics": {
+            "GDP增速": "7.6%",
+            "人口": "14.6亿",
+            "城市化率": "35.7%"
+          }
+        },
+        {
+          "name": "中国",
+          "region": "亚太",
+          "strength": 50,
+          "reason": "人口14.1亿,制造业潜力大、工业化进程中(66%)",
+          "metrics": {
+            "GDP增速": "5.0%",
+            "人口": "14.1亿",
+            "城市化率": "66.3%"
+          }
+        },
+        {
+          "name": "菲律宾",
+          "region": "亚太",
+          "strength": 50,
+          "reason": "人口1.2亿,制造业潜力大、工业化进程中(56%)",
+          "metrics": {
+            "GDP增速": "4.4%",
+            "人口": "1.2亿",
+            "城市化率": "55.8%"
+          }
+        },
+        {
+          "name": "尼日利亚",
+          "region": "中东非洲",
+          "strength": 50,
+          "reason": "人口2.4亿,制造业潜力大、工业化进程中(64%)",
+          "metrics": {
+            "GDP增速": "4.0%",
+            "人口": "2.4亿",
+            "城市化率": "63.8%"
+          }
+        },
+        {
+          "name": "埃及",
+          "region": "中东非洲",
+          "strength": 50,
+          "reason": "人口1.2亿,制造业潜力大、工业化进程中(43%)",
+          "metrics": {
+            "GDP增速": "4.4%",
+            "人口": "1.2亿",
+            "城市化率": "42.9%"
+          }
+        },
+        {
+          "name": "越南",
+          "region": "亚太",
+          "strength": 30,
+          "reason": "GDP高增长8.0%",
+          "metrics": {
+            "GDP增速": "8.0%",
+            "人口": "1.0亿",
+            "城市化率": "38.8%"
+          }
+        }
+      ]
+    },
+    {
+      "type": "renovation",
+      "name": "翻新改造",
+      "icon": "🔧",
+      "desc": "老旧建筑翻新、节能改造、城市更新",
+      "total_strength": 55,
+      "country_count": 15,
+      "countries": [
+        {
+          "name": "日本",
+          "region": "亚太",
+          "strength": 55,
+          "reason": "高城市化率92%、GDP增速放缓(1.2%)",
+          "metrics": {
+            "GDP增速": "1.2%",
+            "人口": "1.2亿",
+            "城市化率": "92.3%"
+          }
+        },
+        {
+          "name": "韩国",
+          "region": "亚太",
+          "strength": 55,
+          "reason": "高城市化率81%、GDP增速放缓(1.0%)",
+          "metrics": {
+            "GDP增速": "1.0%",
+            "人口": "5168.5万",
+            "城市化率": "81.2%"
+          }
+        },
+        {
+          "name": "澳大利亚",
+          "region": "亚太",
+          "strength": 55,
+          "reason": "高城市化率88%、GDP增速放缓(1.4%)",
+          "metrics": {
+            "GDP增速": "1.4%",
+            "人口": "2761.4万",
+            "城市化率": "87.7%"
+          }
+        },
+        {
+          "name": "德国",
+          "region": "欧洲",
+          "strength": 55,
+          "reason": "高城市化率82%、GDP增速放缓(0.2%)",
+          "metrics": {
+            "GDP增速": "0.2%",
+            "人口": "8349.1万",
+            "城市化率": "82.1%"
+          }
+        },
+        {
+          "name": "英国",
+          "region": "欧洲",
+          "strength": 55,
+          "reason": "高城市化率83%、GDP增速放缓(1.4%)",
+          "metrics": {
+            "GDP增速": "1.4%",
+            "人口": "6948.7万",
+            "城市化率": "83.3%"
+          }
+        },
+        {
+          "name": "法国",
+          "region": "欧洲",
+          "strength": 55,
+          "reason": "高城市化率79%、GDP增速放缓(0.8%)",
+          "metrics": {
+            "GDP增速": "0.8%",
+            "人口": "6872.0万",
+            "城市化率": "78.8%"
+          }
+        },
+        {
+          "name": "墨西哥",
+          "region": "美洲",
+          "strength": 55,
+          "reason": "高城市化率80%、GDP增速放缓(0.6%)",
+          "metrics": {
+            "GDP增速": "0.6%",
+            "人口": "1.3亿",
+            "城市化率": "80.0%"
+          }
+        },
+        {
+          "name": "加拿大",
+          "region": "美洲",
+          "strength": 55,
+          "reason": "高城市化率83%、GDP增速放缓(1.7%)",
+          "metrics": {
+            "GDP增速": "1.7%",
+            "人口": "4165.2万",
+            "城市化率": "82.9%"
+          }
+        }
+      ]
+    }
+  ],
+  "trends": [
+    {
+      "name": "建筑板材",
+      "category": "建筑板材",
+      "description": "Google搜索趋势显示'aluminum composite panel'近4周增长17%",
+      "drivers": [
+        "建筑板材"
+      ],
+      "socialSignals": [
+        {
+          "platform": "Google",
+          "growth": -30.3
+        }
+      ],
+      "satisfaction": 50
+    }
+  ],
+  "supplyChain": [
+    {
+      "title": "大宗商品价格追踪 (FRED)",
+      "data": [
+        {
+          "item": "铁矿石",
+          "value": "103.79 $/mt",
+          "change": -7.0
+        },
+        {
+          "item": "铝",
+          "value": "3438.85 $/mt",
+          "change": -6.0
+        },
+        {
+          "item": "铜",
+          "value": "13552.04 $/mt",
+          "change": 0.3
+        },
+        {
+          "item": "锌",
+          "value": "3538.74 $/mt",
+          "change": 1.8
+        },
+        {
+          "item": "铅",
+          "value": "1946.37 $/mt",
+          "change": -2.2
+        },
+        {
+          "item": "镍",
+          "value": "17588.29 $/mt",
+          "change": -6.4
+        },
+        {
+          "item": "天然气(HH)",
+          "value": "2.83 $/MMBtu",
+          "change": 3.7
+        },
+        {
+          "item": "WTI原油",
+          "value": "79.20 $/barrel",
+          "change": 9.3
+        },
+        {
+          "item": "Brent原油",
+          "value": "81.62 $/barrel",
+          "change": 9.8
+        },
+        {
+          "item": "动力煤",
+          "value": "150.36 $/mt",
+          "change": 6.3
+        }
+      ]
+    },
+    {
+      "title": "海运运价指数",
+      "data": [
+        {
+          "item": "BDI(波罗的海干散货)",
+          "value": "2752",
+          "change": 0
+        },
+        {
+          "item": "SCFI(上海集装箱综合)",
+          "value": "3080",
+          "change": -3.2817
+        }
+      ]
+    }
+  ],
+  "regulation": [
+    {
+      "title": "Currey & Company Recalls Nottaway Chandeliers Due to Risk of Serious Injury or D",
+      "summary": "This recall involves Currey & Company's Nottaway chandeliers. The iron with brass frame light fixtures were sold in gold, bronze and champagne finishes and in two sizes. The two-tier chandeliers measu",
+      "tag": "warn",
+      "source": "US CPSC",
+      "link": "https://www.cpsc.gov/Recalls/2026/Currey-Company-Recalls-Nottaway-Chandeliers-Due-to-Risk-of-Serious-Injury-or-Death-from-Electrocution-Hazard",
+      "date": "2026-07-16T00:00:00"
+    },
+    {
+      "title": "Huish Outdoors Recalls Hollis Diving Regulators Due to Risk of Serious Injury or",
+      "summary": "This recall involves Hollis 200LX second stage diving regulators. The regulators are used for Scuba diving and are made of black and red plastic and metal. \"200LX\" and \"Hollis\" are engraved on top of ",
+      "tag": "warn",
+      "source": "US CPSC",
+      "link": "https://www.cpsc.gov/Recalls/2026/Huish-Outdoors-Recalls-Hollis-Diving-Regulators-Due-to-Risk-of-Serious-Injury-or-Death-from-Drowning",
+      "date": "2026-07-16T00:00:00"
+    },
+    {
+      "title": "Jobon Torch Lighters Recalled Due to Risk of Serious Injury or Death from Fire a",
+      "summary": "This recall involves Jobon butane torch lighters. The lighters have a side ignition trigger and hands-free operation lock. The lighters come in gray/brown, gold/black and camouflage print. \"JOBON\" is ",
+      "tag": "warn",
+      "source": "US CPSC",
+      "link": "https://www.cpsc.gov/Recalls/2026/Jobon-Torch-Lighters-Recalled-Due-to-Risk-of-Serious-Injury-or-Death-from-Fire-and-Burn-Hazards-Violate-Mandatory-Standard-for-Multipurpose-Lighters",
+      "date": "2026-07-16T00:00:00"
+    }
+  ],
+  "innovation": [
+    {
+      "title": "Enhancing thermal insulation in cement mortar with silica aerogel and recycled P",
+      "title_zh": "用二氧化硅气凝胶和再生P增强水泥砂浆的隔热性能",
+      "summary": "气凝胶保温: 共10篇相关论文(近期10篇)。代表研究: Marof; Šiller(2025)，被引19次。",
+      "tag": "innovation",
+      "topic": "气凝胶保温",
+      "paper_count": 10,
+      "source": "Crossref/DOAJ",
+      "doi": "10.1016/j.conbuildmat.2025.140320",
+      "tech_direction": "开发低成本气凝胶复合保温板材；解决脆性问题提升施工性；目标导热系数<0.015 W/mK"
+    },
+    {
+      "title": "Optimized community-level distributed photovoltaic generation (DPVG): Aesthetic,",
+      "title_zh": "优化社区级分布式光伏发电（ DPVG ） ：美学、",
+      "summary": "光伏一体化(BIPV): 共10篇相关论文(近期10篇)。代表研究: Zhang; Cao; Chen et al.(2025)，被引14次。",
+      "tag": "innovation",
+      "topic": "光伏一体化(BIPV)",
+      "paper_count": 10,
+      "source": "Crossref/DOAJ",
+      "doi": "10.1016/j.jobe.2025.112085",
+      "tech_direction": "研发建筑外立面集成光伏组件；兼顾美观与发电效率；开发透明/彩色光伏玻璃"
+    },
+    {
+      "title": "Bacterial Healing Concrete",
+      "title_zh": "细菌愈合混凝土",
+      "summary": "自修复混凝土: 共7篇相关论文(近期7篇)。代表研究: Zaky; Mohamed(2025)，被引1次。",
+      "tag": "innovation",
+      "topic": "自修复混凝土",
+      "paper_count": 7,
+      "source": "Crossref/DOAJ",
+      "doi": "10.21203/rs.3.rs-6614495/v1",
+      "tech_direction": "研发微生物/微胶囊自修复添加剂，延长混凝土结构寿命50%+；适用于基础设施和海洋工程"
+    },
+    {
+      "title": "Façade systems for industrialised prefabricated prefinished modular construction",
+      "title_zh": "工业化预制预制模块化结构的外立面系统",
+      "summary": "模块化建筑: 共7篇相关论文(近期7篇)。代表研究: Hajirezaei; Sharafi; Farsangi et al.(2025)，被引9次。",
+      "tag": "innovation",
+      "topic": "模块化建筑",
+      "paper_count": 7,
+      "source": "Crossref/DOAJ",
+      "doi": "10.1016/j.autcon.2025.106269",
+      "tech_direction": "设计标准化模块接口系统；开发轻量化结构板材；实现工厂预制率80%+的快速装配"
+    },
+    {
+      "title": "Spectral analysis of the discoloration process in architectural electrochromic g",
+      "title_zh": "建筑电致变色中变色过程的光谱分析",
+      "summary": "智能玻璃: 共6篇相关论文(近期6篇)。代表研究: Wen; Meng(2025)，被引9次。",
+      "tag": "innovation",
+      "topic": "智能玻璃",
+      "paper_count": 6,
+      "source": "Crossref/DOAJ",
+      "doi": "10.1038/s41598-025-91183-w",
+      "tech_direction": "研发电致变色/热致变色智能调光玻璃；降低制造成本；集成建筑自动化控制系统"
+    },
+    {
+      "title": "Building Sustainable Futures: Evaluating Embodied Carbon Emissions and Biogenic ",
+      "title_zh": "建设可持续的未来：评估碳排放和生物源性",
+      "summary": "大木结构(CLT): 共5篇相关论文(近期5篇)。代表研究: Chapagain; Crovella(2025)，被引7次。",
+      "tag": "innovation",
+      "topic": "大木结构(CLT)",
+      "paper_count": 5,
+      "source": "Crossref/DOAJ",
+      "doi": "10.3390/su17125602",
+      "tech_direction": "开发高强度CLT板材和连接节点系统；解决防火防潮技术难点；拓展中高层建筑应用"
+    },
+    {
+      "title": "Technological aspects of fabricating a reinforced concrete shell using 3D concre",
+      "title_zh": "使用3D混凝土制造钢筋混凝土壳的技术方面",
+      "summary": "3D打印建筑: 共4篇相关论文(近期4篇)。代表研究: Tenesesku(2025)，被引1次。",
+      "tag": "innovation",
+      "topic": "3D打印建筑",
+      "paper_count": 4,
+      "source": "Crossref/DOAJ",
+      "doi": "10.32347/2522-4182.17.2025.141-152",
+      "tech_direction": "开发适用于大型3D打印的速凝特种水泥配方；优化打印路径和结构强度；降低建造成本30%+"
+    },
+    {
+      "title": "Performance Evaluation of Recycled Self-Compacting Concrete Incorporating Recycl",
+      "title_zh": "再生自密实混凝土回收利用性能评价",
+      "summary": "再生钢材: 共2篇相关论文(近期2篇)。代表研究: Abdulrahman; Taha; Younis(2025)，被引1次。",
+      "tag": "innovation",
+      "topic": "再生钢材",
+      "paper_count": 2,
+      "source": "Crossref/DOAJ",
+      "doi": "10.20944/preprints202504.1804.v1",
+      "tech_direction": "开发氢基直接还原铁(DRI-H2)炼钢工艺；提升废钢回收利用率；实现近零碳排放钢铁生产"
+    }
+  ],
+  "events": [
+    {
+      "name": "LPR报价",
+      "date": "2026-07-20",
+      "location": "中国人民银行",
+      "type": "central_bank",
+      "importance": "high",
+      "days_away": 0,
+      "categories": [
+        "货币政策",
+        "利率"
+      ],
+      "website": ""
+    },
+    {
+      "name": "ECB利率决议",
+      "date": "2026-07-23",
+      "location": "欧洲央行",
+      "type": "central_bank",
+      "importance": "high",
+      "days_away": 3,
+      "categories": [
+        "货币政策",
+        "利率"
+      ],
+      "website": ""
+    },
+    {
+      "name": "FOMC利率决议",
+      "date": "2026-07-29",
+      "location": "美联储",
+      "type": "central_bank",
+      "importance": "high",
+      "days_away": 9,
+      "categories": [
+        "货币政策",
+        "利率"
+      ],
+      "website": ""
+    },
+    {
+      "name": "BOJ利率决议",
+      "date": "2026-07-30",
+      "location": "日本央行",
+      "type": "central_bank",
+      "importance": "high",
+      "days_away": 10,
+      "categories": [
+        "货币政策",
+        "利率"
+      ],
+      "website": ""
+    },
+    {
+      "name": "BOE利率决议",
+      "date": "2026-08-06",
+      "location": "英国央行",
+      "type": "central_bank",
+      "importance": "high",
+      "days_away": 17,
+      "categories": [
+        "货币政策",
+        "利率"
+      ],
+      "website": ""
+    },
+    {
+      "name": "Architct@Expo",
+      "date": "2026-08-15",
+      "location": "上海, 中国",
+      "type": "trade_show",
+      "importance": "medium",
+      "days_away": 26,
+      "categories": [
+        "建筑设计",
+        "建材"
+      ],
+      "website": ""
+    },
+    {
+      "name": "Architct@Expo",
+      "date": "2026-08-17",
+      "location": "上海, 中国",
+      "type": "trade_show",
+      "importance": "medium",
+      "days_away": 28,
+      "categories": [
+        "建筑设计",
+        "建材"
+      ],
+      "website": ""
+    },
+    {
+      "name": "LPR报价",
+      "date": "2026-08-20",
+      "location": "中国人民银行",
+      "type": "central_bank",
+      "importance": "high",
+      "days_away": 31,
+      "categories": [
+        "货币政策",
+        "利率"
+      ],
+      "website": ""
+    },
+    {
+      "name": "ECB利率决议",
+      "date": "2026-09-10",
+      "location": "欧洲央行",
+      "type": "central_bank",
+      "importance": "high",
+      "days_away": 52,
+      "categories": [
+        "货币政策",
+        "利率"
+      ],
+      "website": ""
+    },
+    {
+      "name": "FOMC利率决议",
+      "date": "2026-09-16",
+      "location": "美联储",
+      "type": "central_bank",
+      "importance": "high",
+      "days_away": 58,
+      "categories": [
+        "货币政策",
+        "利率"
+      ],
+      "website": ""
+    },
+    {
+      "name": "BOE利率决议",
+      "date": "2026-09-17",
+      "location": "英国央行",
+      "type": "central_bank",
+      "importance": "high",
+      "days_away": 59,
+      "categories": [
+        "货币政策",
+        "利率"
+      ],
+      "website": ""
+    },
+    {
+      "name": "BOJ利率决议",
+      "date": "2026-09-18",
+      "location": "日本央行",
+      "type": "central_bank",
+      "importance": "high",
+      "days_away": 60,
+      "categories": [
+        "货币政策",
+        "利率"
+      ],
+      "website": ""
+    },
+    {
+      "name": "LPR报价",
+      "date": "2026-09-20",
+      "location": "中国人民银行",
+      "type": "central_bank",
+      "importance": "high",
+      "days_away": 62,
+      "categories": [
+        "货币政策",
+        "利率"
+      ],
+      "website": ""
+    },
+    {
+      "name": "BATIMAT (巴黎国际建材展)",
+      "date": "2026-09-28",
+      "location": "巴黎, 法国",
+      "type": "trade_show",
+      "importance": "high",
+      "days_away": 70,
+      "categories": [
+        "建材",
+        "建筑创新"
+      ],
+      "website": "https://www.batimat.com"
+    },
+    {
+      "name": "BATIMAT (巴黎国际建材展)",
+      "date": "2026-10-03",
+      "location": "巴黎, 法国",
+      "type": "trade_show",
+      "importance": "high",
+      "days_away": 75,
+      "categories": [
+        "建材",
+        "建筑创新"
+      ],
+      "website": "https://www.batimat.com"
+    },
+    {
+      "name": "Canton Fair 广交会 (秋季)",
+      "date": "2026-10-15",
+      "location": "广州, 中国",
+      "type": "trade_show",
+      "importance": "top",
+      "days_away": 87,
+      "categories": [
+        "综合贸易",
+        "建材出口"
+      ],
+      "website": "https://www.cantonfair.org.cn"
+    }
+  ],
+  "emergingDemand": [
+    {
+      "name": "灾后重建",
+      "signal_count": 4,
+      "strength": "strong",
+      "signal_types": [],
+      "description": "检测到4条需求信号信号。来源: UN News-Economic, Construction Enquirer。",
+      "example_articles": [
+        {
+          "title": "国防部计划耗资260亿英镑重建皇家橡树项目海军基地",
+          "source": "Construction Enquirer"
+        },
+        {
+          "title": "伦敦新时代庄园重建的Hill Go-Ahead",
+          "source": "Construction Enquirer"
+        }
+      ]
+    },
+    {
+      "name": "数据中心",
+      "signal_count": 1,
+      "strength": "medium",
+      "signal_types": [],
+      "description": "检测到1条需求信号信号。来源: Construction Dive。",
+      "example_articles": [
+        {
+          "title": "Meta向路易斯安那州数据中心周边地区承诺$ 500亿",
+          "source": "Construction Dive"
+        }
+      ]
+    },
+    {
+      "name": "东南亚工业化",
+      "signal_count": 1,
+      "strength": "medium",
+      "signal_types": [],
+      "description": "检测到1条需求信号信号。来源: UN News-Economic。",
+      "example_articles": [
+        {
+          "title": "From favelas to informal settlements, new UN report points to housing solutions ",
+          "source": "基建情报/战后重建"
+        }
+      ]
+    }
+  ],
+  "researchHighlights": [
+    {
+      "title": "Positive effects of sulfates on performance of cement paste incorporating low-gr",
+      "summary": "Elsevier BV journal-article (2025)",
+      "publisher": "Elsevier BV",
+      "year": 2025,
+      "theme": "commodities",
+      "doi": "10.1016/j.cemconcomp.2025.106134",
+      "source": "Crossref",
+      "citations": 12
+    },
+    {
+      "title": "Thermal performance of precast concrete sandwich walls with a double-layer insul",
+      "summary": "Elsevier BV journal-article (2025)",
+      "publisher": "Elsevier BV",
+      "year": 2025,
+      "theme": "building_materials",
+      "doi": "10.1016/j.conbuildmat.2025.140785",
+      "source": "Crossref",
+      "citations": 12
+    },
+    {
+      "title": "Enabling scalable Model Predictive Control design for building HVAC systems usin",
+      "summary": "Elsevier BV journal-article (2025)",
+      "publisher": "Elsevier BV",
+      "year": 2025,
+      "theme": "building_materials",
+      "doi": "10.1016/j.autcon.2024.105929",
+      "source": "Crossref",
+      "citations": 11
+    },
+    {
+      "title": "OECD Steel Outlook 2025",
+      "summary": "OECD Publishing book (2025)",
+      "publisher": "OECD Publishing",
+      "year": 2025,
+      "theme": "commodities",
+      "doi": "10.1787/28b61a5e-en",
+      "source": "Crossref",
+      "citations": 6
+    },
+    {
+      "title": "Initial Property Offering: Underpricing and Learning Behavior in the Presale Hou",
+      "summary": "Springer Science and Business Media LLC journal-article (2025)",
+      "publisher": "Springer Science and Business Media LLC",
+      "year": 2025,
+      "theme": "housing_market",
+      "doi": "10.1007/s11146-025-10013-y",
+      "source": "Crossref",
+      "citations": 2
+    },
+    {
+      "title": "The impact of free trade port construction on regional import and export: Eviden",
+      "summary": "<jats:p>The construction of the Hainan Free Trade Port (HFTP) represents one of the most advanced regional development models explored by China. This study clarifies the concept of the free trade port",
+      "publisher": "Public Library of Science (PLoS)",
+      "year": 2025,
+      "theme": "trade",
+      "doi": "10.1371/journal.pone.0328875",
+      "source": "Crossref",
+      "citations": 2
+    },
+    {
+      "title": "The Impacts of Housing Price Regulation on the Real Estate Market: Micro Evidenc",
+      "summary": "Elsevier BV posted-content (2025)",
+      "publisher": "Elsevier BV",
+      "year": 2025,
+      "theme": "housing_market",
+      "doi": "10.2139/ssrn.5530640",
+      "source": "Crossref",
+      "citations": 1
+    },
+    {
+      "title": "Assessing the role of Fintech, technological infrastructure, and macroeconomic s",
+      "summary": "<jats:p>Type of the article: Research ArticleAbstractThis study examined per capita spending as a key indicator of domestic-level economic activity and households’ financial involvement, both of which",
+      "publisher": "LLC CPC Business Perspectives",
+      "year": 2025,
+      "theme": "infrastructure",
+      "doi": "10.21511/imfi.22(4).2025.04",
+      "source": "Crossref",
+      "citations": 0
+    },
+    {
+      "title": "Regulation of Infrastructure Investment and Development",
+      "summary": "Routledge book-chapter (2025)",
+      "publisher": "Routledge",
+      "year": 2025,
+      "theme": "infrastructure",
+      "doi": "10.4324/9781032712031-36",
+      "source": "Crossref",
+      "citations": 0
+    },
+    {
+      "title": "Green Concrete for Sustainable Infrastructure Development",
+      "summary": "CRC Press book-chapter (2025)",
+      "publisher": "CRC Press",
+      "year": 2025,
+      "theme": "green_finance",
+      "doi": "10.1201/9781003617594-4",
+      "source": "Crossref",
+      "citations": 0
+    }
+  ],
+  "researchSummary": "本期投研周报综合了7个主题方向共72篇研究报告的核心发现。住房市场领域: 初始房地产发行：低估和学习行为(被引2次)。基础设施投资领域: 评估金融科技、技术基础设施、。大宗商品领域: 硫酸盐对水泥浆体性能的积极影响(被引12次)。绿色金融领域: 绿色混凝土促进可持续基础设施发展。贸易流向领域: 自由贸易港建设对区域进口商的影响(被引2次)。建材行业领域: 预制混凝土夹层墙的热性能(被引12次)。房地产市场领域: 整合宏观经济指标和住房市场动态。行业新闻动态方面，本周重点关注: macro(29篇)、房地产市场(14篇)、regulation(7篇)、innovation(7篇)、commodity(4篇)。宏观环境方面，美联储维持利率3.63%不变。综合来看，本周投研关注重点集中在住房市场调整与新房/成屋销售趋势、基础设施投资与建造技术发展、大宗商品(钢铁/水泥/有色金属)价格波动、绿色建材与可持续金融创新、以及全球建材贸易流向变化等方向。建议重点关注建材品类中与基建、住房需求强相关的细分领域。",
+  "customsDashboard": {
+    "title": "中国建材出口月度看板",
+    "period": "2026年2月",
+    "summary": {
+      "total_usd": 0,
+      "total_yoy_pct": null,
+      "categories_count": 24,
+      "highlights": [
+        "最大品类: 土工材料 $0.0M"
+      ]
+    },
+    "categories": [
+      {
+        "name": "土工材料",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "地板供暖系统及配件",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "地板及配件",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "塑料管",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "墙纸/墙板",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "壁炉、炉灶",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "建筑工业玻璃",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "建筑板材",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "木材",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "栏杆与扶手",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "梯子及脚手架",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "模架",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "活动房屋与钢结构",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "浴室和厨房产品",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "瓷砖及配件",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "电梯和自动扶梯",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "石材",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "砖石材料",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "金属建材",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "门、窗及其配件",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "防水材料",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "防火材料",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "隔热材料",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "马赛克",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      }
+    ],
+    "regions": [
+      {
+        "name": "北美",
+        "value_usd": 0,
+        "yoy_pct": null,
+        "top_growth_category": "",
+        "top_growth_yoy": null
+      },
+      {
+        "name": "南美",
+        "value_usd": 0,
+        "yoy_pct": null,
+        "top_growth_category": "",
+        "top_growth_yoy": null
+      },
+      {
+        "name": "西欧",
+        "value_usd": 0,
+        "yoy_pct": null,
+        "top_growth_category": "",
+        "top_growth_yoy": null
+      },
+      {
+        "name": "中东",
+        "value_usd": 0,
+        "yoy_pct": null,
+        "top_growth_category": "",
+        "top_growth_yoy": null
+      },
+      {
+        "name": "东南亚",
+        "value_usd": 0,
+        "yoy_pct": null,
+        "top_growth_category": "",
+        "top_growth_yoy": null
+      },
+      {
+        "name": "中亚",
+        "value_usd": 0,
+        "yoy_pct": null,
+        "top_growth_category": "",
+        "top_growth_yoy": null
+      },
+      {
+        "name": "澳洲",
+        "value_usd": 0,
+        "yoy_pct": null,
+        "top_growth_category": "",
+        "top_growth_yoy": null
+      },
+      {
+        "name": "南亚",
+        "value_usd": 0,
+        "yoy_pct": null,
+        "top_growth_category": "",
+        "top_growth_yoy": null
+      },
+      {
+        "name": "日韩",
+        "value_usd": 0,
+        "yoy_pct": null,
+        "top_growth_category": "",
+        "top_growth_yoy": null
+      }
+    ],
+    "alerts": [],
+    "data_source": "UN Comtrade (中国海关总署上报)",
+    "data_lag": "约2-3个月",
+    "data_collected_at": "2026-07-20T03:47:57.351184",
+    "dashboard_built_at": "2026-07-20T03:47:57.354977"
+  },
+  "dataSources": [
+    {
+      "name": "FRED 央行利率",
+      "status": "ok",
+      "count": 9,
+      "detail": "9/9 央行"
+    },
+    {
+      "name": "World Bank 国别指标",
+      "status": "ok",
+      "count": 25,
+      "detail": "25 国家"
+    },
+    {
+      "name": "SCFI 集装箱运价",
+      "status": "ok",
+      "count": 1
+    },
+    {
+      "name": "BDI 干散货指数",
+      "status": "ok",
+      "count": 1
+    },
+    {
+      "name": "UN Comtrade 贸易流",
+      "status": "ok",
+      "count": 13,
+      "detail": "13 品类"
+    },
+    {
+      "name": "海关月度出口 (UN Comtrade)",
+      "status": "ok",
+      "count": 24,
+      "detail": "24 品类×202602"
+    },
+    {
+      "name": "Google Trends",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "name": "Reddit 讨论",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "name": "EUR-Lex 欧盟法规",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "name": "RSS 新闻聚合",
+      "status": "ok",
+      "count": 55,
+      "detail": "55 篇/9 源"
+    },
+    {
+      "name": "展会/事件日历",
+      "status": "ok",
+      "count": 16
+    },
+    {
+      "name": "学术论文 (Crossref/arXiv/DOAJ)",
+      "status": "ok",
+      "count": 9,
+      "detail": "9 主题"
+    },
+    {
+      "name": "投研报告",
+      "status": "ok",
+      "count": 72,
+      "detail": "72 篇"
+    },
+    {
+      "name": "新兴需求探测",
+      "status": "ok",
+      "count": 1,
+      "detail": "1 强信号"
+    },
+    {
+      "name": "基建宏观情报",
+      "status": "ok",
+      "count": 3,
+      "detail": "3 条区域基建动态"
+    }
+  ],
+  "sectionInsights": {
+    "macro": {
+      "summary": "联邦基金有效利率3.63%。10年期国债收益率4.57%。全球央行: 欧央行(ECB) 2.25%; 英央行(BOE) 3.73%; 日央行(BOJ) 0.84%; 澳联储(RBA) 4.35%; 加央行(BOC) 2.27%。对建材行业影；本周5条建材宏观新闻",
+      "bullets": [
+        {
+          "type": "up",
+          "text": "全球基建情报: 3条区域基建/重建动态"
+        },
+        {
+          "type": "info",
+          "text": "BDI干散货指数 2752 (+0.0%)"
+        },
+        {
+          "type": "alert",
+          "text": "大宗涨幅>3%: 天然气(HH), WTI原油, Brent原油"
+        },
+        {
+          "type": "down",
+          "text": "大宗跌幅>3%: 铁矿石, 铝, 镍"
+        }
+      ]
+    },
+    "regional": {
+      "summary": "需求热力: 基建投资8国、绿色建筑13国、商业地产15国。",
+      "bullets": [
+        {
+          "type": "up",
+          "text": "基建投资: 中国(GDP增速5.0%、人口14.1亿)、印度(GDP增速7.6%、人口14.6亿)、印尼(GDP增速5.1%、人口2.9亿)"
+        },
+        {
+          "type": "up",
+          "text": "绿色建筑: 日本(城市化成熟(92%)、经济转型需求)、韩国(城市化成熟(81%)、经济转型需求)、澳大利亚(城市化成熟(88%)、经济转型需求)"
+        },
+        {
+          "type": "up",
+          "text": "商业地产: 中国(GDP增速5.0%、经济活跃)、尼日利亚(GDP增速4.0%、经济活跃)、波兰(GDP增速3.6%、城市化加速(60%))"
+        },
+        {
+          "type": "up",
+          "text": "住房建设: 印度(城市化率36%偏低、人口基数大(14.6亿))、印尼(城市化率59%偏低、人口基数大(2.9亿))、菲律宾(城市化率56%偏低、人口基数大(1.2亿))"
+        },
+        {
+          "type": "up",
+          "text": "工业厂房: 印尼(GDP高增长5.1%、人口2.9亿,制造业潜力大)、印度(GDP高增长7.6%、人口14.6亿,制造业潜力大)、中国(人口14.1亿,制造业潜力大、工业化进程中(66%))"
+        },
+        {
+          "type": "up",
+          "text": "翻新改造: 日本(高城市化率92%、GDP增速放缓(1.2%))、韩国(高城市化率81%、GDP增速放缓(1.0%))、澳大利亚(高城市化率88%、GDP增速放缓(1.4%))"
+        }
+      ]
+    },
+    "products": {
+      "summary": "本周1个品类趋势信号",
+      "bullets": [
+        {
+          "type": "info",
+          "text": "建筑板材"
+        }
+      ]
+    },
+    "innovation": {
+      "summary": "本周追踪8项技术创新/学术动态",
+      "bullets": [
+        {
+          "type": "up",
+          "text": "用二氧化硅气凝胶和再生P增强水泥砂浆的隔热性能"
+        },
+        {
+          "type": "up",
+          "text": "优化社区级分布式光伏发电（ DPVG ） ：美学、"
+        },
+        {
+          "type": "up",
+          "text": "细菌愈合混凝土"
+        },
+        {
+          "type": "up",
+          "text": "工业化预制预制模块化结构的外立面系统"
+        }
+      ]
+    }
+  }
+}
