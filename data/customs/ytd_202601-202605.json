@@ -1,0 +1,1286 @@
+{
+  "period": "202601-202605",
+  "compare_period": "202501-202505",
+  "year": 2026,
+  "months": 5,
+  "categories": {
+    "土工材料": {
+      "current_usd": 0,
+      "previous_usd": 0,
+      "yoy_pct": null,
+      "by_region": {
+        "北美": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "南美": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "西欧": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "中东": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "东南亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "中亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "澳洲": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "南亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "日韩": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        }
+      },
+      "top_partners": []
+    },
+    "地板供暖系统及配件": {
+      "current_usd": 0,
+      "previous_usd": 0,
+      "yoy_pct": null,
+      "by_region": {
+        "北美": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "南美": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "西欧": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "中东": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "东南亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "中亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "澳洲": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "南亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "日韩": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        }
+      },
+      "top_partners": []
+    },
+    "地板及配件": {
+      "current_usd": 0,
+      "previous_usd": 0,
+      "yoy_pct": null,
+      "by_region": {
+        "北美": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "南美": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "西欧": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "中东": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "东南亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "中亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "澳洲": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "南亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "日韩": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        }
+      },
+      "top_partners": []
+    },
+    "塑料管": {
+      "current_usd": 0,
+      "previous_usd": 0,
+      "yoy_pct": null,
+      "by_region": {
+        "北美": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "南美": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "西欧": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "中东": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "东南亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "中亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "澳洲": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "南亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "日韩": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        }
+      },
+      "top_partners": []
+    },
+    "墙纸/墙板": {
+      "current_usd": 0,
+      "previous_usd": 0,
+      "yoy_pct": null,
+      "by_region": {
+        "北美": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "南美": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "西欧": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "中东": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "东南亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "中亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "澳洲": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "南亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "日韩": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        }
+      },
+      "top_partners": []
+    },
+    "壁炉、炉灶": {
+      "current_usd": 0,
+      "previous_usd": 0,
+      "yoy_pct": null,
+      "by_region": {
+        "北美": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "南美": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "西欧": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "中东": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "东南亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "中亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "澳洲": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "南亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "日韩": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        }
+      },
+      "top_partners": []
+    },
+    "建筑工业玻璃": {
+      "current_usd": 0,
+      "previous_usd": 0,
+      "yoy_pct": null,
+      "by_region": {
+        "北美": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "南美": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "西欧": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "中东": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "东南亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "中亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "澳洲": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "南亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "日韩": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        }
+      },
+      "top_partners": []
+    },
+    "建筑板材": {
+      "current_usd": 0,
+      "previous_usd": 0,
+      "yoy_pct": null,
+      "by_region": {
+        "北美": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "南美": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "西欧": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "中东": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "东南亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "中亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "澳洲": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "南亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "日韩": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        }
+      },
+      "top_partners": []
+    },
+    "木材": {
+      "current_usd": 0,
+      "previous_usd": 0,
+      "yoy_pct": null,
+      "by_region": {
+        "北美": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "南美": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "西欧": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "中东": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "东南亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "中亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "澳洲": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "南亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "日韩": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        }
+      },
+      "top_partners": []
+    },
+    "栏杆与扶手": {
+      "current_usd": 0,
+      "previous_usd": 0,
+      "yoy_pct": null,
+      "by_region": {
+        "北美": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "南美": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "西欧": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "中东": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "东南亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "中亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "澳洲": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "南亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "日韩": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        }
+      },
+      "top_partners": []
+    },
+    "梯子及脚手架": {
+      "current_usd": 0,
+      "previous_usd": 0,
+      "yoy_pct": null,
+      "by_region": {
+        "北美": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "南美": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "西欧": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "中东": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "东南亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "中亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "澳洲": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "南亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "日韩": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        }
+      },
+      "top_partners": []
+    },
+    "模架": {
+      "current_usd": 0,
+      "previous_usd": 0,
+      "yoy_pct": null,
+      "by_region": {
+        "北美": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "南美": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "西欧": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "中东": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "东南亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "中亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "澳洲": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "南亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "日韩": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        }
+      },
+      "top_partners": []
+    },
+    "活动房屋与钢结构": {
+      "current_usd": 0,
+      "previous_usd": 0,
+      "yoy_pct": null,
+      "by_region": {
+        "北美": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "南美": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "西欧": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "中东": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "东南亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "中亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "澳洲": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "南亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "日韩": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        }
+      },
+      "top_partners": []
+    },
+    "浴室和厨房产品": {
+      "current_usd": 0,
+      "previous_usd": 0,
+      "yoy_pct": null,
+      "by_region": {
+        "北美": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "南美": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "西欧": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "中东": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "东南亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "中亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "澳洲": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "南亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "日韩": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        }
+      },
+      "top_partners": []
+    },
+    "瓷砖及配件": {
+      "current_usd": 0,
+      "previous_usd": 0,
+      "yoy_pct": null,
+      "by_region": {
+        "北美": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "南美": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "西欧": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "中东": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "东南亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "中亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "澳洲": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "南亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "日韩": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        }
+      },
+      "top_partners": []
+    },
+    "电梯和自动扶梯": {
+      "current_usd": 0,
+      "previous_usd": 0,
+      "yoy_pct": null,
+      "by_region": {
+        "北美": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "南美": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "西欧": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "中东": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "东南亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "中亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "澳洲": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "南亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "日韩": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        }
+      },
+      "top_partners": []
+    },
+    "石材": {
+      "current_usd": 0,
+      "previous_usd": 0,
+      "yoy_pct": null,
+      "by_region": {
+        "北美": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "南美": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "西欧": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "中东": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "东南亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "中亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "澳洲": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "南亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "日韩": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        }
+      },
+      "top_partners": []
+    },
+    "砖石材料": {
+      "current_usd": 0,
+      "previous_usd": 0,
+      "yoy_pct": null,
+      "by_region": {
+        "北美": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "南美": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "西欧": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "中东": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "东南亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "中亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "澳洲": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "南亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "日韩": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        }
+      },
+      "top_partners": []
+    },
+    "金属建材": {
+      "current_usd": 0,
+      "previous_usd": 0,
+      "yoy_pct": null,
+      "by_region": {
+        "北美": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "南美": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "西欧": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "中东": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "东南亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "中亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "澳洲": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "南亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "日韩": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        }
+      },
+      "top_partners": []
+    },
+    "门、窗及其配件": {
+      "current_usd": 0,
+      "previous_usd": 0,
+      "yoy_pct": null,
+      "by_region": {
+        "北美": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "南美": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "西欧": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "中东": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "东南亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "中亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "澳洲": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "南亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "日韩": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        }
+      },
+      "top_partners": []
+    },
+    "防水材料": {
+      "current_usd": 0,
+      "previous_usd": 0,
+      "yoy_pct": null,
+      "by_region": {
+        "北美": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "南美": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "西欧": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "中东": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "东南亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "中亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "澳洲": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "南亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "日韩": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        }
+      },
+      "top_partners": []
+    },
+    "防火材料": {
+      "current_usd": 0,
+      "previous_usd": 0,
+      "yoy_pct": null,
+      "by_region": {
+        "北美": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "南美": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "西欧": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "中东": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "东南亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "中亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "澳洲": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "南亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "日韩": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        }
+      },
+      "top_partners": []
+    },
+    "隔热材料": {
+      "current_usd": 0,
+      "previous_usd": 0,
+      "yoy_pct": null,
+      "by_region": {
+        "北美": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "南美": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "西欧": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "中东": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "东南亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "中亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "澳洲": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "南亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "日韩": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        }
+      },
+      "top_partners": []
+    },
+    "马赛克": {
+      "current_usd": 0,
+      "previous_usd": 0,
+      "yoy_pct": null,
+      "by_region": {
+        "北美": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "南美": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "西欧": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "中东": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "东南亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "中亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "澳洲": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "南亚": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        },
+        "日韩": {
+          "current_usd": 0,
+          "previous_usd": 0,
+          "yoy_pct": null
+        }
+      },
+      "top_partners": []
+    }
+  },
+  "total_current_usd": 0,
+  "total_previous_usd": 0,
+  "total_yoy_pct": null,
+  "categories_count": 24,
+  "collected_at": "2026-08-05T05:51:39.840136",
+  "status": "ok"
+}
