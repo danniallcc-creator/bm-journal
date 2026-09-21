@@ -4,7 +4,7 @@
   "title": "建材行业全球资讯期刊",
   "tagline": "Global Building Materials Weekly Intelligence Report",
   "coverage": "25 国家 | 35 品类 | 207+ HS编码",
-  "sources": "FRED(9/9央行) + World Bank(25国) + SCFI + BDI + Reddit + Google Trends + UN Comtrade(13品类) + EUR-Lex(0条) + RSS(65篇/10源) + Events(21场) + Academia(9主题) + Research(72篇) + Emerging(2强信号) + Infra(4条/1源)",
+  "sources": "FRED(9/9央行) + World Bank(25国) + SCFI + BDI + Reddit + Google Trends + UN Comtrade(13品类) + 海关月度(24品类×202604) + EUR-Lex(0条) + RSS(63篇/10源) + Events(21场) + Academia(9主题) + Research(72篇) + Emerging(2强信号) + Infra(4条/1源)",
   "keyTakeaways": [
     {
       "headline": "投研周报: 综合7大方向72篇报告核心发现",
@@ -20,7 +20,7 @@
     },
     {
       "headline": "'地板及配件'搜索热度增长73%",
-      "detail": "Google搜索趋势显示'vinyl flooring'近4周增长85%",
+      "detail": "Google搜索趋势显示'engineered wood flooring'近4周增长78%",
       "tag": "opportunity"
     },
     {
@@ -1426,7 +1426,7 @@
     {
       "name": "地板及配件",
       "category": "地板及配件",
-      "description": "Google搜索趋势显示'vinyl flooring'近4周增长85%",
+      "description": "Google搜索趋势显示'engineered wood flooring'近4周增长78%",
       "drivers": [
         "地板及配件"
       ],
@@ -1445,14 +1445,14 @@
     {
       "name": "瓷砖及配件",
       "category": "瓷砖及配件",
-      "description": "Google搜索趋势显示'large format tile'近4周增长140%",
+      "description": "Google搜索趋势显示'large format tile'近4周增长106%",
       "drivers": [
         "瓷砖及配件"
       ],
       "socialSignals": [
         {
           "platform": "Google",
-          "growth": 69.0
+          "growth": 60.0
         }
       ],
       "satisfaction": 50
@@ -1460,14 +1460,14 @@
     {
       "name": "建筑板材",
       "category": "建筑板材",
-      "description": "Google搜索趋势显示'aluminum composite panel'近4周增长144%",
+      "description": "Google搜索趋势显示'aluminum composite panel'近4周增长178%",
       "drivers": [
         "建筑板材"
       ],
       "socialSignals": [
         {
           "platform": "Google",
-          "growth": 8.3
+          "growth": 12.0
         }
       ],
       "satisfaction": 50
@@ -2042,7 +2042,231 @@
   "researchSummary": "本期投研周报综合了7个主题方向共72篇研究报告的核心发现。住房市场领域: 澳大利亚建设租赁的投资行为(被引4次)。基础设施投资领域: 评估金融科技、技术基础设施、(被引2次)。大宗商品领域: 硫酸盐对水泥浆体性能的积极影响(被引14次)。绿色金融领域: 绿色债券和可持续金融市场。绿色债券(被引1次)。贸易流向领域: 自由贸易港建设对区域进口商的影响(被引2次)。建材行业领域: 预制混凝土夹层墙的热性能(被引14次)。房地产市场领域: 整合宏观经济指标和住房市场动态。行业新闻动态方面，本周重点关注: macro(31篇)、commodity(15篇)、房地产市场(12篇)、regulation(4篇)、innovation(3篇)。宏观环境方面，美联储加息25.0bps至3.88%。综合来看，本周投研关注重点集中在住房市场调整与新房/成屋销售趋势、基础设施投资与建造技术发展、大宗商品(钢铁/水泥/有色金属)价格波动、绿色建材与可持续金融创新、以及全球建材贸易流向变化等方向。建议重点关注建材品类中与基建、住房需求强相关的细分领域。",
   "customsDashboard": {
     "title": "中国建材出口月度看板",
-    "status": "api_unavailable"
+    "period": "2026年4月",
+    "summary": {
+      "total_usd": 0,
+      "total_yoy_pct": null,
+      "categories_count": 24,
+      "highlights": [
+        "最大品类: 土工材料 $0.0M"
+      ]
+    },
+    "categories": [
+      {
+        "name": "土工材料",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "地板供暖系统及配件",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "地板及配件",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "塑料管",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "墙纸/墙板",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "壁炉、炉灶",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "建筑工业玻璃",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "建筑板材",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "木材",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "栏杆与扶手",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "梯子及脚手架",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "模架",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "活动房屋与钢结构",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "浴室和厨房产品",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "瓷砖及配件",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "电梯和自动扶梯",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "石材",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "砖石材料",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "金属建材",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "门、窗及其配件",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "防水材料",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "防火材料",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "隔热材料",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      },
+      {
+        "name": "马赛克",
+        "value_usd": 0,
+        "previous_usd": 0,
+        "yoy_pct": null
+      }
+    ],
+    "regions": [
+      {
+        "name": "北美",
+        "value_usd": 0,
+        "yoy_pct": null,
+        "top_growth_category": "",
+        "top_growth_yoy": null
+      },
+      {
+        "name": "南美",
+        "value_usd": 0,
+        "yoy_pct": null,
+        "top_growth_category": "",
+        "top_growth_yoy": null
+      },
+      {
+        "name": "西欧",
+        "value_usd": 0,
+        "yoy_pct": null,
+        "top_growth_category": "",
+        "top_growth_yoy": null
+      },
+      {
+        "name": "中东",
+        "value_usd": 0,
+        "yoy_pct": null,
+        "top_growth_category": "",
+        "top_growth_yoy": null
+      },
+      {
+        "name": "东南亚",
+        "value_usd": 0,
+        "yoy_pct": null,
+        "top_growth_category": "",
+        "top_growth_yoy": null
+      },
+      {
+        "name": "中亚",
+        "value_usd": 0,
+        "yoy_pct": null,
+        "top_growth_category": "",
+        "top_growth_yoy": null
+      },
+      {
+        "name": "澳洲",
+        "value_usd": 0,
+        "yoy_pct": null,
+        "top_growth_category": "",
+        "top_growth_yoy": null
+      },
+      {
+        "name": "南亚",
+        "value_usd": 0,
+        "yoy_pct": null,
+        "top_growth_category": "",
+        "top_growth_yoy": null
+      },
+      {
+        "name": "日韩",
+        "value_usd": 0,
+        "yoy_pct": null,
+        "top_growth_category": "",
+        "top_growth_yoy": null
+      }
+    ],
+    "alerts": [],
+    "data_source": "UN Comtrade (中国海关总署上报)",
+    "data_lag": "约2-3个月",
+    "data_collected_at": "2026-09-21T07:49:03.069112",
+    "dashboard_built_at": "2026-09-21T07:49:03.073241"
   },
   "dataSources": [
     {
@@ -2075,9 +2299,9 @@
     },
     {
       "name": "海关月度出口 (UN Comtrade)",
-      "status": "api_unavailable",
-      "count": 0,
-      "detail": "0 品类×202605"
+      "status": "ok",
+      "count": 24,
+      "detail": "24 品类×202604"
     },
     {
       "name": "Google Trends",
@@ -2097,8 +2321,8 @@
     {
       "name": "RSS 新闻聚合",
       "status": "ok",
-      "count": 65,
-      "detail": "65 篇/10 源"
+      "count": 63,
+      "detail": "63 篇/10 源"
     },
     {
       "name": "展会/事件日历",
@@ -2190,11 +2414,11 @@
         },
         {
           "type": "up",
-          "text": "瓷砖及配件 (+69%)"
+          "text": "瓷砖及配件 (+60%)"
         },
         {
           "type": "alert",
-          "text": "建筑板材 (+8%)"
+          "text": "建筑板材 (+12%)"
         }
       ]
     },
