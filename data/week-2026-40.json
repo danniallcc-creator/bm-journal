@@ -4,11 +4,11 @@
   "title": "建材行业全球资讯期刊",
   "tagline": "Global Building Materials Weekly Intelligence Report",
   "coverage": "25 国家 | 35 品类 | 207+ HS编码",
-  "sources": "FRED(9/9央行) + World Bank(25国) + SCFI + BDI + Reddit + Google Trends + UN Comtrade(13品类) + 海关月度(24品类×202604) + EUR-Lex(0条) + RSS(60篇/10源) + Events(21场) + Academia(9主题) + Research(72篇) + Emerging(1强信号) + Infra(5条/1源)",
+  "sources": "FRED(9/9央行) + World Bank(25国) + SCFI + BDI + Reddit + Google Trends + UN Comtrade(13品类) + 海关月度(24品类×202604) + EUR-Lex(0条) + RSS(58篇/10源) + Events(21场) + Academia(9主题) + Research(72篇) + Emerging(1强信号) + Infra(5条/1源)",
   "keyTakeaways": [
     {
       "headline": "投研周报: 综合7大方向72篇报告核心发现",
-      "detail": "本期投研周报综合了7个主题方向共72篇研究报告的核心发现。住房市场领域: 澳大利亚建设租赁的投资行为(被引4次)。基础设施投资领域: 评估金融科技、技术基础设施、(被引2次)。大宗商品领域: 硫酸盐对水泥浆体性能的积极影响(被引14次)。绿色金融领域: 绿色债券和可持续金融市场。绿色债券(被引1次)。贸易流向领域: 自由贸易港建设对区域进口商的影响(被引2次)。建材行业领域: 预制混凝土夹层墙的热性能(被引15次)。房地产市场领域: 整合宏观经济指标和住房市场动态。行业新闻动态方面，本周重点关注: macro(33篇)、commodity(10篇)、房地产市场(7篇)、贸易流向(6篇)、innovation(5篇)。宏观环境方面，美联储维持利率3.88%不变。综合来看，本周投研关注重点集中在住房市场调整与新房/成屋销售趋势、基础设施投资与建造技术发展、大宗商品(钢铁/水泥/有色金属)价格波动、绿色建材与可持续金融创新、以及全球建材贸易流向变化等方向。建议重点关注建材品类中与基建、住房需求强相关的细分领域。",
+      "detail": "本期投研周报综合了7个主题方向共72篇研究报告的核心发现。住房市场领域: 澳大利亚建设租赁的投资行为(被引4次)。基础设施投资领域: 评估金融科技、技术基础设施、(被引2次)。大宗商品领域: 硫酸盐对水泥浆体性能的积极影响(被引14次)。绿色金融领域: 绿色债券和可持续金融市场。绿色债券(被引1次)。贸易流向领域: 自由贸易港建设对区域进口商的影响(被引2次)。建材行业领域: 预制混凝土夹层墙的热性能(被引15次)。房地产市场领域: 整合宏观经济指标和住房市场动态。行业新闻动态方面，本周重点关注: macro(31篇)、commodity(10篇)、innovation(7篇)、房地产市场(7篇)、贸易流向(6篇)。宏观环境方面，美联储维持利率3.88%不变。综合来看，本周投研关注重点集中在住房市场调整与新房/成屋销售趋势、基础设施投资与建造技术发展、大宗商品(钢铁/水泥/有色金属)价格波动、绿色建材与可持续金融创新、以及全球建材贸易流向变化等方向。建议重点关注建材品类中与基建、住房需求强相关的细分领域。",
       "tag": "watch",
       "type": "research_summary"
     },
@@ -19,8 +19,8 @@
       "type": "infra_summary"
     },
     {
-      "headline": "'建筑板材'搜索热度增长-34%",
-      "detail": "Google搜索趋势显示'aluminum composite panel'近4周增长115%",
+      "headline": "'建筑板材'搜索热度增长-26%",
+      "detail": "Google搜索趋势显示'aluminum composite panel'近4周增长60%",
       "tag": "opportunity"
     },
     {
@@ -1426,14 +1426,14 @@
     {
       "name": "建筑板材",
       "category": "建筑板材",
-      "description": "Google搜索趋势显示'aluminum composite panel'近4周增长115%",
+      "description": "Google搜索趋势显示'aluminum composite panel'近4周增长60%",
       "drivers": [
         "建筑板材"
       ],
       "socialSignals": [
         {
           "platform": "Google",
-          "growth": -34.3
+          "growth": -25.9
         }
       ],
       "satisfaction": 50
@@ -1511,32 +1511,7 @@
       ]
     }
   ],
-  "regulation": [
-    {
-      "title": "ABC Trading Recalls Light-Up Children’s Toys Due to Risk of Serious Injury or De",
-      "summary": "These recalled products are packaged in a large clear plastic bag. A white label on the clear plastic bag has, in black font, one of the following identifiers: 6502 (for the light-up tie), HD-10 (for ",
-      "tag": "warn",
-      "source": "US CPSC",
-      "link": "https://cpsc.gov/Recalls/2026/ABC-Trading-Recalls-Light-Up-Childrens-Toys-Due-to-Risk-of-Serious-Injury-or-Death-from-Battery-Ingestion-Violate-Mandatory-Standard-for-Toys",
-      "date": "2026-09-24T00:00:00"
-    },
-    {
-      "title": "INMO International Technology Limited Recalls INMO Air3 Smart Glasses Due to Ris",
-      "summary": "This recall involves smart glasses with model number AIR3 and are used for AI translation, AI-assisted productivity and media streaming. The recalled products are black with “AIR3” and “INMO” printed ",
-      "tag": "warn",
-      "source": "US CPSC",
-      "link": "https://cpsc.gov/Recalls/2026/INMO-International-Technology-Limited-Recalls-INMO-Air3-Smart-Glasses-Due-to-Risk-of-Serious-Injury-or-Death-from-Burn-Hazard",
-      "date": "2026-09-24T00:00:00"
-    },
-    {
-      "title": "Love To Dream Recalls Portable Sleep Machines Due to Risk of Injury from Fire an",
-      "summary": "This recall involves the portable sleep machine which features various sounds, adjustable volume, a built-in nightlight, and includes a USB charging cable. “Love to Dream” is imprinted on the sleep ma",
-      "tag": "warn",
-      "source": "US CPSC",
-      "link": "https://cpsc.gov/Recalls/2026/Love-To-Dream-Recalls-Portable-Sleep-Machines-Due-to-Risk-of-Injury-from-Fire-and-Burn-Hazards",
-      "date": "2026-09-24T00:00:00"
-    }
-  ],
+  "regulation": [],
   "innovation": [
     {
       "title": "Carboxymethyl Cellulose Composite Aerogel Loaded With Silica Aerogel for Flexibl",
@@ -1561,17 +1536,6 @@
       "tech_direction": "研发建筑外立面集成光伏组件；兼顾美观与发电效率；开发透明/彩色光伏玻璃"
     },
     {
-      "title": "Bacterial Healing Concrete",
-      "title_zh": "细菌愈合混凝土",
-      "summary": "自修复混凝土: 共7篇相关论文(近期7篇)。代表研究: Zaky; Mohamed(2025)，被引1次。",
-      "tag": "innovation",
-      "topic": "自修复混凝土",
-      "paper_count": 7,
-      "source": "Crossref/DOAJ",
-      "doi": "10.21203/rs.3.rs-6614495/v1",
-      "tech_direction": "研发微生物/微胶囊自修复添加剂，延长混凝土结构寿命50%+；适用于基础设施和海洋工程"
-    },
-    {
       "title": "Façade systems for industrialised prefabricated prefinished modular construction",
       "title_zh": "工业化预制预制模块化结构的外立面系统",
       "summary": "模块化建筑: 共7篇相关论文(近期7篇)。代表研究: Hajirezaei; Sharafi; Farsangi et al.(2025)，被引12次。",
@@ -1581,6 +1545,17 @@
       "source": "Crossref/DOAJ",
       "doi": "10.1016/j.autcon.2025.106269",
       "tech_direction": "设计标准化模块接口系统；开发轻量化结构板材；实现工厂预制率80%+的快速装配"
+    },
+    {
+      "title": "Bacterial Healing Concrete",
+      "title_zh": "细菌愈合混凝土",
+      "summary": "自修复混凝土: 共6篇相关论文(近期6篇)。代表研究: Zaky; Mohamed(2025)，被引1次。",
+      "tag": "innovation",
+      "topic": "自修复混凝土",
+      "paper_count": 6,
+      "source": "Crossref/DOAJ",
+      "doi": "10.21203/rs.3.rs-6614495/v1",
+      "tech_direction": "研发微生物/微胶囊自修复添加剂，延长混凝土结构寿命50%+；适用于基础设施和海洋工程"
     },
     {
       "title": "Spectral analysis of the discoloration process in architectural electrochromic g",
@@ -2005,7 +1980,7 @@
       "citations": 1
     }
   ],
-  "researchSummary": "本期投研周报综合了7个主题方向共72篇研究报告的核心发现。住房市场领域: 澳大利亚建设租赁的投资行为(被引4次)。基础设施投资领域: 评估金融科技、技术基础设施、(被引2次)。大宗商品领域: 硫酸盐对水泥浆体性能的积极影响(被引14次)。绿色金融领域: 绿色债券和可持续金融市场。绿色债券(被引1次)。贸易流向领域: 自由贸易港建设对区域进口商的影响(被引2次)。建材行业领域: 预制混凝土夹层墙的热性能(被引15次)。房地产市场领域: 整合宏观经济指标和住房市场动态。行业新闻动态方面，本周重点关注: macro(33篇)、commodity(10篇)、房地产市场(7篇)、贸易流向(6篇)、innovation(5篇)。宏观环境方面，美联储维持利率3.88%不变。综合来看，本周投研关注重点集中在住房市场调整与新房/成屋销售趋势、基础设施投资与建造技术发展、大宗商品(钢铁/水泥/有色金属)价格波动、绿色建材与可持续金融创新、以及全球建材贸易流向变化等方向。建议重点关注建材品类中与基建、住房需求强相关的细分领域。",
+  "researchSummary": "本期投研周报综合了7个主题方向共72篇研究报告的核心发现。住房市场领域: 澳大利亚建设租赁的投资行为(被引4次)。基础设施投资领域: 评估金融科技、技术基础设施、(被引2次)。大宗商品领域: 硫酸盐对水泥浆体性能的积极影响(被引14次)。绿色金融领域: 绿色债券和可持续金融市场。绿色债券(被引1次)。贸易流向领域: 自由贸易港建设对区域进口商的影响(被引2次)。建材行业领域: 预制混凝土夹层墙的热性能(被引15次)。房地产市场领域: 整合宏观经济指标和住房市场动态。行业新闻动态方面，本周重点关注: macro(31篇)、commodity(10篇)、innovation(7篇)、房地产市场(7篇)、贸易流向(6篇)。宏观环境方面，美联储维持利率3.88%不变。综合来看，本周投研关注重点集中在住房市场调整与新房/成屋销售趋势、基础设施投资与建造技术发展、大宗商品(钢铁/水泥/有色金属)价格波动、绿色建材与可持续金融创新、以及全球建材贸易流向变化等方向。建议重点关注建材品类中与基建、住房需求强相关的细分领域。",
   "customsDashboard": {
     "title": "中国建材出口月度看板",
     "period": "2026年4月",
@@ -2231,8 +2206,8 @@
     "alerts": [],
     "data_source": "UN Comtrade (中国海关总署上报)",
     "data_lag": "约2-3个月",
-    "data_collected_at": "2026-09-28T06:22:45.543015",
-    "dashboard_built_at": "2026-09-28T06:22:45.547374"
+    "data_collected_at": "2026-09-28T08:23:55.043242",
+    "dashboard_built_at": "2026-09-28T08:23:55.047220"
   },
   "dataSources": [
     {
@@ -2287,8 +2262,8 @@
     {
       "name": "RSS 新闻聚合",
       "status": "ok",
-      "count": 60,
-      "detail": "60 篇/10 源"
+      "count": 58,
+      "detail": "58 篇/10 源"
     },
     {
       "name": "展会/事件日历",
@@ -2389,11 +2364,11 @@
         },
         {
           "type": "up",
-          "text": "细菌愈合混凝土"
+          "text": "工业化预制预制模块化结构的外立面系统"
         },
         {
           "type": "up",
-          "text": "工业化预制预制模块化结构的外立面系统"
+          "text": "细菌愈合混凝土"
         }
       ]
     }
