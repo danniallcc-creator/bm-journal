@@ -1,6 +1,6 @@
 {
   "title": "中国建材出口月度看板",
-  "period": "202601-202606",
+  "period": "202601-202607",
   "summary": {
     "total_usd": 0,
     "total_yoy_pct": null,
@@ -223,6 +223,6 @@
   "alerts": [],
   "data_source": "UN Comtrade (中国海关总署上报)",
   "data_lag": "约2-3个月",
-  "data_collected_at": "2026-09-05T07:28:11.942589",
-  "dashboard_built_at": "2026-09-05T07:28:11.946387"
+  "data_collected_at": "2026-10-05T10:07:08.724520",
+  "dashboard_built_at": "2026-10-05T10:07:08.728296"
 }
